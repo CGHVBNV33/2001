@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_duanshao = {
+		major = yes
+		potential = {
+			
+			advisor = duanshao
+			
+		}
+		allow = {
+			advisor = duanshao
+		}
+		effect = {
+			remove_advisor = duanshao
+			define_general = {
+				name = "段韶｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_beiqiguonchen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

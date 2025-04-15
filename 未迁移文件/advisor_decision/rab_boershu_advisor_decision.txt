@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_boershu = {
+		major = yes
+		potential = {
+			
+			advisor = boershu
+			
+		}
+		allow = {
+			advisor = boershu
+		}
+		effect = {
+			remove_advisor = boershu
+			define_general = {
+				name = "博尔朮｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_boershu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

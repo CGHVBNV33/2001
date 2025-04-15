@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caoren = {
+		major = yes
+		potential = {
+			
+			advisor = caoren
+			
+		}
+		allow = {
+			advisor = caoren
+		}
+		effect = {
+			remove_advisor = caoren
+			define_general = {
+				name = "曹仁｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_caoren
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

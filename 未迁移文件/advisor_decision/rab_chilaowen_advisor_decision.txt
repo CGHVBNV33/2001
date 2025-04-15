@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chilaowen = {
+		major = yes
+		potential = {
+			
+			advisor = chilaowen
+			
+		}
+		allow = {
+			advisor = chilaowen
+		}
+		effect = {
+			remove_advisor = chilaowen
+			define_general = {
+				name = "赤老温｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_chilaowen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

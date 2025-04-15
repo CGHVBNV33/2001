@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_anlushan = {
+		major = yes
+		potential = {
+			
+			advisor = anlushan
+			
+		}
+		allow = {
+			advisor = anlushan
+		}
+		effect = {
+			remove_advisor = anlushan
+			define_general = {
+				name = "安禄山｢【名将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_anlushan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

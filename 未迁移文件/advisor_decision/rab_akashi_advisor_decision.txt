@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_akashi = {
+		major = yes
+		potential = {
+			
+			advisor = akashi
+			
+		}
+		allow = {
+			advisor = akashi
+		}
+		effect = {
+			remove_advisor = akashi
+			define_general = {
+				name = "明石全登｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_akashi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

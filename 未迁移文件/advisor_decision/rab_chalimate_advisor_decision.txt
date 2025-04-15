@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chalimate = {
+		major = yes
+		potential = {
+			
+			advisor = chalimate
+			
+		}
+		allow = {
+			advisor = chalimate
+		}
+		effect = {
+			remove_advisor = chalimate
+			define_general = {
+				name = "查理-马特｢【铁锤查理】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_chalimate
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

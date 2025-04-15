@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dushinuli = {
+		major = yes
+		potential = {
+			
+			advisor = dushinuli
+			
+		}
+		allow = {
+			advisor = dushinuli
+		}
+		effect = {
+			remove_advisor = dushinuli
+define_general_rab_dushinuli_advisor_decision_15 = yes
+#			define_general = {
+#				name = "é½å¸çå©ï½¢ãæ­¦å°ã"
+#				fire = 4
+#				shock = 4
+#				manuever = 3
+#				siege = 3
+#				trait = rab_leader_dushinuli
+#			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

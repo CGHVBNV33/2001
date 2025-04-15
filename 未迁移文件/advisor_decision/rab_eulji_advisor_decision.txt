@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_eulji = {
+		major = yes
+		potential = {
+			
+			advisor = eulji
+			
+		}
+		allow = {
+			advisor = eulji
+		}
+		effect = {
+			remove_advisor = eulji
+			define_general = {
+				name = "乙支文德｢【大对卢】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_dadulu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

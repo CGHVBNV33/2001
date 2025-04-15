@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_beidang = {
+		major = yes
+		potential = {
+			
+			advisor = beidang
+			
+		}
+		allow = {
+			advisor = beidang
+		}
+		effect = {
+			remove_advisor = beidang
+			define_general = {
+				name = "亨利·菲利浦·贝当｢【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_faguoyuanshwai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

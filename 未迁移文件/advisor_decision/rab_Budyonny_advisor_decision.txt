@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Budyonny = {
+		major = yes
+		potential = {
+			
+			advisor = Budyonny
+			
+		}
+		allow = {
+			advisor = Budyonny
+		}
+		effect = {
+			remove_advisor = Budyonny
+			define_general = {
+				name = "布琼尼｢【元帅】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_Budyonny
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

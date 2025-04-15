@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Boudica = {
+		major = yes
+		potential = {
+			
+			advisor = Boudica
+			
+		}
+		allow = {
+			advisor = Boudica
+		}
+		effect = {
+			remove_advisor = Boudica
+			define_general = {
+				name = "博阿迪西亚"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_Boudica
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

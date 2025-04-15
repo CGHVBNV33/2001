@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fengyunshan = {
+		major = yes
+		potential = {
+			
+			advisor = fengyunshan
+			
+		}
+		allow = {
+			advisor = fengyunshan
+		}
+		effect = {
+			remove_advisor = fengyunshan
+			define_general = {
+				name = "冯云山"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_fengyunshan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chenqingzhi= {
+		major = yes
+		potential = {
+			
+			advisor = chenqingzhi
+			
+		}
+		allow = {
+			advisor = chenqingzhi
+		}
+		effect = {
+			remove_advisor = chenqingzhi
+			define_general = {
+				name = "陈庆之｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 5
+				siege = 5
+				trait = rab_leader_chenqingzhi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Doenitz = {
+		major = yes
+		potential = {
+			
+			advisor = Doenitz
+			
+		}
+		allow = {
+			advisor = Doenitz
+		}
+		effect = {
+			remove_advisor = Doenitz
+			define_admiral = {
+				name = "邓尼茨｢【海军元帅】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

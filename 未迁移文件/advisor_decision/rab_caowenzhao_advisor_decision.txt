@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caowenzhao = {
+		major = yes
+		potential = {
+			
+			advisor = caowenzhao
+			
+		}
+		allow = {
+			advisor = caowenzhao
+		}
+		effect = {
+			remove_advisor = caowenzhao
+			define_general = {
+				name = "曹文诏｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_caowenzhao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dougu = {
+		major = yes
+		potential = {
+			
+			advisor = dougu
+			
+		}
+		allow = {
+			advisor = dougu
+		}
+		effect = {
+			remove_advisor = dougu
+			define_general = {
+				name = "窦固｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_dougu
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

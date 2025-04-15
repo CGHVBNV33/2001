@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fengyi = {
+		major = yes
+		potential = {
+			
+			advisor = fengyi
+			
+		}
+		allow = {
+			advisor = fengyi
+		}
+		effect = {
+			remove_advisor = fengyi
+			define_general = {
+				name = "冯异｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = rab_leader_fengyi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

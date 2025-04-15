@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chengqian = {
+		major = yes
+		potential = {
+			
+			advisor = chengqian
+			
+		}
+		allow = {
+			advisor = chengqian
+		}
+		effect = {
+			remove_advisor = chengqian
+			define_general = {
+				name = "程潜｢【军官】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_chenqian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

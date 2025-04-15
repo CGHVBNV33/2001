@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_achuo = {
+		major = yes
+		potential = {
+			
+			advisor = achuo
+			
+		}
+		allow = {
+			advisor = achuo
+		}
+		effect = {
+			remove_advisor = achuo
+			define_general = {
+				name = "阿绰｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_achuo
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

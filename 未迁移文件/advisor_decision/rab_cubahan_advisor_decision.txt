@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_cubahan = {
+		major = yes
+		potential = {
+			
+			advisor = cubahan
+			
+		}
+		allow = {
+			advisor = cubahan
+		}
+		effect = {
+			remove_advisor = cubahan
+			define_general = {
+				name = "猝跋韩｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_cubahan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
