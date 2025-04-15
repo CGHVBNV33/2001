@@ -1,0 +1,54 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = dengqiang_advisor_come
+#武将某种條件下出現
+#id = 1 : dengqiang : 
+#
+country_event = {
+	id = dengqiang_advisor_come.1
+	title = "dengqiang_advisor_come.1.t"
+	desc = "dengqiang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 356
+		NOT = {
+			is_year = 379
+		}
+		OR = {
+			AND = {
+				exists = QIN
+				tag = QIN
+			}
+			AND = {
+				NOT = {
+					exists = QIN
+				}
+				owns = 2181
+			}
+		}
+		NOT = {
+			has_global_flag = dengqiang_advisor_come_flag
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = dengqiang_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_dengqiang = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_dengqiang = yes
+		}
+	}
+}

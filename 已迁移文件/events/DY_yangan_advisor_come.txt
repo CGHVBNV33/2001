@@ -1,0 +1,49 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yangan_advisor_come
+
+#武将某种条件下出现
+#id = 1 : yangan : 杨安｢【武将】
+
+country_event = {
+	id = yangan_advisor_come.1
+	title = "yangan_advisor_come.1.t"
+	desc = "yangan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 356
+		NOT = { is_year = 378 }
+		OR = {
+			AND = {
+				exists = QIN
+				tag = QIN
+			}
+			AND = {
+				NOT = { exists = QIN }
+				owns = 3178
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yangan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor_yangan = yes
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general_yangan = yes
+		}
+	}
+}
+
