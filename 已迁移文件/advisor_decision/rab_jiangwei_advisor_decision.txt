@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_jiangwei = {
+		major = yes
+		potential = {
+			advisor = jiangwei
+		}
+		allow = {
+			advisor = jiangwei
+		}
+		effect = {
+			remove_advisor = jiangwei
+			define_general_jiangwei = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

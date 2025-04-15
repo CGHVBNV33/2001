@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_maqiu = {
+		major = yes
+		potential = {
+			
+			advisor = maqiu
+			
+		}
+		allow = {
+			advisor = maqiu
+		}
+		effect = {
+			remove_advisor = maqiu
+			define_general = {
+				name = "麻秋｢【武将】"
+				fire = 2
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_maqiu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

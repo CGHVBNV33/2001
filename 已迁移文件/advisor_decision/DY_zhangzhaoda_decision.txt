@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_zhangzhaoda = {
+		major = yes
+		potential = {
+			advisor = zhangzhaoda
+		}
+		allow = {
+			advisor = zhangzhaoda
+		}
+		effect = {
+			remove_advisor = zhangzhaoda
+			define_general_zhangzhaoda = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

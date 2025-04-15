@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanchenheshang = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanchenheshang
+			
+		}
+		allow = {
+			advisor = wanyanchenheshang
+		}
+		effect = {
+			remove_advisor = wanyanchenheshang
+			define_general_wanyanchenheshang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

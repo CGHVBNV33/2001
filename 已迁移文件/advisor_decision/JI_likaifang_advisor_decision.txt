@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_likaifang = {
+		major = yes
+		potential = {
+			advisor = likaifang
+		}
+		allow = {
+			advisor = likaifang
+		}
+		effect = {
+			remove_advisor = likaifang
+			define_general_likaifang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhoutan = {
+		major = yes
+		potential = {
+			
+			advisor = zhoutan
+			
+		}
+		allow = {
+			advisor = zhoutan
+		}
+		effect = {
+			remove_advisor = zhoutan
+			define_general_zhoutan = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

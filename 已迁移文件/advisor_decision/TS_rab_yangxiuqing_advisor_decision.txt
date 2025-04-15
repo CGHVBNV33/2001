@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangxiuqing = {
+		major = yes
+		potential = {
+			
+			advisor = yangxiuqing
+			
+		}
+		allow = {
+			advisor = yangxiuqing
+		}
+		effect = {
+			remove_advisor = yangxiuqing
+			define_general_yangxiuqing = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

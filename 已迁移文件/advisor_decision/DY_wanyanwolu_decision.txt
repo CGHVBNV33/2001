@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanwolu = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanwolu
+			
+		}
+		allow = {
+			advisor = wanyanwolu
+		}
+		effect = {
+			remove_advisor = wanyanwolu
+			define_general_wanyanwolu = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_wentianxiang = {
+		major = yes
+		potential = {
+			advisor = wentianxiang
+		}
+		allow = {
+			advisor = wentianxiang
+		}
+		effect = {
+			remove_advisor = wentianxiang
+			define_general_wentianxiang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

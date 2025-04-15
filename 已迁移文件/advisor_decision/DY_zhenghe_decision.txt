@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_zhenghe = {
+		major = yes
+		potential = {
+			advisor = zhenghe
+		}
+		allow = {
+			advisor = zhenghe
+		}
+		effect = {
+			remove_advisor = zhenghe
+			define_explorer_zhenghe = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

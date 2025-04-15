@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yaochang = {
+		major = yes
+		potential = {
+			
+			advisor = yaochang
+			
+		}
+		allow = {
+			advisor = yaochang
+		}
+		effect = {
+			remove_advisor = yaochang
+			define_general_yaochang = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

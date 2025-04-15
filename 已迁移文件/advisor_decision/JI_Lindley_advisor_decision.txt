@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Lindley = {
+		major = yes
+		potential = {
+			
+			advisor = Lindley
+			
+		}
+		allow = {
+			advisor = Lindley
+		}
+		effect = {
+			remove_advisor = Lindley
+			define_general_Lindley = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

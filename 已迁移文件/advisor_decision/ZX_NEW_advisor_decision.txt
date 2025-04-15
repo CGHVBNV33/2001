@@ -1,0 +1,203 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liaoyongan = {
+		major = yes
+		potential = {
+			
+			advisor = liaoyongan
+			
+		}
+		allow = {
+			advisor = liaoyongan
+		}
+		effect = {
+			remove_advisor = liaoyongan
+			define_admiral = {
+				name = "廖永安｢【巢湖之杰】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 0
+				trait = rab_leader_liaoyongan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_anjie = {
+		major = yes
+		potential = {
+			
+			advisor = anjie
+			
+		}
+		allow = {
+			advisor = anjie
+		}
+		effect = {
+			remove_advisor = anjie
+			define_general = {
+				name = "安颉｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_anjie
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_muying = {
+		major = yes
+		potential = {
+			
+			advisor = muying
+			
+		}
+		allow = {
+			advisor = muying
+		}
+		effect = {
+			remove_advisor = muying
+			define_general_muying = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_qiujuan = {
+		major = yes
+		potential = {
+			
+			advisor = qiujuan
+			
+		}
+		allow = {
+			advisor = qiujuan
+		}
+		effect = {
+			remove_advisor = qiujuan
+			define_general = {
+				name = "丘眷｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_qiujuan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_shusunjian = {
+		major = yes
+		potential = {
+			
+			advisor = shusunjian
+			
+		}
+		allow = {
+			advisor = shusunjian
+		}
+		effect = {
+			remove_advisor = shusunjian
+			define_general = {
+				name = "叔孙建｢【丹阳王】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_shusunjian
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_simachuzhi = {
+		major = yes
+		potential = {
+			
+			advisor = simachuzhi
+			
+		}
+		allow = {
+			advisor = simachuzhi
+		}
+		effect = {
+			remove_advisor = simachuzhi
+			define_general = {
+				name = "司马楚之｢【琅琊王】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_simachuzhi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_duanhong = {
+		major = yes
+		potential = {
+			
+			advisor = duanhong
+			
+		}
+		allow = {
+			advisor = duanhong
+		}
+		effect = {
+			remove_advisor = duanhong
+			define_general = {
+				name = "段宏｢【左将军】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_duanhong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

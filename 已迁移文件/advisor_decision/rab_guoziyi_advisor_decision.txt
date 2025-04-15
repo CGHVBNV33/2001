@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_guoziyi = {
+		major = yes
+		potential = {
+			advisor = guoziyi
+		}
+		allow = {
+			advisor = guoziyi
+		}
+		effect = {
+			remove_advisor = guoziyi
+			define_general_guoziyi = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

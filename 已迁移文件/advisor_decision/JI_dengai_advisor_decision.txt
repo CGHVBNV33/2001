@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_dengai = {
+		major = yes
+		potential = {
+			advisor = dengai
+		}
+		allow = {
+			advisor = dengai
+		}
+		effect = {
+			remove_advisor = dengai
+			define_general_dengai = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

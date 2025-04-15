@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_linfengxiang = {
+		major = yes
+		potential = {
+			
+			advisor = linfengxiang
+			
+		}
+		allow = {
+			advisor = linfengxiang
+		}
+		effect = {
+			remove_advisor = linfengxiang
+			define_general_linfengxiang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

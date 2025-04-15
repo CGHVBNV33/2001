@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xiahouba = {
+		major = yes
+		potential = {
+			
+			advisor = xiahouba
+			
+		}
+		allow = {
+			advisor = xiahouba
+		}
+		effect = {
+			remove_advisor = xiahouba
+			define_general_sha_ho_ba = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

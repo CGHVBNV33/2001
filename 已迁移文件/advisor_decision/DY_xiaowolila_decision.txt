@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xiaowolila = {
+		major = yes
+		potential = {
+			
+			advisor = xiaowolila
+			
+		}
+		allow = {
+			advisor = xiaowolila
+		}
+		effect = {
+			remove_advisor = xiaowolila
+			define_general_xiaowolila = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

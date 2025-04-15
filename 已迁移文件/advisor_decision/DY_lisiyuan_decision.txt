@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_lisiyuan = {
+		major = yes
+		potential = {
+			advisor = lisiyuan
+		}
+		allow = {
+			advisor = lisiyuan
+		}
+		effect = {
+			remove_advisor = lisiyuan
+			define_general_lisiyuan = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

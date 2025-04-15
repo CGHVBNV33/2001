@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shiwansui = {
+		major = yes
+		potential = {
+			
+			advisor = shiwansui
+			
+		}
+		allow = {
+			advisor = shiwansui
+		}
+		effect = {
+			remove_advisor = shiwansui
+			define_general_shiwansui = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

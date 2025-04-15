@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_DY_yujin = {
+		major = yes
+		potential = {
+			
+			advisor = DY_yujin
+			
+		}
+		allow = {
+			advisor = DY_yujin
+		}
+		effect = {
+			remove_advisor = DY_yujin
+			define_general_DY_yujin = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

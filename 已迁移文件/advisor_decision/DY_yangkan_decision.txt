@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_yangkan = {
+		major = yes
+		potential = {
+			advisor = yangkan
+		}
+		allow = {
+			advisor = yangkan
+		}
+		effect = {
+			remove_advisor = yangkan
+			define_general_yangkan = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

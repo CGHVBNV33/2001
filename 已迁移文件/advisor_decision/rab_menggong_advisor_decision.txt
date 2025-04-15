@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_menggong = {
+		major = yes
+		potential = {
+			
+			advisor = menggong
+			
+		}
+		allow = {
+			advisor = menggong
+		}
+		effect = {
+			remove_advisor = menggong
+			define_general_menggong = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

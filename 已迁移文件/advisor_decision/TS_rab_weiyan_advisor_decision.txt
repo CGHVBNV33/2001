@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_weiyan = {
+		major = yes
+		potential = {
+			advisor = weiyan
+		}
+		allow = {
+			advisor = weiyan
+		}
+		effect = {
+			remove_advisor = weiyan
+			define_general_weiyan = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lanyu = {
+		major = yes
+		potential = {
+			
+			advisor = lanyu
+			
+		}
+		allow = {
+			advisor = lanyu
+		}
+		effect = {
+			remove_advisor = lanyu
+			define_general_lanyu = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

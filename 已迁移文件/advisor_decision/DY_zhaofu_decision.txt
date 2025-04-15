@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhaofu = {
+		major = yes
+		potential = {
+			
+			advisor = zhaofu
+			
+		}
+		allow = {
+			advisor = zhaofu
+		}
+		effect = {
+			remove_advisor = zhaofu
+			define_general_zhaofu = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

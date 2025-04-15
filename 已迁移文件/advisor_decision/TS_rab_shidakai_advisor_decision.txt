@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shidakai = {
+		major = yes
+		potential = {
+			
+			advisor = shidakai
+			
+		}
+		allow = {
+			advisor = shidakai
+		}
+		effect = {
+			remove_advisor = shidakai
+			define_general_shidakai = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

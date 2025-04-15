@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xinqiji = {
+		major = yes
+		potential = {
+			
+			advisor = xinqiji
+			
+		}
+		allow = {
+			advisor = xinqiji
+		}
+		effect = {
+			remove_advisor = xinqiji
+			define_general_xinqiji = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

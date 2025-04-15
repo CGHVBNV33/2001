@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_yaoyizhong = {
+		major = yes
+		potential = {
+			advisor = yaoyizhong
+		}
+		allow = {
+			advisor = yaoyizhong
+		}
+		effect = {
+			remove_advisor = yaoyizhong
+			define_general_yaoyizhong = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

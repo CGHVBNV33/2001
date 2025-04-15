@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuliang = {
+		major = yes
+		potential = {
+			
+			advisor = yuliang
+			
+		}
+		allow = {
+			advisor = yuliang
+		}
+		effect = {
+			remove_advisor = yuliang
+			define_general_yuliang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

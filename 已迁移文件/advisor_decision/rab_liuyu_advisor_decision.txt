@@ -1,0 +1,19 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuyu = {
+		major = yes
+		potential = {
+			advisor = liuyu
+		}
+		allow = {
+			advisor = liuyu
+		}
+		effect = {
+			remove_advisor = liuyu
+			define_general_liuyu = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

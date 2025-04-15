@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_zhudi = {
+		major = yes
+		potential = {
+			advisor = zhudi
+		}
+		allow = {
+			advisor = zhudi
+		}
+		effect = {
+			remove_advisor = zhudi
+			define_general_zhudi = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

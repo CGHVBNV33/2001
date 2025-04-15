@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangzhong = {
+		major = yes
+		potential = {
+			
+			advisor = yangzhong
+			
+		}
+		allow = {
+			advisor = yangzhong
+		}
+		effect = {
+			remove_advisor = yangzhong
+			define_general_yangzhong = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

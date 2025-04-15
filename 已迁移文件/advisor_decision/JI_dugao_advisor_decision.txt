@@ -1,0 +1,22 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dugao = {
+		major = yes
+		potential = {
+			
+			advisor = dugao
+			
+		}
+		allow = {
+			advisor = dugao
+		}
+		effect = {
+			remove_advisor = dugao
+			define_general_dugao = yes
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

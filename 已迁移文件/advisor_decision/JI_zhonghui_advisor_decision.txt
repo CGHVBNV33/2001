@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_zhonghui = {
+		major = yes
+		potential = {
+			advisor = zhonghui
+		}
+		allow = {
+			advisor = zhonghui
+		}
+		effect = {
+			remove_advisor = zhonghui
+			define_general_zhonghui = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

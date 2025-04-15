@@ -1,0 +1,26 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_weichanghui = {
+		major = yes
+		potential = {
+			advisor = weichanghui
+		}
+		allow = {
+			advisor = weichanghui
+		}
+		effect = {
+			remove_advisor = weichanghui
+			define_general = {
+				name = "韦昌辉｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_weichanghui
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

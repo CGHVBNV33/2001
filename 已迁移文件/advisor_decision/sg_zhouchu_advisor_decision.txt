@@ -1,0 +1,19 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_zhouchu = {
+		major = yes
+		potential = {
+			advisor = zhouchu
+		}
+		allow = {
+			advisor = zhouchu
+		}
+		effect = {
+			remove_advisor = zhouchu
+			define_general_zhouchu = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

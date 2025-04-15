@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wenqiao = {
+		major = yes
+		potential = {
+			
+			advisor = wenqiao
+			
+		}
+		allow = {
+			advisor = wenqiao
+		}
+		effect = {
+			remove_advisor = wenqiao
+			define_general_wenqiao = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
