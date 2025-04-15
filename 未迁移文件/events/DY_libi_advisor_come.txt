@@ -1,0 +1,69 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = libi_advisor_come
+
+#武将某种条件下出现
+#id = 1 : libi : 李弼｢【柱国】
+
+country_event = {
+	id = libi_advisor_come.1
+	title = "libi_advisor_come.1.t"
+	desc = "libi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时Ᏼ0
+	trigger = {
+	
+		is_year = 514
+		NOT = { is_year = 557 }
+		OR = {
+			AND = {
+				exists = NWY
+				NOT = { exists = CZH }
+				tag = NWY
+			}
+			AND = {
+				exists = CZH
+				NOT = { exists = NWY }
+				tag = CZH
+			}	
+			AND = {
+				NOT = { exists = NWY }
+				NOT = { exists = CZH }
+				owns = 704
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = libi_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = libi
+				name = "李弼｢【柱国】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李弼｢【柱国】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_libi
+			}
+		}
+	}
+}
+

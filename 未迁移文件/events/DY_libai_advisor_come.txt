@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = libai_advisor_come
+
+#武将某种条件下出现
+#id = 1 : libai : 李白｢【诗仙】
+
+country_event = {
+	id = libai_advisor_come.1
+	title = "libai_advisor_come.1.t"
+	desc = "libai_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 726	
+		NOT = { is_year = 762 }
+		OR = {
+			AND = {
+				exists = TNG
+				tag = TNG
+			}
+			AND = {
+				NOT = { exists = TNG }
+				owns = 5032 #Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = libai_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = libai
+				name = "李白｢【诗仙】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}
+

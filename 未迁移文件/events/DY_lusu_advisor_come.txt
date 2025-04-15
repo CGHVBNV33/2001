@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lusu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : lusu : 
+#
+country_event = {
+	id = lusu_advisor_come.1
+	title = "lusu_advisor_come.1.t"
+	desc = "lusu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 200
+		NOT = { is_year = 217 }
+		OR = {
+		   AND = {
+		      exists = SNC
+		      tag = SNC
+		   }		
+		   AND = {
+		      NOT = { exists = SNC}		
+		      owns = 3220
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lusu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lusu
+				name = "鲁肃【军师】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "鲁肃【军师】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_lusu
+			}
+		}
+	}
+}
+

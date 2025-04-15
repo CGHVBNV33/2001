@@ -1,0 +1,46 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liumuzhi_advisor_come
+
+#武将某种条件下出现
+#id = 1 : liumuzhi : 刘穆之｢【军师】
+
+country_event = {
+	id = liumuzhi_advisor_come.1
+	title = "liumuzhi_advisor_come.1.t"
+	desc = "liumuzhi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 380	
+		NOT = { is_year = 417 }
+		OR = {
+			AND = {
+				exists = JN1
+				tag = JN1
+			}
+			AND = {
+				NOT = { exists = JN1 }
+			    owns = 5050 #Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liumuzhi_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = liumuzhi
+				name = "刘穆之｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+}
+}

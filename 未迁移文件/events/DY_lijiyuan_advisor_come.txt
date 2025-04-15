@@ -1,0 +1,62 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lijiyuan_advisor_come
+
+#武将某种条件下出现
+#id = 1 : lijiyuan : 李继瑗｢【武将】
+
+country_event = {
+	id = lijiyuan_advisor_come.1
+	title = "lijiyuan_advisor_come.1.t"
+	desc = "lijiyuan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+	
+		is_year = 980
+		NOT = { is_year = 1010 }
+		OR = {
+			AND = {
+				exists = DNA
+				tag = DNA
+			}
+			AND = {
+				NOT = { exists = DNA }
+				owns = 4223 #13.0
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lijiyuan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lijiyuan
+				name = "李继瑗｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李继瑗｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lijiyuan
+			}
+		}
+	}
+}
+

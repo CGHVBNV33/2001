@@ -1,0 +1,777 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhanggongjin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhanggongjin : 张公谨｢【武将】
+#
+country_event = {
+	id = zhanggongjin_advisor_come.1
+	title = "zhanggongjin_advisor_come.1.t"
+	desc = "zhanggongjin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 632 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }	
+		      owns = 5120
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhanggongjin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhanggongjin
+				name = "张公谨｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张公谨｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhanggongjin #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = duanzhixuan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : duanzhixuan : 段志玄｢【武将】
+#
+country_event = {
+	id = duanzhixuan_advisor_come.1
+	title = "duanzhixuan_advisor_come.1.t"
+	desc = "duanzhixuan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 642 }
+		OR = {
+		   AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 3254
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = duanzhixuan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = duanzhixuan
+				name = "段志玄｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "段志玄｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_duanzhixuan #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gaoshilian_advisor_come
+
+#武将某种條件下出現
+#id = 1 : gaoshilian : 高士廉｢【文官】
+#
+country_event = {
+	id = gaoshilian_advisor_come.1
+	title = "gaoshilian_advisor_come.1.t"
+	desc = "gaoshilian_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 647 }
+		OR = {
+		   AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 690
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = gaoshilian_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = gaoshilian
+				name = "高士廉｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "高士廉｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = rab_leader_gaoshilian #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liuhongji_advisor_come
+
+#武将某种條件下出現
+#id = 1 : liuhongji : 刘弘基｢【武将】
+#
+country_event = {
+	id = liuhongji_advisor_come.1
+	title = "liuhongji_advisor_come.1.t"
+	desc = "liuhongji_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 618
+		NOT = { is_year = 650 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }	
+		      owns = 693
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liuhongji_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = liuhongji
+				name = "刘弘基｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "刘弘基｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liuhongji #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = qututong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : qututong : 屈突通｢【武将】
+#
+country_event = {
+	id = qututong_advisor_come.1
+	title = "qututong_advisor_come.1.t"
+	desc = "qututong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 618
+		NOT = { is_year = 628 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 700
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = qututong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = qututong
+				name = "屈突通｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "屈突通｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_qututong #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liuzhenghui_advisor_come
+
+#武将某种條件下出現
+#id = 1 : liuzhenghui : 刘政会｢【文官】
+#
+country_event = {
+	id = liuzhenghui_advisor_come.1
+	title = "liuzhenghui_advisor_come.1.t"
+	desc = "liuzhenghui_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 635 }
+		OR = {
+		     AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 687
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liuzhenghui_advisor_come.OPTA1
+			define_advisor = {
+				type = liuzhenghui
+				name = "刘政会｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = tangjian_advisor_come
+
+#武将某种條件下出現
+#id = 1 : tangjian : 唐俭｢【文官】
+#
+country_event = {
+	id = tangjian_advisor_come.1
+	title = "tangjian_advisor_come.1.t"
+	desc = "tangjian_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 618
+		NOT = { is_year = 656 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 693
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = tangjian_advisor_come.OPTA1
+			define_advisor = {
+				type = tangjian
+				name = "唐俭｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yinkaishan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : yinkaishan : 殷开山｢【武将】
+#
+country_event = {
+	id = yinkaishan_advisor_come.1
+	title = "yinkaishan_advisor_come.1.t"
+	desc = "yinkaishan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 618
+		NOT = { is_year = 622 }
+		OR = {
+		   AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 700
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yinkaishan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yinkaishan
+				name = "殷开山｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "殷开山｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 2
+				siege = 2
+				trait = rab_leader_yinkaishan #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = xiaoyu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : xiaoyu : 萧瑀｢【文官】
+#
+country_event = {
+	id = xiaoyu_advisor_come.1
+	title = "xiaoyu_advisor_come.1.t"
+	desc = "xiaoyu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 648 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+		      tag = TNG
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+		      owns = 5027
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = xiaoyu_advisor_come.OPTA1
+			define_advisor = {
+				type = xiaoyu
+				name = "萧瑀｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangsunshunde_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangsunshunde : 长孙顺德｢【文官】
+#
+country_event = {
+	id = zhangsunshunde_advisor_come.1
+	title = "zhangsunshunde_advisor_come.1.t"
+	desc = "zhangsunshunde_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 618
+		NOT = { is_year = 631 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 1836
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangsunshunde_advisor_come.OPTA1
+			define_advisor = {
+				type = zhangsunshunde
+				name = "长孙顺德｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yushinan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : yushinan : 虞世南｢【文官】
+#
+country_event = {
+	id = yushinan_advisor_come.1
+	title = "yushinan_advisor_come.1.t"
+	desc = "yushinan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 638 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 2148
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yushinan_advisor_come.OPTA1
+			define_advisor = {
+				type = yushinan
+				name = "虞世南｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangliang_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangliang : 张亮｢【文官】
+#
+country_event = {
+	id = zhangliang_advisor_come.1
+	title = "zhangliang_advisor_come.1.t"
+	desc = "zhangliang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 627
+		NOT = { is_year = 646 }
+		OR = {
+		    AND = {
+		      exists = TNG 
+			  NOT = { exists = LY2 }	
+		      tag = TNG
+		   }
+		    AND = {
+		      exists = LY2 
+			  NOT = { exists = TNG }	
+		      tag = LY2
+		   }		
+		   AND = {
+		      NOT = { exists = TNG }	
+			   NOT = { exists = LY2 }
+		      owns = 688
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangliang_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhangliang
+				name = "张亮｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张亮｢【武将】"
+				fire = 2
+				shock = 2
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangliang #将领的特质
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lb_advisor_come
+
+#武将某种条件下出现
+#id = 1 : lb : 李泌｢【军师】
+
+country_event = {
+	id = lb_advisor_come.1
+	title = "lb_advisor_come.1.t"
+	desc = "lb_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+	
+		is_year = 742
+		NOT = { is_year = 789 }
+		OR = {
+			AND = {
+				exists = TNG
+				tag = TNG
+			}
+			AND = {
+				NOT = { exists = TNG }
+				owns = 700
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lb_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = lb
+				name = "李泌｢【军师】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}
+

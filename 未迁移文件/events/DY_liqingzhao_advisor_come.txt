@@ -1,0 +1,46 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liqingzhao_advisor_come
+
+#武将某种条件下出现
+#id = 1 : liqingzhao : 李清照｢【才女】
+
+country_event = {
+	id = liqingzhao_advisor_come.1
+	title = "liqingzhao_advisor_come.1.t"
+	desc = "liqingzhao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1104	
+		NOT = { is_year = 1155 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				owns = 691
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liqingzhao_advisor_come.OPTA1
+			define_advisor = {
+				type = liqingzhao
+				name = "李清照｢【才女】"
+				female = yes
+				discount = yes	
+				skill = 3
+			}
+	}
+}

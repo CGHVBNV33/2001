@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liurenshan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : liurenshan : 
+#
+country_event = {
+	id = liurenshan_advisor_come.1
+	title = "liurenshan_advisor_come.1.t"
+	desc = "liurenshan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 935
+		NOT = { is_year = 957 }
+		OR = {
+		   AND = {
+		      exists = NT1
+		      tag = NT1
+		   }		
+		   AND = {
+		      NOT = { exists = NT1}		
+		      owns = 2141
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liurenshan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = liurenshan
+				name = "刘仁赡【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "刘仁赡【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_liurenshan
+			}
+		}
+	}
+}
+

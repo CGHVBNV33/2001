@@ -1,0 +1,159 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执၌Æ,Ḓv
+#id = 2 : 李弼｢【柱国】 毛၂ýÿცýÿၐ 
+
+namespace = libi_prov_move_events
+
+
+province_event = {
+	id =libi_prov_move_events.1
+	title = "libi_prov_move_events.NAME1"
+	desc = "libi_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份☒Q是否有ዥ9pov_xxxx
+	#只ﴐÿ‰有新谑XḒv武将，ኰ9ᴒV加入ዥ9pov_xxxx 謑N OR 其中
+		has_province_modifier = pov_libi
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "libi_prov_move_events.OPTA1"
+###########################李弼｢【柱国】pov_libi#################################		
+		if = {
+			limit = { has_province_modifier = pov_libi }
+			if = {
+			#决樐R在武将Ḓv寿㤄T
+				limit = { 
+					NOT = { is_year = 557  }
+				}
+			#假ᨒYዥ9国家Ḓv君㤒s特ဨýÿ符合
+			#就毛၂ýÿცýÿၐ	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+														
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_libi
+					owner = {
+						country_event = {
+							id =libi_prov_move_events.2
+						}
+					}
+				}
+					#假ᨒYዥ9国家Ḓv君㤒s特ဨýÿ不符合就到ႻýÿბýÿḒv省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+            
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_libi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_libi"
+							duration = -1
+						}					
+					}
+				}
+				#不是期⼒VḒv国家 直接移到别Ḓv省分
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_libi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_libi"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#ᨒY匐g年份☒�Ⴧýÿ此ቐᤉÿ在ዎ武将离世
+				limit = { 
+					is_year = 557
+				}	
+				remove_province_modifier = pov_libi		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	李弼｢【柱国】毛၂ýÿცýÿၐ
+#
+############################################################################
+
+
+country_event = {
+	id =libi_prov_move_events.2
+	title = "libi_prov_move_events.NAME2"
+	desc = "libi_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "libi_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type =libi
+					name = "李弼｢【柱国】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "李弼｢【柱国】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_libi
+			}
+		}
+	}
+}
+
+	
+	
