@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = kutaiba_advisor_come
+
+#武将某种条件下出现
+#id = 1 : kutaiba : 库泰拔·伊本·穆斯林｢【武将】
+
+country_event = {
+	id = kutaiba_advisor_come.1
+	title = "kutaiba_advisor_come.1.t"
+	desc = "kutaiba_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 695	
+		NOT = { is_year = 715 }
+		OR = {
+			AND = {
+				exists = UMA
+				tag = UMA
+			}
+			AND = {
+				NOT = { exists = UMA }
+				owns = 382
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = kutaiba_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = kutaiba
+				name = "库泰拔·伊本·穆斯林｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "库泰拔·伊本·穆斯林｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_kutaiba
+			}
+		}
+	}
+}
+

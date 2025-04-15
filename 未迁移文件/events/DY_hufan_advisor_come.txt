@@ -1,0 +1,69 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = hufan_advisor_come
+
+#武将某种条件下出现
+#id = 1 : hufan : 胡藩｢【武将】
+
+country_event = {
+	id = hufan_advisor_come.1
+	title = "hufan_advisor_come.1.t"
+	desc = "hufan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+	
+		is_year = 372
+		NOT = { is_year = 433 }
+		OR = {
+			AND = {
+				exists = JN1
+				NOT = { exists = LSO }
+				tag = JN1
+			}
+			AND = {
+				exists = LSO
+				NOT = { exists = JN1 }
+				tag = LSO
+			}	
+			AND = {
+				NOT = { exists = JN1 }
+				NOT = { exists = LSO }
+				owns = 684
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = hufan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = hufan
+				name = "胡藩｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "胡藩｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 5
+				siege = 2
+				trait = rab_leader_hufan
+			}
+		}
+	}
+}
+

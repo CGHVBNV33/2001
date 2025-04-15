@@ -1,0 +1,68 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = heba_advisor_come
+
+#武将某种條件下出現
+#id = 1 : heba : 
+#
+country_event = {
+	id = heba_advisor_come.1
+	title = "heba_advisor_come.1.t"
+	desc = "heba_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 386
+		NOT = { is_year = 404 }
+		OR = {
+		   AND = {
+		      exists = NWE
+			  NOT = { exists = DA1}
+		      tag = NWE
+		   }
+		    AND = {
+		      exists = DA1
+			  NOT = { exists = NWE}
+		      tag = DA1
+		   }		
+		   AND = {
+		      NOT = { exists = NWE}	
+			  NOT = { exists = DA1}
+		      owns = 697
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = heba_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = heba
+				name = "和跋｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "和跋｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 3
+				trait = rab_leader_heba
+			}
+		}
+	}
+}
+

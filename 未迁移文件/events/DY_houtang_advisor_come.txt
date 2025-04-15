@@ -1,0 +1,160 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gaoxingzhou_advisor_come
+
+#武将某种條件下出現
+#id = 1 : gaoxingzhou : 
+#
+country_event = {
+	id = gaoxingzhou_advisor_come.1
+	title = "gaoxingzhou_advisor_come.1.t"
+	desc = "gaoxingzhou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 914
+		NOT = { is_year = 952 }
+		OR = {
+		   AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 3339
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = gaoxingzhou_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = gaoxingzhou
+				name = "高行周｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "高行周｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_gaoxingzhou
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gaohuaide_advisor_come
+
+#武将某种條件下出現
+#id = 1 : gaohuaide : 
+#
+country_event = {
+	id = gaohuaide_advisor_come.1
+	title = "gaohuaide_advisor_come.1.t"
+	desc = "gaohuaide_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 951
+		NOT = { is_year = 982 }
+		OR = {
+		   AND = {
+		      exists = HZ1
+		      tag = HZ1
+		   }
+		   AND = {
+		      NOT = { exists = HZ1}	
+		      owns = 3339
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = gaohuaide_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = gaohuaide
+				name = "高怀德｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "高怀德｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_gaohuaide
+			}
+		}
+	}
+}

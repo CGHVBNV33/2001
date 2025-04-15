@@ -1,0 +1,391 @@
+
+namespace = gaohuaide_annex_cap_events
+
+
+country_event = {
+	id = gaohuaide_annex_cap_events.1
+	title = "gaohuaide_annex_cap_events.NAME1"
+	desc = "gaohuaide_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = gaohuaide
+				has_leader = "高怀德｢【武将】"
+			}
+		}
+	}	
+	option = {
+		name = "gaohuaide_annex_cap_events.OPTA1"
+		country_event = {
+			id = gaohuaide_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+#######################################################################
+country_event = {
+	id = gaohuaide_annex_cap_events.2
+	title = "gaohuaide_annex_cap_events.NAME2"
+	desc = "gaohuaide_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "gaohuaide_annex_cap_events.OPTA2"
+	
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = TKG
+				}	
+			}	
+		}
+		#ꤐs家㼉N登用，且君王or other条件符合
+		#Sဿfk将建立于新的国家
+		
+		if = {
+			limit = {
+					NOT = {
+			 			OR = {
+				    		tag = TKG
+				
+						}	
+					}
+					OR = {
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7		
+			     		}
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = gaohuaide
+						name = "高怀德｢【武将】"
+						discount = yes	
+						skill = 5
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "高怀德｢【武将】"
+					fire = 3
+					shock = 5
+					manuever = 3
+					siege = 2
+					trait = rab_leader_gaohuaide
+				}
+			}
+		}
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+		
+		if = {
+			limit = {
+			 NOT = {
+			 	OR = {
+					tag = TKG 
+				}	
+			}			
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+					
+					}
+				}
+			}
+				country_event = {
+					id = gaohuaide_annex_cap_events.3
+				}
+		}
+		if = {
+			limit = {
+			 	OR = {
+					tag = TKG
+					
+				}	
+			}
+			country_event = {
+				id = gaohuaide_annex_cap_events.3
+			}
+		}		
+	}
+
+	option = {
+		name = "gaohuaide_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+	}	
+
+	option = {
+		name = "gaohuaide_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_gaohuaide"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+######################武将拒绝的画㽢###################################
+
+country_event = {
+	id = gaohuaide_annex_cap_events.3
+	title = "gaohuaide_annex_cap_events.NAME3"
+	desc = "gaohuaide_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "gaohuaide_annex_cap_events.OPTA3"
+		country_event = {
+				id = gaohuaide_annex_cap_events.2
+		}
+	}
+}
+namespace = gaoxingzhou_annex_cap_events
+
+
+country_event = {
+	id = gaoxingzhou_annex_cap_events.1
+	title = "gaoxingzhou_annex_cap_events.NAME1"
+	desc = "gaoxingzhou_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = gaoxingzhou
+				has_leader = "高行周｢【武将】"
+			}
+		}
+	}	
+	option = {
+		name = "gaoxingzhou_annex_cap_events.OPTA1"
+		country_event = {
+			id = gaoxingzhou_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+#######################################################################
+country_event = {
+	id = gaoxingzhou_annex_cap_events.2
+	title = "gaoxingzhou_annex_cap_events.NAME2"
+	desc = "gaoxingzhou_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "gaoxingzhou_annex_cap_events.OPTA2"
+	
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = TKG
+				}	
+			}	
+		}
+		#ꤐs家㼉N登用，且君王or other条件符合
+		#Sဿfk将建立于新的国家
+		
+		if = {
+			limit = {
+					NOT = {
+			 			OR = {
+				    		tag = TKG
+				
+						}	
+					}
+					OR = {
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7		
+			     		}
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = gaoxingzhou
+						name = "高行周｢【武将】"
+						discount = yes	
+						skill = 5
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "高行周｢【武将】"
+					fire = 3
+					shock = 6
+					manuever = 3
+					siege = 3
+					trait = rab_leader_gaoxingzhou
+				}
+			}
+		}
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+		
+		if = {
+			limit = {
+			 NOT = {
+			 	OR = {
+					tag = TKG 
+				}	
+			}			
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+					
+					}
+				}
+			}
+				country_event = {
+					id = gaoxingzhou_annex_cap_events.3
+				}
+		}
+		if = {
+			limit = {
+			 	OR = {
+					tag = TKG
+					
+				}	
+			}
+			country_event = {
+				id = gaoxingzhou_annex_cap_events.3
+			}
+		}		
+	}
+
+	option = {
+		name = "gaoxingzhou_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+	}	
+
+	option = {
+		name = "gaoxingzhou_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_gaoxingzhou"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+######################武将拒绝的画㽢###################################
+
+country_event = {
+	id = gaoxingzhou_annex_cap_events.3
+	title = "gaoxingzhou_annex_cap_events.NAME3"
+	desc = "gaoxingzhou_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "gaoxingzhou_annex_cap_events.OPTA3"
+		country_event = {
+				id = gaoxingzhou_annex_cap_events.2
+		}
+	}
+}

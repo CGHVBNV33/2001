@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = hongchengchou_advisor_come
+
+#武将某种條件下出現
+#id = 1 : hongchengchou : 
+#
+country_event = {
+	id = hongchengchou_advisor_come.1
+	title = "hongchengchou_advisor_come.1.t"
+	desc = "hongchengchou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1616
+		NOT = { is_year = 1642 }
+		OR = {
+		   AND = {
+		      exists = MNG
+		      tag = MNG
+		   }		
+		   AND = {
+		      NOT = { exists = MNG}		
+		      owns = 3238
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = hongchengchou_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = hongchengchou
+				name = "洪承畴｢【督师】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "洪承畴｢【督师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_hongchengchou
+			}
+		}
+	}
+}
+

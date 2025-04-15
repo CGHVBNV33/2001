@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = guojia_advisor_come
+
+#武将某种条件下出现
+#id = 1 : guojia : 郭嘉｢【军师】
+
+country_event = {
+	id = guojia_advisor_come.1
+	title = "guojia_advisor_come.1.t"
+	desc = "guojia_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 190	
+		NOT = { is_year = 207 }
+		OR = {
+			AND = {
+				exists = TS2
+				tag = TS2
+			}
+			AND = {
+				NOT = { exists = TS2 }
+				owns = 5060 #Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = guojia_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = guojia
+				name = "郭嘉｢【军师】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}
+

@@ -1,0 +1,229 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = hongchengchou_prov_move_events
+
+
+province_event = {
+	id = hongchengchou_prov_move_events.1
+	title = "hongchengchou_prov_move_events.NAME1"
+	desc = "hongchengchou_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_hongchengchou
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "hongchengchou_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_hongchengchou }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1642  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_hongchengchou
+					owner = {
+						country_event = {
+							id = hongchengchou_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = JAP
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_hongchengchou
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_hongchengchou"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JAP
+							}
+						} 
+					}
+					remove_province_modifier = pov_hongchengchou
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_hongchengchou"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1642
+				}	
+				remove_province_modifier = pov_hongchengchou		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方??fk将】毛???#
+############################################################################
+
+
+country_event = {
+	id = hongchengchou_prov_move_events.2
+	title = "hongchengchou_prov_move_events.NAME2"
+	desc = "hongchengchou_prov_move_events.DESC2"
+	picture = NEW_EMPIRE_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "hongchengchou_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = hongchengchou
+					name = "洪承畴｢【督师】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "洪承畴｢【督师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_hongchengchou
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hongchengchou_prov_move_events.3
+	title = "hongchengchou_prov_move_events.NAME3"
+	desc = "hongchengchou_prov_move_events.DESC3"
+	picture = QNG1_EMPIRE_eventPicture				
+	
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = MNG
+		NOT = { is_year = 1643 }
+		OR = {
+			war_with = QNG
+			war_with = MCH
+		}
+		OR = {
+			advisor = chenxinjia
+			has_leader = "陈新甲｢"
+		}
+		OR = {
+			advisor = hongchengchou
+			has_leader = "洪承畴｢【督师】"
+		}
+		OR = {
+    QNG = {
+        war_score_against = {
+            who = ROOT
+            value = 15
+        }
+    }
+    MCH = {
+        war_score_against = {
+            who = ROOT
+            value = 15
+        }
+    }
+
+			}
+	}
+	
+	option = {
+		name = "hongchengchou_prov_move_events.OPTA3"
+		remove_advisor = hongchengchou
+		kill_leader = {
+		type = "洪承畴｢【督师】"
+		}
+		hidden_effect = {
+			QNG = {
+				country_event = { id = hongchengchou1_prov_move_events.2 }
+				set_country_flag = hongchengchou
+			}
+			MCH = {
+				country_event = { id = hongchengchou1_prov_move_events.2 }
+				set_country_flag = hongchengchou
+			}
+		}
+	}
+}

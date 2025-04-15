@@ -1,0 +1,187 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yangshihou_advisor_come
+
+#武将某种條件下出現
+#id = 1 : yangshihou : 
+#
+country_event = {
+	id = yangshihou_advisor_come.1
+	title = "yangshihou_advisor_come.1.t"
+	desc = "yangshihou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 882
+		NOT = { is_year = 915 }
+		OR = {
+		   AND = {
+		      exists = ZU1
+		      tag = ZU1
+		   }
+		   AND = {
+		      NOT = { exists = ZU1}	
+		      owns = 2144
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yangshihou_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yangshihou
+				name = "杨师厚｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "杨师厚｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yangshihou
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gecongzhou_advisor_come
+
+#武将某种條件下出現
+#id = 1 : gecongzhou : 
+#
+country_event = {
+	id = gecongzhou_advisor_come.1
+	title = "gecongzhou_advisor_come.1.t"
+	desc = "gecongzhou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 889
+		NOT = { is_year = 915 }
+		OR = {
+			OR = {
+		      tag = ZU1
+		      tag = X1A
+		      tag = X1W
+		   }
+		   AND = {
+		      NOT = { exists = ZU1}
+			  NOT = { exists = X1A}
+			  NOT = { exists = X1W}
+		      owns = 690
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = gecongzhou_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = gecongzhou
+				name = "葛从周｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "葛从周｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 4
+				trait = rab_leader_gecongzhou
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liuxun_advisor_come
+
+#武将某种條件下出現
+#id = 1 : liuxun : 
+#
+country_event = {
+	id = liuxun_advisor_come.1
+	title = "liuxun_advisor_come.1.t"
+	desc = "liuxun_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 903
+		NOT = { is_year = 921 }
+		OR = {
+		   AND = {
+		      exists = ZU1
+		      tag = ZU1
+		   }
+		   AND = {
+		      NOT = { exists = ZU1}	
+		      owns = 3254
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liuxun_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = liuxun
+				name = "刘鄩｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "刘鄩｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_liuxun
+			}
+		}
+	}
+}
+
+
+

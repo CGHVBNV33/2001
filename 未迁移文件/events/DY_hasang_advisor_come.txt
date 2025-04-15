@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = hasang_advisor_come
+
+#武将某种条件下出现
+#id = 1 : hasang : 哈桑·伊本·努尔曼｢【武将】
+
+country_event = {
+	id = hasang_advisor_come.1
+	title = "hasang_advisor_come.1.t"
+	desc = "hasang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 683	
+		NOT = { is_year = 700 }
+		OR = {
+			AND = {
+				exists = UMA
+				tag = UMA
+			}
+			AND = {
+				NOT = { exists = UMA }
+				owns = 382
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = hasang_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = hasang
+				name = "哈桑·伊本·努尔曼｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "哈桑·伊本·努尔曼｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_hasang
+			}
+		}
+	}
+}
+

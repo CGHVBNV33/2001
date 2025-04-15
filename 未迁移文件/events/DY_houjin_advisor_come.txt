@@ -1,0 +1,1092 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = huangfuyu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : huangfuyu : 
+#
+country_event = {
+	id = huangfuyu_advisor_come.1
+	title = "huangfuyu_advisor_come.1.t"
+	desc = "huangfuyu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 928
+		NOT = { is_year = 947 }
+		OR = {
+		  AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 3339
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = huangfuyu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = huangfuyu
+				name = "皇甫遇｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "皇甫遇｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_huangfuyu
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = murongyanchao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : murongyanchao : 
+#
+country_event = {
+	id = murongyanchao_advisor_come.1
+	title = "murongyanchao_advisor_come.1.t"
+	desc = "murongyanchao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 928
+		NOT = { is_year = 950 }
+		OR = {
+		   AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 3188
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = murongyanchao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = murongyanchao
+				name = "慕容彦超｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "慕容彦超｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 4
+				trait = rab_leader_murongyanchao
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shihongzhao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : shihongzhao : 
+#
+country_event = {
+	id = shihongzhao_advisor_come.1
+	title = "shihongzhao_advisor_come.1.t"
+	desc = "shihongzhao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 935
+		NOT = { is_year = 950 }
+		OR = {
+		   AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 3256
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shihongzhao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shihongzhao
+				name = "史弘肇｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "史弘肇｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 4
+				trait = rab_leader_shihongzhao
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = anshenqi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : anshenqi : 
+#
+country_event = {
+	id = anshenqi_advisor_come.1
+	title = "anshenqi_advisor_come.1.t"
+	desc = "anshenqi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 930
+		NOT = { is_year = 958 }
+		OR = {
+		   AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 693
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = anshenqi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = anshenqi
+				name = "安审琦｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "安审琦｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 2
+				siege = 3
+				trait = rab_leader_anshenqi
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangyanze_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangyanze : 
+#
+country_event = {
+	id = zhangyanze_advisor_come.1
+	title = "zhangyanze_advisor_come.1.t"
+	desc = "zhangyanze_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 936
+		NOT = { is_year = 947 }
+		OR = {
+		   AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 693
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangyanze_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhangyanze
+				name = "张彦泽｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张彦泽｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhangyanze
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhaoyanshou_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhaoyanshou : 
+#
+country_event = {
+	id = zhaoyanshou_advisor_come.1
+	title = "zhaoyanshou_advisor_come.1.t"
+	desc = "zhaoyanshou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 936
+		NOT = { is_year = 948 }
+		OR = {
+		   AND = {
+		      exists = LIO
+			NOT = { exists = KHT }
+		      tag = LIO
+		   }
+		    AND = {
+		      exists = KHT
+			NOT = { exists = LIO }
+		      tag = KHT
+		   }
+		   AND = {
+		      NOT = { exists = LIO}
+			  NOT = { exists = KHT }
+		      owns = 3339
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhaoyanshou_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhaoyanshou
+				name = "赵延寿｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "赵延寿｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhaoyanshou
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhaokuangzan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhaokuangzan : 
+#
+country_event = {
+	id = zhaokuangzan_advisor_come.1
+	title = "zhaokuangzan_advisor_come.1.t"
+	desc = "zhaokuangzan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 947
+		NOT = { is_year = 977 }
+		OR = {
+		    AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 1812
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhaokuangzan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhaokuangzan
+				name = "赵匡赞｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "赵匡赞｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 4
+				trait = rab_leader_zhaokuangzan
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = guquanwu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : guquanwu : 
+#
+country_event = {
+	id = guquanwu_advisor_come.1
+	title = "guquanwu_advisor_come.1.t"
+	desc = "guquanwu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 890
+		NOT = { is_year = 930 }
+		OR = {
+		   AND = {
+		      exists = WUY
+		      tag = WUY
+		   }
+		   AND = {
+		      NOT = { exists = WUY}	
+		      owns = 684
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = guquanwu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = guquanwu
+				name = "顾全武｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "顾全武｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_guquanwu
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lishenfu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : lishenfu : 
+#
+country_event = {
+	id = lishenfu_advisor_come.1
+	title = "lishenfu_advisor_come.1.t"
+	desc = "lishenfu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 883
+		NOT = { is_year = 905 }
+		OR = {
+		   AND = {
+		      exists = YW1
+		      tag = YW1
+		   }
+		   AND = {
+		      NOT = { exists = YW1}	
+		      owns = 685
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lishenfu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lishenfu
+				name = "李神福｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李神福｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_lishenfu
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = bianhao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : bianhao : 
+#
+country_event = {
+	id = bianhao_advisor_come.1
+	title = "bianhao_advisor_come.1.t"
+	desc = "bianhao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 937
+		NOT = { is_year = 956 }
+		OR = {
+		   AND = {
+		      exists = NT1
+		      tag = NT1
+		   }
+		   AND = {
+		      NOT = { exists = NT1}	
+		      owns = 1821
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = bianhao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = bianhao
+				name = "边镐｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "边镐｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_bianhao
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhaotingyin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhaotingyin : 
+#
+country_event = {
+	id = zhaotingyin_advisor_come.1
+	title = "zhaotingyin_advisor_come.1.t"
+	desc = "zhaotingyin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 931
+		NOT = { is_year = 950 }
+		OR = {
+		  AND = {
+		      exists = HS1
+			  NOT = { exists = MZX}
+		      tag = HS1
+		   }
+		   AND = {
+		      exists = MZX
+			  NOT = { exists = HS1}
+		      tag = MZX
+		   }
+		   AND = {
+		      NOT = { exists = HS1}
+			  NOT = { exists = MZX}
+		      owns = 688
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhaotingyin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhaotingyin
+				name = "赵廷隐｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "赵廷隐｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhaotingyin
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lirenhan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wangquanbin : 
+#
+country_event = {
+	id = lirenhan_advisor_come.1
+	title = "lirenhan_advisor_come.1.t"
+	desc = "lirenhan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 931
+		NOT = { is_year = 935 }
+		OR = {
+		   AND = {
+		      exists = HS1
+			  NOT = { exists = MZX}
+		      tag = HS1
+		   }
+		   AND = {
+		      exists = MZX
+			  NOT = { exists = HS1}
+		      tag = MZX
+		   }
+		   AND = {
+		      NOT = { exists = HS1}
+			  NOT = { exists = MZX}
+		      owns = 688
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lirenhan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lirenhan
+				name = "李仁罕｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李仁罕｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 3
+				trait = rab_leader_lirenhan
+			}
+		}
+	}
+}
+
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wangquanbin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wangquanbin : 
+#
+country_event = {
+	id = wangquanbin_advisor_come.1
+	title = "wangquanbin_advisor_come.1.t"
+	desc = "wangquanbin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 930
+		NOT = { is_year = 976 }
+		OR = {
+		   AND = {
+		      exists = HT1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HT1
+		   }
+		   AND = {
+		      exists = HJ1
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HT1}	
+			  NOT = { exists = SNG}	
+		      tag = HZ1
+		   }
+		   AND = {
+		      exists = SNG
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = HT1}	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = HT1}	
+			  NOT = { exists = HJ1}	
+			  NOT = { exists = HH1}	
+			  NOT = { exists = HZ1}	
+			  NOT = { exists = SNG}	
+		      owns = 693
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wangquanbin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wangquanbin
+				name = "王全斌｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "王全斌｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 4
+				trait = rab_leader_wangquanbin
+			}
+		}
+	}
+}
