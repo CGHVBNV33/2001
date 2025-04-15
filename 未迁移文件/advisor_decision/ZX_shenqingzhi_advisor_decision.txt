@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shenqingzhi = {
+		major = yes
+		potential = {
+			
+			advisor = shenqingzhi
+			
+		}
+		allow = {
+			advisor = shenqingzhi
+		}
+		effect = {
+			remove_advisor = shenqingzhi
+			define_general = {
+				name = "沈庆之｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_shenqingzhi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

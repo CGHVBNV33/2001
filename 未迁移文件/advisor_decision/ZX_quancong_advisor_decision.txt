@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_quancong = {
+		major = yes
+		potential = {
+			
+			advisor = quancong
+			
+		}
+		allow = {
+			advisor = quancong
+		}
+		effect = {
+			remove_advisor = quancong
+			define_general = {
+				name = "全琮｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_quancong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

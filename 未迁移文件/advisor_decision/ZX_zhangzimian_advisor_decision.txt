@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangzimian = {
+		major = yes
+		potential = {
+			
+			advisor = zhangzimian
+			
+		}
+		allow = {
+			advisor = zhangzimian
+		}
+		effect = {
+			remove_advisor = zhangzimian
+			define_general = {
+				name = "张自勉｢【将领】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangzimian
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

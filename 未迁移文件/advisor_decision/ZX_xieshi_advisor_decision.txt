@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xieshi = {
+		major = yes
+		potential = {
+			
+			advisor = xieshi
+			
+		}
+		allow = {
+			advisor = xieshi
+		}
+		effect = {
+			remove_advisor = xieshi
+			define_general = {
+				name = "谢石｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xieshi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

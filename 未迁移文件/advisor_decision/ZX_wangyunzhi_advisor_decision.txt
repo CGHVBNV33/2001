@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangyunzhi = {
+		major = yes
+		potential = {
+			
+			advisor = wangyunzhi
+			
+		}
+		allow = {
+			advisor = wangyunzhi
+		}
+		effect = {
+			remove_advisor = wangyunzhi
+			define_general = {
+				name = "王允之｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wangyunzhi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

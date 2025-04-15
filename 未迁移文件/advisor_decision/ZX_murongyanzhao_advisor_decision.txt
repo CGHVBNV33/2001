@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongyanzhao = {
+		major = yes
+		potential = {
+			
+			advisor = murongyanzhao
+			
+		}
+		allow = {
+			advisor = murongyanzhao
+		}
+		effect = {
+			remove_advisor = murongyanzhao
+			define_general = {
+				name = "慕容延钊｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_murongyanzhao
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

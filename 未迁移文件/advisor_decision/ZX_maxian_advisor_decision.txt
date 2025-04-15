@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_maxian = {
+		major = yes
+		potential = {
+			
+			advisor = maxian
+			
+		}
+		allow = {
+			advisor = maxian
+		}
+		effect = {
+			remove_advisor = maxian
+			define_general = {
+				name = "马贤"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_maxian
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

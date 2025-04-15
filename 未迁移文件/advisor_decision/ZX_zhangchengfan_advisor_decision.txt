@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangchengfan = {
+		major = yes
+		potential = {
+			
+			advisor = zhangchengfan
+			
+		}
+		allow = {
+			advisor = zhangchengfan
+		}
+		effect = {
+			remove_advisor = zhangchengfan
+			define_general = {
+				name = "张承范｢【将领】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangchengfan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

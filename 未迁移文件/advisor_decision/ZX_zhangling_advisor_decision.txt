@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangling = {
+		major = yes
+		potential = {
+			
+			advisor = zhangling
+			
+		}
+		allow = {
+			advisor = zhangling
+		}
+		effect = {
+			remove_advisor = zhangling
+			define_general = {
+				name = "张璘｢【骁将】"
+				fire = 3
+				shock = 5
+				manuever = 5
+				siege = 1
+				trait = rab_leader_zhangling
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

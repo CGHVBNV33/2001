@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xiahoushang = {
+		major = yes
+		potential = {
+			
+			advisor = xiahoushang
+			
+		}
+		allow = {
+			advisor = xiahoushang
+		}
+		effect = {
+			remove_advisor = xiahoushang
+			define_general = {
+				name = "夏侯尚｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xiahoushang
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

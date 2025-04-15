@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xieyan = {
+		major = yes
+		potential = {
+			
+			advisor = xieyan
+			
+		}
+		allow = {
+			advisor = xieyan
+		}
+		effect = {
+			remove_advisor = xieyan
+			define_general = {
+				name = "谢琰｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xieyan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

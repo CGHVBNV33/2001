@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_suntang = {
+		major = yes
+		potential = {
+			
+			advisor = suntang
+			
+		}
+		allow = {
+			advisor = suntang
+		}
+		effect = {
+			remove_advisor = suntang
+			define_general = {
+				name = "孙镗 ｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_suntang
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

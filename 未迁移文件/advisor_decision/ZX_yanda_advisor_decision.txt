@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yanda = {
+		major = yes
+		potential = {
+			
+			advisor = yanda
+			
+		}
+		allow = {
+			advisor = yanda
+		}
+		effect = {
+			remove_advisor = yanda
+			define_general = {
+				name = "燕达｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yanda
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_weiyuan = {
+		major = yes
+		potential = {
+			
+			advisor = weiyuan
+			
+		}
+		allow = {
+			advisor = weiyuan
+		}
+		effect = {
+			remove_advisor = weiyuan
+			define_general = {
+				name = "尉元｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_weiyuan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

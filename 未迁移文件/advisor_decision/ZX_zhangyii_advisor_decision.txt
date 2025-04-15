@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangyii = {
+		major = yes
+		potential = {
+			
+			advisor = zhangyii
+			
+		}
+		allow = {
+			advisor = zhangyii
+		}
+		effect = {
+			remove_advisor = zhangyii
+			define_general = {
+				name = "张嶷｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangyii
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

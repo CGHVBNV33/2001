@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_maxu = {
+		major = yes
+		potential = {
+			
+			advisor = maxu
+			
+		}
+		allow = {
+			advisor = maxu
+		}
+		effect = {
+			remove_advisor = maxu
+			define_general = {
+				name = "马续｢【太史令】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_maxu
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

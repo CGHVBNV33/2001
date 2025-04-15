@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_simafu = {
+		major = yes
+		potential = {
+			
+			advisor = simafu
+			
+		}
+		allow = {
+			advisor = simafu
+		}
+		effect = {
+			remove_advisor = simafu
+			define_general = {
+				name = "司马孚｢【安平王】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = rab_leader_simafu
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

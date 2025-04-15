@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mawensheng = {
+		major = yes
+		potential = {
+			
+			advisor = mawensheng
+			
+		}
+		allow = {
+			advisor = mawensheng
+		}
+		effect = {
+			remove_advisor = mawensheng
+			define_general = {
+				name = "马文升  ｢【名臣】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mawensheng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

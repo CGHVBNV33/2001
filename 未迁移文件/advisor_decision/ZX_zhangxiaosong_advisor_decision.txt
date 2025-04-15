@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangxiaosong = {
+		major = yes
+		potential = {
+			
+			advisor = zhangxiaosong
+			
+		}
+		allow = {
+			advisor = zhangxiaosong
+		}
+		effect = {
+			remove_advisor = zhangxiaosong
+			define_general = {
+				name = "张孝嵩｢【北庭都护】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 1
+				trait = rab_leader_zhangxiaosong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

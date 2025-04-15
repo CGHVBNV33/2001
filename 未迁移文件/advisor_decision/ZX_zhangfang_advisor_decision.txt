@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangfang = {
+		major = yes
+		potential = {
+			
+			advisor = zhangfang
+			
+		}
+		allow = {
+			advisor = zhangfang
+		}
+		effect = {
+			remove_advisor = zhangfang
+			define_general = {
+				name = "张方｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 4
+				trait = rab_leader_zhangfang
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

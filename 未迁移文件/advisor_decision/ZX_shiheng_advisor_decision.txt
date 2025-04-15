@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shiheng = {
+		major = yes
+		potential = {
+			
+			advisor = shiheng
+			
+		}
+		allow = {
+			advisor = shiheng
+		}
+		effect = {
+			remove_advisor = shiheng
+			define_general = {
+				name = "石亨 ｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_shiheng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

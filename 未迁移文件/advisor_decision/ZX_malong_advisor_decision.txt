@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_malong = {
+		major = yes
+		potential = {
+			
+			advisor = malong
+			
+		}
+		allow = {
+			advisor = malong
+		}
+		effect = {
+			remove_advisor = malong
+			define_general = {
+				name = "马隆｢【发明家】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_malong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

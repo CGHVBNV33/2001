@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_qiuyue = {
+		major = yes
+		potential = {
+			
+			advisor = qiuyue
+			
+		}
+		allow = {
+			advisor = qiuyue
+		}
+		effect = {
+			remove_advisor = qiuyue
+			define_general = {
+				name = "仇钺  ｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_qiuyue
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

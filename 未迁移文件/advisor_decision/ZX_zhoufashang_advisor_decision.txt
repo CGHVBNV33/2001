@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhoufashang = {
+		major = yes
+		potential = {
+			
+			advisor = zhoufashang
+			
+		}
+		allow = {
+			advisor = zhoufashang
+		}
+		effect = {
+			remove_advisor = zhoufashang
+			define_general = {
+				name = "周法尚｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhoufashang
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

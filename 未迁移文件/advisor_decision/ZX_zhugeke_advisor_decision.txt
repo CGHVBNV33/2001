@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhugeke = {
+		major = yes
+		potential = {
+			
+			advisor = zhugeke
+			
+		}
+		allow = {
+			advisor = zhugeke
+		}
+		effect = {
+			remove_advisor = zhugeke
+			define_general = {
+				name = "诸葛恪｢【丞相】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_zhugeke
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

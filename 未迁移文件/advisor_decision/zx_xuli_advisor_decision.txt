@@ -1,0 +1,36 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_xuhuizu = {
+		major = yes
+		potential = {
+			advisor = xuhuizu
+		}
+		allow = {
+			advisor = xuhuizu
+		}
+		effect = {
+			remove_advisor = xuhuizu
+			define_leader_xuhuizu = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	################################################	
+	advisors_convert_generals_lijinglong = {
+		major = yes
+		potential = {
+			advisor = lijinglong
+		}
+		allow = {
+			advisor = lijinglong
+		}
+		effect = {
+			remove_advisor = lijinglong
+			define_leader_lijinglong = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yanyingyuan = {
+		major = yes
+		potential = {
+			
+			advisor = yanyingyuan
+			
+		}
+		allow = {
+			advisor = yanyingyuan
+		}
+		effect = {
+			remove_advisor = yanyingyuan
+			define_general = {
+				name = "阎应元｢【武将】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yanyingyuan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

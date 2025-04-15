@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wuxi = {
+		major = yes
+		potential = {
+			
+			advisor = wuxi
+			
+		}
+		allow = {
+			advisor = wuxi
+		}
+		effect = {
+			remove_advisor = wuxi
+			define_general = {
+				name = "吴喜｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 4
+				trait = rab_leader_wuxi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

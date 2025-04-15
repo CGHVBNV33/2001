@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangji = {
+		major = yes
+		potential = {
+			
+			advisor = wangji
+			
+		}
+		allow = {
+			advisor = wangji
+		}
+		effect = {
+			remove_advisor = wangji
+			define_general = {
+				name = "王骥 ｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 4
+				trait = rab_leader_wangji
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

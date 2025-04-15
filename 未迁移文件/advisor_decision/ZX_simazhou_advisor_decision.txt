@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_simazhou = {
+		major = yes
+		potential = {
+			
+			advisor = simazhou
+			
+		}
+		allow = {
+			advisor = simazhou
+		}
+		effect = {
+			remove_advisor = simazhou
+			define_general = {
+				name = "司马伷｢【琅邪王】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_simazhou
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

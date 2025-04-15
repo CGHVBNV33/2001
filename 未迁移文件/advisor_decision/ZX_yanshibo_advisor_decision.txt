@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yanshibo = {
+		major = yes
+		potential = {
+			
+			advisor = yanshibo
+			
+		}
+		allow = {
+			advisor = yanshibo
+		}
+		effect = {
+			remove_advisor = yanshibo
+			define_general = {
+				name = "颜师伯｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 3
+				trait = rab_leader_yanshibo
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhoupanlong = {
+		major = yes
+		potential = {
+			
+			advisor = zhoupanlong
+			
+		}
+		allow = {
+			advisor = zhoupanlong
+		}
+		effect = {
+			remove_advisor = zhoupanlong
+			define_general = {
+				name = "周盘龙｢【龙骧将军】"
+				fire = 3
+				shock = 7
+				manuever = 5
+				siege = 2
+				trait = rab_leader_zhoupanlong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

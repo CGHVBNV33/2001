@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mazhong = {
+		major = yes
+		potential = {
+			
+			advisor = mazhong
+			
+		}
+		allow = {
+			advisor = mazhong
+		}
+		effect = {
+			remove_advisor = mazhong
+			define_general = {
+				name = "马忠｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mazhong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

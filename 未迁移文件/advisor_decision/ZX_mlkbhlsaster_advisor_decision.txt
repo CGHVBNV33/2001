@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mlkbhlsaster = {
+		major = yes
+		potential = {
+			
+			advisor = mlkbhlsaster
+			
+		}
+		allow = {
+			advisor = mlkbhlsaster
+		}
+		effect = {
+			remove_advisor = mlkbhlsaster
+			define_general = {
+				name = "马立克·阿什塔尔｢【猛将】"
+				fire = 5
+				shock = 7
+				manuever = 6
+				siege = 1
+				trait = rab_leader_mlkbhlsaster
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

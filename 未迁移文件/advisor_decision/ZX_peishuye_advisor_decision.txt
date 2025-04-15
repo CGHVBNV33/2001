@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_peishuye = {
+		major = yes
+		potential = {
+			
+			advisor = peishuye
+			
+		}
+		allow = {
+			advisor = peishuye
+		}
+		effect = {
+			remove_advisor = peishuye
+			define_general = {
+				name = "裴叔业｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_peishuye
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

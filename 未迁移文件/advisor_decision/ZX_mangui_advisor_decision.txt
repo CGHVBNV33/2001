@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mangui = {
+		major = yes
+		potential = {
+			
+			advisor = mangui
+			
+		}
+		allow = {
+			advisor = mangui
+		}
+		effect = {
+			remove_advisor = mangui
+			define_general = {
+				name = "满桂 ｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mangui
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

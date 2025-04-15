@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ruoganhui = {
+		major = yes
+		potential = {
+			
+			advisor = ruoganhui
+			
+		}
+		allow = {
+			advisor = ruoganhui
+		}
+		effect = {
+			remove_advisor = ruoganhui
+			define_general = {
+				name = "若干惠｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ruoganhui
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

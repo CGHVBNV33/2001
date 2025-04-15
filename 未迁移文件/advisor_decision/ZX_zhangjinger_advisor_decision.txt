@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangjinger = {
+		major = yes
+		potential = {
+			
+			advisor = zhangjinger
+			
+		}
+		allow = {
+			advisor = zhangjinger
+		}
+		effect = {
+			remove_advisor = zhangjinger
+			define_general = {
+				name = "张敬儿｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangjinger
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

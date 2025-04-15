@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangrui = {
+		major = yes
+		potential = {
+			
+			advisor = wangrui
+			
+		}
+		allow = {
+			advisor = wangrui
+		}
+		effect = {
+			remove_advisor = wangrui
+			define_general = {
+				name = "王濬｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangrui
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
