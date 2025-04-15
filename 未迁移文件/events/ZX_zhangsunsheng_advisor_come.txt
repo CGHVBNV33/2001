@@ -1,0 +1,59 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = zhangsunsheng_advisor_come
+#武将某种條件下出現
+#id = 1 : zhangsunsheng : yyyyy｢【zz】
+#
+country_event = {
+	id = zhangsunsheng_advisor_come.1
+	title = "zhangsunsheng_advisor_come.1.t"
+	desc = "zhangsunsheng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 580
+		NOT = {
+			is_year = 609
+		}
+		OR = {
+			AND = {
+				exists = CZH
+				NOT = {
+					exists = SUI
+				}
+				tag = CZH
+			}
+			AND = {
+				exists = SUI
+				NOT = {
+					exists = CZH
+				}
+				tag = SUI
+			}
+			AND = {
+				NOT = {
+					exists = CZH
+				}
+				NOT = {
+					exists = SUI
+				}
+				owns = 5059				#Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = zhangsunsheng_advisor_come.OPTA1
+		define_advisor = {
+			type = zhangsunsheng
+			name = "长孙晟｢【谋士】"
+			discount = yes
+			skill = 3
+		}
+	}
+}

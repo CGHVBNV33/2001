@@ -1,0 +1,66 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangling_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangling : 张璘｢【骁将】
+#
+country_event = {
+	id = zhangling_advisor_come.1
+	title = "zhangling_advisor_come.1.t"
+	desc = "zhangling_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 870
+		NOT = { is_year = 880 }
+		OR = {
+		   AND = {
+		      exists = TNG 
+		      tag = TNG
+		   }		
+		   AND = {
+		      NOT = { exists = TNG}		
+		      owns = 700
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangling_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhangling
+				name = "张璘｢【骁将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张璘｢【骁将】"
+				fire = 3
+				shock = 5
+				manuever = 5
+				siege = 1
+				trait = rab_leader_zhangling #将领的特质
+			}
+		}
+	}
+}
+
