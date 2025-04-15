@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = fengsheng_advisor_come
+
+#武将某种条件下出现
+#id = 1 : fengsheng : 冯胜｢【武将】
+
+country_event = {
+	id = fengsheng_advisor_come.1
+	title = "fengsheng_advisor_come.1.t"
+	desc = "fengsheng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1352	
+		NOT = { is_year = 1395 }
+		OR = {
+				tag = ZU2
+				tag = MNG
+			}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = fengsheng_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = fengsheng
+				name = "冯胜｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "冯胜｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_fengsheng
+			}
+		}
+	}
+}
+

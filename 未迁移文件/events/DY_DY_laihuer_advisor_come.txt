@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = laihuer_advisor_come
+
+#武将某种条件下出现
+#id = 1 : laihuer : 来护儿｢【武将】
+
+country_event = {
+	id = laihuer_advisor_come.1
+	title = "laihuer_advisor_come.1.t"
+	desc = "laihuer_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 583	
+		NOT = { is_year = 618 }
+		OR = {
+			AND = {
+			exists = SUI	
+			tag = SUI
+			}
+		    AND = {
+				NOT = { exists = SUI }
+				owns = 2498
+			}				
+	}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = laihuer_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = laihuer
+				name = "来护儿｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "来护儿｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 2
+				trait = dy_laihuer_personality
+			}
+		}
+	}
+}
+

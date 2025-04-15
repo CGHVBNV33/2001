@@ -1,0 +1,57 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = tianjianxiu_advisor_come
+
+#武将某种条件下出现
+#id = 1 : tianjianxiu : 田见秀｢【武将】
+
+country_event = {
+	id = tianjianxiu_advisor_come.1
+	title = "tianjianxiu_advisor_come.1.t"
+	desc = "tianjianxiu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1643	
+		NOT = { is_year = 1664 }
+		OR = {
+			AND = {
+				exists = CSH
+				tag = CSH
+			}
+	}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = tianjianxiu_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = tianjianxiu
+				name = "田见秀｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "田见秀｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 1
+				trait = rab_leader_tianjianxiu
+			}
+		}
+	}
+}
+

@@ -1,0 +1,63 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yeluhelu_advisor_come
+
+#武将某种条件下出现
+#id = 1 : yeluhelu : 耶律曷鲁｢【军师】
+
+country_event = {
+	id = yeluhelu_advisor_come.1
+	title = "yeluhelu_advisor_come.1.t"
+	desc = "yeluhelu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 907	
+		NOT = { is_year = 918 }
+		OR = {
+			AND = {
+			exists = KHT
+			NOT = {exists = LIO}	
+			tag = KHT
+			}
+			AND = {
+			exists = LIO
+			NOT = {exists = KHT}	
+			tag = LIO
+			}
+	}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yeluhelu_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yeluhelu
+				name = "耶律曷鲁｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "耶律曷鲁｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = JI_leader_Yeluhelu
+			}
+		}
+	}
+}
+

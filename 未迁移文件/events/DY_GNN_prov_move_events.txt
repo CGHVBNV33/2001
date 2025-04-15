@@ -1,0 +1,1544 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = yangpu_prov_move_events
+
+
+province_event = {
+	id = yangpu_prov_move_events.1
+	title = "yangpu_prov_move_events.NAME1"
+	desc = "yangpu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_yangpu
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "yangpu_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_yangpu }
+			if = {
+				limit = { 
+					NOT = { is_year = 1125 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_yangpu
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = yangpu_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_yangpu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yangpu"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1125
+				}	
+				remove_province_modifier = pov_yangpu		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = yangpu_prov_move_events.2
+	title = "yangpu_prov_move_events.NAME2"
+	desc = "yangpu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "yangpu_prov_move_events.OPTA2"
+				define_advisor = {
+					type = yangpu
+					name = "杨朴｢【军师】"
+					discount = yes	
+					skill = 3
+				}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = liue_prov_move_events
+
+
+province_event = {
+	id = liue_prov_move_events.1
+	title = "liue_prov_move_events.NAME1"
+	desc = "liue_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_liue
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "liue_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_liue }
+			if = {
+				limit = { 
+					NOT = { is_year = 1172 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_liue
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = liue_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_liue
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_liue"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1172
+				}	
+				remove_province_modifier = pov_liue		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = liue_prov_move_events.2
+	title = "liue_prov_move_events.NAME2"
+	desc = "liue_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "liue_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = liue
+					name = "刘萼｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "刘萼｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liue
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyangao_prov_move_events
+
+
+province_event = {
+	id = wanyangao_prov_move_events.1
+	title = "wanyangao_prov_move_events.NAME1"
+	desc = "wanyangao_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyangao
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyangao_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyangao }
+			if = {
+				limit = { 
+					NOT = { is_year = 1130 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyangao
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyangao_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyangao
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyangao"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1130
+				}	
+				remove_province_modifier = pov_wanyangao		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyangao_prov_move_events.2
+	title = "wanyangao_prov_move_events.NAME2"
+	desc = "wanyangao_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyangao_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyangao
+					name = "完颜杲｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜杲｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_wanyangao
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyansagai_prov_move_events
+
+
+province_event = {
+	id = wanyansagai_prov_move_events.1
+	title = "wanyansagai_prov_move_events.NAME1"
+	desc = "wanyansagai_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyansagai
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyansagai_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyansagai }
+			if = {
+				limit = { 
+					NOT = { is_year = 1121 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyansagai
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyansagai_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyansagai
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyansagai"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1121
+				}	
+				remove_province_modifier = pov_wanyansagai		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyansagai_prov_move_events.2
+	title = "wanyansagai_prov_move_events.NAME2"
+	desc = "wanyansagai_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyansagai_prov_move_events.OPTA2"
+				define_advisor = {
+					type = wanyansagai
+					name = "完颜撒改｢【文官】"
+					discount = yes	
+					skill = 3
+				}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanxibushi_prov_move_events
+
+
+province_event = {
+	id = wanyanxibushi_prov_move_events.1
+	title = "wanyanxibushi_prov_move_events.NAME1"
+	desc = "wanyanxibushi_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanxibushi
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanxibushi_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanxibushi }
+			if = {
+				limit = { 
+					NOT = { is_year = 1123 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanxibushi
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanxibushi_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanxibushi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanxibushi"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1123
+				}	
+				remove_province_modifier = pov_wanyanxibushi		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanxibushi_prov_move_events.2
+	title = "wanyanxibushi_prov_move_events.NAME2"
+	desc = "wanyanxibushi_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanxibushi_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanxibushi
+					name = "完颜习不失｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜习不失｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanxibushi
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanxiyin_prov_move_events
+
+
+province_event = {
+	id = wanyanxiyin_prov_move_events.1
+	title = "wanyanxiyin_prov_move_events.NAME1"
+	desc = "wanyanxiyin_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanxiyin
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanxiyin_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanxiyin }
+			if = {
+				limit = { 
+					NOT = { is_year = 1140 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanxiyin
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanxiyin_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanxiyin
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanxiyin"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1140
+				}	
+				remove_province_modifier = pov_wanyanxiyin		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanxiyin_prov_move_events.2
+	title = "wanyanxiyin_prov_move_events.NAME2"
+	desc = "wanyanxiyin_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanxiyin_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanxiyin
+					name = "完颜希尹｢【文官】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜希尹｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wanyanxiyin
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanzongfu_prov_move_events
+
+
+province_event = {
+	id = wanyanzongfu_prov_move_events.1
+	title = "wanyanzongfu_prov_move_events.NAME1"
+	desc = "wanyanzongfu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanzongfu
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanzongfu_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanzongfu }
+			if = {
+				limit = { 
+					NOT = { is_year = 1135 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanzongfu
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanzongfu_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanzongfu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanzongfu"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1135
+				}	
+				remove_province_modifier = pov_wanyanzongfu		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanzongfu_prov_move_events.2
+	title = "wanyanzongfu_prov_move_events.NAME2"
+	desc = "wanyanzongfu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanzongfu_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanzongfu
+					name = "完颜宗辅｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜宗辅｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wanyanzongfu
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanzonggan_prov_move_events
+
+
+province_event = {
+	id = wanyanzonggan_prov_move_events.1
+	title = "wanyanzonggan_prov_move_events.NAME1"
+	desc = "wanyanzonggan_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanzonggan
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanzonggan_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanzonggan }
+			if = {
+				limit = { 
+					NOT = { is_year = 1141 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanzonggan
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanzonggan_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanzonggan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanzonggan"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1141
+				}	
+				remove_province_modifier = pov_wanyanzonggan		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanzonggan_prov_move_events.2
+	title = "wanyanzonggan_prov_move_events.NAME2"
+	desc = "wanyanzonggan_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanzonggan_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanzonggan
+					name = "完颜宗干｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜宗干｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanzonggan
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanzongjun_prov_move_events
+
+
+province_event = {
+	id = wanyanzongjun_prov_move_events.1
+	title = "wanyanzongjun_prov_move_events.NAME1"
+	desc = "wanyanzongjun_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanzongjun
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanzongjun_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanzongjun }
+			if = {
+				limit = { 
+					NOT = { is_year = 1124 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanzongjun
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanzongjun_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanzongjun
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanzongjun"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1124
+				}	
+				remove_province_modifier = pov_wanyanzongjun		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanzongjun_prov_move_events.2
+	title = "wanyanzongjun_prov_move_events.NAME2"
+	desc = "wanyanzongjun_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanzongjun_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanzongjun
+					name = "完颜宗峻｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜宗峻｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanzongjun
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanzongpan_prov_move_events
+
+
+province_event = {
+	id = wanyanzongpan_prov_move_events.1
+	title = "wanyanzongpan_prov_move_events.NAME1"
+	desc = "wanyanzongpan_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanzongpan
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanzongpan_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanzongpan }
+			if = {
+				limit = { 
+					NOT = { is_year = 1139 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanzongpan
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanzongpan_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanzongpan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanzongpan"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1139
+				}	
+				remove_province_modifier = pov_wanyanzongpan		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanzongpan_prov_move_events.2
+	title = "wanyanzongpan_prov_move_events.NAME2"
+	desc = "wanyanzongpan_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanzongpan_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanzongpan
+					name = "完颜宗磐｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜宗磐｢【武将】"
+				fire = 2
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_wanyanzongpan
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = liliangfu_prov_move_events
+
+
+province_event = {
+	id = liliangfu_prov_move_events.1
+	title = "liliangfu_prov_move_events.NAME1"
+	desc = "liliangfu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_liliangfu
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "liliangfu_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_liliangfu }
+			if = {
+				limit = { 
+					NOT = { is_year = 1132 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_liliangfu
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = liliangfu_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_liliangfu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_liliangfu"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1132
+				}	
+				remove_province_modifier = pov_liliangfu		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = liliangfu_prov_move_events.2
+	title = "liliangfu_prov_move_events.NAME2"
+	desc = "liliangfu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "liliangfu_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = liliangfu
+					name = "李良辅｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "李良辅｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 1
+				siege = 2
+				trait = rab_leader_liliangfu
+			}
+		}
+	}
+}
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = wanyanyinzhuke_prov_move_events
+
+
+province_event = {
+	id = wanyanyinzhuke_prov_move_events.1
+	title = "wanyanyinzhuke_prov_move_events.NAME1"
+	desc = "wanyanyinzhuke_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wanyanyinzhuke
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wanyanyinzhuke_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wanyanyinzhuke }
+			if = {
+				limit = { 
+					NOT = { is_year = 1140 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = LIO
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wanyanyinzhuke
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = wanyanyinzhuke_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_wanyanyinzhuke
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wanyanyinzhuke"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1140
+				}	
+				remove_province_modifier = pov_wanyanyinzhuke		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = wanyanyinzhuke_prov_move_events.2
+	title = "wanyanyinzhuke_prov_move_events.NAME2"
+	desc = "wanyanyinzhuke_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wanyanyinzhuke_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wanyanyinzhuke
+					name = "完颜银朮可｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "完颜银朮可｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanyinzhuke
+			}
+		}
+	}
+}

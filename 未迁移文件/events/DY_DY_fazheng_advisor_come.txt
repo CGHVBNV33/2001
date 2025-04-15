@@ -1,0 +1,68 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = fazheng_advisor_come
+
+#武将某种条件下出现
+#id = 1 : fazheng : 法正｢【军师】
+
+country_event = {
+	id = fazheng_advisor_come.1
+	title = "fazheng_advisor_come.1.t"
+	desc = "fazheng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 211	
+		NOT = { is_year = 220 }
+		OR = {
+			AND = {
+				exists = LUP
+				NOT = { exists = SHU }
+				tag = LUP
+			}
+			AND = {
+				exists = SHU
+				NOT = { exists = LUP }
+				tag = SHU
+			}
+			AND = {
+				NOT = { exists = SHU }
+				NOT = { exists = LUP }
+				owns = 2171
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = fazheng_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = fazheng
+				name = "法正｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "法正｢【军师】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_fazheng				
+			}
+		}
+	}
+}
+

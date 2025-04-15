@@ -1,0 +1,63 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = xiaoaguzhi_advisor_come
+
+#武将某种条件下出现
+#id = 1 : xiaoaguzhi : 萧阿古只｢【武将】
+
+country_event = {
+	id = xiaoaguzhi_advisor_come.1
+	title = "xiaoaguzhi_advisor_come.1.t"
+	desc = "xiaoaguzhi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 907	
+		NOT = { is_year = 926 }
+		OR = {
+			AND = {
+			exists = KHT
+			NOT = {exists = LIO}	
+			tag = KHT
+			}
+			AND = {
+			exists = LIO
+			NOT = {exists = KHT}	
+			tag = LIO
+			}
+	}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = xiaoaguzhi_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = xiaoaguzhi
+				name = "萧阿古只｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "萧阿古只｢【武将】"
+				fire = 2
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xiaoaguzhi
+			}
+		}
+	}
+}
+

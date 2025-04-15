@@ -1,0 +1,45 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liuyang_advisor_come
+
+#武将某种条件下出现
+#id = 1 : liuyang : 刘扬｢【真定王】
+
+country_event = {
+	id = liuyang_advisor_come.1
+	title = "liuyang_advisor_come.1.t"
+	desc = "liuyang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	#出现时间
+	
+	is_triggered_only = yes
+	option = {
+		name = liuyang_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = liuyang
+				name = "刘扬｢【真定王】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "刘扬｢【真定王】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 1
+				#trait = rab_leader_liuyang
+			}
+		}
+	}
+}
+

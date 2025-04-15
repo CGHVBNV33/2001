@@ -1,0 +1,738 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yangpu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : yangpu : 杨朴｢【军师】
+#
+country_event = {
+	id = yangpu_advisor_come.1
+	title = "yangpu_advisor_come.1.t"
+	desc = "yangpu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1125 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4652
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yangpu_advisor_come.OPTA1
+			define_advisor = {
+				type = yangpu
+				name = "杨朴｢【军师】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liue_advisor_come
+
+#武将某种條件下出現
+#id = 1 : liue : 刘萼｢【武将】
+#
+country_event = {
+	id = liue_advisor_come.1
+	title = "liue_advisor_come.1.t"
+	desc = "liue_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1131
+		NOT = { is_year = 1172 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liue_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = liue
+				name = "刘萼｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "刘萼｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liue #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyangao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyangao : 完颜杲｢【武将】
+#
+country_event = {
+	id = wanyangao_advisor_come.1
+	title = "wanyangao_advisor_come.1.t"
+	desc = "wanyangao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1130 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyangao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyangao
+				name = "完颜杲｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜杲｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_wanyangao #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyansagai_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyansagai : 完颜撒改｢【丞相】
+#
+country_event = {
+	id = wanyansagai_advisor_come.1
+	title = "wanyansagai_advisor_come.1.t"
+	desc = "wanyansagai_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1121 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyansagai_advisor_come.OPTA1
+			define_advisor = {
+				type = wanyansagai
+				name = "完颜撒改｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanxibushi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanxibushi : 完颜习不失｢【武将】
+#
+country_event = {
+	id = wanyanxibushi_advisor_come.1
+	title = "wanyanxibushi_advisor_come.1.t"
+	desc = "wanyanxibushi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1123 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanxibushi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanxibushi
+				name = "完颜习不失｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜习不失｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanxibushi #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanxiyin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanxiyin : 完颜希尹｢【武将】
+#
+country_event = {
+	id = wanyanxiyin_advisor_come.1
+	title = "wanyanxiyin_advisor_come.1.t"
+	desc = "wanyanxiyin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1140 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanxiyin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanxiyin
+				name = "完颜希尹｢【文官】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜希尹｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wanyanxiyin #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanzongfu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanzongfu : 完颜宗辅｢【武将】
+#
+country_event = {
+	id = wanyanzongfu_advisor_come.1
+	title = "wanyanzongfu_advisor_come.1.t"
+	desc = "wanyanzongfu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1135 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanzongfu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanzongfu
+				name = "完颜宗辅｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜宗辅｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wanyanzongfu #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanzonggan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanzonggan : 完颜宗干｢【武将】
+#
+country_event = {
+	id = wanyanzonggan_advisor_come.1
+	title = "wanyanzonggan_advisor_come.1.t"
+	desc = "wanyanzonggan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1141 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanzonggan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanzonggan
+				name = "完颜宗干｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜宗干｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanzonggan #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanzongjun_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanzongjun : 完颜宗峻｢【武将】
+#
+country_event = {
+	id = wanyanzongjun_advisor_come.1
+	title = "wanyanzongjun_advisor_come.1.t"
+	desc = "wanyanzongjun_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1124 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanzongjun_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanzongjun
+				name = "完颜宗峻｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜宗峻｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanzongjun #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanzongpan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanzongpan : 完颜宗磐｢【武将】
+#
+country_event = {
+	id = wanyanzongpan_advisor_come.1
+	title = "wanyanzongpan_advisor_come.1.t"
+	desc = "wanyanzongpan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1139 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanzongpan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanzongpan
+				name = "完颜宗磐｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜宗磐｢【武将】"
+				fire = 2
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_wanyanzongpan #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanyinzhuke_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wanyanyinzhuke : 完颜银朮可｢【武将】
+#
+country_event = {
+	id = wanyanyinzhuke_advisor_come.1
+	title = "wanyanyinzhuke_advisor_come.1.t"
+	desc = "wanyanyinzhuke_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1140 }
+		OR = {
+		    AND = {
+		      exists = GNN 	
+		      tag = GNN
+		   }
+		   AND = {
+		      NOT = { exists = GNN }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanyinzhuke_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanyinzhuke
+				name = "完颜银朮可｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜银朮可｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wanyanyinzhuke #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liliangfu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : liliangfu : 李良辅｢【武将】
+#
+country_event = {
+	id = liliangfu_advisor_come.1
+	title = "liliangfu_advisor_come.1.t"
+	desc = "liliangfu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1117
+		NOT = { is_year = 1132 }
+		OR = {
+		    AND = {
+		      exists = XIA 	
+		      tag = XIA
+		   }
+		   AND = {
+		      NOT = { exists = XIA }	
+		      owns = 4200
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liliangfu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = liliangfu
+				name = "李良辅｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李良辅｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 1
+				siege = 2
+				trait = rab_leader_liliangfu #将领的特质
+			}
+		}
+	}
+}

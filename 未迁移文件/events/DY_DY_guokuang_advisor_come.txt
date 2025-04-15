@@ -1,0 +1,44 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = guokuang_advisor_come
+
+#武将某种条件下出现
+#id = 1 : guokuang : 郭况｢【外戚】
+
+country_event = {
+	id = guokuang_advisor_come.1
+	title = "guokuang_advisor_come.1.t"
+	desc = "guokuang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	#出现时间
+	is_triggered_only = yes
+	option = {
+		name = guokuang_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = guokuang
+				name = "郭况｢【外戚】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "郭况｢【外戚】"
+				fire = 1
+				shock = 1
+				manuever = 2
+				siege = 1
+				trait = rab_leader_guokuang
+			}
+		}
+	}
+}
+

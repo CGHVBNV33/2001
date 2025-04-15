@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = fuxiong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : fuxiong : 
+#
+country_event = {
+	id = fuxiong_advisor_come.1
+	title = "fuxiong_advisor_come.1.t"
+	desc = "fuxiong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 351
+		NOT = { is_year = 354 }
+		OR = {
+		   AND = {
+		      exists = QIN
+		      tag = QIN
+		   }		
+		   AND = {
+		      NOT = { exists = QIN}		
+		      owns = 5141
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = fuxiong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = fuxiong
+				name = "苻雄｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "苻雄｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_fuxiong
+			}
+		}
+	}
+}
+
