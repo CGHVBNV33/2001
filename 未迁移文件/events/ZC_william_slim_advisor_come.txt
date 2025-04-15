@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = william_slim_advisor_come
+
+country_event = {
+	id = william_slim_advisor_come.1
+	title = "william_slim_advisor_come.1.t"
+	desc = "william_slim_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1891
+		NOT = { is_year = 1970 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 239
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = william_slim_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = william_slim
+					name = "威廉 斯利姆【元帅】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "威廉 斯利姆【元帅】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = ZC_william_slim
+			}
+		}
+	}
+}

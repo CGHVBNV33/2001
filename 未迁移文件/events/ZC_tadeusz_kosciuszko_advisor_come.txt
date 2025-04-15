@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = tadeusz_kosciuszko_advisor_come
+
+country_event = {
+	id = tadeusz_kosciuszko_advisor_come.1
+	title = "tadeusz_kosciuszko_advisor_come.1.t"
+	desc = "tadeusz_kosciuszko_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1746
+		NOT = { is_year = 1817 }
+		OR = {
+			tag = PLC
+			AND = {
+				NOT = { exists = PLC }
+				owns = 270
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = tadeusz_kosciuszko_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = tadeusz_kosciuszko
+					name = "塔德乌什 柯斯丘什科【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "塔德乌什 柯斯丘什科【将领】"
+				fire = 3
+				shock = 4
+				manuever = 5
+				siege = 1
+				trait = ZC_tadeusz_kosciuszko
+			}
+		}
+	}
+}

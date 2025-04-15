@@ -1,0 +1,42 @@
+namespace = william_shakespeare_advisor_come
+
+country_event = {
+	id = william_shakespeare_advisor_come.1
+	title = "william_shakespeare_advisor_come.1.t"
+	desc = "william_shakespeare_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1564
+		NOT = { is_year = 1616 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 4372
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = william_shakespeare_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = william_shakespeare
+			name = "威廉 莎士比亚｢【文学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

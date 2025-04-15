@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = tuah_advisor_come
+
+country_event = {
+	id = tuah_advisor_come.1
+	title = "tuah_advisor_come.1.t"
+	desc = "tuah_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1444
+		NOT = { is_year = 1488 }
+		OR = {
+			tag = MLC
+			AND = {
+				NOT = { exists = MLC }
+				owns = 597
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = tuah_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = tuah
+				name = "汉都亚【提督】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

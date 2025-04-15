@@ -1,0 +1,31 @@
+namespace = st_benedict_advisor_come
+
+country_event = {
+	id = st_benedict_advisor_come.1
+	title = "st_benedict_advisor_come.1.t"
+	desc = "st_benedict_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 480
+		NOT = { is_year = 550 }
+		owns = 4732
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = st_benedict_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = st_benedict
+			name = "圣 本尼迪克特｢【修道士】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = vitus_bering_prov_move_events
+
+province_event = {
+	id = vitus_bering_prov_move_events.1
+	title = "vitus_bering_prov_move_events.NAME1"
+	desc = "vitus_bering_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_vitus_bering
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "vitus_bering_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_vitus_bering }
+			if = {
+				limit = { 
+					NOT = { is_year = 1741  }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_vitus_bering
+					owner = {
+						country_event = {
+							id = vitus_bering_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_vitus_bering
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_vitus_bering"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1741
+				}	
+				remove_province_modifier = pov_vitus_bering	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = vitus_bering_prov_move_events.2
+	title = "vitus_bering_prov_move_events.NAME2"
+	desc = "vitus_bering_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "vitus_bering_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = vitus_bering
+					name = "维图斯 白令｢【探险家】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "维图斯 白令｢【探险家】"
+				fire = 4
+				shock = 2
+				manuever = 5
+				siege = 0
+				trait = rab_leader_vitus_bering
+			}
+		}
+	}
+}

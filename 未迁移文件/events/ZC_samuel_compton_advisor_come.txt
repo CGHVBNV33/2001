@@ -1,0 +1,42 @@
+namespace = samuel_compton_advisor_come
+
+country_event = {
+	id = samuel_compton_advisor_come.1
+	title = "samuel_compton_advisor_come.1.t"
+	desc = "samuel_compton_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1753
+		NOT = { is_year = 1827 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 244
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = samuel_compton_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = samuel_compton
+			name = "塞缪尔 克朗普顿｢【发明家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

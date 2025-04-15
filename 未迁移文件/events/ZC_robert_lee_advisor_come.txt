@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = joseph_johnston_advisor_come
+
+country_event = {
+	id = joseph_johnston_advisor_come.1
+	title = "joseph_johnston_advisor_come.1.t"
+	desc = "joseph_johnston_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1807
+		NOT = { is_year = 1891 }
+		OR = {
+			tag = CSA
+			AND = {
+				NOT = { exists = CSA }
+				owns = 950
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = joseph_johnston_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = joseph_johnston
+					name = "约瑟夫 约翰斯顿｢【司令】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "约瑟夫 约翰斯顿｢【司令】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_joseph_johnston
+			}
+		}
+	}
+}

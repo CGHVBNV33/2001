@@ -1,0 +1,37 @@
+namespace = tacitus_advisor_come
+
+country_event = {
+	id = tacitus_advisor_come.1
+	title = "tacitus_advisor_come.1.t"
+	desc = "tacitus_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 56	
+		NOT = { is_year = 120 }
+		OR = {
+			tag = ROW
+			AND = {
+				NOT = { exists = ROM }
+				owns = 101
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = tacitus_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = tacitus
+			name = "普布利乌斯 塔西陀｢【历史学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

@@ -1,0 +1,117 @@
+namespace = samuel_compton_prov_move_events
+
+
+province_event = {
+	id = samuel_compton_prov_move_events.1
+	title = "samuel_compton_prov_move_events.NAME1"
+	desc = "samuel_compton_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_samuel_compton
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "samuel_compton_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_samuel_compton }
+			if = {
+			limit = { 
+				NOT = { is_year = 1827  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}
+					remove_province_modifier = pov_samuel_compton
+					owner = {
+						country_event = {
+							id = samuel_compton_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+							 	  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_samuel_compton
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_samuel_compton"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_samuel_compton
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_samuel_compton"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1827
+			}	
+				remove_province_modifier = pov_samuel_compton
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = samuel_compton_prov_move_events.2
+	title = "samuel_compton_prov_move_events.NAME2"
+	desc = "samuel_compton_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "samuel_compton_prov_move_events.OPTA2"
+		define_advisor = {
+			type = samuel_compton
+			name = "塞缪尔 克朗普顿｢【发明家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

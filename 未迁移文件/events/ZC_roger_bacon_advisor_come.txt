@@ -1,0 +1,42 @@
+namespace = roger_bacon_advisor_come
+
+country_event = {
+	id = roger_bacon_advisor_come.1
+	title = "roger_bacon_advisor_come.1.t"
+	desc = "roger_bacon_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1214
+		NOT = { is_year = 1293 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 4130
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = roger_bacon_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = roger_bacon
+			name = "罗杰 培根｢【奇异博士】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

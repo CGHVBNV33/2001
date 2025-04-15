@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = stefan_czarniecki_advisor_come
+
+country_event = {
+	id = stefan_czarniecki_advisor_come.1
+	title = "stefan_czarniecki_advisor_come.1.t"
+	desc = "stefan_czarniecki_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1599
+		NOT = { is_year = 1665 }
+		OR = {
+			tag = PLC
+			AND = {
+				NOT = { exists = PLC }
+				owns = 257
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = stefan_czarniecki_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = stefan_czarniecki
+					name = "斯特凡 恰尔涅茨基【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "斯特凡 恰尔涅茨基【将领】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 0
+				trait = ZC_stefan_czarniecki
+			}
+		}
+	}
+}

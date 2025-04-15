@@ -1,0 +1,42 @@
+namespace = rembrandt_van_rijn_advisor_come
+
+country_event = {
+	id = rembrandt_van_rijn_advisor_come.1
+	title = "rembrandt_van_rijn_advisor_come.1.t"
+	desc = "rembrandt_van_rijn_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1606
+		NOT = { is_year = 1669 }
+		OR = {
+			tag = NED
+			AND = {
+				NOT = { exists = NED }
+				tag = HOL
+			}
+			AND = {
+				NOT = { exists = NED }
+				NOT = { exists = HOL }
+				owns = 4383
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = rembrandt_van_rijn_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = rembrandt_van_rijn
+			name = "伦勃朗 凡 莱茵【画家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

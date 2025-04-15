@@ -1,0 +1,43 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = strabo_advisor_come
+
+#武将匐판】o下됐㠐è
+#id = 1 : strabo : 㼿虘奇｢【武将】
+#
+country_event = {
+	id = strabo_advisor_come.1
+	title = "strabo_advisor_come.1.t"
+	desc = "strabo_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 2
+		NOT = { is_year = 23 }
+		OR = {
+			tag = ROM
+			AND = {
+				NOT = { exists = ROM }
+				owns = 2299
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = strabo_advisor_come.OPTA1
+		define_advisor = {
+			type = strabo
+			name = "斯特拉波｢【地理学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

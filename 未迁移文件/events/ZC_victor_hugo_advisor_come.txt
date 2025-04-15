@@ -1,0 +1,41 @@
+namespace = victor_hugo_advisor_come
+
+country_event = {
+	id = victor_hugo_advisor_come.1
+	title = "victor_hugo_advisor_come.1.t"
+	desc = "victor_hugo_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1802
+		NOT = { is_year = 1885 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 4764
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = victor_hugo_advisor_come.OPTA1
+		define_advisor = {
+			type = victor_hugo
+			name = "维克多 雨果｢【作家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

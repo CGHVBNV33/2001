@@ -1,0 +1,25 @@
+namespace = thomas_munzer_advisor_come
+
+country_event = {
+	id = thomas_munzer_advisor_come.1
+	title = "thomas_munzer_advisor_come.1.t"
+	desc = "thomas_munzer_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = thomas_munzer_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = thomas_munzer
+			name = "托马斯 闵采尔【宗教改革家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

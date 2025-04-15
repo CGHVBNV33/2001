@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = samuel_champlain_advisor_come
+
+country_event = {
+	id = samuel_champlain_advisor_come.1
+	title = "samuel_champlain_advisor_come.1.t"
+	desc = "samuel_champlain_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1567
+		NOT = { is_year = 1635 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 4111
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = samuel_champlain_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = samuel_champlain
+					name = "萨缪尔 尚普兰｢【探险家】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_conquistador = {
+				name = "萨缪尔 尚普兰｢【探险家】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 4
+				trait = rab_leader_samuel_champlain
+			}
+		}
+	}
+}

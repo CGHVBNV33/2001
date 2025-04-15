@@ -1,0 +1,48 @@
+namespace = st_patrick_advisor_come
+
+country_event = {
+	id = st_patrick_advisor_come.1
+	title = "st_patrick_advisor_come.1.t"
+	desc = "st_patrick_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 385
+		NOT = { is_year = 461 }
+		OR = {
+			tag = IRE
+			AND = {
+				NOT = { exists = IRE }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = IRE }
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = IRE }
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 4369
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = st_patrick_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = st_patrick
+			name = "圣 帕特里克｢【巴德利爵】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

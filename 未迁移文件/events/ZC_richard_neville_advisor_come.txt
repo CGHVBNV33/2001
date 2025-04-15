@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = richard_neville_advisor_come
+
+country_event = {
+	id = richard_neville_advisor_come.1
+	title = "richard_neville_advisor_come.1.t"
+	desc = "richard_neville_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1428
+		NOT = { is_year = 1471 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 2340
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = richard_neville_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = richard_neville
+					name = "理查德 内维尔｢【沃里克伯爵】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "理查德 内维尔｢【沃里克伯爵】"
+				fire = 2
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = rab_leader_richard_neville
+			}
+		}
+	}
+}

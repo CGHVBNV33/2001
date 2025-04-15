@@ -1,0 +1,44 @@
+namespace = werner_siemens_advisor_come
+
+country_event = {
+	id = werner_siemens_advisor_come.1
+	title = "werner_siemens_advisor_come.1.t"
+	desc = "werner_siemens_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1816
+		NOT = { is_year = 1892 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { tag = GER }
+				tag = PRU
+			}
+			AND = {
+				NOT = { tag = GER }
+				NOT = { tag = PRU }
+				owns = 1758
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+			
+	option = {
+		name = werner_siemens_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = werner_siemens
+			name = "维尔纳 西门子【发明家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+
