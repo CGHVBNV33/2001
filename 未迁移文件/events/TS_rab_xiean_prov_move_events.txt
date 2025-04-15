@@ -1,0 +1,173 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 谢安｢【军师】毛遂自荐 
+
+namespace = xiean_prov_move_events
+
+
+province_event = {
+	id = xiean_prov_move_events.1
+	title = "xiean_prov_move_events.NAME1"
+	desc = "xiean_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_xiean
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "xiean_prov_move_events.OPTA1"
+###########################谢安｢【军师】pov_xiean#################################		
+		if = {
+			limit = { has_province_modifier = pov_xiean }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 264  }
+				}
+			#假如该国家的君王特质符合	
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch7
+									has_ruler_modifier = rb_ch8
+									has_ruler_modifier = rb_ch6					
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_xiean
+					owner = {
+						country_event = {
+							id = xiean_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch7
+									has_ruler_modifier = rb_ch8
+                                    has_ruler_modifier = rb_ch6
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_xiean
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_xiean"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+							owner = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+					}
+					remove_province_modifier = pov_xiean
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_xiean"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 264 
+				}	
+				remove_province_modifier = pov_xiean		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	谢安｢【军师】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id = xiean_prov_move_events.2
+	title = "xiean_prov_move_events.NAME2"
+	desc = "xiean_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "xiean_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = xiean
+					name = "谢安｢【军师】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "谢安｢【军师】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xiean
+			}
+		}
+	}
+}
+
+	
+	

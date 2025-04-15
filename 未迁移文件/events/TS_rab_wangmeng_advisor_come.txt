@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wangmeng_advisor_come
+
+#武将某种条件下出现
+#id = 1 : wangmeng : 王猛 ｢【军师】
+
+country_event = {
+	id = wangmeng_advisor_come.1
+	title = "wangmeng_advisor_come.1.t"
+	desc = "wangmeng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 340	
+		NOT = { is_year = 375 }
+		OR = {
+			AND = {
+				exists = QIN
+				tag = QIN
+			}
+			AND = {
+				NOT = { exists = QIN }
+				owns = 3185
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wangmeng_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wangmeng
+				name = "王猛 ｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "王猛 ｢【军师】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangmeng
+			}
+		}
+	}
+}
+

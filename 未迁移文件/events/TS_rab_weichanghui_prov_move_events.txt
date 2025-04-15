@@ -1,0 +1,140 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+#id = 1 : 主系統-幕後執行的
+#id = 2 : 韦昌辉｢【武将】毛遂自薦 
+namespace = weichanghui_prov_move_events
+province_event = {
+	id = weichanghui_prov_move_events.1
+	title = "weichanghui_prov_move_events.NAME1"
+	desc = "weichanghui_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	hidden = yes
+	trigger = {
+		#偵測省份內是否有該pov_xxxx
+		#只要有新增的武將，記得加入該pov_xxxx 於 OR 其中
+		has_province_modifier = pov_weichanghui
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "weichanghui_prov_move_events.OPTA1"
+		###########################韦昌辉｢【武将】pov_weichanghui#################################		
+		if = {
+			limit = {
+				has_province_modifier = pov_weichanghui
+			}
+			if = {
+				#決定在野武將的壽命
+				limit = {
+					is_year = 1848
+					NOT = {
+						is_year = 1889
+					}
+				}
+				#假如該國家的君王特質符合	
+				#就毛遂自薦	
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								tag = QNG
+							}
+							OR = {
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch3
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch6
+								has_ruler_modifier = ra_ch9
+								has_ruler_modifier = rb_ch8
+							}
+						}
+					}
+					remove_province_modifier = pov_weichanghui
+					owner = {
+						country_event = {
+							id = weichanghui_prov_move_events.2
+						}
+					}
+				}
+				#假如該國家的君王特質不符合就到鄰近的省分						
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								tag = QNG
+							}
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch9
+									has_ruler_modifier = rb_ch8
+								}
+							}
+						}
+					}
+					remove_province_modifier = pov_weichanghui
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_weichanghui"
+							duration = -1
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = {
+							tag = QNG
+						}
+					}
+					remove_province_modifier = pov_weichanghui
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_weichanghui"
+							duration = -1
+						}
+					}
+				}
+			}
+			if = {
+				#如果年份超過此限，在野武將離世
+				limit = {
+					is_year = 1889
+				}
+				remove_province_modifier = pov_weichanghui
+			}
+		}
+	}
+}
+
+############################################################################
+#	韦昌辉｢【武将】毛遂自薦
+#
+############################################################################
+country_event = {
+	id = weichanghui_prov_move_events.2
+	title = "weichanghui_prov_move_events.NAME2"
+	desc = "weichanghui_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "weichanghui_prov_move_events.OPTA2"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_weichanghui = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_weichanghui = yes
+		}
+	}
+}

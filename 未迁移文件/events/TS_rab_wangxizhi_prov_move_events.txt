@@ -1,0 +1,145 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 王羲之 ｢【艺术家】 毛遂自荐 
+
+namespace = wangxizhi_prov_move_events
+
+
+province_event = {
+	id =wangxizhi_prov_move_events.1
+	title = "wangxizhi_prov_move_events.NAME1"
+	desc = "wangxizhi_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_wangxizhi
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "wangxizhi_prov_move_events.OPTA1"
+###########################王羲之 ｢【艺术家】pov_wangxizhi#################################		
+		if = {
+			limit = { has_province_modifier = pov_wangxizhi }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 365  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+														
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_wangxizhi
+					owner = {
+						country_event = {
+							id =wangxizhi_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+            
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_wangxizhi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wangxizhi"
+							duration = -1
+						}					
+					}
+				}
+				#不是期待的国家 直接移到别的省分
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_wangxizhi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wangxizhi"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 365 
+				}	
+				remove_province_modifier = pov_wangxizhi		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	王羲之 ｢【艺术家】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id =wangxizhi_prov_move_events.2
+	title = "wangxizhi_prov_move_events.NAME2"
+	desc = "wangxizhi_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wangxizhi_prov_move_events.OPTA2"
+		define_advisor = {
+			type = wangxizhi
+			name = "王羲之 ｢【艺术家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+
+	
+	

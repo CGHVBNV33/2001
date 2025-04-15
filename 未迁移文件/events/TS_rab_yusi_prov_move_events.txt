@@ -1,0 +1,156 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後執行的
+#id = 2 : 虞汜｢【武将】毛遂自薦 
+
+namespace = yusi_prov_move_events
+
+
+province_event = {
+	id = yusi_prov_move_events.1
+	title = "yusi_prov_move_events.NAME1"
+	desc = "yusi_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+	#只要有新增的武將，記得加入該pov_xxxx 於 OR 其中
+		has_province_modifier = pov_yusi
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "yusi_prov_move_events.OPTA1"
+###########################虞汜｢【武将】pov_yusi#################################		
+		if = {
+			limit = { has_province_modifier = pov_yusi }
+			if = {
+			#決定在野武將的壽命
+			limit = { 
+				NOT = { is_year = 262  }
+			}
+			#假如該國家的君王特質符合	
+			#就毛遂自薦	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								has_ruler_modifier = ra_ch1
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch1
+								has_ruler_modifier = rb_ch2
+								has_ruler_modifier = rb_ch3
+								has_ruler_modifier = rb_ch4
+													
+							}
+						}
+					}
+					remove_province_modifier = pov_yusi
+					owner = {
+						country_event = {
+							id = yusi_prov_move_events.2
+						}
+					}
+				}
+				#假如該國家的君王特質不符合就到鄰近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch1
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch3
+									has_ruler_modifier = rb_ch4
+                
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_yusi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yusi"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_yusi
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yusi"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			#如果年份超過此限，在野武將離世
+			limit = { 
+				is_year = 262 
+			}	
+				remove_province_modifier = pov_yusi		
+			}
+		}
+	}	
+}	
+############################################################################
+#	虞汜｢【武将】毛遂自薦
+#
+############################################################################
+
+
+country_event = {
+	id = yusi_prov_move_events.2
+	title = "yusi_prov_move_events.NAME2"
+	desc = "yusi_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "yusi_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = yusi
+					name = "虞汜｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "虞汜｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = JI_leader_Yusi
+			}
+		}
+	}
+}
+
+	
+	

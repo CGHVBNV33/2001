@@ -1,0 +1,64 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yimojuci_advisor_come
+
+#武将某种条件下出现
+#id = 1 : yimojuci : 伊墨居次｢【军师】
+
+country_event = {
+	id = yimojuci_advisor_come.1
+	title = "yimojuci_advisor_come.1.t"
+	desc = "yimojuci_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 2	
+		NOT = { is_year = 24 }
+		OR = {
+			AND = {
+				exists = XIO
+				tag = XIO
+			}
+			AND = {
+				NOT = { exists = XIO }
+				owns = 721
+			}			
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yimojuci_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yimojuci
+				name = "伊墨居次｢【军师】"
+				female = yes
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "伊墨居次｢【军师】"
+				female = yes
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_yimojuci
+			}
+			
+		}
+	}
+}
+

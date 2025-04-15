@@ -1,0 +1,173 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 随育｢【武将】毛遂自荐 
+
+namespace = suiyu_prov_move_events
+
+
+province_event = {
+	id = suiyu_prov_move_events.1
+	title = "suiyu_prov_move_events.NAME1"
+	desc = "suiyu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_suiyu
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "suiyu_prov_move_events.OPTA1"
+###########################随育｢【武将】pov_suiyu#################################		
+		if = {
+			limit = { has_province_modifier = pov_suiyu }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 50  }
+				}
+			#假如该国家的君王特质符合	
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+								OR = {
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch3
+									has_ruler_modifier = rb_ch4					
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_suiyu
+					owner = {
+						country_event = {
+							id = suiyu_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch2
+								    has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch3
+                                    has_ruler_modifier = rb_ch4
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_suiyu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_suiyu"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+							owner = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+					}
+					remove_province_modifier = pov_suiyu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_suiyu"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 50 
+				}	
+				remove_province_modifier = pov_suiyu		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	随育｢【武将】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id = suiyu_prov_move_events.2
+	title = "suiyu_prov_move_events.NAME2"
+	desc = "suiyu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "suiyu_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = suiyu
+					name = "随育｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "随育｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 2
+				siege = 2
+				trait = JI_leader_Suiyu
+			}
+		}
+	}
+}
+
+	
+	

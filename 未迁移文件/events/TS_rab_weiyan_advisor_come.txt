@@ -1,0 +1,49 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = weiyan_advisor_come
+
+#武将某种条件下出现
+#id = 1 : weiyan : 魏延｢【武将】
+
+country_event = {
+	id = weiyan_advisor_come.1
+	title = "weiyan_advisor_come.1.t"
+	desc = "weiyan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 205	
+		NOT = { is_year = 234 }
+		OR = {
+			AND = {
+				exists = SHU 
+				tag = SHU
+			}
+			AND = {
+				NOT = { exists = SHU }
+				owns = 675
+			}			
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = "weiyan_advisor_come.OPTA1"
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor_weiyan = yes
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general_weiyan = yes
+		}
+	}
+}
+

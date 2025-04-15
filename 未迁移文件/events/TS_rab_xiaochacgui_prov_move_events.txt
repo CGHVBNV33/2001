@@ -1,0 +1,158 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後執行的
+#id = 2 : 萧朝贵｢【武将】毛遂自薦 
+
+namespace = xiaochacgui_prov_move_events
+
+
+province_event = {
+	id = xiaochacgui_prov_move_events.1
+	title = "xiaochacgui_prov_move_events.NAME1"
+	desc = "xiaochacgui_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+	#只要有新增的武將，記得加入該pov_xxxx 於 OR 其中
+		has_province_modifier = pov_xiaochacgui
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "xiaochacgui_prov_move_events.OPTA1"
+###########################萧朝贵｢【武将】pov_xiaochacgui#################################		
+		if = {
+			limit = { has_province_modifier = pov_xiaochacgui }
+			if = {
+			#決定在野武將的壽命
+				limit = { 
+					is_year = 1852
+					NOT = { is_year = 1878  }
+				}
+			#假如該國家的君王特質符合	
+			#就毛遂自薦	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = QNG }
+							OR = {
+							
+							has_ruler_modifier = ra_ch1
+							has_ruler_modifier = ra_ch2
+							has_ruler_modifier = ra_ch4
+							has_ruler_modifier = ra_ch8
+							has_ruler_modifier = rb_ch4
+							has_ruler_modifier = rb_ch5
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_xiaochacgui
+					owner = {
+						country_event = {
+							id = xiaochacgui_prov_move_events.2
+						}
+					}
+				}
+					#假如該國家的君王特質不符合就到鄰近的省分						
+				if = { 
+					limit = { 
+						NOT = { owner = { tag = QNG } }
+						NOT = { 
+							owner = { 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch5
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_xiaochacgui
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_xiaochacgui"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = QNG }
+					}
+					remove_province_modifier = pov_xiaochacgui
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_xiaochacgui"
+							duration = -1
+						}					
+					}
+				}				
+			}
+			if = {
+			#如果年份超過此限，在野武將離世
+				limit = { 
+					is_year = 1878 
+				}	
+				remove_province_modifier = pov_xiaochacgui		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	萧朝贵｢【武将】毛遂自薦
+#
+############################################################################
+
+
+country_event = {
+	id = xiaochacgui_prov_move_events.2
+	title = "xiaochacgui_prov_move_events.NAME2"
+	desc = "xiaochacgui_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "xiaochacgui_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = xiaochacgui
+					name = "萧朝贵｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "萧朝贵｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 1
+				trait = rab_leader_xiaochacgui
+			}
+		}
+	}
+}
+
+	
+	

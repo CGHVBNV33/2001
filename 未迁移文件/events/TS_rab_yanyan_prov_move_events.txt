@@ -1,0 +1,158 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後執行的
+#id = 2 : 严颜｢【武将】毛遂自薦 
+
+namespace = yanyan_prov_move_events
+
+
+province_event = {
+	id = yanyan_prov_move_events.1
+	title = "yanyan_prov_move_events.NAME1"
+	desc = "yanyan_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+	#只要有新增的武將，記得加入該pov_xxxx 於 OR 其中
+		has_province_modifier = pov_yanyan
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "yanyan_prov_move_events.OPTA1"
+###########################严颜｢【武将】pov_yanyan#################################		
+		if = {
+			limit = { has_province_modifier = pov_yanyan }
+			if = {
+			#決定在野武將的壽命
+				limit = { 
+					NOT = { is_year = 240  }
+				}
+			#假如該國家的君王特質符合	
+			#就毛遂自薦	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = rb_ch1
+									has_ruler_modifier = rb_ch3
+									has_ruler_modifier = rb_ch5
+																					
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_yanyan
+					owner = {
+						country_event = {
+							id = yanyan_prov_move_events.2
+						}
+					}
+				}
+					#假如該國家的君王特質不符合就到鄰近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = rb_ch1
+									has_ruler_modifier = rb_ch3
+									has_ruler_modifier = rb_ch5
+            
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_yanyan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yanyan"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_yanyan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yanyan"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超過此限，在野武將離世
+				limit = { 
+					is_year = 240 
+				}	
+				remove_province_modifier = pov_yanyan		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	严颜｢【武将】毛遂自薦
+#
+############################################################################
+
+
+country_event = {
+	id = yanyan_prov_move_events.2
+	title = "yanyan_prov_move_events.NAME2"
+	desc = "yanyan_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "yanyan_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = yanyan
+					name = "严颜｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "严颜｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yanyan
+			}
+		}
+	}
+}
+
+	
+	

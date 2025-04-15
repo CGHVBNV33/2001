@@ -1,0 +1,52 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shen_tu_jian_advisor_come
+
+#武将某种条件下出现
+#id = 1 : shen_tu_jian : 申屠建｢【武将】
+#
+country_event = {
+	id = shen_tu_jian_advisor_come.1
+	title = "shen_tu_jian_advisor_come.1.t"
+	desc = "shen_tu_jian_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+	#出现时间
+	trigger = {
+		is_year = 5
+		NOT = { is_year = 26 }
+		tag = WX2
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shen_tu_jian_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shen_tu_jian
+				name = "申屠建｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "申屠建｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_shen_tu_jian
+			}
+		}
+	}
+}
+

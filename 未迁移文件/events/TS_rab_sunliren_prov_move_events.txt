@@ -1,0 +1,136 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後執行的
+#id = 2 : 孙立人｢【将军】 毛遂自薦 
+
+namespace = sunliren_prov_move_events
+
+
+province_event = {
+	id = sunliren_prov_move_events.1
+	title = "sunliren_prov_move_events.NAME1"
+	desc = "sunliren_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+	#只要有新增的武將，記得加入該pov_xxxx 於 OR 其中
+		has_province_modifier = pov_sunliren
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "sunliren_prov_move_events.OPTA1"
+###########################孙立人｢【将军】pov_sunliren#################################		
+		if = {
+			limit = { has_province_modifier = pov_sunliren }
+			if = {
+			#決定在野武將的壽命
+				limit = { 
+					NOT = { is_year = 1980  }
+				}
+			#假如該國家的君王特質符合	
+			#就毛遂自薦	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+									tag = JA3
+								}	
+							} 
+						}
+					}
+			
+					remove_province_modifier = pov_sunliren
+					owner = {
+						country_event = {
+							id = sunliren_prov_move_events.2
+						}
+					}
+				}
+					#假如該國家的君王特質不符合就到鄰近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JAP 
+								tag = JA1
+								tag = JA3
+							}	
+						}
+					}
+					remove_province_modifier = pov_sunliren
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_sunliren"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+			#如果年份超過此限，在野武將離世
+				limit = { 
+					is_year = 1980 
+				}	
+				remove_province_modifier = pov_sunliren		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	孙立人｢【将军】毛遂自薦
+#
+############################################################################
+
+
+country_event = {
+	id = sunliren_prov_move_events.2
+	title = "sunliren_prov_move_events.NAME2"
+	desc = "sunliren_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "sunliren_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = sunliren
+					name = "孙立人｢【将军】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "孙立人｢【将军】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_shunliren
+			}
+		}
+	}
+}
+
+	
+	
