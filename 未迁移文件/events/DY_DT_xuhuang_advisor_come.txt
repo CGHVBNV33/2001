@@ -1,0 +1,68 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = xuhuang_advisor_come
+
+#武将某种条件下出现
+#id = 1 : xuhuang : 徐晃｢【武将】
+
+country_event = {
+	id = xuhuang_advisor_come.1
+	title = "xuhuang_advisor_come.1.t"
+	desc = "xuhuang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 191
+		NOT = { is_year = 227 }
+		OR = {
+			AND = {
+				exists = BBS
+				tag = BBS
+				NOT = { is_year = 197 }
+			}
+			AND = {
+				exists = TS2
+				tag = TS2
+				is_year = 197
+			}
+			AND = {
+				NOT = { exists = BBS }
+				NOT = { exists = TS2 }
+				owns = 3179
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = xuhuang_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = xuhuang
+				name = "徐晃｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "徐晃｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_wuziliangjing_1
+			}
+		}
+	}
+}
+

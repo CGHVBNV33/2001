@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhanghe_advisor_come
+
+#武将某种条件下出现
+#id = 1 : zhanghe : 张郃｢【武将】
+
+country_event = {
+	id = zhanghe_advisor_come.1
+	title = "zhanghe_advisor_come.1.t"
+	desc = "zhanghe_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 192	
+		NOT = { is_year = 231 }
+		OR = {
+			AND = {
+				exists = UAN
+				tag = UAN
+			}
+			AND = {
+				NOT = { exists = UAN }
+				owns = 5043 #Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhanghe_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhanghe
+				name = "张郃｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张郃｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 6
+				siege = 2
+				trait = rab_leader_zhanghe
+			}
+		}
+	}
+}
+

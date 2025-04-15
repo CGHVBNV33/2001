@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = chenbaxian_advisor_come
+
+#武将某种条件下出现
+#id = 1 : chenbaxian : 陈霸先｢【武将】
+
+country_event = {
+	id = chenbaxian_advisor_come.1
+	title = "chenbaxian_advisor_come.1.t"
+	desc = "chenbaxian_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 523	
+		NOT = { is_year = 557 }
+		OR = {
+			AND = {
+				exists = LN1
+				tag = LN1
+			}
+			AND = {
+				NOT = { exists = LN1 }
+				owns = 684
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = chenbaxian_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = chenbaxian
+				name = "陈霸先｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "陈霸先｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_chenbaxian
+			}
+		}
+	}
+}
+

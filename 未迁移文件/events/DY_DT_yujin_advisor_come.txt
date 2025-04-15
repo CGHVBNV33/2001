@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yujin_advisor_come
+
+#武将某种条件下出现
+#id = 1 : yujin : 于禁｢【武将】
+
+country_event = {
+	id = yujin_advisor_come.1
+	title = "yujin_advisor_come.1.t"
+	desc = "yujin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 192	
+		NOT = { is_year = 221 }
+		OR = {
+			AND = {
+				exists = TS2
+				tag = TS2
+			}
+			AND = {
+				NOT = { exists = TS2 }
+				owns = 3168
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yujin_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yujin
+				name = "于禁｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "于禁｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 2
+				siege = 3
+				trait = rab_leader_yujin
+			}
+		}
+	}
+}
+

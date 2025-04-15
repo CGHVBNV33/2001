@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = dingfeng_advisor_come
+
+#武将某种條件下出現
+#id = 1 : dingfeng : 
+#
+country_event = {
+	id = dingfeng_advisor_come.1
+	title = "dingfeng_advisor_come.1.t"
+	desc = "dingfeng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 208
+		NOT = { is_year = 271 }
+		OR = {
+		   AND = {
+		      exists = SNC
+		      tag = SNC
+		   }		
+		   AND = {
+		      NOT = { exists = SNC}		
+		      owns = 686
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = dingfeng_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = dingfeng
+				name = "丁奉【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "丁奉【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_dingfeng
+			}
+		}
+	}
+}
+

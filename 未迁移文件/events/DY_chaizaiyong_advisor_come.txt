@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = chaizaiyong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : chaizaiyong : 
+#
+country_event = {
+	id = chaizaiyong_advisor_come.1
+	title = "chaizaiyong_advisor_come.1.t"
+	desc = "chaizaiyong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 902
+		NOT = { is_year = 935 }
+		OR = {
+		   AND = {
+		      exists = YW1
+		      tag = YW1
+		   }		
+		   AND = {
+		      NOT = { exists = YW1}		
+		      owns = 2175
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = chaizaiyong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = chaizaiyong
+				name = "柴再用【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "柴再用【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_chaizaiyong
+			}
+		}
+	}
+}
+

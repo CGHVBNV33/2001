@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = chenxinjia_advisor_come
+
+#武将某种條件下出現
+#id = 1 : chenxinjia : 
+#
+country_event = {
+	id = chenxinjia_advisor_come.1
+	title = "chenxinjia_advisor_come.1.t"
+	desc = "chenxinjia_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1628
+		NOT = { is_year = 1642 }
+		OR = {
+		   AND = {
+		      exists = MNG
+		      tag = MNG
+		   }		
+		   AND = {
+		      NOT = { exists = MNG}		
+		      owns = 680
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = chenxinjia_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = chenxinjia
+				name = "陈新甲｢"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "陈新甲｢"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = rab_leader_chenxinjia
+			}
+		}
+	}
+}
+

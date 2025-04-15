@@ -1,0 +1,300 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = chenguojun_advisor_come
+
+#武将某种條件下出現
+#id = 1 : chenguojun : 
+#
+country_event = {
+	id = chenguojun_advisor_come.1
+	title = "chenguojun_advisor_come.1.t"
+	desc = "chenguojun_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1257
+		NOT = { is_year = 1300 }
+		OR = {
+		   AND = {
+		      exists = DAI
+		      tag = DAI
+		   }
+		   AND = {
+		      NOT = { exists = DAI}	
+		      owns = 2372
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = chenguojun_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = chenguojun
+				name = "陈国峻｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "陈国峻｢【武将】"
+				fire = 6
+				shock = 6
+				manuever = 4
+				siege = 3
+				trait = rab_leader_chenguojun
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = likuigong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : likuigong : 
+#
+country_event = {
+	id = likuigong_advisor_come.1
+	title = "likuigong_advisor_come.1.t"
+	desc = "likuigong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 980
+		NOT = { is_year = 1005 }
+		OR = {
+		   AND = {
+		      exists = DAI
+		      tag = DAI
+		   }
+		   AND = {
+		      NOT = { exists = DAI}	
+		      owns = 613
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = likuigong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = likuigong
+				name = "黎魁供｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "黎魁供｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_likuigong
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = ruanyoujin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : ruanyoujin : 
+#
+country_event = {
+	id = ruanyoujin_advisor_come.1
+	title = "ruanyoujin_advisor_come.1.t"
+	desc = "ruanyoujin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1630
+		NOT = { is_year = 1666 }
+		OR = {
+		   AND = {
+		      exists = ANN
+		      tag = ANN
+		   }
+		   AND = {
+		      NOT = { exists = ANN}	
+		      owns = 610
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = ruanyoujin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = ruanyoujin
+				name = "阮有进｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "阮有进｢【武将】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ruanyoujin
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = ruanyouyi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : ruanyouyi : 
+#
+country_event = {
+	id = ruanyouyi_advisor_come.1
+	title = "ruanyouyi_advisor_come.1.t"
+	desc = "ruanyouyi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1630
+		NOT = { is_year = 1682 }
+		OR = {
+		   AND = {
+		      exists = ANN
+		      tag = ANN
+		   }
+		   AND = {
+		      NOT = { exists = ANN}	
+		      owns = 610
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = ruanyouyi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = ruanyouyi
+				name = "阮有镒｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "阮有镒｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ruanyouyi
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = ruanwenzhang_advisor_come
+
+#武将某种條件下出現
+#id = 1 : ruanwenzhang : 
+#
+country_event = {
+	id = ruanwenzhang_advisor_come.1
+	title = "ruanwenzhang_advisor_come.1.t"
+	desc = "ruanwenzhang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1780
+		NOT = { is_year = 1820 }
+		OR = {
+		   AND = {
+		      exists = DAI
+		      tag = DAI
+		   }
+		   AND = {
+		      NOT = { exists = DAI}	
+		      owns = 1022
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = ruanwenzhang_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = ruanwenzhang
+				name = "阮文张｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "阮文张｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 4
+				trait = rab_leader_ruanwenzhang
+			}
+		}
+	}
+}
