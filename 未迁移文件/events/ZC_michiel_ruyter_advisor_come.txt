@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = michiel_ruyter_advisor_come
+
+country_event = {
+	id = michiel_ruyter_advisor_come.1
+	title = "michiel_ruyter_advisor_come.1.t"
+	desc = "michiel_ruyter_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1607
+		NOT = { is_year = 1676 }
+		OR = {
+			tag = NED
+			AND = {
+				NOT = { exists = NED }
+				tag = HOL
+			}
+			AND = {
+				NOT = { exists = NED }
+				NOT = { exists = HOL }
+				owns = 96
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = michiel_ruyter_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = michiel_ruyter
+					name = "米希尔 鲁伊特【恐怖者】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+				name = "米希尔 鲁伊特【恐怖者】"
+				fire = 6
+				shock = 5
+				manuever = 6
+				siege = 0
+				trait = ZC_michiel_ruyter
+			}
+		}
+	}
+}

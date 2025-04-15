@@ -1,0 +1,43 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = livius_advisor_come
+
+#武将匐판】o下됐㠐è
+#id = 1 : livius : 㼿虘奇｢【武将】
+#
+country_event = {
+	id = livius_advisor_come.1
+	title = "livius_advisor_come.1.t"
+	desc = "livius_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 2
+		NOT = { is_year = 17 }
+		OR = {
+			tag = ROM
+			AND = {
+				NOT = { exists = ROM }
+				owns = 4729
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = livius_advisor_come.OPTA1
+		define_advisor = {
+			type = livius
+			name = "提图斯 李维｢【历史学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
