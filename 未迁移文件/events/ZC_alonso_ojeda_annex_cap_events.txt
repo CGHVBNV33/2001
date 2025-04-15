@@ -1,0 +1,163 @@
+namespace = alonso_ojeda_annex_cap_events
+
+country_event = {
+	id = alonso_ojeda_annex_cap_events.1
+	title = "alonso_ojeda_annex_cap_events.NAME1"
+	desc = "alonso_ojeda_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = alonso_ojeda
+				has_leader = "阿隆索 奥赫达｢【征服者】"
+			}
+		}
+	}	
+	option = {
+		name = "alonso_ojeda_annex_cap_events.OPTA1"
+		country_event = {
+			id = alonso_ojeda_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = alonso_ojeda_annex_cap_events.2
+	title = "alonso_ojeda_annex_cap_events.NAME2"
+	desc = "alonso_ojeda_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = "alonso_ojeda_annex_cap_events.OPTA2"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 
+				NOT = {
+					OR = {
+						ruler_has_personality = well_connected_personality
+						ruler_has_personality = well_advised_personality
+						ruler_has_personality = silver_tongue_personality
+						ruler_has_personality = fierce_negotiator_personality
+						ruler_has_personality = humane_personality
+						ruler_has_personality = benevolent_personality
+					}
+				}
+			}
+			modifier = {
+				factor = 0 
+				tag = JAP
+			}	
+		}
+
+		if = {
+			limit = {
+			 	NOT = { tag = JAP }
+				OR = {
+					ruler_has_personality = well_connected_personality
+					ruler_has_personality = well_advised_personality
+					ruler_has_personality = silver_tongue_personality
+					ruler_has_personality = fierce_negotiator_personality
+					ruler_has_personality = humane_personality
+					ruler_has_personality = benevolent_personality
+				}
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = alonso_ojeda
+						name = "阿隆索 奥赫达｢【征服者】"
+						discount = yes	
+						skill = 3
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_conquistador = {
+					name = "阿隆索 奥赫达｢【征服者】"
+					fire = 3
+					shock = 4
+					manuever = 4
+					siege = 0
+					trait = rab_leader_alonso_ojeda
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { tag = JAP }
+				NOT = {
+					OR = {
+						ruler_has_personality = well_connected_personality
+						ruler_has_personality = well_advised_personality
+						ruler_has_personality = silver_tongue_personality
+						ruler_has_personality = fierce_negotiator_personality
+						ruler_has_personality = humane_personality
+						ruler_has_personality = benevolent_personality
+					}
+				}
+			}
+				country_event = {
+					id = alonso_ojeda_annex_cap_events.3
+				}
+		}
+		if = {
+			limit = {
+				tag = JAP
+			}
+			country_event = {
+				id = alonso_ojeda_annex_cap_events.3
+			}
+		}		
+	}
+
+	option = {
+		name = "alonso_ojeda_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+	}	
+		
+	option = {
+		name = "alonso_ojeda_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_alonso_ojeda"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+######################武将樑?㼚剉画㽢####################################
+
+country_event = {
+	id = alonso_ojeda_annex_cap_events.3
+	title = "alonso_ojeda_annex_cap_events.NAME3"
+	desc = "alonso_ojeda_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "alonso_ojeda_annex_cap_events.OPTA3"
+		country_event = {
+				id = alonso_ojeda_annex_cap_events.2
+		}
+	}
+}

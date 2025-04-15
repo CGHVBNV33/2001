@@ -1,0 +1,131 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = alexandre_bigdumas_prov_move_events
+
+province_event = {
+	id = alexandre_bigdumas_prov_move_events.1
+	title = "alexandre_bigdumas_prov_move_events.NAME1"
+	desc = "alexandre_bigdumas_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_alexandre_bigdumas
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "alexandre_bigdumas_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_alexandre_bigdumas }
+			if = {
+				limit = { 
+					NOT = { is_year = 1870  }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+									tag = JA3
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_alexandre_bigdumas
+					owner = {
+						country_event = {
+							id = alexandre_bigdumas_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+								tag = JA3
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_alexandre_bigdumas
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_alexandre_bigdumas"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1870
+				}	
+				remove_province_modifier = pov_alexandre_bigdumas	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = alexandre_bigdumas_prov_move_events.2
+	title = "alexandre_bigdumas_prov_move_events.NAME2"
+	desc = "alexandre_bigdumas_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "alexandre_bigdumas_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = alexandre_bigdumas
+					name = "亚历山大 仲马｢【大仲马】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "亚历山大 仲马｢【大仲马】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_alexandre_bigdumas
+			}
+		}
+	}
+}

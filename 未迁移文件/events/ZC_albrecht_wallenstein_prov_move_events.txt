@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = albrecht_wallenstein_prov_move_events
+
+province_event = {
+	id = albrecht_wallenstein_prov_move_events.1
+	title = "albrecht_wallenstein_prov_move_events.NAME1"
+	desc = "albrecht_wallenstein_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_albrecht_wallenstein
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "albrecht_wallenstein_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_albrecht_wallenstein }
+			if = {
+				limit = { 
+					NOT = { is_year = 1634  }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_albrecht_wallenstein
+					owner = {
+						country_event = {
+							id = albrecht_wallenstein_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_albrecht_wallenstein
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_albrecht_wallenstein"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1634
+				}	
+				remove_province_modifier = pov_albrecht_wallenstein	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = albrecht_wallenstein_prov_move_events.2
+	title = "albrecht_wallenstein_prov_move_events.NAME2"
+	desc = "albrecht_wallenstein_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "albrecht_wallenstein_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = albrecht_wallenstein
+					name = "阿尔布雷希特 华伦斯坦｢【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "阿尔布雷希特 华伦斯坦｢【将领】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_albrecht_wallenstein
+			}
+		}
+	}
+}

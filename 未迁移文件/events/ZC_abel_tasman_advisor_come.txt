@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = abel_tasman_advisor_come
+
+country_event = {
+	id = abel_tasman_advisor_come.1
+	title = "abel_tasman_advisor_come.1.t"
+	desc = "abel_tasman_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1603
+		NOT = { is_year = 1659 }
+		OR = {
+			tag = NED
+			AND = {
+				NOT = { exists = NED }
+				tag = HOL
+			}
+			AND = {
+				NOT = { exists = NED }
+				NOT = { exists = HOL }
+				owns = 4382
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = abel_tasman_advisor_come.OPTA1
+		
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = abel_tasman
+						name = "阿贝尔 塔斯曼【探险家】"
+						discount = yes	
+						skill = 3
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_explorer = {
+					name = "阿贝尔 塔斯曼【探险家】"
+					fire = 2
+					shock = 2
+					manuever = 6
+					siege = 0
+					trait = ZC_abel_tasman
+				}
+			}
+	}
+}

@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = amerigo_vespvcci_advisor_come
+
+country_event = {
+	id = amerigo_vespvcci_advisor_come.1
+	title = "amerigo_vespvcci_advisor_come.1.t"
+	desc = "amerigo_vespvcci_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1454
+		NOT = { is_year = 1512 }
+		OR = {
+			tag = SPA
+			AND = {
+				NOT = { exists = SPA }
+				tag = CAS
+			}
+			AND = {
+				NOT = { exists = SPA }
+				NOT = { exists = CAS }
+				owns = 116
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = amerigo_vespvcci_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = amerigo_vespvcci
+					name = "阿美利哥 维斯普西｢【商人】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "阿美利哥 维斯普西｢【商人】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 0
+				trait = rab_leader_amerigo_vespvcci
+			}
+		}
+	}
+}

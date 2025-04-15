@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = augustus_keppel_prov_move_events
+
+province_event = {
+	id = augustus_keppel_prov_move_events.1
+	title = "augustus_keppel_prov_move_events.NAME1"
+	desc = "augustus_keppel_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_augustus_keppel
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "augustus_keppel_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_augustus_keppel }
+			if = {
+				limit = { 
+					NOT = { is_year = 1786 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_augustus_keppel
+					owner = {
+						country_event = {
+							id = augustus_keppel_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_augustus_keppel
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_augustus_keppel"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1786
+				}	
+				remove_province_modifier = pov_augustus_keppel	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = augustus_keppel_prov_move_events.2
+	title = "augustus_keppel_prov_move_events.NAME2"
+	desc = "augustus_keppel_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "augustus_keppel_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = augustus_keppel
+					name = "奥古斯塔斯 凯佩尔【提督】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+					name = "奥古斯塔斯 凯佩尔【提督】"
+					fire = 2
+					shock = 3
+					manuever = 4
+					siege = 0
+				trait = ZC_augustus_keppel
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+namespace = albert_einstein_advisor_come
+
+country_event = {
+	id = albert_einstein_advisor_come.1
+	title = "albert_einstein_advisor_come.1.t"
+	desc = "albert_einstein_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1879
+		NOT = { is_year = 1955 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { tag = GER }
+				tag = PRU
+			}
+			AND = {
+				NOT = { tag = GER }
+				NOT = { tag = PRU }
+				owns = 1872
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+			
+	option = {
+		name = albert_einstein_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = albert_einstein
+			name = "阿尔伯特 爱因斯坦【物理学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

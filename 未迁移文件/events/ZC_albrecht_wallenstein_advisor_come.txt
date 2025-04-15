@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = albrecht_wallenstein_advisor_come
+
+country_event = {
+	id = albrecht_wallenstein_advisor_come.1
+	title = "albrecht_wallenstein_advisor_come.1.t"
+	desc = "albrecht_wallenstein_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1583
+		NOT = { is_year = 1634 }
+		OR = {
+			tag = BOH
+			AND = {
+				NOT = { exists = BOH }
+				owns = 266
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = albrecht_wallenstein_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = albrecht_wallenstein
+					name = "阿尔布雷希特 华伦斯坦｢【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "阿尔布雷希特 华伦斯坦｢【将领】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_albrecht_wallenstein
+			}
+		}
+	}
+}

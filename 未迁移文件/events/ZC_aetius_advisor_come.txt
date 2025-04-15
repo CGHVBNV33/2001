@@ -1,0 +1,51 @@
+namespace = aetius_advisor_come
+
+country_event = {
+	id = aetius_advisor_come.1
+	title = "aetius_advisor_come.1.t"
+	desc = "aetius_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 391	
+		NOT = { is_year = 454 }
+		OR = {
+			tag = ROW
+			AND = {
+				NOT = { exists = ROW }
+				owns = 159
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = aetius_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = aetius
+				name = "弗拉维斯 埃提乌斯｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "弗拉维斯 埃提乌斯｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 2
+				trait = rab_leader_aetius
+			}
+		}
+	}
+}
+

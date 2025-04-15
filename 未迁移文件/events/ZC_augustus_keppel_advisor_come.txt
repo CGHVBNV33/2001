@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = augustus_keppel_advisor_come
+
+country_event = {
+	id = augustus_keppel_advisor_come.1
+	title = "augustus_keppel_advisor_come.1.t"
+	desc = "augustus_keppel_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1725
+		NOT = { is_year = 1786 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 236
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = augustus_keppel_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = augustus_keppel
+					name = "奥古斯塔斯 凯佩尔【提督】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+				name = "奥古斯塔斯 凯佩尔【提督】"
+				fire = 2
+				shock = 3
+				manuever = 4
+				siege = 0
+				trait = ZC_augustus_keppel
+			}
+		}
+	}
+}

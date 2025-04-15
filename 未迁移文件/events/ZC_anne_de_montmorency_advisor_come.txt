@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = anne_de_montmorency_advisor_come
+
+country_event = {
+	id = anne_de_montmorency_advisor_come.1
+	title = "anne_de_montmorency_advisor_come.1.t"
+	desc = "anne_de_montmorency_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1493
+		NOT = { is_year = 1567 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = anne_de_montmorency_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = anne_de_montmorency
+				name = "阿内 德 蒙莫朗西｢【莫朗西公爵】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

@@ -1,0 +1,117 @@
+namespace = alexander_fleming_prov_move_events
+
+
+province_event = {
+	id = alexander_fleming_prov_move_events.1
+	title = "alexander_fleming_prov_move_events.NAME1"
+	desc = "alexander_fleming_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_alexander_fleming
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "alexander_fleming_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_alexander_fleming }
+			if = {
+			limit = { 
+				NOT = { is_year = 1955  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}
+					remove_province_modifier = pov_alexander_fleming
+					owner = {
+						country_event = {
+							id = alexander_fleming_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+							 	  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_alexander_fleming
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_alexander_fleming"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_alexander_fleming
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_alexander_fleming"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1955
+			}	
+				remove_province_modifier = pov_alexander_fleming	
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = alexander_fleming_prov_move_events.2
+	title = "alexander_fleming_prov_move_events.NAME2"
+	desc = "alexander_fleming_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "alexander_fleming_prov_move_events.OPTA2"
+		define_advisor = {
+			type = alexander_fleming
+			name = "亚历山大 弗莱明｢【医学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

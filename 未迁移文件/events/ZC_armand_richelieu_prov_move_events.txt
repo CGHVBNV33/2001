@@ -1,0 +1,117 @@
+namespace = armand_richelieu_prov_move_events
+
+
+province_event = {
+	id = armand_richelieu_prov_move_events.1
+	title = "armand_richelieu_prov_move_events.NAME1"
+	desc = "armand_richelieu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_armand_richelieu
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "armand_richelieu_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_armand_richelieu }
+			if = {
+			limit = { 
+				NOT = { is_year = 1642  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality		
+							}
+						}
+					}
+					remove_province_modifier = pov_armand_richelieu
+					owner = {
+						country_event = {
+							id = armand_richelieu_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+								  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_armand_richelieu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_armand_richelieu"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_armand_richelieu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_armand_richelieu"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1642
+			}	
+				remove_province_modifier = pov_armand_richelieu
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = armand_richelieu_prov_move_events.2
+	title = "armand_richelieu_prov_move_events.NAME2"
+	desc = "armand_richelieu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "armand_richelieu_prov_move_events.OPTA2"
+		define_advisor = {
+			type = armand_richelieu
+			name = "阿尔芒 黎塞留｢【红衣主教】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

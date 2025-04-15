@@ -1,0 +1,41 @@
+namespace = armand_richelieu_advisor_come
+
+country_event = {
+	id = armand_richelieu_advisor_come.1
+	title = "armand_richelieu_advisor_come.1.t"
+	desc = "armand_richelieu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1585
+		NOT = { is_year = 1642 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = armand_richelieu_advisor_come.OPTA1
+		define_advisor = {
+			type = armand_richelieu
+			name = "阿尔芒 黎塞留｢【红衣主教】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

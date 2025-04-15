@@ -1,0 +1,42 @@
+namespace = adam_smith_advisor_come
+
+country_event = {
+	id = adam_smith_advisor_come.1
+	title = "adam_smith_advisor_come.1.t"
+	desc = "adam_smith_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1723	
+		NOT = { is_year = 1790 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 250
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = adam_smith_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = adam_smith
+			name = "亚当 斯密｢【经济学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

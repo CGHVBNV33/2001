@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = andrew_cunningham_advisor_come
+
+country_event = {
+	id = andrew_cunningham_advisor_come.1
+	title = "andrew_cunningham_advisor_come.1.t"
+	desc = "andrew_cunningham_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1883
+		NOT = { is_year = 1963 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 236
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = andrew_cunningham_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = andrew_cunningham
+					name = "安德鲁 坎宁安【提督】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+				name = "安德鲁 坎宁安【提督】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 0
+				trait = ZC_andrew_cunningham
+			}
+		}
+	}
+}

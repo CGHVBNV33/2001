@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = alonso_ojeda_advisor_come
+
+country_event = {
+	id = alonso_ojeda_advisor_come.1
+	title = "alonso_ojeda_advisor_come.1.t"
+	desc = "alonso_ojeda_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1466
+		NOT = { is_year = 1515 }
+		OR = {
+			tag = SPA
+			AND = {
+				NOT = { exists = SPA }
+				tag = CAS
+			}
+			AND = {
+				NOT = { exists = SPA }
+				NOT = { exists = CAS }
+				owns = 2751
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = alonso_ojeda_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = alonso_ojeda
+					name = "阿隆索 奥赫达｢【征服者】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_conquistador = {
+				name = "阿隆索 奥赫达｢【征服者】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = rab_leader_alonso_ojeda
+			}
+		}
+	}
+}

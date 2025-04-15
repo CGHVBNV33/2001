@@ -1,0 +1,117 @@
+namespace = augustine_prov_move_events
+
+
+province_event = {
+	id = augustine_prov_move_events.1
+	title = "augustine_prov_move_events.NAME1"
+	desc = "augustine_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_augustine
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "augustine_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_augustine }
+			if = {
+			limit = { 
+				NOT = { is_year = 430  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality		
+							}
+						}
+					}
+					remove_province_modifier = pov_augustine
+					owner = {
+						country_event = {
+							id = augustine_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+								  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_augustine
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_augustine"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_augustine
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_augustine"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 430
+			}	
+				remove_province_modifier = pov_augustine	
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = augustine_prov_move_events.2
+	title = "augustine_prov_move_events.NAME2"
+	desc = "augustine_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "augustine_prov_move_events.OPTA2"
+		define_advisor = {
+			type = augustine
+			name = "圣 奥勒留 奥古斯丁｢【主教】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
