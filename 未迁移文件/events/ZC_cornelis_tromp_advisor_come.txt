@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = cornelis_tromp_advisor_come
+
+country_event = {
+	id = cornelis_tromp_advisor_come.1
+	title = "cornelis_tromp_advisor_come.1.t"
+	desc = "cornelis_tromp_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1629
+		NOT = { is_year = 1691 }
+		OR = {
+			tag = NED
+			AND = {
+				NOT = { exists = NED }
+				tag = HOL
+			}
+			AND = {
+				NOT = { exists = NED }
+				NOT = { exists = HOL }
+				owns = 97
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = cornelis_tromp_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = cornelis_tromp
+					name = "科内利斯 特龙普【小特龙普】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+				name = "科内利斯 特龙普【小特龙普】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 0
+				trait = ZC_cornelis_tromp
+			}
+		}
+	}
+}

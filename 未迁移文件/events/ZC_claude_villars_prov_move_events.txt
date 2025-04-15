@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = claude_villars_prov_move_events
+
+province_event = {
+	id = claude_villars_prov_move_events.1
+	title = "claude_villars_prov_move_events.NAME1"
+	desc = "claude_villars_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_claude_villars
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "claude_villars_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_claude_villars }
+			if = {
+				limit = { 
+					NOT = { is_year = 1734 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_claude_villars
+					owner = {
+						country_event = {
+							id = claude_villars_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_claude_villars
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_claude_villars"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1734
+				}	
+				remove_province_modifier = pov_claude_villars	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = claude_villars_prov_move_events.2
+	title = "claude_villars_prov_move_events.NAME2"
+	desc = "claude_villars_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "claude_villars_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = claude_villars
+					name = "肖德 维拉尔｢【维拉尔公爵】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "肖德 维拉尔｢【维拉尔公爵】"
+				fire = 6
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = ZC_claude_villars
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+namespace = charles_montesquieu_advisor_come
+
+country_event = {
+	id = charles_montesquieu_advisor_come.1
+	title = "charles_montesquieu_advisor_come.1.t"
+	desc = "charles_montesquieu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1689
+		NOT = { is_year = 1755 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 174
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = charles_montesquieu_advisor_come.OPTA1
+		define_advisor = {
+			type = charles_montesquieu
+			name = "夏尔 孟德斯鸠｢【法学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

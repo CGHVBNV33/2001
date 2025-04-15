@@ -1,0 +1,54 @@
+namespace = belisarius_advisor_come
+
+country_event = {
+	id = belisarius_advisor_come.1
+	title = "belisarius_advisor_come.1.t"
+	desc = "belisarius_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 505
+		NOT = { is_year = 565 }
+		OR = {
+			tag = BYZ
+			AND = {
+				NOT = { exists = BYZ }
+				owns = 5213
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = belisarius_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no 
+			}	
+			define_advisor = {
+				type = belisarius
+				name = "弗拉维乌斯 贝利萨留｢【元帅】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes 
+			}	
+			define_general = {
+				name = "弗拉维乌斯 贝利萨留｢【元帅】"
+				fire = 2
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_belisarius
+			}
+		}		
+	}
+}

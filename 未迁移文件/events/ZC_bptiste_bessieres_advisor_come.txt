@@ -1,0 +1,38 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = bptiste_bessieres_advisor_come
+
+country_event = {
+	id = bptiste_bessieres_advisor_come.1
+	title = "bptiste_bessieres_advisor_come.1.t"
+	desc = "bptiste_bessieres_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1768
+		NOT = { is_year = 1813 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	
+	option = {
+		name = bptiste_bessieres_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = bptiste_bessieres
+				name = "巴蒂斯特 贝西埃尔【伊斯的利亚公爵】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

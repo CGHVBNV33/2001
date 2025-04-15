@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = claude_villars_advisor_come
+
+country_event = {
+	id = claude_villars_advisor_come.1
+	title = "claude_villars_advisor_come.1.t"
+	desc = "claude_villars_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1653
+		NOT = { is_year = 1734 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 190
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = claude_villars_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = claude_villars
+				name = "肖德 维拉尔｢【维拉尔公爵】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

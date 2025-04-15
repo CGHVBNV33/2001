@@ -1,0 +1,38 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = dieu_soult_advisor_come
+
+country_event = {
+	id = dieu_soult_advisor_come.1
+	title = "dieu_soult_advisor_come.1.t"
+	desc = "dieu_soult_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1769
+		NOT = { is_year = 1851 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	
+	option = {
+		name = dieu_soult_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = dieu_soult
+				name = "迪厄 苏尔特【铁手】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

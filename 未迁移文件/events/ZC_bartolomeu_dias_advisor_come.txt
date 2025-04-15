@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = bartolomeu_dias_advisor_come
+
+country_event = {
+	id = bartolomeu_dias_advisor_come.1
+	title = "bartolomeu_dias_advisor_come.1.t"
+	desc = "bartolomeu_dias_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1450
+		NOT = { is_year = 1500 }
+		OR = {
+			tag = POR
+			AND = {
+				NOT = { exists = POR }
+				owns = 227
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = bartolomeu_dias_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = bartolomeu_dias
+					name = "巴尔托洛梅乌 迪亚士【探险家】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "巴尔托洛梅乌 迪亚士【探险家】"
+				fire = 2
+				shock = 2
+				manuever = 6
+				siege = 0
+				trait = ZC_bartolomeu_dias
+			}
+		}
+	}
+}

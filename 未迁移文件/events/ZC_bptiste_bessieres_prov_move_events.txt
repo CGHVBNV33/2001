@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = bptiste_bessieres_prov_move_events
+
+province_event = {
+	id = bptiste_bessieres_prov_move_events.1
+	title = "bptiste_bessieres_prov_move_events.NAME1"
+	desc = "bptiste_bessieres_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_bptiste_bessieres
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "bptiste_bessieres_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_bptiste_bessieres }
+			if = {
+				limit = { 
+					NOT = { is_year = 1813 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_bptiste_bessieres
+					owner = {
+						country_event = {
+							id = bptiste_bessieres_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_bptiste_bessieres
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_bptiste_bessieres"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1813
+				}	
+				remove_province_modifier = pov_bptiste_bessieres	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bptiste_bessieres_prov_move_events.2
+	title = "bptiste_bessieres_prov_move_events.NAME2"
+	desc = "bptiste_bessieres_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "bptiste_bessieres_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = bptiste_bessieres
+					name = "巴蒂斯特 贝西埃尔【伊斯的利亚公爵】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "巴蒂斯特 贝西埃尔【伊斯的利亚公爵】"
+				fire = 4
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = ZC_bptiste_bessieres
+			}
+		}
+	}
+}

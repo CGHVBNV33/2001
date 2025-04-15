@@ -1,0 +1,42 @@
+namespace = dmitri_mendeleev_advisor_come
+
+country_event = {
+	id = dmitri_mendeleev_advisor_come.1
+	title = "dmitri_mendeleev_advisor_come.1.t"
+	desc = "dmitri_mendeleev_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1834
+		NOT = { is_year = 1907 }
+		OR = {
+			tag = RUS
+			AND = {
+				NOT = { exists = RUS }
+				tag = MOS
+			}
+			AND = {
+				NOT = { exists = RUS }
+				NOT = { exists = MOS }
+				owns = 1074
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = dmitri_mendeleev_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = dmitri_mendeleev
+			name = "德米特里 门捷列夫｢【化学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

@@ -1,0 +1,37 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = celsus_advisor_come
+
+#武将匐?ℐ】oတ下တ	y㠐?
+#id = 1 : celsus : 㼿㽘GY｢【武将】
+#
+country_event = {
+	id = celsus_advisor_come.1
+	title = "celsus_advisor_come.1.t"
+	desc = "celsus_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 2
+		NOT = { is_year = 50 }
+		tag = ROM
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = celsus_advisor_come.OPTA1
+		define_advisor = {
+			type = celsus
+			name = "盖里乌斯 塞尔苏斯｢【医学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

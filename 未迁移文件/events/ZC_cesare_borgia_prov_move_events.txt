@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = cesare_borgia_prov_move_events
+
+province_event = {
+	id = cesare_borgia_prov_move_events.1
+	title = "cesare_borgia_prov_move_events.NAME1"
+	desc = "cesare_borgia_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_cesare_borgia
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "cesare_borgia_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_cesare_borgia }
+			if = {
+				limit = { 
+					NOT = { is_year = 1475 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_cesare_borgia
+					owner = {
+						country_event = {
+							id = cesare_borgia_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_cesare_borgia
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_cesare_borgia"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1507
+				}	
+				remove_province_modifier = pov_cesare_borgia	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cesare_borgia_prov_move_events.2
+	title = "cesare_borgia_prov_move_events.NAME2"
+	desc = "cesare_borgia_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "cesare_borgia_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = cesare_borgia
+					name = "赫尔曼 丹德尔斯【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "赫尔曼 丹德尔斯【将领】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = ZC_cesare_borgia
+			}
+		}
+	}
+}

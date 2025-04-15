@@ -1,0 +1,41 @@
+namespace = blaise_pascal_advisor_come
+
+country_event = {
+	id = blaise_pascal_advisor_come.1
+	title = "blaise_pascal_advisor_come.1.t"
+	desc = "blaise_pascal_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1623
+		NOT = { is_year = 1662 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 199
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = blaise_pascal_advisor_come.OPTA1
+		define_advisor = {
+			type = blaise_pascal
+			name = "布莱士 帕斯卡｢【数学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

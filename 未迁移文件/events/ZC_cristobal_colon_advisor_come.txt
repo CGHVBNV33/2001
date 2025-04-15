@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = cristobal_colon_advisor_come
+
+country_event = {
+	id = cristobal_colon_advisor_come.1
+	title = "cristobal_colon_advisor_come.1.t"
+	desc = "cristobal_colon_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1451
+		NOT = { is_year = 1506 }
+		OR = {
+			tag = SPA
+			AND = {
+				NOT = { exists = SPA }
+				tag = CAS
+			}
+			AND = {
+				NOT = { exists = SPA }
+				NOT = { exists = CAS }
+				owns = 101
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = cristobal_colon_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = cristobal_colon
+					name = "克里斯托弗 哥伦布｢【航海王】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "克里斯托弗 哥伦布｢【航海王】"
+				fire = 6
+				shock = 6
+				manuever = 6
+				siege = 0
+				trait = rab_leader_cristobal_colon
+			}
+		}
+	}
+}

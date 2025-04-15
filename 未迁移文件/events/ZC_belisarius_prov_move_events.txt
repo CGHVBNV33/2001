@@ -1,0 +1,133 @@
+namespace = belisarius_prov_move_events
+
+
+province_event = {
+	id = belisarius_prov_move_events.1
+	title = "belisarius_prov_move_events.NAME1"
+	desc = "belisarius_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_belisarius
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "belisarius_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_belisarius }
+			if = {
+			limit = { 
+				NOT = { is_year = 565  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality		
+							}
+						}
+					}
+					remove_province_modifier = pov_belisarius
+					owner = {
+						country_event = {
+							id = belisarius_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+								  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_belisarius
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_belisarius"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_belisarius
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_belisarius"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 565
+			}	
+				remove_province_modifier = pov_belisarius
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = belisarius_prov_move_events.2
+	title = "belisarius_prov_move_events.NAME2"
+	desc = "belisarius_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "belisarius_prov_move_events.OPTA2"
+		if = {
+			limit = {
+				ai = no 
+			}	
+			define_advisor = {
+				type = belisarius
+				name = "弗拉维乌斯 贝利萨留｢【元帅】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes 
+			}	
+			define_general = {
+				name = "弗拉维乌斯 贝利萨留｢【元帅】"
+				fire = 2
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_belisarius
+			}
+		}
+	}
+}

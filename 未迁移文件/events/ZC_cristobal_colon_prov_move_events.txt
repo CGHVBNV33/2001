@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = cristobal_colon_prov_move_events
+
+province_event = {
+	id = cristobal_colon_prov_move_events.1
+	title = "cristobal_colon_prov_move_events.NAME1"
+	desc = "cristobal_colon_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_cristobal_colon
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "cristobal_colon_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_cristobal_colon }
+			if = {
+				limit = { 
+					NOT = { is_year = 1506  }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_cristobal_colon
+					owner = {
+						country_event = {
+							id = cristobal_colon_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_cristobal_colon
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_cristobal_colon"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1506
+				}	
+				remove_province_modifier = pov_cristobal_colon	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cristobal_colon_prov_move_events.2
+	title = "cristobal_colon_prov_move_events.NAME2"
+	desc = "cristobal_colon_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "cristobal_colon_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = cristobal_colon
+					name = "克里斯托弗 哥伦布｢【航海王】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "克里斯托弗 哥伦布｢【航海王】"
+				fire = 6
+				shock = 6
+				manuever = 6
+				siege = 0
+				trait = rab_leader_cristobal_colon
+			}
+		}
+	}
+}

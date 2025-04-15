@@ -1,0 +1,41 @@
+namespace = denis_diderot_advisor_come
+
+country_event = {
+	id = denis_diderot_advisor_come.1
+	title = "denis_diderot_advisor_come.1.t"
+	desc = "denis_diderot_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1713
+		NOT = { is_year = 1784 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 4389
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = denis_diderot_advisor_come.OPTA1
+		define_advisor = {
+			type = denis_diderot
+			name = "德尼 狄德罗｢【哲学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

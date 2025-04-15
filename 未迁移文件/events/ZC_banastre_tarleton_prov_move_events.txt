@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = banastre_tarleton_prov_move_events
+
+province_event = {
+	id = banastre_tarleton_prov_move_events.1
+	title = "banastre_tarleton_prov_move_events.NAME1"
+	desc = "banastre_tarleton_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_banastre_tarleton
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "banastre_tarleton_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_banastre_tarleton }
+			if = {
+				limit = { 
+					NOT = { is_year = 1833 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_banastre_tarleton
+					owner = {
+						country_event = {
+							id = banastre_tarleton_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_banastre_tarleton
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_banastre_tarleton"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1833
+				}	
+				remove_province_modifier = pov_banastre_tarleton	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = banastre_tarleton_prov_move_events.2
+	title = "banastre_tarleton_prov_move_events.NAME2"
+	desc = "banastre_tarleton_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "banastre_tarleton_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = banastre_tarleton
+					name = "伯纳斯特 塔尔顿【青龙】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "伯纳斯特 塔尔顿【青龙】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = ZC_banastre_tarleton
+			}
+		}
+	}
+}

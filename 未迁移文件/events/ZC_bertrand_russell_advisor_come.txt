@@ -1,0 +1,42 @@
+namespace = bertrand_russell_advisor_come
+
+country_event = {
+	id = bertrand_russell_advisor_come.1
+	title = "bertrand_russell_advisor_come.1.t"
+	desc = "bertrand_russell_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1872	
+		NOT = { is_year = 1970 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 241
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = bertrand_russell_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = bertrand_russell
+			name = "伯特兰 罗素｢【哲学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+
