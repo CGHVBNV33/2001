@@ -1,0 +1,42 @@
+namespace = george_stephenson_advisor_come
+
+country_event = {
+	id = george_stephenson_advisor_come.1
+	title = "george_stephenson_advisor_come.1.t"
+	desc = "george_stephenson_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1781	
+		NOT = { is_year = 1848 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 246
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = george_stephenson_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = george_stephenson
+			name = "乔治 斯蒂芬孙｢【工程师】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

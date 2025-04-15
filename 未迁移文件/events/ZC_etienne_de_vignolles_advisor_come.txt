@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = etienne_de_vignolles_advisor_come
+
+country_event = {
+	id = etienne_de_vignolles_advisor_come.1
+	title = "etienne_de_vignolles_advisor_come.1.t"
+	desc = "etienne_de_vignolles_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1390
+		NOT = { is_year = 1443 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = etienne_de_vignolles_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = etienne_de_vignolles
+				name = "拉海尔｢【红桃J】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

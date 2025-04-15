@@ -1,0 +1,117 @@
+namespace = friedrich_nietzsche_prov_move_events
+
+
+province_event = {
+	id = friedrich_nietzsche_prov_move_events.1
+	title = "friedrich_nietzsche_prov_move_events.NAME1"
+	desc = "friedrich_nietzsche_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_friedrich_nietzsche
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "friedrich_nietzsche_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_friedrich_nietzsche }
+			if = {
+			limit = { 
+				NOT = { is_year = 1900 }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}
+					remove_province_modifier = pov_friedrich_nietzsche
+					owner = {
+						country_event = {
+							id = friedrich_nietzsche_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+							 	  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_friedrich_nietzsche
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_friedrich_nietzsche"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_friedrich_nietzsche
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_friedrich_nietzsche"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1900
+			}	
+				remove_province_modifier = pov_friedrich_nietzsche
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = friedrich_nietzsche_prov_move_events.2
+	title = "friedrich_nietzsche_prov_move_events.NAME2"
+	desc = "friedrich_nietzsche_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "friedrich_nietzsche_prov_move_events.OPTA2"
+		define_advisor = {
+			type = friedrich_nietzsche
+			name = "弗里德里希 尼采【哲学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

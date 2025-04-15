@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gilles_de_rais_advisor_come
+
+country_event = {
+	id = gilles_de_rais_advisor_come.1
+	title = "gilles_de_rais_advisor_come.1.t"
+	desc = "gilles_de_rais_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1404
+		NOT = { is_year = 1440 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 172
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = gilles_de_rais_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = gilles_de_rais
+				name = "吉尔斯 德 莱斯｢【青须】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

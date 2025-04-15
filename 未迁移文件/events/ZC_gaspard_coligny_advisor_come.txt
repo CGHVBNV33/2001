@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gaspard_coligny_advisor_come
+
+country_event = {
+	id = gaspard_coligny_advisor_come.1
+	title = "gaspard_coligny_advisor_come.1.t"
+	desc = "gaspard_coligny_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1519
+		NOT = { is_year = 1572 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = gaspard_coligny_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = gaspard_coligny
+				name = "加斯帕尔 科利尼｢【将领】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

@@ -1,0 +1,117 @@
+namespace = emily_bronte_prov_move_events
+
+
+province_event = {
+	id = emily_bronte_prov_move_events.1
+	title = "emily_bronte_prov_move_events.NAME1"
+	desc = "emily_bronte_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_emily_bronte
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "emily_bronte_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_emily_bronte }
+			if = {
+			limit = { 
+				NOT = { is_year = 1848  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}
+					remove_province_modifier = pov_emily_bronte
+					owner = {
+						country_event = {
+							id = emily_bronte_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+							 	  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_emily_bronte
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_emily_bronte"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_emily_bronte
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_emily_bronte"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1848
+			}	
+				remove_province_modifier = pov_emily_bronte	
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = emily_bronte_prov_move_events.2
+	title = "emily_bronte_prov_move_events.NAME2"
+	desc = "emily_bronte_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "emily_bronte_prov_move_events.OPTA2"
+		define_advisor = {
+			type = emily_bronte
+			name = "艾米莉 勃朗特｢【作家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

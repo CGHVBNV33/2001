@@ -1,0 +1,117 @@
+namespace = fyodor_dostoyevsky_prov_move_events
+
+
+province_event = {
+	id = fyodor_dostoyevsky_prov_move_events.1
+	title = "fyodor_dostoyevsky_prov_move_events.NAME1"
+	desc = "fyodor_dostoyevsky_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_fyodor_dostoyevsky
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "fyodor_dostoyevsky_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_fyodor_dostoyevsky }
+			if = {
+			limit = { 
+				NOT = { is_year = 1881  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}
+					remove_province_modifier = pov_fyodor_dostoyevsky
+					owner = {
+						country_event = {
+							id = fyodor_dostoyevsky_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+							 	  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_fyodor_dostoyevsky
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_fyodor_dostoyevsky"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_fyodor_dostoyevsky
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_fyodor_dostoyevsky"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1881
+			}	
+				remove_province_modifier = pov_fyodor_dostoyevsky
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = fyodor_dostoyevsky_prov_move_events.2
+	title = "fyodor_dostoyevsky_prov_move_events.NAME2"
+	desc = "fyodor_dostoyevsky_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "fyodor_dostoyevsky_prov_move_events.OPTA2"
+		define_advisor = {
+			type = fyodor_dostoyevsky
+			name = "费奥多尔 陀思妥耶夫斯基｢【作家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

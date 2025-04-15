@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = erich_falkenhayn_advisor_come
+
+country_event = {
+	id = erich_falkenhayn_advisor_come.1
+	title = "erich_falkenhayn_advisor_come.1.t"
+	desc = "erich_falkenhayn_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1861
+		NOT = { is_year = 1922 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { exists = GER }
+				owns = 1859
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = erich_falkenhayn_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = erich_falkenhayn
+					name = "埃里希 法尔肯海恩【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "埃里希 法尔肯海恩【将领】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = ZC_erich_falkenhayn
+			}
+		}
+	}
+}

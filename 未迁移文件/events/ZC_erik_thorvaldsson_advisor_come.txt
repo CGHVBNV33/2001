@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = erik_thorvaldsson_advisor_come
+
+country_event = {
+	id = erik_thorvaldsson_advisor_come.1
+	title = "erik_thorvaldsson_advisor_come.1.t"
+	desc = "erik_thorvaldsson_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		has_country_flag = erik_thorvaldsson_flag	
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = erik_thorvaldsson_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = erik_thorvaldsson
+					name = "埃里克 瑟瓦尔德森｢【红发】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "埃里克 瑟瓦尔德森｢【红发】"
+				fire = 3
+				shock = 2
+				manuever = 4
+				siege = 2
+				trait = rab_leader_erik_thorvaldsson
+			}
+		}
+	}
+}

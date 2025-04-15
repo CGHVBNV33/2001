@@ -1,0 +1,38 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = etienne_macdonald_advisor_come
+
+country_event = {
+	id = etienne_macdonald_advisor_come.1
+	title = "etienne_macdonald_advisor_come.1.t"
+	desc = "etienne_macdonald_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1765
+		NOT = { is_year = 1840 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 181
+			}
+		}
+	}
+	
+	option = {
+		name = etienne_macdonald_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = etienne_macdonald
+				name = "埃蒂安 麦克唐纳【塔兰托公爵】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

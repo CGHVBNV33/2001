@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = george_anson_advisor_come
+
+country_event = {
+	id = george_anson_advisor_come.1
+	title = "george_anson_advisor_come.1.t"
+	desc = "george_anson_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1697
+		NOT = { is_year = 1762 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 4372
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = george_anson_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = george_anson
+					name = "乔治 安森【百夫长】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+				name = "乔治 安森【百夫长】"
+				fire = 4
+				shock = 4
+				manuever = 5
+				siege = 0
+				trait = ZC_george_anson
+			}
+		}
+	}
+}

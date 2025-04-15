@@ -1,0 +1,41 @@
+namespace = francois_arouet_advisor_come
+
+country_event = {
+	id = francois_arouet_advisor_come.1
+	title = "francois_arouet_advisor_come.1.t"
+	desc = "francois_arouet_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1694
+		NOT = { is_year = 1778 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 183
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = francois_arouet_advisor_come.OPTA1
+		define_advisor = {
+			type = francois_arouet
+			name = "弗朗索瓦 阿鲁埃｢【伏尔泰】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

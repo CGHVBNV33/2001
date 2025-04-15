@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = erich_manstein_advisor_come
+
+country_event = {
+	id = erich_manstein_advisor_come.1
+	title = "erich_manstein_advisor_come.1.t"
+	desc = "erich_manstein_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1887
+		NOT = { is_year = 1973 }
+		OR = {
+			tag = NZ1
+			AND = {
+				NOT = { exists = NZ1 }
+				tag = NZ2
+			}
+			AND = {
+				NOT = { exists = NZ1 }
+				NOT = { exists = NZ2 }
+				owns = 50
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = erich_manstein_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = erich_manstein
+					name = "埃里希 曼施坦因【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "埃里希 曼施坦因【将领】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = ZC_erich_manstein
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+namespace = guy_maupassant_advisor_come
+
+country_event = {
+	id = guy_maupassant_advisor_come.1
+	title = "guy_maupassant_advisor_come.1.t"
+	desc = "guy_maupassant_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1850
+		NOT = { is_year = 1893 }
+		OR = {
+			tag = FR2
+			AND = {
+				NOT = { exists = FR2 }
+				tag = FRA
+			}
+			AND = {
+				NOT = { exists = FR2 }
+				NOT = { exists = FRA }
+				owns = 168
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = guy_maupassant_advisor_come.OPTA1
+		define_advisor = {
+			type = guy_maupassant
+			name = "居伊 莫泊桑｢【作家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

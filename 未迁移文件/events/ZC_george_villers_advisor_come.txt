@@ -1,0 +1,46 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = george_villers_advisor_come
+
+country_event = {
+	id = george_villers_advisor_come.1
+	title = "george_villers_advisor_come.1.t"
+	desc = "george_villers_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1592
+		NOT = { is_year = 1628 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 4376
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = george_villers_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = george_villers
+				name = "乔治 维利尔斯｢【白金汉宫爵】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

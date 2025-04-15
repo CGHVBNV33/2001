@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gonzalo_cordoba_advisor_come
+
+country_event = {
+	id = gonzalo_cordoba_advisor_come.1
+	title = "gonzalo_cordoba_advisor_come.1.t"
+	desc = "gonzalo_cordoba_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1453
+		NOT = { is_year = 1515 }
+		OR = {
+			tag = SPA
+			AND = {
+				NOT = { exists = SPA }
+				tag = CAS
+			}
+			AND = {
+				NOT = { exists = SPA }
+				NOT = { exists = CAS }
+				owns = 219
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = gonzalo_cordoba_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = gonzalo_cordoba
+					name = "贡萨洛 科尔多瓦｢【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "贡萨洛 科尔多瓦｢【将领】"
+				fire = 6
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_gonzalo_cordoba
+			}
+		}
+	}
+}

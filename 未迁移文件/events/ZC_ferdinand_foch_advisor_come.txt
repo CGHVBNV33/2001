@@ -1,0 +1,41 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = ferdinand_foch_advisor_come
+
+country_event = {
+	id = ferdinand_foch_advisor_come.1
+	title = "ferdinand_foch_advisor_come.1.t"
+	desc = "ferdinand_foch_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1851
+		NOT = { is_year = 1929 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				owns = 176
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = ferdinand_foch_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = ferdinand_foch
+				name = "斐迪南 福煦｢【司令】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

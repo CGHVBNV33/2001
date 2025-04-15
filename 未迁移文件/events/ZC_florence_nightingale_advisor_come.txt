@@ -1,0 +1,41 @@
+namespace = florence_nightingale_advisor_come
+
+country_event = {
+	id = florence_nightingale_advisor_come.1
+	title = "florence_nightingale_advisor_come.1.t"
+	desc = "florence_nightingale_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1820
+		NOT = { is_year = 1910 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 116
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = florence_nightingale_advisor_come.OPTA1
+		define_advisor = {
+			type = florence_nightingale
+			name = "弗洛伦斯 南丁格尔｢【提灯女神】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

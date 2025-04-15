@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = erich_ludendorff_advisor_come
+
+country_event = {
+	id = erich_ludendorff_advisor_come.1
+	title = "erich_ludendorff_advisor_come.1.t"
+	desc = "erich_ludendorff_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1865
+		NOT = { is_year = 1937 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { exists = GER }
+				owns = 254
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = erich_ludendorff_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = erich_ludendorff
+					name = "埃里希 鲁登道夫【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "埃里希 鲁登道夫【将领】"
+				fire = 3
+				shock = 4
+				manuever = 2
+				siege = 2
+				trait = ZC_erich_ludendorff
+			}
+		}
+	}
+}
