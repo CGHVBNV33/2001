@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_joao_zarco = {
+		major = yes
+		potential = {
+			
+			advisor = joao_zarco
+			
+		}
+		allow = {
+			advisor = joao_zarco
+		}
+		effect = {
+			remove_advisor = joao_zarco
+			define_explorer = {
+				name = "若昂 扎尔科【探险家】"
+				fire = 1
+				shock = 1
+				manuever = 2
+				siege = 0
+				trait = ZC_joao_zarco
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

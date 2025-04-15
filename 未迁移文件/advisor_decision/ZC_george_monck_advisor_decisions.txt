@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_george_monck = {
+		major = yes
+		potential = {
+			
+			advisor = george_monck
+			
+		}
+		allow = {
+			advisor = george_monck
+		}
+		effect = {
+			remove_advisor = george_monck
+			define_general = {
+				name = "乔治 蒙克｢【阿尔比马尔公爵】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = ZC_george_monck
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

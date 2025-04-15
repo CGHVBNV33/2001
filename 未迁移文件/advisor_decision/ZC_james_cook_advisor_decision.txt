@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_explorer_james_cook = {
+		major = yes
+		potential = {
+			
+			advisor = james_cook
+			
+		}
+		allow = {
+			advisor = james_cook
+		}
+		effect = {
+			remove_advisor = james_cook
+			define_explorer = {
+				name = "詹姆斯 库克｢【库克船长】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 4
+				trait = rab_leader_james_cook
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

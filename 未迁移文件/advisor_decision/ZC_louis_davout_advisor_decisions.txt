@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_louis_davout = {
+		major = yes
+		potential = {
+			
+			advisor = louis_davout
+			
+		}
+		allow = {
+			advisor = louis_davout
+		}
+		effect = {
+			remove_advisor = louis_davout
+			define_general = {
+				name = "路易 尼古拉 达武【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = ZC_louis_davout
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

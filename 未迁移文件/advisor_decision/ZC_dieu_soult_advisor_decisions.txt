@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_dieu_soult = {
+		major = yes
+		potential = {
+			
+			advisor = dieu_soult
+			
+		}
+		allow = {
+			advisor = dieu_soult
+		}
+		effect = {
+			remove_advisor = dieu_soult
+			define_general = {
+				name = "迪厄 苏尔特【铁手】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = ZC_dieu_soult
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_johan_rantzau = {
+		major = yes
+		potential = {
+			
+			advisor = johan_rantzau
+			
+		}
+		allow = {
+			advisor = johan_rantzau
+		}
+		effect = {
+			remove_advisor = johan_rantzau
+			define_general = {
+				name = "约翰 兰曹｢【政治家】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_johan_rantzau
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

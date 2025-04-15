@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_george_villers = {
+		major = yes
+		potential = {
+			
+			advisor = george_villers
+			
+		}
+		allow = {
+			advisor = george_villers
+		}
+		effect = {
+			remove_advisor = george_villers
+			define_general = {
+				name = "乔治 维利尔斯｢【白金汉宫爵】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = ZC_george_villers
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

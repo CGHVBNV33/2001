@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_charles_fouquet = {
+		major = yes
+		potential = {
+			
+			advisor = charles_fouquet
+			
+		}
+		allow = {
+			advisor = charles_fouquet
+		}
+		effect = {
+			remove_advisor = charles_fouquet
+			define_general = {
+				name = "夏尔 富凯｢【贝尔岛公爵】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = ZC_charles_fouquet
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

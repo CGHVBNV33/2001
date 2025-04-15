@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_da_gama = {
+		major = yes
+		potential = {
+			
+			advisor = da_gama
+			
+		}
+		allow = {
+			advisor = da_gama
+		}
+		effect = {
+			remove_advisor = da_gama
+			define_explorer = {
+				name = "瓦斯科 达伽马【探险家】"
+				fire = 2
+				shock = 2
+				manuever = 6
+				siege = 0
+				trait = ZC_da_gama
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

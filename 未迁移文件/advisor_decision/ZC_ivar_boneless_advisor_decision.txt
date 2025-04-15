@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_ivar_boneless = {
+		major = yes
+		potential = {
+			
+			advisor = ivar_boneless
+			
+		}
+		allow = {
+			advisor = ivar_boneless
+		}
+		effect = {
+			remove_advisor = ivar_boneless
+			define_general = {
+				name = "伊瓦尔｢【无骨者】"
+				fire = 5
+				shock = 5
+				manuever = 2
+				siege = 3
+				trait = rab_leader_ivar_boneless
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

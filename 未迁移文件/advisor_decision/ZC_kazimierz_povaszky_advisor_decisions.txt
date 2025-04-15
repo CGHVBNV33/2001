@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_kazimierz_povaszky = {
+		major = yes
+		potential = {
+			
+			advisor = kazimierz_povaszky
+			
+		}
+		allow = {
+			advisor = kazimierz_povaszky
+		}
+		effect = {
+			remove_advisor = kazimierz_povaszky
+			define_general = {
+				name = "卡齐米日 普瓦斯基【将领】"
+				fire = 3
+				shock = 2
+				manuever = 3
+				siege = 0
+				trait = ZC_kazimierz_povaszky
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

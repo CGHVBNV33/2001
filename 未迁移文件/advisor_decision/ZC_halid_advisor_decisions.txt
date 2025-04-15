@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_generals_halid = {
+		major = yes
+		potential = {
+			
+			advisor = halid
+			
+		}
+		allow = {
+			advisor = halid
+		}
+		effect = {
+			remove_advisor = halid
+			define_general = {
+				name = "哈立德 本 瓦利德｢【真主之剑】"
+				fire = 6
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_zenzuzhijen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

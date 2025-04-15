@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_karl_lorenz = {
+		major = yes
+		potential = {
+			
+			advisor = karl_lorenz
+			
+		}
+		allow = {
+			advisor = karl_lorenz
+		}
+		effect = {
+			remove_advisor = karl_lorenz
+			define_general = {
+				name = "卡尔 洛伦茨【卡尔大公】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 1
+				trait = ZC_karl_lorenz
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

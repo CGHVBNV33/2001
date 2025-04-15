@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_jozef_pisudski = {
+		major = yes
+		potential = {
+			
+			advisor = jozef_pisudski
+			
+		}
+		allow = {
+			advisor = jozef_pisudski
+		}
+		effect = {
+			remove_advisor = jozef_pisudski
+			define_general = {
+				name = "约瑟夫 毕苏斯基【将领】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = ZC_jozef_pisudski
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

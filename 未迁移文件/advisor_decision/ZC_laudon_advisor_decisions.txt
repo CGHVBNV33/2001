@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_laudon = {
+		major = yes
+		potential = {
+			
+			advisor = laudon
+			
+		}
+		allow = {
+			advisor = laudon
+		}
+		effect = {
+			remove_advisor = laudon
+			define_general = {
+				name = "恩斯特 劳东【元帅】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 0
+				trait = ZC_laudon
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

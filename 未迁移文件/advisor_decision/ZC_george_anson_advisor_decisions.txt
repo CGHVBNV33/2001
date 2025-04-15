@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_george_anson = {
+		major = yes
+		potential = {
+			
+			advisor = george_anson
+			
+		}
+		allow = {
+			advisor = george_anson
+		}
+		effect = {
+			remove_advisor = george_anson
+			define_admiral = {
+				name = "乔治 安森【百夫长】"
+				fire = 4
+				shock = 4
+				manuever = 5
+				siege = 0
+				trait = ZC_george_anson
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

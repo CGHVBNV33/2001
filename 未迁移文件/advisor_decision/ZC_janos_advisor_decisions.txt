@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_janos = {
+		major = yes
+		potential = {
+			
+			advisor = janos
+			
+		}
+		allow = {
+			advisor = janos
+		}
+		effect = {
+			remove_advisor = janos
+			define_general = {
+				name = "亚诺什 匈雅提【白骑士】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = ZC_janos
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

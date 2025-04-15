@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_pedro_navarro = {
+		major = yes
+		potential = {
+			
+			advisor = pedro_navarro
+			
+		}
+		allow = {
+			advisor = pedro_navarro
+		}
+		effect = {
+			remove_advisor = pedro_navarro
+			define_general = {
+				name = "佩特罗 纳瓦罗｢【工程师】"
+				fire = 3
+				shock = 2
+				manuever = 2
+				siege = 6
+				trait = ZC_pedro_navarro
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

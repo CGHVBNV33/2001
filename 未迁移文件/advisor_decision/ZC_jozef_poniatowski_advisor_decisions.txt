@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_jozef_poniatowski = {
+		major = yes
+		potential = {
+			
+			advisor = jozef_poniatowski
+			
+		}
+		allow = {
+			advisor = jozef_poniatowski
+		}
+		effect = {
+			remove_advisor = jozef_poniatowski
+			define_general = {
+				name = "约瑟夫 波尼亚托夫斯基【将领】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_jozef_poniatowski
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

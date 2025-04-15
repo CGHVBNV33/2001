@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_charles_brandon = {
+		major = yes
+		potential = {
+			
+			advisor = charles_brandon
+			
+		}
+		allow = {
+			advisor = charles_brandon
+		}
+		effect = {
+			remove_advisor = charles_brandon
+			define_general = {
+				name = "查尔斯 布兰登｢【萨福克公爵】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_charles_brandon
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

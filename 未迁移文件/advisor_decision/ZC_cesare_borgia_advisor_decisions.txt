@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_cesare_borgia = {
+		major = yes
+		potential = {
+			
+			advisor = cesare_borgia
+			
+		}
+		allow = {
+			advisor = cesare_borgia
+		}
+		effect = {
+			remove_advisor = cesare_borgia
+			define_general = {
+				name = "恺撒 博尔吉亚【毒药公爵】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = ZC_cesare_borgia
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

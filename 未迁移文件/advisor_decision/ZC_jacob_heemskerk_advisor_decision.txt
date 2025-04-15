@@ -1,0 +1,27 @@
+country_decisions = {
+	advisors_convert_explorer_jacob_heemskerk = {
+		major = yes
+		potential = {
+			
+			advisor = jacob_heemskerk
+			
+		}
+		allow = {
+			advisor = jacob_heemskerk
+		}
+		effect = {
+			remove_advisor = jacob_heemskerk
+			define_explorer = {
+				name = "雅各布 海姆斯凯克【海军上将】"
+				fire = 4
+				shock = 4
+				manuever = 6
+				siege = 1
+				trait = ZC_jacob_heemskerk
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

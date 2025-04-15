@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_explorer_john_cabot = {
+		major = yes
+		potential = {
+			
+			advisor = john_cabot
+			
+		}
+		allow = {
+			advisor = john_cabot
+		}
+		effect = {
+			remove_advisor = john_cabot
+			define_explorer = {
+				name = "约翰 卡伯特｢【探险家】"
+				fire = 2
+				shock = 4
+				manuever = 5
+				siege = 0
+				trait = rab_leader_john_cabot
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

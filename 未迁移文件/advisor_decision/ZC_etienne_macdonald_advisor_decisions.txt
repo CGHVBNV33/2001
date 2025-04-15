@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_etienne_macdonald = {
+		major = yes
+		potential = {
+			
+			advisor = etienne_macdonald
+			
+		}
+		allow = {
+			advisor = etienne_macdonald
+		}
+		effect = {
+			remove_advisor = etienne_macdonald
+			define_general = {
+				name = "埃蒂安 麦克唐纳【塔兰托公爵】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 3
+				trait = ZC_etienne_macdonald
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

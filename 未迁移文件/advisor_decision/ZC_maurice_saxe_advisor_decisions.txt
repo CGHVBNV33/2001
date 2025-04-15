@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_maurice_saxe = {
+		major = yes
+		potential = {
+			
+			advisor = maurice_saxe
+			
+		}
+		allow = {
+			advisor = maurice_saxe
+		}
+		effect = {
+			remove_advisor = maurice_saxe
+			define_general = {
+				name = "赫尔曼 萨克森｢【元帅】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 1
+				trait = ZC_maurice_saxe
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

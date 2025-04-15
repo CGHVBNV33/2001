@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_conquistador_john_smith = {
+		major = yes
+		potential = {
+			
+			advisor = john_smith
+			
+		}
+		allow = {
+			advisor = john_smith
+		}
+		effect = {
+			remove_advisor = john_smith
+			define_conquistador = {
+				name = "约翰 史密斯｢【征服者】"
+				fire = 2
+				shock = 2
+				manuever = 6
+				siege = 0
+				trait = ZC_john_smith
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

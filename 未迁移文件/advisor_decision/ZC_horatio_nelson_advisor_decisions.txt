@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_horatio_nelson = {
+		major = yes
+		potential = {
+			
+			advisor = horatio_nelson
+			
+		}
+		allow = {
+			advisor = horatio_nelson
+		}
+		effect = {
+			remove_advisor = horatio_nelson
+			define_admiral = {
+				name = "霍雷肖 纳尔逊【海军之魂】"
+				fire = 6
+				shock = 6
+				manuever = 6 
+				siege = 0
+				trait = ZC_horatio_nelson
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_gouvion_st_cyr = {
+		major = yes
+		potential = {
+			
+			advisor = gouvion_st_cyr
+			
+		}
+		allow = {
+			advisor = gouvion_st_cyr
+		}
+		effect = {
+			remove_advisor = gouvion_st_cyr
+			define_general = {
+				name = "古维翁 圣西尔【将领】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 0
+				trait = ZC_gouvion_st_cyr
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

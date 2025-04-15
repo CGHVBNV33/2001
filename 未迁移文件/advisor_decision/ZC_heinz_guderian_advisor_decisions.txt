@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_heinz_guderian = {
+		major = yes
+		potential = {
+			
+			advisor = heinz_guderian
+			
+		}
+		allow = {
+			advisor = heinz_guderian
+		}
+		effect = {
+			remove_advisor = heinz_guderian
+			define_general = {
+				name = "海因里希 古德里安【将领】"
+				fire = 4
+				shock = 3
+				manuever = 6
+				siege = 4
+				trait = ZC_heinz_guderian
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

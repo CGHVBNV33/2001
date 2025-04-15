@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_conquistador_juan_leon = {
+		major = yes
+		potential = {
+			
+			advisor = juan_leon
+			
+		}
+		allow = {
+			advisor = juan_leon
+		}
+		effect = {
+			remove_advisor = juan_leon
+			define_conquistador = {
+				name = "胡安 庞塞 莱昂｢【征服者】"
+				fire = 2
+				shock = 2
+				manuever = 3
+				siege = 0
+				trait = rab_leader_juan_leon
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

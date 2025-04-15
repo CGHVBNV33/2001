@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_edward_boscawen = {
+		major = yes
+		potential = {
+			
+			advisor = edward_boscawen
+			
+		}
+		allow = {
+			advisor = edward_boscawen
+		}
+		effect = {
+			remove_advisor = edward_boscawen
+			define_admiral = {
+				name = "爱德华 博斯科恩【老顽童】"
+				fire = 4
+				shock = 3
+				manuever = 5
+				siege = 0
+				trait = ZC_edward_boscawen
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

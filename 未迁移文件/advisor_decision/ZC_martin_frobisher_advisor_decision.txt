@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_explorer_martin_frobisher = {
+		major = yes
+		potential = {
+			
+			advisor = martin_frobisher
+			
+		}
+		allow = {
+			advisor = martin_frobisher
+		}
+		effect = {
+			remove_advisor = martin_frobisher
+			define_explorer = {
+				name = "马丁 弗罗比舍｢【探险家】"
+				fire = 5
+				shock = 2
+				manuever = 4
+				siege = 0
+				trait = rab_leader_martin_frobisher
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

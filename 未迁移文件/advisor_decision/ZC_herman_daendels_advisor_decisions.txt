@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_herman_daendels = {
+		major = yes
+		potential = {
+			
+			advisor = herman_daendels
+			
+		}
+		allow = {
+			advisor = herman_daendels
+		}
+		effect = {
+			remove_advisor = herman_daendels
+			define_general = {
+				name = "赫尔曼 丹德尔斯【将领】"
+				fire = 2
+				shock = 2
+				manuever = 3
+				siege = 2
+				trait = ZC_herman_daendels
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

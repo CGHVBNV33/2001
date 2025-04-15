@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_polo = {
+		major = yes
+		potential = {
+			
+			advisor = polo
+			
+		}
+		allow = {
+			advisor = polo
+		}
+		effect = {
+			remove_advisor = polo
+			define_explorer = {
+				name = "马可 波罗【探险家】"
+				fire = 2
+				shock = 3
+				manuever = 6
+				siege = 0
+				trait = ZC_polo
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

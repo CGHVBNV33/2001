@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_ferenc = {
+		major = yes
+		potential = {
+			
+			advisor = ferenc
+			
+		}
+		allow = {
+			advisor = ferenc
+		}
+		effect = {
+			remove_advisor = ferenc
+			define_general = {
+				name = "纳达斯迪 费伦茨【将领】"
+				fire = 1
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_ferenc
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

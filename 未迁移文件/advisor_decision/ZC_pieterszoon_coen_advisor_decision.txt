@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_conquistador_pieterszoon_coen = {
+		major = yes
+		potential = {
+			
+			advisor = pieterszoon_coen
+			
+		}
+		allow = {
+			advisor = pieterszoon_coen
+		}
+		effect = {
+			remove_advisor = pieterszoon_coen
+			define_conquistador = {
+				name = "简 皮特斯佐恩 科恩【征服者】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = ZC_pieterszoon_coen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

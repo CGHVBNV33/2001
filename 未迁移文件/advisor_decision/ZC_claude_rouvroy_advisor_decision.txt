@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_claude_rouvroy = {
+		major = yes
+		potential = {
+			
+			advisor = claude_rouvroy
+			
+		}
+		allow = {
+			advisor = claude_rouvroy
+		}
+		effect = {
+			remove_advisor = claude_rouvroy
+			define_explorer = {
+				name = "克劳德 圣西门｢【思想家】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = rab_leader_claude_rouvroy
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

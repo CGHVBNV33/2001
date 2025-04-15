@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_gabriel_suchet = {
+		major = yes
+		potential = {
+			
+			advisor = gabriel_suchet
+			
+		}
+		allow = {
+			advisor = gabriel_suchet
+		}
+		effect = {
+			remove_advisor = gabriel_suchet
+			define_general = {
+				name = "加布里埃尔 絮歇【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = ZC_gabriel_suchet
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

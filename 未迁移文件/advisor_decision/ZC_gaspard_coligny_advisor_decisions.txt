@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_gaspard_coligny = {
+		major = yes
+		potential = {
+			
+			advisor = gaspard_coligny
+			
+		}
+		allow = {
+			advisor = gaspard_coligny
+		}
+		effect = {
+			remove_advisor = gaspard_coligny
+			define_general = {
+				name = "加斯帕尔 科利尼｢【将领】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = ZC_gaspard_coligny
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

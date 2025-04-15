@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_gebhard_blucher = {
+		major = yes
+		potential = {
+			
+			advisor = gebhard_blucher
+			
+		}
+		allow = {
+			advisor = gebhard_blucher
+		}
+		effect = {
+			remove_advisor = gebhard_blucher
+			define_general = {
+				name = "格布哈德 布吕歇尔【将领】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 0
+				trait = ZC_gebhard_blucher
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

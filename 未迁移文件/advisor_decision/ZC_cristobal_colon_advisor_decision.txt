@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_explorer_cristobal_colon = {
+		major = yes
+		potential = {
+			
+			advisor = cristobal_colon
+			
+		}
+		allow = {
+			advisor = cristobal_colon
+		}
+		effect = {
+			remove_advisor = cristobal_colon
+			define_explorer = {
+				name = "克里斯托弗 哥伦布｢【航海王】"
+				fire = 6
+				shock = 6
+				manuever = 6
+				siege = 0
+				trait = rab_leader_cristobal_colon
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

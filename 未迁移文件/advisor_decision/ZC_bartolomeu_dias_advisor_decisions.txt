@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_bartolomeu_dias = {
+		major = yes
+		potential = {
+			
+			advisor = bartolomeu_dias
+			
+		}
+		allow = {
+			advisor = bartolomeu_dias
+		}
+		effect = {
+			remove_advisor = bartolomeu_dias
+			define_explorer = {
+				name = "巴尔托洛梅乌 迪亚士【探险家】"
+				fire = 2
+				shock = 2
+				manuever = 6
+				siege = 1
+				trait = ZC_bartolomeu_dias
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

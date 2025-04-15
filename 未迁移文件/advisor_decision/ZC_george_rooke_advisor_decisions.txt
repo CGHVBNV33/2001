@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_george_rooke = {
+		major = yes
+		potential = {
+			
+			advisor = george_rooke
+			
+		}
+		allow = {
+			advisor = george_rooke
+		}
+		effect = {
+			remove_advisor = george_rooke
+			define_admiral = {
+				name = "乔治 鲁克｢【提督】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 0
+				trait = ZC_george_rooke
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_francois_grasse = {
+		major = yes
+		potential = {
+			
+			advisor = francois_grasse
+			
+		}
+		allow = {
+			advisor = francois_grasse
+		}
+		effect = {
+			remove_advisor = francois_grasse
+			define_admiral = {
+				name = "弗朗索瓦 格拉斯【提督】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = ZC_francois_grasse
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

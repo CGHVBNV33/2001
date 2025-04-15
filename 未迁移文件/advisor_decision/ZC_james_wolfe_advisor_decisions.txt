@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_james_wolfe = {
+		major = yes
+		potential = {
+			
+			advisor = james_wolfe
+			
+		}
+		allow = {
+			advisor = james_wolfe
+		}
+		effect = {
+			remove_advisor = james_wolfe
+			define_general = {
+				name = "詹姆斯 沃尔夫【将领】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = ZC_james_wolfe
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

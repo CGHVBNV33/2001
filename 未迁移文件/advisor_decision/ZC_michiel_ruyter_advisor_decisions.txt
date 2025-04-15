@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_michiel_ruyter = {
+		major = yes
+		potential = {
+			
+			advisor = michiel_ruyter
+			
+		}
+		allow = {
+			advisor = michiel_ruyter
+		}
+		effect = {
+			remove_advisor = michiel_ruyter
+			define_admiral = {
+				name = "米希尔 鲁伊特【恐怖者】"
+				fire = 6
+				shock = 5
+				manuever = 6
+				siege = 0
+				trait = ZC_michiel_ruyter
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

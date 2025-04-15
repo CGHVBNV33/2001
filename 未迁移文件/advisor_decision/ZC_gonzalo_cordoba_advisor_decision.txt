@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_gonzalo_cordoba = {
+		major = yes
+		potential = {
+			
+			advisor = gonzalo_cordoba
+			
+		}
+		allow = {
+			advisor = gonzalo_cordoba
+		}
+		effect = {
+			remove_advisor = gonzalo_cordoba
+			define_general = {
+				name = "贡萨洛 科尔多瓦｢【将领】"
+				fire = 6
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_gonzalo_cordoba
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_piet_hein = {
+		major = yes
+		potential = {
+			
+			advisor = piet_hein
+			
+		}
+		allow = {
+			advisor = piet_hein
+		}
+		effect = {
+			remove_advisor = piet_hein
+			define_admiral = {
+				name = "皮特 海恩【提督】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_piet_hein
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

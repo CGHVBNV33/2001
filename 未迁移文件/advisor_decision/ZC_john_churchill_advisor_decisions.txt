@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_john_churchill = {
+		major = yes
+		potential = {
+			
+			advisor = john_churchill
+			
+		}
+		allow = {
+			advisor = john_churchill
+		}
+		effect = {
+			remove_advisor = john_churchill
+			define_general = {
+				name = "约翰 丘吉尔｢【马尔博罗公爵】"
+				fire = 6
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = ZC_john_churchill
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

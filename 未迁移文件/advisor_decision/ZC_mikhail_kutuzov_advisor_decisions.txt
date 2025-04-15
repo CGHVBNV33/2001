@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_mikhail_kutuzov = {
+		major = yes
+		potential = {
+			
+			advisor = mikhail_kutuzov
+			
+		}
+		allow = {
+			advisor = mikhail_kutuzov
+		}
+		effect = {
+			remove_advisor = mikhail_kutuzov
+			define_general = {
+				name = "米哈伊尔 库图佐夫｢【独眼】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_mikhail_kutuzov
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

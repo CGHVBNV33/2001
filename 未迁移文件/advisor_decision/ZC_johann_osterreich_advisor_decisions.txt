@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_johann_osterreich = {
+		major = yes
+		potential = {
+			
+			advisor = johann_osterreich
+			
+		}
+		allow = {
+			advisor = johann_osterreich
+		}
+		effect = {
+			remove_advisor = johann_osterreich
+			define_general = {
+				name = "约翰【约翰大公】"
+				fire = 2
+				shock = 2
+				manuever = 2
+				siege = 0
+				trait = ZC_johann_osterreich
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

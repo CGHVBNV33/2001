@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_explorer_francis_drake = {
+		major = yes
+		potential = {
+			
+			advisor = francis_drake
+			
+		}
+		allow = {
+			advisor = francis_drake
+		}
+		effect = {
+			remove_advisor = francis_drake
+			define_explorer = {
+				name = "弗朗西斯 德雷克｢【探险家】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 1
+				trait = rab_leader_francis_drake
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

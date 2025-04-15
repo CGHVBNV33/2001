@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_joseph_johnston = {
+		major = yes
+		potential = {
+			
+			advisor = joseph_johnston
+			
+		}
+		allow = {
+			advisor = joseph_johnston
+		}
+		effect = {
+			remove_advisor = joseph_johnston
+			define_general = {
+				name = "约瑟夫 约翰斯顿｢【司令】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_joseph_johnston
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

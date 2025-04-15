@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_joachim_murat = {
+		major = yes
+		potential = {
+			
+			advisor = joachim_murat
+			
+		}
+		allow = {
+			advisor = joachim_murat
+		}
+		effect = {
+			remove_advisor = joachim_murat
+			define_general = {
+				name = "若阿尚 缪拉【元帅】"
+				fire = 4
+				shock = 4
+				manuever = 6
+				siege = 2
+				trait = ZC_joachim_murat
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

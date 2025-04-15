@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_otto_bismarck = {
+		major = yes
+		potential = {
+			
+			advisor = otto_bismarck
+			
+		}
+		allow = {
+			advisor = otto_bismarck
+		}
+		effect = {
+			remove_advisor = otto_bismarck
+			define_general = {
+				name = "奥拓 冯 俾斯麦【铁血宰相】"
+				fire = 6
+				shock = 6
+				manuever = 2
+				siege = 4
+				trait = ZC_otto_bismarck
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

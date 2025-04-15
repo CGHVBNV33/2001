@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_cuthbert_collingwood = {
+		major = yes
+		potential = {
+			
+			advisor = cuthbert_collingwood
+			
+		}
+		allow = {
+			advisor = cuthbert_collingwood
+		}
+		effect = {
+			remove_advisor = cuthbert_collingwood
+			define_admiral = {
+				name = "卡斯伯特 科林伍德【提督】"
+				fire = 4
+				shock = 4
+				manuever = 5
+				siege = 0
+				trait = ZC_cuthbert_collingwood
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

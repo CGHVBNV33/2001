@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_daun = {
+		major = yes
+		potential = {
+			
+			advisor = daun
+			
+		}
+		allow = {
+			advisor = daun
+		}
+		effect = {
+			remove_advisor = daun
+			define_general = {
+				name = "利奥波德 道恩【元帅】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 1
+				trait = ZC_daun
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

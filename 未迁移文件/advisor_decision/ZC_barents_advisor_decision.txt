@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_explorer_barents = {
+		major = yes
+		potential = {
+			
+			advisor = barents
+			
+		}
+		allow = {
+			advisor = barents
+		}
+		effect = {
+			remove_advisor = barents
+			define_explorer = {
+				name = "威廉 巴伦支【探险家】"
+				fire = 2
+				shock = 2
+				manuever = 5
+				siege = 1
+				trait = ZC_barents
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

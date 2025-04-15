@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_erich_manstein = {
+		major = yes
+		potential = {
+			
+			advisor = erich_manstein
+			
+		}
+		allow = {
+			advisor = erich_manstein
+		}
+		effect = {
+			remove_advisor = erich_manstein
+			define_general = {
+				name = "埃里希 曼施坦因【将领】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = ZC_erich_manstein
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

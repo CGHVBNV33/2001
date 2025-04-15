@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_franz_mercy = {
+		major = yes
+		potential = {
+			
+			advisor = franz_mercy
+			
+		}
+		allow = {
+			advisor = franz_mercy
+		}
+		effect = {
+			remove_advisor = franz_mercy
+			define_general = {
+				name = "弗朗茨 梅西｢【元帅】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 0
+				trait = rab_leader_franz_mercy
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

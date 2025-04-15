@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_john_monash = {
+		major = yes
+		potential = {
+			
+			advisor = john_monash
+			
+		}
+		allow = {
+			advisor = john_monash
+		}
+		effect = {
+			remove_advisor = john_monash
+			define_general = {
+				name = "约翰 莫纳什｢【爵士】"
+				fire = 4
+				shock = 2
+				manuever = 3
+				siege = 1
+				trait = rab_leader_john_monash
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

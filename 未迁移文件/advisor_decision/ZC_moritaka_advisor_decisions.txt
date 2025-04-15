@@ -1,0 +1,29 @@
+country_decisions = {
+	advisors_convert_generals_moritaka = {
+		major = yes
+		potential = {
+			
+			advisor = moritaka
+			
+		}
+		allow = {
+			advisor = moritaka
+		}
+
+		effect = {
+			remove_advisor = moritaka
+			define_admiral = {
+				name = "九鬼嘉隆｢【提督】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = sg_leader_Kuki
+			}
+		
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_pedro_cabral = {
+		major = yes
+		potential = {
+			
+			advisor = pedro_cabral
+			
+		}
+		allow = {
+			advisor = pedro_cabral
+		}
+		effect = {
+			remove_advisor = pedro_cabral
+			define_explorer = {
+				name = "佩德罗 卡布拉尔【探险家】"
+				fire = 2
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = ZC_pedro_cabral
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

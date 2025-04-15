@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_generals_hanyanhui = {
+		major = yes
+		potential = {
+			
+			advisor = hanyanhui
+			
+		}
+		allow = {
+			advisor = hanyanhui
+		}
+		effect = {
+			remove_advisor = hanyanhui
+			define_general = {
+				name = "韩延徽｢【谋士】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 3
+				trait = rab_leader_hanyanhwai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

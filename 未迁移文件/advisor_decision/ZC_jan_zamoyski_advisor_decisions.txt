@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_jan_zamoyski = {
+		major = yes
+		potential = {
+			
+			advisor = jan_zamoyski
+			
+		}
+		allow = {
+			advisor = jan_zamoyski
+		}
+		effect = {
+			remove_advisor = jan_zamoyski
+			define_general = {
+				name = "扬 扎莫厄斯基【奥德南特】"
+				fire = 2
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = ZC_jan_zamoyski
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

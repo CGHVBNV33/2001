@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_generals_belisarius = {
+		major = yes
+		potential = {
+			
+			advisor = belisarius
+			
+		}
+		allow = {
+			advisor = belisarius
+		}
+		effect = {
+			remove_advisor = belisarius
+			define_general = {
+				name = "弗拉维乌斯 贝利萨留｢【元帅】"
+				fire = 2
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_belisarius
+			}
+		
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_ferdinand_foch = {
+		major = yes
+		potential = {
+			
+			advisor = ferdinand_foch
+			
+		}
+		allow = {
+			advisor = ferdinand_foch
+		}
+		effect = {
+			remove_advisor = ferdinand_foch
+			define_general = {
+				name = "斐迪南 福煦｢【司令】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 1
+				trait = ZC_ferdinand_foch
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_explorer_erik_thorvaldsson= {
+		major = yes
+		potential = {
+			
+			advisor = erik_thorvaldsson
+			
+		}
+		allow = {
+			advisor = erik_thorvaldsson
+		}
+		effect = {
+			remove_advisor = erik_thorvaldsson
+			define_explorer = {
+				name = "埃里克 瑟瓦尔德森｢【红发】"
+				fire = 3
+				shock = 2
+				manuever = 4
+				siege = 2
+				trait = rab_leader_erik_thorvaldsson
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

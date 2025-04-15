@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_bernard_montgomery = {
+		major = yes
+		potential = {
+			
+			advisor = bernard_montgomery
+			
+		}
+		allow = {
+			advisor = bernard_montgomery
+		}
+		effect = {
+			remove_advisor = bernard_montgomery
+			define_general = {
+				name = "伯纳德 蒙哥马利【元帅】"
+				fire = 5
+				shock = 4
+				manuever = 2
+				siege = 2
+				trait = ZC_bernard_montgomery
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

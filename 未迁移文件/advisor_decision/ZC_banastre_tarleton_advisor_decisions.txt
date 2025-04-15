@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_banastre_tarleton = {
+		major = yes
+		potential = {
+			
+			advisor = banastre_tarleton
+			
+		}
+		allow = {
+			advisor = banastre_tarleton
+		}
+		effect = {
+			remove_advisor = banastre_tarleton
+			define_general = {
+				name = "伯纳斯特 塔尔顿【青龙】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = ZC_banastre_tarleton
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

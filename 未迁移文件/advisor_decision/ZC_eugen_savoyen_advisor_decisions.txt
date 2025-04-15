@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_eugen_savoyen = {
+		major = yes
+		potential = {
+			
+			advisor = eugen_savoyen
+			
+		}
+		allow = {
+			advisor = eugen_savoyen
+		}
+		effect = {
+			remove_advisor = eugen_savoyen
+			define_general = {
+				name = "弗朗索瓦 欧根【欧根亲王】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 4
+				trait = ZC_eugen_savoyen
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_gilles_de_rais = {
+		major = yes
+		potential = {
+			
+			advisor = gilles_de_rais
+			
+		}
+		allow = {
+			advisor = gilles_de_rais
+		}
+		effect = {
+			remove_advisor = gilles_de_rais
+			define_general = {
+				name = "吉尔斯 德 莱斯｢【青须】"
+				fire = 3
+				shock = 3
+				manuever = 5
+				siege = 1
+				trait = ZC_gilles_de_rais
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

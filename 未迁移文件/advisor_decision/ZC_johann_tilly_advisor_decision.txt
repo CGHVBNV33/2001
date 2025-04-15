@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_johann_tilly = {
+		major = yes
+		potential = {
+			
+			advisor = johann_tilly
+			
+		}
+		allow = {
+			advisor = johann_tilly
+		}
+		effect = {
+			remove_advisor = johann_tilly
+			define_general = {
+				name = "约翰 蒂利｢【马格德堡屠夫】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_johann_tilly
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_claude_de_lorraine = {
+		major = yes
+		potential = {
+			
+			advisor = claude_de_lorraine
+			
+		}
+		allow = {
+			advisor = claude_de_lorraine
+		}
+		effect = {
+			remove_advisor = claude_de_lorraine
+			define_general = {
+				name = "克洛德 德 洛林｢【吉斯公爵】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = ZC_claude_de_lorraine
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_cornelis_tromp = {
+		major = yes
+		potential = {
+			
+			advisor = cornelis_tromp
+			
+		}
+		allow = {
+			advisor = cornelis_tromp
+		}
+		effect = {
+			remove_advisor = cornelis_tromp
+			define_admiral = {
+				name = "科内利斯 特龙普【小特龙普】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 0
+				trait = ZC_cornelis_tromp
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

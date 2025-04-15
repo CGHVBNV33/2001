@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_michel_ney = {
+		major = yes
+		potential = {
+			
+			advisor = michel_ney
+			
+		}
+		allow = {
+			advisor = michel_ney
+		}
+		effect = {
+			remove_advisor = michel_ney
+			define_general = {
+				name = "米歇尔 内伊【元帅】"
+				fire = 3
+				shock = 3
+				manuever = 6
+				siege = 1
+				trait = ZC_michel_ney
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
