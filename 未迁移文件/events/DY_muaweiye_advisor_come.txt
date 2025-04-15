@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = muaweiye_advisor_come
+
+#武将某种条件下出现
+#id = 1 : muaweiye : 穆阿维叶·伊本·阿布·苏富扬｢【武将】
+
+country_event = {
+	id = muaweiye_advisor_come.1
+	title = "muaweiye_advisor_come.1.t"
+	desc = "muaweiye_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 630	
+		NOT = { is_year = 680 }
+		OR = {
+			AND = {
+				exists = RSD
+				tag = RSD
+			}
+			AND = {
+				NOT = { exists = RSD }
+				owns = 384
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = muaweiye_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = muaweiye
+				name = "穆阿维叶·伊本·阿布·苏富扬｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "穆阿维叶·伊本·阿布·苏富扬｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_muaweiye
+			}
+		}
+	}
+}
+

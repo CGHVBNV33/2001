@@ -1,0 +1,68 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = murongbaiyao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : murongbaiyao : 
+#
+country_event = {
+	id = murongbaiyao_advisor_come.1
+	title = "murongbaiyao_advisor_come.1.t"
+	desc = "murongbaiyao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 435
+		NOT = { is_year = 471 }
+		OR = {
+		   AND = {
+		      exists = NWE
+			  NOT = { exists = DA1}
+		      tag = NWE
+		   }
+		    AND = {
+		      exists = DA1
+			  NOT = { exists = NWE}
+		      tag = DA1
+		   }		
+		   AND = {
+		      NOT = { exists = NWE}	
+			  NOT = { exists = DA1}
+		      owns = 3188
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = murongbaiyao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = murongbaiyao
+				name = "慕容白曜｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "慕容白曜｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_murongbaiyao
+			}
+		}
+	}
+}
+

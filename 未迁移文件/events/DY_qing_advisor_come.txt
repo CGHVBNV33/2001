@@ -1,0 +1,460 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = sunsike_advisor_come
+
+#武将某种條件下出現
+#id = 1 : sunsike : 
+#
+country_event = {
+	id = sunsike_advisor_come.1
+	title = "sunsike_advisor_come.1.t"
+	desc = "sunsike_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1648
+		NOT = { is_year = 1700 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 1816
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = sunsike_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = sunsike
+				name = "孙思克【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "孙思克【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_sunsike
+			}
+		}
+	}
+}
+
+namespace = zhangyon_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangyon : 
+#
+country_event = {
+	id = zhangyon_advisor_come.1
+	title = "zhangyon_advisor_come.1.t"
+	desc = "zhangyon_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1645
+		NOT = { is_year = 1684 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 700
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangyon_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhangyon
+				name = "张勇【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张勇【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhangyon
+			}
+		}
+	}
+}
+
+namespace = zhaoliangdong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhaoliangdong : 
+#
+country_event = {
+	id = zhaoliangdong_advisor_come.1
+	title = "zhaoliangdong_advisor_come.1.t"
+	desc = "zhaoliangdong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1650
+		NOT = { is_year = 1697 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 698
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhaoliangdong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhaoliangdong
+				name = "赵良栋【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "赵良栋【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhaoliangdong
+			}
+		}
+	}
+}
+
+namespace = wangjinbao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wangjinbao : 
+#
+country_event = {
+	id = wangjinbao_advisor_come.1
+	title = "wangjinbao_advisor_come.1.t"
+	desc = "wangjinbao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1654
+		NOT = { is_year = 1685 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 3195
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wangjinbao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wangjinbao
+				name = "王进宝【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "王进宝【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wangjinbao
+			}
+		}
+	}
+}
+
+namespace = sonin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : sonin : 
+#
+country_event = {
+	id = sonin_advisor_come.1
+	title = "sonin_advisor_come.1.t"
+	desc = "sonin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1625
+		NOT = { is_year = 1667 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 730
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = sonin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = sonin
+				name = "索尼【首席大臣】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "索尼【首席大臣】"
+				fire = 2
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = rab_leader_sonin
+			}
+		}
+	}
+}
+
+namespace = Suksaha_advisor_come
+
+#武将某种條件下出現
+#id = 1 : Suksaha : 
+#
+country_event = {
+	id = Suksaha_advisor_come.1
+	title = "Suksaha_advisor_come.1.t"
+	desc = "Suksaha_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1630
+		NOT = { is_year = 1667 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 730
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = Suksaha_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = Suksaha
+				name = "苏克萨哈【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "苏克萨哈【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_Suksaha
+			}
+		}
+	}
+}
+
+namespace = ebilong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : ebilong : 
+#
+country_event = {
+	id = ebilong_advisor_come.1
+	title = "ebilong_advisor_come.1.t"
+	desc = "ebilong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1628
+		NOT = { is_year = 1673 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 730
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = ebilong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = ebilong
+				name = "遏必隆【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "遏必隆【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_ebilong
+			}
+		}
+	}
+}
+
+namespace = zhoupeigong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhoupeigong : 
+#
+country_event = {
+	id = zhoupeigong_advisor_come.1
+	title = "zhoupeigong_advisor_come.1.t"
+	desc = "zhoupeigong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1661
+		NOT = { is_year = 1701 }
+		OR = {
+		   AND = {
+		      exists = QNG
+		      tag = QNG
+		   }		
+		   AND = {
+		      NOT = { exists = QNG}		
+		      owns = 5027
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhoupeigong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhoupeigong
+				name = "周培公【军师】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "周培公【军师】"
+				fire = 1
+				shock = 1
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhoupeigong
+			}
+		}
+	}
+}
+

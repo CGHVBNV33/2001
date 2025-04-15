@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = peirenji_advisor_come
+
+#武将某种條件下出現
+#id = 1 : peirenji : 
+#
+country_event = {
+	id = peirenji_advisor_come.1
+	title = "peirenji_advisor_come.1.t"
+	desc = "peirenji_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 617
+		NOT = { is_year = 620 }
+		OR = {
+		   AND = {
+		      exists = WG2 
+		      tag = WG2
+		   }		
+		   AND = {
+		      NOT = { exists = WG2}		
+		      owns = 2176
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = peirenji_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = peirenji
+				name = "裴仁基｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "裴仁基｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_peirenji
+			}
+		}
+	}
+}
+

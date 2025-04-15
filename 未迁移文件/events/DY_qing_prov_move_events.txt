@@ -1,0 +1,1311 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = sonin_prov_move_events
+
+
+province_event = {
+	id = sonin_prov_move_events.1
+	title = "sonin_prov_move_events.NAME1"
+	desc = "sonin_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_sonin
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "sonin_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_sonin }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1667  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_sonin
+					owner = {
+						country_event = {
+							id = sonin_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_sonin
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_sonin"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_sonin
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_sonin"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1667
+				}	
+				remove_province_modifier = pov_sonin		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = sonin_prov_move_events.2
+	title = "sonin_prov_move_events.NAME2"
+	desc = "sonin_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "sonin_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = sonin
+					name = "索尼【首席大臣】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "索尼【首席大臣】"
+				fire = 2
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = rab_leader_sonin
+			}
+		}
+	}
+}
+
+namespace = sunsike_prov_move_events
+
+
+province_event = {
+	id = sunsike_prov_move_events.1
+	title = "sunsike_prov_move_events.NAME1"
+	desc = "sunsike_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_sunsike
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "sunsike_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_sunsike }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1700  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_sunsike
+					owner = {
+						country_event = {
+							id = sunsike_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_sunsike
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_sunsike"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_sunsike
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_sunsike"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1700
+				}	
+				remove_province_modifier = pov_sunsike		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = sunsike_prov_move_events.2
+	title = "sunsike_prov_move_events.NAME2"
+	desc = "sunsike_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "sunsike_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = sunsike
+					name = "孙思克【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "孙思克【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_sunsike
+			}
+		}
+	}
+}
+
+namespace = zhaoliangdong_prov_move_events
+
+
+province_event = {
+	id = zhaoliangdong_prov_move_events.1
+	title = "zhaoliangdong_prov_move_events.NAME1"
+	desc = "zhaoliangdong_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_zhaoliangdong
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "zhaoliangdong_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_zhaoliangdong }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1697  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_zhaoliangdong
+					owner = {
+						country_event = {
+							id = zhaoliangdong_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_zhaoliangdong
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhaoliangdong"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_zhaoliangdong
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhaoliangdong"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1687
+				}	
+				remove_province_modifier = pov_zhaoliangdong		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = zhaoliangdong_prov_move_events.2
+	title = "zhaoliangdong_prov_move_events.NAME2"
+	desc = "zhaoliangdong_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "zhaoliangdong_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = zhaoliangdong
+					name = "赵良栋【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "赵良栋【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhaoliangdong
+			}
+		}
+	}
+}
+
+namespace = zhangyon_prov_move_events
+
+
+province_event = {
+	id = zhangyon_prov_move_events.1
+	title = "zhangyon_prov_move_events.NAME1"
+	desc = "zhangyon_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_zhangyon
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "zhangyon_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_zhangyon }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1684  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_zhangyon
+					owner = {
+						country_event = {
+							id = zhangyon_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_zhangyon
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhangyon"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_zhangyon
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhangyon"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1684
+				}	
+				remove_province_modifier = pov_zhangyon		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = zhangyon_prov_move_events.2
+	title = "zhangyon_prov_move_events.NAME2"
+	desc = "zhangyon_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "zhangyon_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = zhangyon
+					name = "张勇【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "张勇【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangyon
+			}
+		}
+	}
+}
+
+namespace = wangjinbao_prov_move_events
+
+
+province_event = {
+	id = wangjinbao_prov_move_events.1
+	title = "wangjinbao_prov_move_events.NAME1"
+	desc = "wangjinbao_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_wangjinbao
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "wangjinbao_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_wangjinbao }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1685  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_wangjinbao
+					owner = {
+						country_event = {
+							id = wangjinbao_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_wangjinbao
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wangjinbao"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_wangjinbao
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wangjinbao"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1685
+				}	
+				remove_province_modifier = pov_wangjinbao		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = wangjinbao_prov_move_events.2
+	title = "wangjinbao_prov_move_events.NAME2"
+	desc = "wangjinbao_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wangjinbao_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = wangjinbao
+					name = "王进宝【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "王进宝【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wangjinbao
+			}
+		}
+	}
+}
+
+namespace = Suksaha_prov_move_events
+
+
+province_event = {
+	id = Suksaha_prov_move_events.1
+	title = "Suksaha_prov_move_events.NAME1"
+	desc = "Suksaha_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_Suksaha
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "Suksaha_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_Suksaha }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1667  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_Suksaha
+					owner = {
+						country_event = {
+							id = Suksaha_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_Suksaha
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_Suksaha"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_Suksaha
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_Suksaha"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1667
+				}	
+				remove_province_modifier = pov_Suksaha		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = Suksaha_prov_move_events.2
+	title = "Suksaha_prov_move_events.NAME2"
+	desc = "Suksaha_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "Suksaha_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = Suksaha
+					name = "苏克萨哈【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "苏克萨哈【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_Suksaha
+			}
+		}
+	}
+}
+
+namespace = ebilong_prov_move_events
+
+
+province_event = {
+	id = ebilong_prov_move_events.1
+	title = "ebilong_prov_move_events.NAME1"
+	desc = "ebilong_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_ebilong
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "ebilong_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_ebilong }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1673  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_ebilong
+					owner = {
+						country_event = {
+							id = ebilong_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_ebilong
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_ebilong"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_ebilong
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_ebilong"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1673
+				}	
+				remove_province_modifier = pov_ebilong		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = ebilong_prov_move_events.2
+	title = "ebilong_prov_move_events.NAME2"
+	desc = "ebilong_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "ebilong_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = ebilong
+					name = "遏必隆【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "遏必隆【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_ebilong
+			}
+		}
+	}
+}
+
+namespace = zhoupeigong_prov_move_events
+
+
+province_event = {
+	id = zhoupeigong_prov_move_events.1
+	title = "zhoupeigong_prov_move_events.NAME1"
+	desc = "zhoupeigong_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_zhoupeigong
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "zhoupeigong_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_zhoupeigong }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 1701  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_zhoupeigong
+					owner = {
+						country_event = {
+							id = zhoupeigong_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = MNG
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_zhoupeigong
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhoupeigong"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = MNG
+							}
+						} 
+					}
+					remove_province_modifier = pov_zhoupeigong
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhoupeigong"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 1701
+				}	
+				remove_province_modifier = pov_zhoupeigong		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = zhoupeigong_prov_move_events.2
+	title = "zhoupeigong_prov_move_events.NAME2"
+	desc = "zhoupeigong_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "zhoupeigong_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = zhoupeigong
+					name = "周培公【军师】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "周培公【军师】"
+				fire = 1
+				shock = 1
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhoupeigong
+			}
+		}
+	}
+}

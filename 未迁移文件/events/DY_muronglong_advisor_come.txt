@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = muronglong_advisor_come
+
+#武将某种條件下出現
+#id = 1 : muronglong : 
+#
+country_event = {
+	id = muronglong_advisor_come.1
+	title = "muronglong_advisor_come.1.t"
+	desc = "muronglong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 384
+		NOT = { is_year = 397 }
+		OR = {
+		   AND = {
+		      exists = HY1
+		      tag = HY1
+		   }		
+		   AND = {
+		      NOT = { exists = HY1}		
+		      owns = 3188
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = muronglong_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = muronglong
+				name = "慕容隆【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "慕容隆【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_muronglong
+			}
+		}
+	}
+}
+

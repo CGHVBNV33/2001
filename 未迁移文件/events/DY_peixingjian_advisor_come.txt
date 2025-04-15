@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = peixingjian_advisor_come
+
+#武将某种條件下出現
+#id = 1 : peixingjian : 
+#
+country_event = {
+	id = peixingjian_advisor_come.1
+	title = "peixingjian_advisor_come.1.t"
+	desc = "peixingjian_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 640
+		NOT = { is_year = 682 }
+		OR = {
+		   AND = {
+		      exists = TNG 
+		      tag = TNG
+		   }		
+		   AND = {
+		      NOT = { exists = TNG}		
+		      owns = 2176
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = peixingjian_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = peixingjian
+				name = "裴行俭｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "裴行俭｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_peixingjian
+			}
+		}
+	}
+}
+

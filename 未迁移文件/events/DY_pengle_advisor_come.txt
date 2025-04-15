@@ -1,0 +1,69 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = pengle_advisor_come
+
+#武将某种条件下出现
+#id = 1 : pengle : 彭乐｢【武将】
+
+country_event = {
+	id = pengle_advisor_come.1
+	title = "pengle_advisor_come.1.t"
+	desc = "pengle_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+	
+		is_year = 517
+		NOT = { is_year = 551 }
+		OR = {
+			AND = {
+				exists = DEW
+				NOT = { exists = BAQ }
+				tag = DWE
+			}
+			AND = {
+				exists = BAQ
+				NOT = { exists = DEW }
+				tag = BAQ
+			}	
+			AND = {
+				NOT = { exists = DWE }
+				NOT = { exists = BAQ }
+				owns = 3195
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = pengle_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = pengle
+				name = "彭乐｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "彭乐｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_pengle
+			}
+		}
+	}
+}
+

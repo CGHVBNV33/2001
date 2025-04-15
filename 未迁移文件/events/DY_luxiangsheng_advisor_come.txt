@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = luxiangsheng_advisor_come
+
+#武将某种條件下出現
+#id = 1 : luxiangsheng : 
+#
+country_event = {
+	id = luxiangsheng_advisor_come.1
+	title = "luxiangsheng_advisor_come.1.t"
+	desc = "luxiangsheng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1622
+		NOT = { is_year = 1639 }
+		OR = {
+		   AND = {
+		      exists = MNG
+		      tag = MNG
+		   }		
+		   AND = {
+		      NOT = { exists = MNG}		
+		      owns = 3179
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = luxiangsheng_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = luxiangsheng
+				name = "卢象升【督师】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "卢象升【督师】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_luxiangsheng
+			}
+		}
+	}
+}
+
