@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = tanguan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : tanguan : 
+#
+country_event = {
+	id = tanguan_advisor_come.1
+	title = "tanguan_advisor_come.1.t"
+	desc = "tanguan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1551
+		NOT = { is_year = 1577 }
+		OR = {
+		   AND = {
+		      exists = MNG
+		      tag = MNG
+		   }		
+		   AND = {
+		      NOT = { exists = MNG}		
+		      owns = 3258
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = tanguan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = tanguan
+				name = "谭纶【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "谭纶【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_tanguan
+			}
+		}
+	}
+}
+

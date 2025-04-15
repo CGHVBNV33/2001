@@ -1,0 +1,477 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wulin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wulin : 吴璘｢【武将】
+#
+country_event = {
+	id = wulin_advisor_come.1
+	title = "wulin_advisor_come.1.t"
+	desc = "wulin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1131
+		NOT = { is_year = 1167 }
+		OR = {
+		    AND = {
+		      exists = SNG 	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = SNG}	
+		      owns = 5141
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wulin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wulin
+				name = "吴璘｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "吴璘｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wulin #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shedeyi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : shedeyi : 折德扆｢【武将】
+#
+country_event = {
+	id = shedeyi_advisor_come.1
+	title = "shedeyi_advisor_come.1.t"
+	desc = "shedeyi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 945
+		NOT = { is_year = 964 }
+		OR = {
+		    AND = {
+		      exists = HJ1 	
+			  NOT = { exists = SNG}	
+			   NOT = { exists = HZ1}
+				   NOT = { exists = HH1}
+		      tag = HJ1
+		   }
+		   AND = {
+		      exists = HH1 
+			  NOT = { exists = SNG}	
+			   NOT = { exists = HZ1}
+			     NOT = { exists = HJ1}	
+		      tag = HH1
+		   }
+		   AND = {
+		      exists = HZ1 
+			 NOT = { exists = SNG}	
+			     NOT = { exists = HJ1}	
+				   NOT = { exists = HH1}
+		      tag = HZ1
+		   }
+		    AND = {
+		      exists = SNG
+			   NOT = { exists = HZ1}
+			     NOT = { exists = HJ1}	
+				   NOT = { exists = HH1}	
+		      tag = SNG
+		   }		
+		   AND = {
+		      NOT = { exists = SNG}	
+			   NOT = { exists = HZ1}
+			     NOT = { exists = HJ1}	
+				   NOT = { exists = HH1}	
+		      owns = 3252
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shedeyi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shedeyi
+				name = "折德扆｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "折德扆｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_shedeyi #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = hanqi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : hanqi : 韩琦｢【武将】
+#
+country_event = {
+	id = hanqi_advisor_come.1
+	title = "hanqi_advisor_come.1.t"
+	desc = "hanqi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1038
+		NOT = { is_year = 1075 }
+		OR = {
+		    AND = {
+		      exists = SNG 	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = SNG}	
+		      owns = 3267
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = hanqi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = hanqi
+				name = "韩琦｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "韩琦｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_hanqi #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = sheyuxun_advisor_come
+
+#武将某种條件下出現
+#id = 1 : sheyuxun : 折御勋｢【武将】
+#
+country_event = {
+	id = sheyuxun_advisor_come.1
+	title = "sheyuxun_advisor_come.1.t"
+	desc = "sheyuxun_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 965
+		NOT = { is_year = 977 }
+		OR = {
+		    AND = {
+		      exists = SNG 	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = SNG}	
+		      owns = 3252
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = sheyuxun_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = sheyuxun
+				name = "折御勋｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "折御勋｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_sheyuxun #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = sheyuqing_advisor_come
+
+#武将某种條件下出現
+#id = 1 : sheyuqing : 折御卿｢【武将】
+#
+country_event = {
+	id = sheyuqing_advisor_come.1
+	title = "sheyuqing_advisor_come.1.t"
+	desc = "sheyuqing_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 969
+		NOT = { is_year = 996 }
+		OR = {
+		    AND = {
+		      exists = SNG 	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = SNG}	
+		      owns = 3252
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = sheyuqing_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = sheyuqing
+				name = "折御卿｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "折御卿｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_sheyuqing #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shekexing_advisor_come
+
+#武将某种條件下出現
+#id = 1 : shekexing : 折克行｢【武将】
+#
+country_event = {
+	id = shekexing_advisor_come.1
+	title = "shekexing_advisor_come.1.t"
+	desc = "shekexing_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1070
+		NOT = { is_year = 1108 }
+		OR = {
+		    AND = {
+		      exists = SNG 	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = SNG}	
+		      owns = 3252
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shekexing_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shekexing
+				name = "折克行｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "折克行｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_shekexing #将领的特质
+			}
+		}
+	}
+}
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shekeshi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : shekeshi : 折可适｢【武将】
+#
+country_event = {
+	id = shekeshi_advisor_come.1
+	title = "shekeshi_advisor_come.1.t"
+	desc = "shekeshi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 1082
+		NOT = { is_year = 1110 }
+		OR = {
+		    AND = {
+		      exists = SNG 	
+		      tag = SNG
+		   }
+		   AND = {
+		      NOT = { exists = SNG}	
+		      owns = 3252
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shekeshi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shekeshi
+				name = "折可适｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "折可适｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_shekeshi #将领的特质
+			}
+		}
+	}
+}
+
+

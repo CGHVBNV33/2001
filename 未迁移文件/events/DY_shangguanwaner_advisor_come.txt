@@ -1,0 +1,48 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shangguanwaner_advisor_come
+
+#武将某种条件下出现
+#id = 1 : shangguanwaner : 上官婉儿｢【巾帼宰相】
+
+country_event = {
+	id = shangguanwaner_advisor_come.1
+	title = "shangguanwaner_advisor_come.1.t"
+	desc = "shangguanwaner_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 677	
+		NOT = { is_year = 710 }
+		OR = {
+			AND = {
+				exists = TNG
+				tag = TNG
+			}
+			AND = {
+				NOT = { exists = TNG }
+				owns = 700
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shangguanwaner_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = shangguanwaner
+				name = "上官婉儿｢【巾帼宰相】"
+				female = yes
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

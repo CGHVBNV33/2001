@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanbingde_advisor_come
+
+#武将某种条件下出现
+#id = 1 : wanyanbingde : 完颜秉德｢【武将】
+
+country_event = {
+	id = wanyanbingde_advisor_come.1
+	title = "wanyanbingde_advisor_come.1.t"
+	desc = "wanyanbingde_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1120	
+		NOT = { is_year = 1145 }
+		OR = {
+			AND = {
+				exists = GNN
+				tag = GNN
+			}
+			AND = {
+				NOT = { exists = GNN }
+				owns = 727
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanbingde_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanbingde
+				name = "完颜秉德｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜秉德｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_wanyanbingde
+			}
+		}
+	}
+}
+

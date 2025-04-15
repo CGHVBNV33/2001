@@ -1,0 +1,69 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wangzhongde_advisor_come
+
+#武将某种条件下出现
+#id = 1 : wangzhongde : 王仲德｢【武将】
+
+country_event = {
+	id = wangzhongde_advisor_come.1
+	title = "wangzhongde_advisor_come.1.t"
+	desc = "wangzhongde_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+	
+		is_year = 387
+		NOT = { is_year = 438 }
+		OR = {
+			AND = {
+				exists = JN1
+				NOT = { exists = LSO }
+				tag = JN1
+			}
+			AND = {
+				exists = LSO
+				NOT = { exists = JN1 }
+				tag = LSO
+			}	
+			AND = {
+				NOT = { exists = JN1 }
+				NOT = { exists = LSO }
+				owns = 693
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wangzhongde_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wangzhongde
+				name = "王仲德｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "王仲德｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wangzhongde
+			}
+		}
+	}
+}
+

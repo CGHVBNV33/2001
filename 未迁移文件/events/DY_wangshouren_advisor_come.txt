@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wangshouren_advisor_come
+
+#武将某种條件下出現
+#id = 1 : wangshouren : 
+#
+country_event = {
+	id = wangshouren_advisor_come.1
+	title = "wangshouren_advisor_come.1.t"
+	desc = "wangshouren_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1499
+		NOT = { is_year = 1529 }
+		OR = {
+		   AND = {
+		      exists = MNG
+		      tag = MNG
+		   }		
+		   AND = {
+		      NOT = { exists = MNG}		
+		      owns = 2148
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wangshouren_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wangshouren
+				name = "王守仁｢【思想家】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "王守仁｢【思想家】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangshouren
+			}
+		}
+	}
+}
+

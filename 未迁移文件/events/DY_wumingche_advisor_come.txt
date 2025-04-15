@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wumingche_advisor_come
+
+#武将某种条件下出现
+#id = 1 : wumingche : 吴明彻｢【武将】
+
+country_event = {
+	id = wumingche_advisor_come.1
+	title = "wumingche_advisor_come.1.t"
+	desc = "wumingche_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 532	
+		NOT = { is_year = 578 }
+		OR = {
+			AND = {
+				exists = CEN
+				tag = CEN
+			}
+			AND = {
+				NOT = { exists = CEN }
+				owns = 1821
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wumingche_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wumingche
+				name = "吴明彻｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "吴明彻｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 2
+				siege = 3
+				trait = rab_leader_wumingche
+			}
+		}
+	}
+}
+

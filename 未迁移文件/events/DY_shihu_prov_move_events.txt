@@ -1,0 +1,159 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 石虎｢【武将】 毛遂自荐 
+
+namespace = shihu_prov_move_events
+
+
+province_event = {
+	id =shihu_prov_move_events.1
+	title = "shihu_prov_move_events.NAME1"
+	desc = "shihu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_shihu
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "shihu_prov_move_events.OPTA1"
+###########################石虎｢【武将】pov_shihu#################################		
+		if = {
+			limit = { has_province_modifier = pov_shihu }
+			if = {
+			#决定在武将的寿命
+				limit = { 
+					NOT = { is_year = 349  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+														
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_shihu
+					owner = {
+						country_event = {
+							id =shihu_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+            
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_shihu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_shihu"
+							duration = -1
+						}					
+					}
+				}
+				#不是期待的国家 直接移到别的省分
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_shihu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_shihu"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 349
+				}	
+				remove_province_modifier = pov_shihu		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	石虎｢【武将】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id =shihu_prov_move_events.2
+	title = "shihu_prov_move_events.NAME2"
+	desc = "shihu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "shihu_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type =shihu
+					name = "石虎｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "石虎｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shihu
+			}
+		}
+	}
+}
+
+	
+	

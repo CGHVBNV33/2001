@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shentianzi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : shentianzi: 
+#
+country_event = {
+	id = shentianzi_advisor_come.1
+	title = "shentianzi_advisor_come.1.t"
+	desc = "shentianzi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 403
+		NOT = { is_year = 419 }
+		OR = {
+		   AND = {
+		      exists = JN1
+		      tag = JN1
+		   }
+		   AND = {
+		      NOT = { exists = JN1}		
+		      owns = 5035
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shentianzi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shentianzi
+				name = "沈田子【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "沈田子【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_shentianzi
+			}
+		}
+	}
+}
+

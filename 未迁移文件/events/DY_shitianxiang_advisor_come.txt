@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = shitianxiang_advisor_come
+
+#武将某种條件下出現
+#id = 1 : shitianxiang: 
+#
+country_event = {
+	id = shitianxiang_advisor_come.1
+	title = "shitianxiang_advisor_come.1.t"
+	desc = "shitianxiang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1213
+		NOT = { is_year = 1258 }
+		OR = {
+		   AND = {
+		      exists = MGE
+		      tag = MGE
+		   }		
+		   AND = {
+		      NOT = { exists = MGE}		
+		      owns = 5122
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = shitianxiang_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = shitianxiang
+				name = "史天祥【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "史天祥【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shitianxiang
+			}
+		}
+	}
+}
+
