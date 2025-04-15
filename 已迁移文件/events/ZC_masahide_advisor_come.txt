@@ -1,0 +1,37 @@
+namespace = masahide_advisor_come
+
+
+country_event = {
+	id = masahide_advisor_come.1
+	title = "masahide_advisor_come.1.t"
+	desc = "masahide_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1492
+		NOT = { is_year = 1553 }
+		OR = {
+			tag = ODA
+			AND = {
+				NOT = { exists = ODA }
+				owns = 1030
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = masahide_advisor_come.OPTA1
+		define_advisor = {
+			type = masahide
+			name = "平手政秀｢【文官】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = mikhail_kutuzov_prov_move_events
+
+province_event = {
+	id = mikhail_kutuzov_prov_move_events.1
+	title = "mikhail_kutuzov_prov_move_events.NAME1"
+	desc = "mikhail_kutuzov_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_mikhail_kutuzov
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "mikhail_kutuzov_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_mikhail_kutuzov }
+			if = {
+				limit = { 
+					NOT = { is_year = 1813  }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_mikhail_kutuzov
+					owner = {
+						country_event = {
+							id = mikhail_kutuzov_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_mikhail_kutuzov
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_mikhail_kutuzov"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1741
+				}	
+				remove_province_modifier = pov_mikhail_kutuzov	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mikhail_kutuzov_prov_move_events.2
+	title = "mikhail_kutuzov_prov_move_events.NAME2"
+	desc = "mikhail_kutuzov_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "mikhail_kutuzov_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = mikhail_kutuzov
+					name = "米哈伊尔 库图佐夫｢【独眼】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "米哈伊尔 库图佐夫｢【独眼】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_mikhail_kutuzov
+			}
+		}
+	}
+}

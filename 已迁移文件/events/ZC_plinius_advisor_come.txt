@@ -1,0 +1,43 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = plinius_advisor_come
+
+#武将匐?⸿】o㼐:下㼐?㠐?
+#id = 1 : plinius : 㼿㽘GY｢【武将】
+#
+country_event = {
+	id = plinius_advisor_come.1
+	title = "plinius_advisor_come.1.t"
+	desc = "plinius_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 23
+		NOT = { is_year = 79 }
+		OR = {
+			tag = ROM
+			AND = {
+				NOT = { exists = ROM }
+				owns = 4740
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = plinius_advisor_come.OPTA1
+		define_advisor = {
+			type = plinius
+			name = "盖乌斯 塞孔都斯｢【作家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

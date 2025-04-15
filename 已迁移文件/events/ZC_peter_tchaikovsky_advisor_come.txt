@@ -1,0 +1,42 @@
+namespace = peter_tchaikovsky_advisor_come
+
+country_event = {
+	id = peter_tchaikovsky_advisor_come.1
+	title = "peter_tchaikovsky_advisor_come.1.t"
+	desc = "peter_tchaikovsky_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1840
+		NOT = { is_year = 1893 }
+		OR = {
+			tag = RUS
+			AND = {
+				NOT = { exists = RUS }
+				tag = MOS
+			}
+			AND = {
+				NOT = { exists = RUS }
+				NOT = { exists = MOS }
+				owns = 305
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = peter_tchaikovsky_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = peter_tchaikovsky
+			name = "彼得 柴可夫斯基｢【作曲家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

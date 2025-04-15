@@ -1,0 +1,24 @@
+namespace = moritaka_advisor_come
+
+country_event = {
+	id = moritaka_advisor_come.1
+	title = "moritaka_advisor_come.1.t"
+	desc = "moritaka_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = moritaka_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = moritaka
+			name = "九鬼嘉隆｢【提督】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

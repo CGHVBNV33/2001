@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = pedro_navarro_prov_move_events
+
+province_event = {
+	id = pedro_navarro_prov_move_events.1
+	title = "pedro_navarro_prov_move_events.NAME1"
+	desc = "pedro_navarro_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_pedro_navarro
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "pedro_navarro_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_pedro_navarro }
+			if = {
+				limit = { 
+					NOT = { is_year = 1528 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_pedro_navarro
+					owner = {
+						country_event = {
+							id = pedro_navarro_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_pedro_navarro
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_pedro_navarro"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1528
+				}	
+				remove_province_modifier = pov_pedro_navarro	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pedro_navarro_prov_move_events.2
+	title = "pedro_navarro_prov_move_events.NAME2"
+	desc = "pedro_navarro_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "pedro_navarro_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = pedro_navarro
+					name = "佩特罗 纳瓦罗｢【工程师】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "佩特罗 纳瓦罗｢【工程师】"
+				fire = 3
+				shock = 2
+				manuever = 2
+				siege = 6
+				trait = ZC_pedro_navarro
+			}
+		}
+	}
+}

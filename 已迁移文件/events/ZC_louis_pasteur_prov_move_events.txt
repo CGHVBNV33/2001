@@ -1,0 +1,117 @@
+namespace = louis_pasteur_prov_move_events
+
+
+province_event = {
+	id = louis_pasteur_prov_move_events.1
+	title = "louis_pasteur_prov_move_events.NAME1"
+	desc = "louis_pasteur_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_louis_pasteur
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "louis_pasteur_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_louis_pasteur }
+			if = {
+			limit = { 
+				NOT = { is_year = 1895  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality		
+							}
+						}
+					}
+					remove_province_modifier = pov_louis_pasteur
+					owner = {
+						country_event = {
+							id = louis_pasteur_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+								  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_louis_pasteur
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_louis_pasteur"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_louis_pasteur
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_louis_pasteur"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1895
+			}	
+				remove_province_modifier = pov_louis_pasteur
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = louis_pasteur_prov_move_events.2
+	title = "louis_pasteur_prov_move_events.NAME2"
+	desc = "louis_pasteur_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "louis_pasteur_prov_move_events.OPTA2"
+		define_advisor = {
+			type = louis_pasteur
+			name = "路易斯 巴斯德｢【微生物学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

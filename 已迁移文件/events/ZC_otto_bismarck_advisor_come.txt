@@ -1,0 +1,27 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = otto_bismarck_advisor_come
+
+country_event = {
+	id = otto_bismarck_advisor_come.1
+	title = "otto_bismarck_advisor_come.1.t"
+	desc = "otto_bismarck_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	is_triggered_only = yes
+	option = {
+		name = otto_bismarck_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = otto_bismarck
+				name = "奥拓 冯 俾斯麦【铁血宰相】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

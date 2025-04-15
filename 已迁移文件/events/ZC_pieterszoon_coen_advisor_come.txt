@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = pieterszoon_coen_advisor_come
+
+country_event = {
+	id = pieterszoon_coen_advisor_come.1
+	title = "pieterszoon_coen_advisor_come.1.t"
+	desc = "pieterszoon_coen_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1587
+		NOT = { is_year = 1629 }
+		tag = NED
+		OR = {
+			AND = {
+				NOT = { exists = NED }
+				tag = HOL
+			}
+			AND = {
+				NOT = { exists = NED }
+				NOT = { exists = HOL }
+				owns = 4381
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = pieterszoon_coen_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = pieterszoon_coen
+					name = "简 皮特斯佐恩 科恩【征服者】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_conquistador = {
+				name = "简 皮特斯佐恩 科恩【征服者】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = ZC_pieterszoon_coen
+			}
+		}
+	}
+}

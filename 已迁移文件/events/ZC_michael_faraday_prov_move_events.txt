@@ -1,0 +1,117 @@
+namespace = michael_faraday_prov_move_events
+
+
+province_event = {
+	id = michael_faraday_prov_move_events.1
+	title = "michael_faraday_prov_move_events.NAME1"
+	desc = "michael_faraday_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_michael_faraday
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "michael_faraday_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_michael_faraday }
+			if = {
+			limit = { 
+				NOT = { is_year = 1867  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}
+					remove_province_modifier = pov_michael_faraday
+					owner = {
+						country_event = {
+							id = michael_faraday_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+							 	  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_michael_faraday
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_michael_faraday"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_michael_faraday
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_michael_faraday"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 1867
+			}	
+				remove_province_modifier = pov_michael_faraday
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = michael_faraday_prov_move_events.2
+	title = "michael_faraday_prov_move_events.NAME2"
+	desc = "michael_faraday_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "michael_faraday_prov_move_events.OPTA2"
+		define_advisor = {
+			type = michael_faraday
+			name = "迈克尔 法拉第｢【物理学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
