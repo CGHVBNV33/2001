@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gaozhanggong_advisor_come
+
+#武将某种条件下出现
+#id = 1 : gaozhanggong : 高长恭｢【武将】
+
+country_event = {
+	id = gaozhanggong_advisor_come.1
+	title = "gaozhanggong_advisor_come.1.t"
+	desc = "gaozhanggong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 555	
+		NOT = { is_year = 574 }
+		OR = {
+			AND = {
+				exists = BAQ
+				tag = BAQ
+			}
+			AND = {
+				NOT = { exists = BAQ }
+				owns = 695
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = gaozhanggong_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = gaozhanggong
+				name = "高长恭｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "高长恭｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 1
+				trait = rab_leader_gaozhanggong
+			}
+		}
+	}
+}
+

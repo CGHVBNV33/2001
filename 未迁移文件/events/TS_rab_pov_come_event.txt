@@ -1,0 +1,1688 @@
+namespace = pov_come_event
+country_event = {
+	id = pov_come_event.1
+	title = "pov_come_event.NAME1"
+	desc = "pov_come_event.DESC1"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA1"
+		define_advisor = {
+			type = ma_loan
+			name = "马融｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.2
+	title = "pov_come_event.NAME2"
+	desc = "pov_come_event.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA2"
+		define_advisor = {
+			type = cai_lun
+			name = "蔡伦｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.3
+	title = "pov_come_event.NAME3"
+	desc = "pov_come_event.DESC3"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA3"
+		define_advisor = {
+			type = deng_rang
+			name = "邓让｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.4
+	title = "pov_come_event.NAME4"
+	desc = "pov_come_event.DESC4"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA4"
+		define_advisor = {
+			type = jiang_shi
+			name = "姜诗｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.5
+	title = "pov_come_event.NAME5"
+	desc = "pov_come_event.DESC5"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA5"
+		define_advisor = {
+			type = jiang_ge
+			name = "江革｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.6
+	title = "pov_come_event.NAME6"
+	desc = "pov_come_event.DESC6"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA6"
+		define_advisor = {
+			type = liu_xin
+			name = "刘信｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.7
+	title = "pov_come_event.NAME7"
+	desc = "pov_come_event.DESC7"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA7"
+		define_advisor = {
+			type = chou_lan
+			name = "仇览｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.8
+	title = "pov_come_event.NAME8"
+	desc = "pov_come_event.DESC8"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA8"
+		define_advisor = {
+			type = hu_guang
+			name = "胡广｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.9
+	title = "pov_come_event.NAME9"
+	desc = "pov_come_event.DESC9"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA9"
+		define_advisor = {
+			type = zhang_rang
+			name = "张让｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.10
+	title = "pov_come_event.NAME10"
+	desc = "pov_come_event.DESC10"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA10"
+		define_advisor = {
+			type = zhen_chong
+			name = "郑众｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.11
+	title = "pov_come_event.NAME11"
+	desc = "pov_come_event.DESC11"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA11"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = huang_fu_gui
+				name = "皇甫规｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "皇甫规｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.12
+	title = "pov_come_event.NAME12"
+	desc = "pov_come_event.DESC12"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA12"
+		define_advisor = {
+			type = cao_teng
+			name = "曹腾｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.14
+	title = "pov_come_event.NAME14"
+	desc = "pov_come_event.DESC14"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA14"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = dou_xian
+				name = "窦宪｢【外戚】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "窦宪｢【外戚】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_dou_xian
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.15
+	title = "pov_come_event.NAME15"
+	desc = "pov_come_event.DESC15"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA15"
+		define_advisor = {
+			type = dan_chao
+			name = "�������¹晡�"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.16
+	title = "pov_come_event.NAME16"
+	desc = "pov_come_event.DESC16"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA16"
+		define_advisor = {
+			type = dan_chao
+			name = "单超｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.17
+	title = "pov_come_event.NAME17"
+	desc = "pov_come_event.DESC17"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA17"
+		define_advisor = {
+			type = cai_yong
+			name = "蔡邕｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.18
+	title = "pov_come_event.NAME18"
+	desc = "pov_come_event.DESC18"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA18"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = geng_bing
+				name = "耿秉｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "耿秉｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_geng_bing
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.19
+	title = "pov_come_event.NAME19"
+	desc = "pov_come_event.DESC19"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA19"
+		define_advisor = {
+			type = he_chang
+			name = "何敞｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.20
+	title = "pov_come_event.NAME20"
+	desc = "pov_come_event.DESC20"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA20"
+		define_advisor = {
+			type = jia_fu
+			name = "贾复｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.21
+	title = "pov_come_event.NAME21"
+	desc = "pov_come_event.DESC21"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA21"
+		define_advisor = {
+			type = ban_chao
+			name = "班超｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.22
+	title = "pov_come_event.NAME22"
+	desc = "pov_come_event.DESC22"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA22"
+		define_advisor = {
+			type = ban_zho
+			name = "班昭｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.23
+	title = "pov_come_event.NAME23"
+	desc = "pov_come_event.DESC23"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA23"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = yu_xu
+				name = "虞诩｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "虞诩｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yu_xu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.24
+	title = "pov_come_event.NAME24"
+	desc = "pov_come_event.DESC24"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA24"
+		define_advisor = {
+			type = zhang_heng
+			name = "张衡｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.25
+	title = "pov_come_event.NAME25"
+	desc = "pov_come_event.DESC25"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA25"
+		define_advisor = {
+			type = liu_yan
+			name = "刘焉｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.26
+	title = "pov_come_event.NAME26"
+	desc = "pov_come_event.DESC26"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA26"
+		define_advisor = {
+			type = deng_zhi
+			name = "邓骘｢【外戚】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.27
+	title = "pov_come_event.NAME27"
+	desc = "pov_come_event.DESC27"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA27"
+		define_advisor = {
+			type = deng_xun
+			name = "邓训｢【外戚】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.28
+	title = "pov_come_event.NAME28"
+	desc = "pov_come_event.DESC28"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA28"
+		define_advisor = {
+			type = deng_sui
+			name = "邓绥｢【外戚】"
+			female = yes
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.29
+	title = "pov_come_event.NAME29"
+	desc = "pov_come_event.DESC29"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA29"
+		define_advisor = {
+			type = wang_fu
+			name = "王甫｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.31
+	title = "pov_come_event.NAME31"
+	desc = "pov_come_event.DESC31"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA31"
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "皇甫嵩｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = rab_leader_huang_fu_song
+			}
+		}
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = huang_fu_song
+				name = "皇甫嵩｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.32
+	title = "pov_come_event.NAME32"
+	desc = "pov_come_event.DESC32"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA32"
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "朱俊｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_zhu_jun
+			}
+		}
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhu_jun
+				name = "朱俊｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.33
+	title = "pov_come_event.NAME33"
+	desc = "pov_come_event.DESC33"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA33"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = u_fu_ro
+				name = "于夫罗｢【武将】"
+				skill = 2
+				location = 720
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "于夫罗｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_u_fu_ro
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.34
+	title = "pov_come_event.NAME34"
+	desc = "pov_come_event.DESC34"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA34"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = pu_nu
+				name = "蒲奴｢【武将】"
+				skill = 2
+				location = 2193
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "蒲奴｢【武将】"
+				fire = 2
+				shock = 2
+				manuever = 2
+				siege = 2
+				trait = rab_leader_pu_nu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.35
+	title = "pov_come_event.NAME35"
+	desc = "pov_come_event.DESC35"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA35"
+		define_advisor = {
+			type = fon_ho
+			name = "逢侯｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.37
+	title = "pov_come_event.NAME37"
+	desc = "pov_come_event.DESC37"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA37"
+		define_advisor = {
+			type = chen_fan
+			name = "陈蕃｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.38
+	title = "pov_come_event.NAME38"
+	desc = "pov_come_event.DESC38"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA38"
+		define_advisor = {
+			type = pen_ho
+			name = "偏何｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.39
+	title = "pov_come_event.NAME39"
+	desc = "pov_come_event.DESC39"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA39"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhang_bao
+				name = "张宝｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "张宝｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhang_bao
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.41
+	title = "pov_come_event.NAME41"
+	desc = "pov_come_event.DESC41"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA41"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhang_lian
+				name = "张梁｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "张梁｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_zhang_lian
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.44
+	title = "pov_come_event.NAME44"
+	desc = "pov_come_event.DESC44"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA44"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhang_man_cheng
+				name = "张曼成｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "张曼成｢【武将】"
+				fire = 2
+				shock = 4
+				manuever = 1
+				siege = 1
+				trait = rab_leader_zhang_man_cheng
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.45
+	title = "pov_come_event.NAME45"
+	desc = "pov_come_event.DESC45"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA45"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = guan_hai
+				name = "管亥｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "管亥｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 1
+				siege = 1
+				trait = JI_leader_Guanhai
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.46
+	title = "pov_come_event.NAME46"
+	desc = "pov_come_event.DESC46"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA46"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = xia_hou_yuan
+				name = "夏侯渊｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "夏侯渊｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_xia_hou_yuan
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.47
+	title = "pov_come_event.NAME47"
+	desc = "pov_come_event.DESC47"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA47"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = xia_hou_dun
+				name = "夏侯惇｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "夏侯惇｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xia_hou_dun
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.48
+	title = "pov_come_event.NAME48"
+	desc = "pov_come_event.DESC48"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA48"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_guan_yu = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_guan_yu = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.49
+	title = "pov_come_event.NAME49"
+	desc = "pov_come_event.DESC49"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA49"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhang_fei = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhang_fei = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.50
+	title = "pov_come_event.NAME50"
+	desc = "pov_come_event.DESC50"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA50"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_gao_shun = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_gao_shun = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.51
+	title = "pov_come_event.NAME51"
+	desc = "pov_come_event.DESC51"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA51"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = ma_chao
+				name = "马超｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "马超｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 1
+				trait = rab_leader_machao
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.52
+	title = "pov_come_event.NAME52"
+	desc = "pov_come_event.DESC52"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA52"
+		define_advisor = {
+			type = sun_qian
+			name = "孙乾｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.53
+	title = "pov_come_event.NAME53"
+	desc = "pov_come_event.DESC53"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA53"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhou_yu
+				name = "周瑜｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "周瑜｢【武将】"
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 4
+				trait = rab_leader_mazoulan
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.54
+	title = "pov_come_event.NAME54"
+	desc = "pov_come_event.DESC54"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA54"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = cheng_pu
+				name = "程普｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "程普｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 4
+				trait = rab_leader_cheng_pu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.55
+	title = "pov_come_event.NAME55"
+	desc = "pov_come_event.DESC55"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA55"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = yan_liang
+				name = "颜良｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "颜良｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 2
+				trait = rab_leader_yan_liang
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.56
+	title = "pov_come_event.NAME56"
+	desc = "pov_come_event.DESC56"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA56"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = wen_chou
+				name = "文丑｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "文丑｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 1
+				trait = JI_leader_Wenchou
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.57
+	title = "pov_come_event.NAME57"
+	desc = "pov_come_event.DESC57"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA57"
+		define_advisor = {
+			type = xun_yu
+			name = "荀彧｢【军师】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.58
+	title = "pov_come_event.NAME58"
+	desc = "pov_come_event.DESC58"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA58"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = lu_bu
+				name = "吕布｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "吕布｢【武将】"
+				fire = 6
+				shock = 7
+				manuever = 5
+				siege = 2
+				trait = fly_leader_lvbu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.59
+	title = "pov_come_event.NAME59"
+	desc = "pov_come_event.DESC59"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA59"
+		define_advisor = {
+			type = jia_xu
+			name = "贾诩｢【军师】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.60
+	title = "pov_come_event.NAME60"
+	desc = "pov_come_event.DESC60"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA60"
+		define_advisor = {
+			type = li_lu
+			name = "李儒｢【军师】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.61
+	title = "pov_come_event.NAME61"
+	desc = "pov_come_event.DESC61"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA61"
+		define_advisor = {
+			type = cheng_yu
+			name = "程昱｢【军师】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.62
+	title = "pov_come_event.NAME62"
+	desc = "pov_come_event.DESC62"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA62"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhang_xun
+				name = "张勋｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "张勋｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_zhang_xun
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.63
+	title = "pov_come_event.NAME63"
+	desc = "pov_come_event.DESC63"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA63"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				female = yes
+				type = diao_chan
+				name = "貂蝉｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "貂蝉｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 5
+				siege = 2
+				trait = rab_leader_diao_chan
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.64
+	title = "pov_come_event.NAME64"
+	desc = "pov_come_event.DESC64"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA64"
+		define_advisor = {
+			type = wang_uan
+			name = "王允｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.65
+	title = "pov_come_event.NAME65"
+	desc = "pov_come_event.DESC65"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA65"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = yang_feng
+				name = "杨奉｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				female = yes
+				name = "杨奉｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_yang_feng
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.66
+	title = "pov_come_event.NAME66"
+	desc = "pov_come_event.DESC66"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA66"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhuge_liang = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhuge_liang = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.67
+	title = "pov_come_event.NAME67"
+	desc = "pov_come_event.DESC67"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA67"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = hoang_chung
+				name = "黄忠｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "黄忠｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 5
+				siege = 2
+				trait = rab_leader_in_vintage_form
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.68
+	title = "pov_come_event.NAME68"
+	desc = "pov_come_event.DESC68"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA68"
+		define_advisor = {
+			type = zhang_zhao
+			name = "张昭｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.69
+	title = "pov_come_event.NAME69"
+	desc = "pov_come_event.DESC69"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA69"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhao_yun = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhao_yun = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.70
+	title = "pov_come_event.NAME70"
+	desc = "pov_come_event.DESC70"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA70"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhang_liao = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhang_liao = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.71
+	title = "pov_come_event.NAME71"
+	desc = "pov_come_event.DESC71"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA71"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = xu_chu
+				name = "许褚｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "许褚｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 2
+				trait = rab_leader_xu_chu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.72
+	title = "pov_come_event.NAME72"
+	desc = "pov_come_event.DESC72"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA72"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_sima_yi = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_sima_yi = yes
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.73
+	title = "pov_come_event.NAME73"
+	desc = "pov_come_event.DESC73"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA73"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = lu_xun
+				name = "陆逊｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "陆逊｢【军师】"
+				fire = 6
+				shock = 4
+				manuever = 6
+				siege = 4
+				trait = rab_leader_lu_xun
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pov_come_event.74
+	title = "pov_come_event.NAME74"
+	desc = "pov_come_event.DESC74"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "pov_come_event.OPTA74"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = taishi_ci
+				name = "太史慈｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "太史慈｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_tashici
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lumon_advisor_come
+
+#武将某种条件下出现
+#id = 1 : lumon : 吕蒙｢【武将】
+
+country_event = {
+	id = lumon_advisor_come.1
+	title = "lumon_advisor_come.1.t"
+	desc = "lumon_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 195	
+		NOT = { is_year = 220 }
+		OR = {
+			AND = {
+				exists = SNC
+				tag = SNC
+			}
+			AND = {
+				exists = WUU
+				tag = WUU
+			}
+			AND = {
+				NOT = { exists = WUU }
+				NOT = { exists = SNC }
+				owns = 2148
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lumon_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lumon
+				name = "吕蒙｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "吕蒙｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 6
+				siege = 4
+				trait = JI_leader_Lumeng
+			}
+		}
+	}
+}
+

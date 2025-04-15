@@ -1,0 +1,66 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = licunxiao_advisor_come
+
+#武将某种条件下出现
+#id = 1 : licunxiao : 李存孝｢【武将】
+
+country_event = {
+	id = licunxiao_advisor_come.1
+	title = "licunxiao_advisor_come.1.t"
+	desc = "licunxiao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 888
+		NOT = { is_year = 894 }
+		OR = {
+			OR = {
+				tag = QJ1
+				tag = HDJ
+				tag = L1K
+				tag = HT1
+			}
+			AND = {
+				NOT = { exists = HDJ }
+				NOT = { exists = QJ1 }
+				NOT = { exists = HT1 }
+				NOT = { exists = L1K }
+				owns = 697
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = licunxiao_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = licunxiao
+				name = "李存孝｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李存孝｢【武将】"
+				fire = 5
+				shock = 7
+				manuever = 4
+				siege = 1
+				trait = rab_leader_tangmurmingjing
+			}
+		}
+	}
+}
+

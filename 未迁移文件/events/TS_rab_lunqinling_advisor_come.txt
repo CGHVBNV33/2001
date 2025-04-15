@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lunqinling_advisor_come
+
+#武将某种条件下出现
+#id = 1 : lunqinling : 噶尔.钦陵赞卓｢【武将】
+
+country_event = {
+	id = lunqinling_advisor_come.1
+	title = "lunqinling_advisor_come.1.t"
+	desc = "lunqinling_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 622	
+		NOT = { is_year = 690 }
+		OR = {
+			AND = {
+				exists = TO1
+				tag = TO1
+			}
+			AND = {
+				NOT = { exists = TO1 }
+				owns = 3329
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lunqinling_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lunqinling
+				name = "噶尔.｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "噶尔.钦陵赞卓｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lunqinling
+			}
+		}
+	}
+}
+

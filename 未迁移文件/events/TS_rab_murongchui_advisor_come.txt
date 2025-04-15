@@ -1,0 +1,63 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = murongchui_advisor_come
+
+#武将某种条件下出现
+#id = 1 : murongchui : 慕容垂｢【武将】
+
+country_event = {
+	id = murongchui_advisor_come.1
+	title = "murongchui_advisor_come.1.t"
+	desc = "murongchui_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 346
+		NOT = { is_year = 390 }
+		#前燕CCY
+		OR = {	
+			AND = {
+				NOT = { exists = HY1 }
+				exists = CCY
+				tag = CCY
+			}
+			AND = {
+				NOT = { exists = HY1 }
+				owns = 3188
+			}	
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = murongchui_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = murongchui
+				name = "慕容垂｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "慕容垂｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = fly_leader_murongchui
+			}
+		}
+	}
+}
+

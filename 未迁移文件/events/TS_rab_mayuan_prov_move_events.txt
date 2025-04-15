@@ -1,0 +1,173 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 马援｢【武将】毛遂自荐 
+
+namespace = mayuan_prov_move_events
+
+
+province_event = {
+	id = mayuan_prov_move_events.1
+	title = "mayuan_prov_move_events.NAME1"
+	desc = "mayuan_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_mayuan
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "mayuan_prov_move_events.OPTA1"
+###########################马援｢【武将】pov_mayuan#################################		
+		if = {
+			limit = { has_province_modifier = pov_mayuan }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 49  }
+				}
+			#假如该国家的君王特质符合	
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch8
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch3
+									has_ruler_modifier = rb_ch4					
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_mayuan
+					owner = {
+						country_event = {
+							id = mayuan_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch8
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch3
+                                    has_ruler_modifier = rb_ch4
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_mayuan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_mayuan"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+							owner = {
+								OR = {
+									tag = QIN 
+									tag = XIB
+								}
+							} 
+					}
+					remove_province_modifier = pov_mayuan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_mayuan"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 49 
+				}	
+				remove_province_modifier = pov_mayuan		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	马援｢【武将】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id = mayuan_prov_move_events.2
+	title = "mayuan_prov_move_events.NAME2"
+	desc = "mayuan_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "mayuan_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = mayuan
+					name = "马援｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "马援｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mayuan
+			}
+		}
+	}
+}
+
+	
+	

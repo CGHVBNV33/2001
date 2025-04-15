@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = luji_advisor_come
+
+#武将某种条件下出现
+#id = 1 : luji : 陆机 ｢【军师】
+
+country_event = {
+	id = luji_advisor_come.1
+	title = "luji_advisor_come.1.t"
+	desc = "luji_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 280	
+		NOT = { is_year = 305 }
+		OR = {
+			AND = {
+				exists = JN1
+				tag = JN1
+			}
+			AND = {
+				NOT = { exists = JN1 }
+				owns = 1822
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = luji_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = luji
+				name = "陆机 ｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "陆机 ｢【军师】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = JI_leader_Luji
+			}
+		}
+	}
+}
+

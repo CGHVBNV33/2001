@@ -1,0 +1,62 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = aaa_advisor_come
+
+#武将某种条件下出现
+#id = 1 : lidingguo : 李定国｢【武将】
+
+country_event = {
+	id = aaa_advisor_come.1
+	title = "aaa_advisor_come.1.t"
+	desc = "aaa_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+
+	trigger = {
+		OR = {
+			AND = {
+				is_year = 1649
+				NOT = { is_year = 1658 }
+				tag = CXI
+			}
+			AND = {
+				is_year = 1658
+				NOT = { is_year = 1666 }
+				tag = MNG
+			}
+		}	
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = aaa_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lidingguo
+				name = "李定国｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李定国｢【武将】"
+				fire = 7
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_nanmingmingjing
+			}
+		}		
+	}
+}
+

@@ -1,0 +1,118 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = lulingqi_advisor_come
+#武将某种条件下出现
+#id = 1 : lulingqi : 吕玲绮｢【武将】
+country_event = {
+	id = lulingqi_advisor_come.1
+	title = "lulingqi_advisor_come.1.t"
+	desc = "lulingqi_advisor_come.1.d"
+	picture = lulingqi_come_eventPicture
+	fire_only_once = yes
+	#The girl will work when her father die.
+	trigger = {
+		OR = {
+			tag = DAX
+			tag = LB1
+		}
+		NOT = {
+			has_ruler = "布"
+		}
+		NOT = {
+			has_country_flag = me_jianguo_event1M_flag
+		}
+	}
+	mean_time_to_happen = {
+		years = 1
+	}
+	option = {
+		name = lulingqi_advisor_come.1.1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = lulingqi
+				name = "吕玲绮｢【武将】"
+				female = yes
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				female = yes
+				name = "吕玲绮｢【武将】"
+				fire = 7
+				shock = 7
+				manuever = 3
+				siege = 1
+				trait = fly_leader_lvlingqi
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lulingqi_advisor_come.2
+	title = "lulingqi_advisor_come.2.t"
+	desc = "lulingqi_advisor_come.2.d"
+	picture = lulingqi_come_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = DAX
+			tag = LB1
+		}
+		OR = {
+			advisor = lulingqi
+			has_leader = "吕玲绮｢【武将】"
+		}
+		NOT = {
+			has_ruler = "布"
+		}
+		OR = {
+			NOT = {
+				mil = 6
+			}
+			ruler_has_personality = craven_personality
+		}
+	}
+	mean_time_to_happen = {
+		years = 1
+	}
+	option = {
+		name = lulingqi_advisor_come.2.1
+		define_ruler = {
+			name = "玲绮"
+			dynasty = "¿吕"
+			adm = 3
+			dip = 3
+			mil = 6
+			female = yes
+		}
+		kill_leader = {
+			type = "吕玲绮｢【武将】"
+		}
+		remove_advisor = lulingqi
+		define_ruler_to_general = {
+			name = "吕玲绮｢【武将】"
+			fire = 7
+			shock = 7
+			manuever = 3
+			siege = 1
+			trait = fly_leader_lvlingqi
+		}
+		hidden_effect = {
+			add_ruler_personality = bold_fighter_personality
+			add_ruler_personality = strict_personality
+		}
+	}
+	option = {
+		name = lulingqi_advisor_come.2.2
+	}
+}
