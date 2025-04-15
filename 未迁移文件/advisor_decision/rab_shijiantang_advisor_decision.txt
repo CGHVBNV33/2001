@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shijiantang = {
+		major = yes
+		potential = {
+			
+			advisor = shijiantang
+			
+		}
+		allow = {
+			advisor = shijiantang
+		}
+		effect = {
+			remove_advisor = shijiantang
+			define_general = {
+				name = "史建瑭｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shatorzhmingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

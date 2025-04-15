@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_muhanmodeyibenkaximu = {
+		major = yes
+		potential = {
+			
+			advisor = muhanmodeyibenkaximu
+			
+		}
+		allow = {
+			advisor = muhanmodeyibenkaximu
+		}
+		effect = {
+			remove_advisor = muhanmodeyibenkaximu
+			define_general = {
+				name = "穆罕默德.伊本.卡西木｢【总督】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_muhanmodeyibenkaximu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

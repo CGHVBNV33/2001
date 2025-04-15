@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lumu = {
+		major = yes
+		potential = {
+			
+			advisor = lumu
+			
+		}
+		allow = {
+			advisor = lumu
+		}
+		effect = {
+			remove_advisor = lumu
+			define_general = {
+				female = yes
+				name = "呂母｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = rab_leader_lumu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ohnoharusa = {
+		major = yes
+		potential = {
+			
+			advisor = ohnoharusa
+			
+		}
+		allow = {
+			advisor = ohnoharusa
+		}
+		effect = {
+			remove_advisor = ohnoharusa
+			define_general = {
+				name = "大野治房｢【武将】"
+				fire = 2
+				shock = 2
+				manuever = 2
+				siege = 2
+				trait = JI_leader_ohnoharusa
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

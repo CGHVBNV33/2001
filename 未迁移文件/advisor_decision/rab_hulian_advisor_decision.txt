@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hulian = {
+		major = yes
+		potential = {
+			
+			advisor = hulian
+			
+		}
+		allow = {
+			advisor = hulian
+		}
+		effect = {
+			remove_advisor = hulian
+			define_general = {
+				name = "胡琏｢【上将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_hulian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

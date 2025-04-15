@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gengbingwen = {
+		major = yes
+		potential = {
+			
+			advisor = gengbingwen
+			
+		}
+		allow = {
+			advisor = gengbingwen
+		}
+		effect = {
+			remove_advisor = gengbingwen
+			define_general = {
+				name = "耿炳文｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_gengbingwen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gotokiji = {
+		major = yes
+		potential = {
+			
+			advisor = gotokiji
+			
+		}
+		allow = {
+			advisor = gotokiji
+		}
+		effect = {
+			remove_advisor = gotokiji
+			define_general = {
+				name = "后藤又兵卫｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_gotokiji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

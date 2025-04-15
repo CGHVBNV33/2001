@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liguangbi = {
+		major = yes
+		potential = {
+			
+			advisor = liguangbi
+			
+		}
+		allow = {
+			advisor = liguangbi
+		}
+		effect = {
+			remove_advisor = liguangbi
+			define_general = {
+				name = "李光弼｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_liguangbi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

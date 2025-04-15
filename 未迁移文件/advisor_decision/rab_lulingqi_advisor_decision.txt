@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lulingqi = {
+		major = yes
+		potential = {
+			
+			advisor = lulingqi
+			
+		}
+		allow = {
+			advisor = lulingqi
+		}
+		effect = {
+			remove_advisor = lulingqi
+			define_general = {
+				female = yes
+				name = "吕玲绮｢【武将】"
+				fire = 7
+				shock = 7
+				manuever = 3
+				siege = 1
+				trait = fly_leader_lvlingqi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

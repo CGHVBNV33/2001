@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shlang = {
+		major = yes
+		potential = {
+			
+			advisor = shlang
+			
+		}
+		allow = {
+			advisor = shlang
+		}
+		effect = {
+			remove_advisor = shlang
+			define_general = {
+				name = "施琅｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_shlang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

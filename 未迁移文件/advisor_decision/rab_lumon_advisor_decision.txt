@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lumon = {
+		major = yes
+		potential = {
+			
+			advisor = lumon
+			
+		}
+		allow = {
+			advisor = lumon
+		}
+		effect = {
+			remove_advisor = lumon
+			define_general = {
+				name = "吕蒙｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 6
+				siege = 4
+				trait = JI_leader_Lumeng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

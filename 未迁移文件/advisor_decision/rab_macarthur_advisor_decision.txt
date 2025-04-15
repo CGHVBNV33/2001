@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_macarthur = {
+		major = yes
+		potential = {
+			
+			advisor = macarthur
+			
+		}
+		allow = {
+			advisor = macarthur
+		}
+		effect = {
+			remove_advisor = macarthur
+			define_general = {
+				female = yes
+				name = "麦克阿瑟｢【将军】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_MacArthur
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

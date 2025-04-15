@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lisheng = {
+		major = yes
+		potential = {
+			
+			advisor = lisheng
+			
+		}
+		allow = {
+			advisor = lisheng
+		}
+		effect = {
+			remove_advisor = lisheng
+			define_general = {
+				name = "李晟｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lisheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

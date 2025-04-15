@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaohuan= {
+		major = yes
+		potential = {
+			
+			advisor = gaohuan
+			
+		}
+		allow = {
+			advisor = gaohuan
+		}
+		effect = {
+			remove_advisor = gaohuan
+			define_general = {
+				name = "高欢｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_gaohuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

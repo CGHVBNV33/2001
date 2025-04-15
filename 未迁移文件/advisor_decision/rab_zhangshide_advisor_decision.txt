@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangshide = {
+		major = yes
+		potential = {
+			
+			advisor = zhangshide
+			
+		}
+		allow = {
+			advisor = zhangshide
+		}
+		effect = {
+			remove_advisor = zhangshide
+			define_general = {
+				name = "张士德｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zanshider
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

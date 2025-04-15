@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shahrbaraz = {
+		major = yes
+		potential = {
+			
+			advisor = shahrbaraz
+			
+		}
+		allow = {
+			advisor = shahrbaraz
+		}
+		effect = {
+			remove_advisor = shahrbaraz
+			define_general = {
+				name = "沙赫巴勒兹｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shahrbaraz
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

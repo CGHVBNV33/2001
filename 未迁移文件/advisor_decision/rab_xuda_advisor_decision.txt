@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xuda = {
+		major = yes
+		potential = {
+			
+			advisor = xuda
+			
+		}
+		allow = {
+			advisor = xuda
+		}
+		effect = {
+			remove_advisor = xuda
+			define_general = {
+				name = "徐达｢【武将】"
+				fire = 6
+				shock = 7
+				manuever = 5
+				siege = 5
+				trait = rab_leader_xuda
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

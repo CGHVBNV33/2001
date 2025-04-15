@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mafanng = {
+		major = yes
+		potential = {
+			
+			advisor = mafanng
+			
+		}
+		allow = {
+			advisor = mafanng
+		}
+		effect = {
+			remove_advisor = mafanng
+			define_general = {
+				name = "马防｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mafanng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Himmler = {
+		major = yes
+		potential = {
+			
+			advisor = Himmler
+			
+		}
+		allow = {
+			advisor = Himmler
+		}
+		effect = {
+			remove_advisor = Himmler
+			define_general = {
+				name = "希姆莱｢【党卫队首领】"
+				fire = 2
+				shock = 2
+				manuever = 1
+				siege = 0
+				trait = JI_leader_Himmler
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

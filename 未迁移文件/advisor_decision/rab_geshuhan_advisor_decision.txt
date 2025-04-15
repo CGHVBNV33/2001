@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_geshuhan = {
+		major = yes
+		potential = {
+			
+			advisor = geshuhan
+			
+		}
+		allow = {
+			advisor = geshuhan
+		}
+		effect = {
+			remove_advisor = geshuhan
+			define_general = {
+				name = "哥舒翰｢【名将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_geshuhan_new
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lidian = {
+		major = yes
+		potential = {
+			
+			advisor = lidian
+			
+		}
+		allow = {
+			advisor = lidian
+		}
+		effect = {
+			remove_advisor = lidian
+			define_general = {
+				name = "李典｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lidian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

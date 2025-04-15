@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_pengdehuai = {
+		major = yes
+		potential = {
+			
+			advisor = pengdehuai
+			
+		}
+		allow = {
+			advisor = pengdehuai
+		}
+		effect = {
+			remove_advisor = pengdehuai
+			define_general = {
+				name = "彭德怀｢【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 4
+				trait = rab_leader_pengdehuai
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

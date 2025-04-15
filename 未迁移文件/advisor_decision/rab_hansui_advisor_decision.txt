@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hansui = {
+		major = yes
+		potential = {
+			
+			advisor = hansui
+			
+		}
+		allow = {
+			advisor = hansui
+		}
+		effect = {
+			remove_advisor = hansui
+			define_general = {
+				name = "韩遂｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_hansui
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

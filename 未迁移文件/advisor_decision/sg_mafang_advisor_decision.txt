@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mafang = {
+		major = yes
+		potential = {
+			
+			advisor = mafang
+			
+		}
+		allow = {
+			advisor = mafang
+		}
+		effect = {
+			remove_advisor = mafang
+			define_general = {
+				name = "马芳｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = sg_leader_mafang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

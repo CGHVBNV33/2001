@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yeresha = {
+		major = yes
+		potential = {
+			
+			advisor = yeresha
+			
+		}
+		allow = {
+			advisor = yeresha
+		}
+		effect = {
+			remove_advisor = yeresha
+			define_general = {
+				name = "耶律沙｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_liaoguomingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

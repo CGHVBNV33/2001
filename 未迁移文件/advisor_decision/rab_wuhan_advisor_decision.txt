@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wuhan = {
+		major = yes
+		potential = {
+			
+			advisor = wuhan
+			
+		}
+		allow = {
+			advisor = wuhan
+		}
+		effect = {
+			remove_advisor = wuhan
+			define_general = {
+				name = "吴汉｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wuhan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

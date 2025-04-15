@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuejin = {
+		major = yes
+		potential = {
+			
+			advisor = yuejin
+			
+		}
+		allow = {
+			advisor = yuejin
+		}
+		effect = {
+			remove_advisor = yuejin
+			define_general = {
+				name = "乐进｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yuejin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

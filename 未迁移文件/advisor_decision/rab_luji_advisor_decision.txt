@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_luji= {
+		major = yes
+		potential = {
+			
+			advisor = luji
+			
+		}
+		allow = {
+			advisor = luji
+		}
+		effect = {
+			remove_advisor = luji
+			define_general = {
+				name = "陆机 ｢【军师】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = JI_leader_Luji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

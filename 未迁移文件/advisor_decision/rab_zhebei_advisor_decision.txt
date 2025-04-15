@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhebei = {
+		major = yes
+		potential = {
+			
+			advisor = zhebei
+			
+		}
+		allow = {
+			advisor = zhebei
+		}
+		effect = {
+			remove_advisor = zhebei
+			define_general = {
+				name = "哲别｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_mongolmingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

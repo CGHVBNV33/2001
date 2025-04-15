@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Heinz = {
+		major = yes
+		potential = {
+			
+			advisor = Heinz
+			
+		}
+		allow = {
+			advisor = Heinz
+		}
+		effect = {
+			remove_advisor = Heinz
+			define_general = {
+				name = "海因茨.古德林｢【军官】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 4
+				trait = fly_leader_Guderian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

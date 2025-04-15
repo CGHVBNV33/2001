@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuguoxuan = {
+		major = yes
+		potential = {
+			
+			advisor = liuguoxuan
+			
+		}
+		allow = {
+			advisor = liuguoxuan
+		}
+		effect = {
+			remove_advisor = liuguoxuan
+			define_general = {
+
+				name = "刘国轩｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liuguoxuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

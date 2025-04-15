@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Voroshilov = {
+		major = yes
+		potential = {
+			
+			advisor = Voroshilov
+			
+		}
+		allow = {
+			advisor = Voroshilov
+		}
+		effect = {
+			remove_advisor = Voroshilov
+			define_general = {
+				name = "伏罗希洛夫｢【元帅】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_Voroshilov
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

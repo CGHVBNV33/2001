@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hewenqing = {
+		major = yes
+		potential = {
+			
+			advisor = hewenqing
+			
+		}
+		allow = {
+			advisor = hewenqing
+		}
+		effect = {
+			remove_advisor = hewenqing
+			define_general = {
+				name = "何文庆【志天燕】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = sg_leader_hewenqing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

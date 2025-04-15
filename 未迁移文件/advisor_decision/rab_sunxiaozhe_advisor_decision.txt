@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_sunxiaozhe = {
+		major = yes
+		potential = {
+			
+			advisor = sunxiaozhe
+			
+		}
+		allow = {
+			advisor = sunxiaozhe
+		}
+		effect = {
+			remove_advisor = sunxiaozhe
+			define_general = {
+				name = "孙孝哲｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_sunxiaozhe_new
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

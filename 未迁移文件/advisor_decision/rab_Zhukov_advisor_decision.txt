@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Zhukov = {
+		major = yes
+		potential = {
+			
+			advisor = Zhukov
+			
+		}
+		allow = {
+			advisor = Zhukov
+		}
+		effect = {
+			remove_advisor = Zhukov
+			define_general = {
+				name = "朱可夫｢【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_sulianyuanshia
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

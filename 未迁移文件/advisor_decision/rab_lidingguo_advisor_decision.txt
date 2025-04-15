@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lidingguo = {
+		major = yes
+		potential = {
+			
+			advisor = lidingguo
+			
+		}
+		allow = {
+			advisor = lidingguo
+		}
+		effect = {
+			remove_advisor = lidingguo
+			define_general = {
+				name = "李定国｢【武将】"
+				fire = 7
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_nanmingmingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

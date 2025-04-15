@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_kouxun = {
+		major = yes
+		potential = {
+			
+			advisor = kouxun
+			
+		}
+		allow = {
+			advisor = kouxun
+		}
+		effect = {
+			remove_advisor = kouxun
+			define_general = {
+				name = "寇恂｢【军师】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_kouxun
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

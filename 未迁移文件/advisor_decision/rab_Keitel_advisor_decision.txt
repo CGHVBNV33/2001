@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Keitel = {
+		major = yes
+		potential = {
+			
+			advisor = Keitel
+			
+		}
+		allow = {
+			advisor = Keitel
+		}
+		effect = {
+			remove_advisor = Keitel
+			define_general = {
+				name = "凯特尔｢【元帅】"
+				fire = 4
+				shock = 2
+				manuever = 2
+				siege = 1
+				trait = rab_leader_Keitel
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

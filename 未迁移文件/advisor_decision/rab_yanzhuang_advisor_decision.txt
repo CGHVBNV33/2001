@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yanzhuang = {
+		major = yes
+		potential = {
+			
+			advisor = yanzhuang
+			
+		}
+		allow = {
+			advisor = yanzhuang
+		}
+		effect = {
+			remove_advisor = yanzhuang
+			define_general = {
+				name = "严庄｢【军师】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 2
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

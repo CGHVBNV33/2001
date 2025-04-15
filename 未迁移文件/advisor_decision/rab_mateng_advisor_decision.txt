@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mateng = {
+		major = yes
+		potential = {
+			
+			advisor = mateng
+			
+		}
+		allow = {
+			advisor = mateng
+		}
+		effect = {
+			remove_advisor = mateng
+			define_general = {
+				name = "马腾｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_mateng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

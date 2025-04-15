@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaoxianzhi = {
+		major = yes
+		potential = {
+			
+			advisor = gaoxianzhi
+			
+		}
+		allow = {
+			advisor = gaoxianzhi
+		}
+		effect = {
+			remove_advisor = gaoxianzhi
+			define_general = {
+				name = "高仙芝｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = JI_leader_Gaoxianzhi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

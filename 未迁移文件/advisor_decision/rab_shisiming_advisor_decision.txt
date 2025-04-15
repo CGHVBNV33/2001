@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shisiming = {
+		major = yes
+		potential = {
+			
+			advisor = shisiming
+			
+		}
+		allow = {
+			advisor = shisiming
+		}
+		effect = {
+			remove_advisor = shisiming
+			define_general = {
+				name = "史思明｢【猛将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shisiming
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

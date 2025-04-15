@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuxin = {
+		major = yes
+		potential = {
+			
+			advisor = liuxin
+			
+		}
+		allow = {
+			advisor = liuxin
+		}
+		effect = {
+			remove_advisor = liuxin
+			define_general = {
+				name = "刘歆｢【文官】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 1
+				
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

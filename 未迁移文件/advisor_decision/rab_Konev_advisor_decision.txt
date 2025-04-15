@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Konev = {
+		major = yes
+		potential = {
+			
+			advisor = Konev
+			
+		}
+		allow = {
+			advisor = Konev
+		}
+		effect = {
+			remove_advisor = Konev
+			define_general = {
+				name = "科涅夫｢【元帅】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_Konev
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

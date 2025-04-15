@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liubei = {
+		major = yes
+		potential = {
+			
+			advisor = liubei
+			
+		}
+		allow = {
+			advisor = liubei
+		}
+		effect = {
+			remove_advisor = liubei
+			define_general = {
+				name = "刘备｢【司空】"
+				fire = 3
+				shock = 3
+				manuever = 5
+				siege = 2
+				trait = rab_leader_liubei
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

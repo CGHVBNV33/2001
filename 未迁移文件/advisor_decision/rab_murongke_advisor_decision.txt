@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongke= {
+		major = yes
+		potential = {
+			
+			advisor = murongke
+			
+		}
+		allow = {
+			advisor = murongke
+		}
+		effect = {
+			remove_advisor = murongke
+			define_general = {
+				name = "慕容恪 ｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_chenyangmingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

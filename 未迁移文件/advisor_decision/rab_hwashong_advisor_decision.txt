@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hwashong = {
+		major = yes
+		potential = {
+			
+			advisor = hwashong
+			
+		}
+		allow = {
+			advisor = hwashong
+		}
+		effect = {
+			remove_advisor = hwashong
+			define_general = {
+				name = "华雄｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = JI_leader_Huaxiong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

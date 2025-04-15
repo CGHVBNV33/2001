@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lijing = {
+		major = yes
+		potential = {
+			
+			advisor = lijing
+			
+		}
+		allow = {
+			advisor = lijing
+		}
+		effect = {
+			remove_advisor = lijing
+			define_general = {
+				name = "李靖｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lijing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

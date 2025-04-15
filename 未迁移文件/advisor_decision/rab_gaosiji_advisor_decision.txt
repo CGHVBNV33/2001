@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaosiji = {
+		major = yes
+		potential = {
+			
+			advisor = gaosiji
+			
+		}
+		allow = {
+			advisor = gaosiji
+		}
+		effect = {
+			remove_advisor = gaosiji
+			define_general = {
+				name = "高思继｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_gaosiji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

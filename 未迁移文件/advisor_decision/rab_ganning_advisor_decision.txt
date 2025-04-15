@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ganning = {
+		major = yes
+		potential = {
+			
+			advisor = ganning
+			
+		}
+		allow = {
+			advisor = ganning
+		}
+		effect = {
+			remove_advisor = ganning
+			define_general = {
+				name = "甘宁｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_ganning
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

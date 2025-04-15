@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhoutai = {
+		major = yes
+		potential = {
+			
+			advisor = zhoutai
+			
+		}
+		allow = {
+			advisor = zhoutai
+		}
+		effect = {
+			remove_advisor = zhoutai
+			define_general = {
+				name = "周泰｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_zhoutai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

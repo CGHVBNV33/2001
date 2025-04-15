@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mayuan = {
+		major = yes
+		potential = {
+			
+			advisor = mayuan
+			
+		}
+		allow = {
+			advisor = mayuan
+		}
+		effect = {
+			remove_advisor = mayuan
+			define_general = {
+				name = "马援｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mayuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_linbiao = {
+		major = yes
+		potential = {
+			
+			advisor = linbiao
+			
+		}
+		allow = {
+			advisor = linbiao
+		}
+		effect = {
+			remove_advisor = linbiao
+			define_general = {
+				name = "林彪｢【军官】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 4
+				trait = rab_leader_linbiao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xialuqi = {
+		major = yes
+		potential = {
+			
+			advisor = xialuqi
+			
+		}
+		allow = {
+			advisor = xialuqi
+		}
+		effect = {
+			remove_advisor = xialuqi
+			define_general = {
+				name = "夏鲁奇｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 5
+				siege = 1
+				trait = rab_leader_hotangmingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

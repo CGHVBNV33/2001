@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_qiebiheli = {
+		major = yes
+		potential = {
+			
+			advisor = qiebiheli
+			
+		}
+		allow = {
+			advisor = qiebiheli
+		}
+		effect = {
+			remove_advisor = qiebiheli
+			define_general = {
+				name = "契苾何力｢【将领】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 3
+				trait = rab_leader_qiebiheli
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

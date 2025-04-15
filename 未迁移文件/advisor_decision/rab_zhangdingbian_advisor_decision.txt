@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangdingbian = {
+		major = yes
+		potential = {
+			
+			advisor = zhangdingbian
+			
+		}
+		allow = {
+			advisor = zhangdingbian
+		}
+		effect = {
+			remove_advisor = zhangdingbian
+			define_general = {
+				name = "张定边｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangdingbian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

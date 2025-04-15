@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_WangTai = {
+		major = yes
+		potential = {
+			
+			advisor = WangTai
+			
+		}
+		allow = {
+			advisor = WangTai
+		}
+		effect = {
+			remove_advisor = WangTai
+			define_general = {
+				name = "王泰｢【军师】"
+				fire = 2
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_WangTai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

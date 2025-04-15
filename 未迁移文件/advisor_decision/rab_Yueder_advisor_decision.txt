@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Yueder = {
+		major = yes
+		potential = {
+			
+			advisor = Yueder
+			
+		}
+		allow = {
+			advisor = Yueder
+		}
+		effect = {
+			remove_advisor = Yueder
+			define_general = {
+				name = "约德尔｢【将军】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_Yueder
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

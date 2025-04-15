@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_licunxiao= {
+		major = yes
+		potential = {
+			
+			advisor = licunxiao
+			
+		}
+		allow = {
+			advisor = licunxiao
+		}
+		effect = {
+			remove_advisor = licunxiao
+			define_general = {
+				name = "李存孝｢【武将】"
+				fire = 5
+				shock = 7
+				manuever = 4
+				siege = 1
+				trait = rab_leader_tangmurmingjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

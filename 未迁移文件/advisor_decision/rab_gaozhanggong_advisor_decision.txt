@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaozhanggong = {
+		major = yes
+		potential = {
+			
+			advisor = gaozhanggong
+			
+		}
+		allow = {
+			advisor = gaozhanggong
+		}
+		effect = {
+			remove_advisor = gaozhanggong
+			define_general = {
+				name = "高长恭｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 1
+				trait = rab_leader_gaozhanggong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

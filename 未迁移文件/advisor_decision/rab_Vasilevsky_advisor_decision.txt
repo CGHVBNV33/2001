@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Vasilevsky = {
+		major = yes
+		potential = {
+			
+			advisor = Vasilevsky
+			
+		}
+		allow = {
+			advisor = Vasilevsky
+		}
+		effect = {
+			remove_advisor = Vasilevsky
+			define_general = {
+				name = "华西列夫斯基｢【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_Vasilevsky
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

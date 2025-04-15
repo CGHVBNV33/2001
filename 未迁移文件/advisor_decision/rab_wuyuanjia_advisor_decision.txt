@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wuyuanjia = {
+		major = yes
+		potential = {
+			
+			advisor = wuyuanjia
+			
+		}
+		allow = {
+			advisor = wuyuanjia
+		}
+		effect = {
+			remove_advisor = wuyuanjia
+			define_general = {
+				name = "武元甲｢【将军】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_wuyuanjia
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

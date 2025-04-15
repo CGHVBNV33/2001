@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Timoshenko = {
+		major = yes
+		potential = {
+			
+			advisor = Timoshenko
+			
+		}
+		allow = {
+			advisor = Timoshenko
+		}
+		effect = {
+			remove_advisor = Timoshenko
+			define_general = {
+				name = "铁木辛哥｢【元帅】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_Timoshenko
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

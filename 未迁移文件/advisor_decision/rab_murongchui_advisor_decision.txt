@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongchui = {
+		major = yes
+		potential = {
+			
+			advisor = murongchui
+			
+		}
+		allow = {
+			advisor = murongchui
+		}
+		effect = {
+			remove_advisor = murongchui
+			define_general = {
+				name = "慕容垂｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = fly_leader_murongchui
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

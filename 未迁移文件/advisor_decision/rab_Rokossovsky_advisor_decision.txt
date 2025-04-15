@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_Rokossovsky = {
+		major = yes
+		potential = {
+			
+			advisor = Rokossovsky
+			
+		}
+		allow = {
+			advisor = Rokossovsky
+		}
+		effect = {
+			remove_advisor = Rokossovsky
+			define_general = {
+				name = "罗科索夫斯基｢【元帅】"
+				fire = 5
+				shock = 4
+				manuever = 5
+				siege = 2
+				trait =  rab_leader_Rokossovsky
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

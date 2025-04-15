@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liyu = {
+		major = yes
+		potential = {
+			
+			advisor = liyu
+			
+		}
+		allow = {
+			advisor = liyu
+		}
+		effect = {
+			remove_advisor = liyu
+			define_general = {
+				name = "粟裕｢【军官】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = rab_leader_liyu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

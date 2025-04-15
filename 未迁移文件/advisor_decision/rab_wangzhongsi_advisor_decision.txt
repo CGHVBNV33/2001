@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangzhongsi = {
+		major = yes
+		potential = {
+			
+			advisor = wangzhongsi
+			
+		}
+		allow = {
+			advisor = wangzhongsi
+		}
+		effect = {
+			remove_advisor = wangzhongsi
+			define_general = {
+				name = "王忠嗣｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 3
+				trait = rab_leader_wangzhongsi_new
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

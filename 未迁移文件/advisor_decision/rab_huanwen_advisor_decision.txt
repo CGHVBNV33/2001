@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_huanwen= {
+		major = yes
+		potential = {
+			
+			advisor = huanwen
+			
+		}
+		allow = {
+			advisor = huanwen
+		}
+		effect = {
+			remove_advisor = huanwen
+			define_general = {
+				name = "桓温 ｢【军师】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = JI_leader_Huanwen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

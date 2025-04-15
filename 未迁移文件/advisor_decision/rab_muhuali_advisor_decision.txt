@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_muhuali = {
+		major = yes
+		potential = {
+			
+			advisor = muhuali
+			
+		}
+		allow = {
+			advisor = muhuali
+		}
+		effect = {
+			remove_advisor = muhuali
+			define_general = {
+				name = "木华黎｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_muhuali
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

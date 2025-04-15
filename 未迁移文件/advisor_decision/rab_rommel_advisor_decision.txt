@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_rommel = {
+		major = yes
+		potential = {
+			
+			advisor = rommel
+			
+		}
+		allow = {
+			advisor = rommel
+		}
+		effect = {
+			remove_advisor = rommel
+			define_general = {
+				name = "隆美尔｢【元帅】"
+				fire = 5
+				shock = 7
+				manuever = 6
+				siege = 4
+				trait = fly_leader_rommel
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_niangengyao = {
+		major = yes
+		potential = {
+			
+			advisor = niangengyao
+			
+		}
+		allow = {
+			advisor = niangengyao
+		}
+		effect = {
+			remove_advisor = niangengyao
+			define_general = {
+				name = "年羹尧｢【大将军】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_niangengyao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

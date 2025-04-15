@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_sudingfang = {
+		major = yes
+		potential = {
+			
+			advisor = sudingfang
+			
+		}
+		allow = {
+			advisor = sudingfang
+		}
+		effect = {
+			remove_advisor = sudingfang
+			define_general = {
+				name = "苏定方｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_sudingfang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
