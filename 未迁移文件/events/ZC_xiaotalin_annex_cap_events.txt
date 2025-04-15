@@ -1,0 +1,136 @@
+namespace = xiaotalin_annex_cap_events
+
+country_event = {
+	id = xiaotalin_annex_cap_events.1
+	title = "xiaotalin_annex_cap_events.NAME1"
+	desc = "xiaotalin_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = xiaotalin
+				has_leader = "萧挞凛｢【武将】"
+			}
+		}
+	}	
+	option = {
+		name = "xiaotalin_annex_cap_events.OPTA1"
+		country_event = {
+			id = xiaotalin_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = xiaotalin_annex_cap_events.2
+	title = "xiaotalin_annex_cap_events.NAME2"
+	desc = "xiaotalin_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = "xiaotalin_annex_cap_events.OPTA2"		
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 
+				OR = {
+					tag = JAP
+					tag = JA1
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						tag = JAP
+						tag = JA1
+					}
+				}
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = xiaotalin
+						name = "萧挞凛｢【武将】"
+						discount = yes	
+						skill = 3
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "萧挞凛｢【武将】"
+					fire = 4
+					shock = 5
+					manuever = 5
+					siege = 2
+					trait = rab_leader_xiaotalin
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					tag = JAP
+					tag = JA1
+				}
+			}
+			country_event = {
+				id = xiaotalin_annex_cap_events.3
+			}
+		}		
+	}
+		
+	option = {
+		name = "xiaotalin_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+	}	
+		
+	option = {
+		name = "xiaotalin_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_xiaotalin"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+
+country_event = { 
+	id = xiaotalin_annex_cap_events.3
+	title = "xiaotalin_annex_cap_events.NAME3"
+	desc = "xiaotalin_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "xiaotalin_annex_cap_events.OPTA3"
+		country_event = {
+				id = xiaotalin_annex_cap_events.2
+		}
+	}
+}

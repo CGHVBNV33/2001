@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zrinyi_advisor_come
+
+country_event = {
+	id = zrinyi_advisor_come.1
+	title = "zrinyi_advisor_come.1.t"
+	desc = "zrinyi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1620
+		NOT = { is_year = 1644 }
+		OR = {
+			tag = HUN
+			AND = {
+				NOT = { exists = HUN }
+				owns = 131
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = zrinyi_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = zrinyi
+					name = "米克洛什 兹里尼【作家】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "米克洛什 兹里尼【作家】"
+				fire = 2
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = ZC_zrinyi
+			}
+		}
+	}
+}
