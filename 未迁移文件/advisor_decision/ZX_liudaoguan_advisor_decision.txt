@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liudaoguan = {
+		major = yes
+		potential = {
+			
+			advisor = liudaoguan
+			
+		}
+		allow = {
+			advisor = liudaoguan
+		}
+		effect = {
+			remove_advisor = liudaoguan
+			define_general = {
+				name = "刘道规｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 4
+				trait = rab_leader_liudaoguan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

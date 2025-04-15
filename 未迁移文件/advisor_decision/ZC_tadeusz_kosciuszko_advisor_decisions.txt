@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_tadeusz_kosciuszko = {
+		major = yes
+		potential = {
+			
+			advisor = tadeusz_kosciuszko
+			
+		}
+		allow = {
+			advisor = tadeusz_kosciuszko
+		}
+		effect = {
+			remove_advisor = tadeusz_kosciuszko
+			define_general = {
+				name = "塔德乌什 柯斯丘什科【将领】"
+				fire = 3
+				shock = 4
+				manuever = 5
+				siege = 1
+				trait = ZC_tadeusz_kosciuszko
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

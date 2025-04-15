@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_huojun = {
+		major = yes
+		potential = {
+			
+			advisor = huojun
+			
+		}
+		allow = {
+			advisor = huojun
+		}
+		effect = {
+			remove_advisor = huojun
+			define_general = {
+				name = "霍峻｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_huojun
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

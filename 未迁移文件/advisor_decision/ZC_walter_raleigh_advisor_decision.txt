@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_conquistador_walter_raleigh = {
+		major = yes
+		potential = {
+			
+			advisor = walter_raleigh
+			
+		}
+		allow = {
+			advisor = walter_raleigh
+		}
+		effect = {
+			remove_advisor = walter_raleigh
+			define_conquistador = {
+				name = "沃尔特 雷利｢【征服者】"
+				fire = 4
+				shock = 4
+				manuever = 6
+				siege = 2
+				trait = rab_leader_walter_raleigh
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

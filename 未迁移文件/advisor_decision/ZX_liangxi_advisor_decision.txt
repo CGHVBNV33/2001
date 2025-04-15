@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liangxi = {
+		major = yes
+		potential = {
+			
+			advisor = liangxi
+			
+		}
+		allow = {
+			advisor = liangxi
+		}
+		effect = {
+			remove_advisor = liangxi
+			define_general = {
+				name = "梁习｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_liangxi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_banyong = {
+		major = yes
+		potential = {
+			
+			advisor = banyong
+			
+		}
+		allow = {
+			advisor = banyong
+		}
+		effect = {
+			remove_advisor = banyong
+			define_general = {
+				name = "班勇｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = JI_leader_Banyong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

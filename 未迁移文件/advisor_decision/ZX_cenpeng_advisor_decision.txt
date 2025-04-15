@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_cenpeng = {
+		major = yes
+		potential = {
+			
+			advisor = cenpeng
+			
+		}
+		allow = {
+			advisor = cenpeng
+		}
+		effect = {
+			remove_advisor = cenpeng
+			define_general = {
+				name = "岑彭｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_cenpeng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

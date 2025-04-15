@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_explorer_samuel_champlain = {
+		major = yes
+		potential = {
+			
+			advisor = samuel_champlain
+			
+		}
+		allow = {
+			advisor = samuel_champlain
+		}
+		effect = {
+			remove_advisor = samuel_champlain
+			define_explorer = {
+				name = "萨缪尔 尚普兰｢【探险家】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 6
+				trait = rab_leader_samuel_champlain
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

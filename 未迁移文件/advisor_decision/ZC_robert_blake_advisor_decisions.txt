@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_robert_blake = {
+		major = yes
+		potential = {
+			
+			advisor = robert_blake
+			
+		}
+		allow = {
+			advisor = robert_blake
+		}
+		effect = {
+			remove_advisor = robert_blake
+			define_admiral = {
+				name = "罗伯特 布莱克｢【舰队司令】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 0
+				trait = ZC_robert_blake
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

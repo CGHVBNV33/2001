@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caohong = {
+		major = yes
+		potential = {
+			
+			advisor = caohong
+			
+		}
+		allow = {
+			advisor = caohong
+		}
+		effect = {
+			remove_advisor = caohong
+			define_general = {
+				name = "曹洪｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_caohong
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

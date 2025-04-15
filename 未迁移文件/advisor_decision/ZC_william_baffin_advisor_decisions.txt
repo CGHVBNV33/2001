@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_william_baffin = {
+		major = yes
+		potential = {
+			
+			advisor = william_baffin
+			
+		}
+		allow = {
+			advisor = william_baffin
+		}
+		effect = {
+			remove_advisor = william_baffin
+			define_explorer = {
+				name = "威廉 巴芬｢【探险家】"
+				fire = 2
+				shock = 2
+				manuever = 5
+				siege = 0
+				trait = ZC_william_baffin
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

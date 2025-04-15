@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liusheng = {
+		major = yes
+		potential = {
+			
+			advisor = liusheng
+			
+		}
+		allow = {
+			advisor = liusheng
+		}
+		effect = {
+			remove_advisor = liusheng
+			define_general = {
+				name = "柳升｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liusheng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

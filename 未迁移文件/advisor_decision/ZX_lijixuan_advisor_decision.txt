@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lijixuan = {
+		major = yes
+		potential = {
+			
+			advisor = lijixuan
+			
+		}
+		allow = {
+			advisor = lijixuan
+		}
+		effect = {
+			remove_advisor = lijixuan
+			define_general = {
+				name = "李继宣｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lijixuan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

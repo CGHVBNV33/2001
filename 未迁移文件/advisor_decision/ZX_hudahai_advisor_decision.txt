@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hudahai = {
+		major = yes
+		potential = {
+			
+			advisor = hudahai
+			
+		}
+		allow = {
+			advisor = hudahai
+		}
+		effect = {
+			remove_advisor = hudahai
+			define_general = {
+				name = "胡大海｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 4
+				trait = rab_leader_hudahai
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

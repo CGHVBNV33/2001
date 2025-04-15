@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_tuah = {
+		major = yes
+		potential = {
+			
+			advisor = tuah
+			
+		}
+		allow = {
+			advisor = tuah
+		}
+		effect = {
+			remove_advisor = tuah
+			define_admiral = {
+				name = "汉都亚【提督】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_tuah
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

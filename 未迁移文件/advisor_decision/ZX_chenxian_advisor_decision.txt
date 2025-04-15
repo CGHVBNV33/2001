@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chenxian = {
+		major = yes
+		potential = {
+			
+			advisor = chenxian
+			
+		}
+		allow = {
+			advisor = chenxian
+		}
+		effect = {
+			remove_advisor = chenxian
+			define_general = {
+				name = "陈宪｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_chenxian
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

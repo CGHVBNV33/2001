@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_robert_lee = {
+		major = yes
+		potential = {
+			
+			advisor = robert_lee
+			
+		}
+		allow = {
+			advisor = robert_lee
+		}
+		effect = {
+			remove_advisor = robert_lee
+			define_general = {
+				name = "罗伯特 李｢【司令】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_robert_lee
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

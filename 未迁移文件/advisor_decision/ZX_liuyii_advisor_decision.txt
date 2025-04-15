@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuyii = {
+		major = yes
+		potential = {
+			
+			advisor = liuyii
+			
+		}
+		allow = {
+			advisor = liuyii
+		}
+		effect = {
+			remove_advisor = liuyii
+			define_general = {
+				name = "刘毅｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liuyii
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

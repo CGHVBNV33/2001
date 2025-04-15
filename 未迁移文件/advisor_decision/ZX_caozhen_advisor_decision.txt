@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caozhen = {
+		major = yes
+		potential = {
+			
+			advisor = caozhen
+			
+		}
+		allow = {
+			advisor = caozhen
+		}
+		effect = {
+			remove_advisor = caozhen
+			define_general = {
+				name = "曹真｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_caozhen
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

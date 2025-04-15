@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liufang = {
+		major = yes
+		potential = {
+			
+			advisor = liufang
+			
+		}
+		allow = {
+			advisor = liufang
+		}
+		effect = {
+			remove_advisor = liufang
+			define_general = {
+				name = "刘方｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_liufang
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caobianjiao = {
+		major = yes
+		potential = {
+			
+			advisor = caobianjiao
+			
+		}
+		allow = {
+			advisor = caobianjiao
+		}
+		effect = {
+			remove_advisor = caobianjiao
+			define_general = {
+				name = "曹变蛟｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_caobianjiao
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

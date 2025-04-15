@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gouxi = {
+		major = yes
+		potential = {
+			
+			advisor = gouxi
+			
+		}
+		allow = {
+			advisor = gouxi
+		}
+		effect = {
+			remove_advisor = gouxi
+			define_general = {
+				name = "苟晞｢【武将】"
+				fire = 5
+				shock = 7
+				manuever = 4
+				siege = 1
+				trait = rab_leader_gouxi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

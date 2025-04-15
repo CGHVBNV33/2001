@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaiyan = {
+		major = yes
+		potential = {
+			
+			advisor = gaiyan
+			
+		}
+		allow = {
+			advisor = gaiyan
+		}
+		effect = {
+			remove_advisor = gaiyan
+			define_general = {
+				name = "盖延｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_gaiyan
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

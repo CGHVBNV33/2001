@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dianwei = {
+		major = yes
+		potential = {
+			
+			advisor = dianwei
+			
+		}
+		allow = {
+			advisor = dianwei
+		}
+		effect = {
+			remove_advisor = dianwei
+			define_general = {
+				name = "典韦｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_dianwei
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

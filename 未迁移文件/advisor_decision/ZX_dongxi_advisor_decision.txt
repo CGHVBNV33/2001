@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dongxi = {
+		major = yes
+		potential = {
+			
+			advisor = dongxi
+			
+		}
+		allow = {
+			advisor = dongxi
+		}
+		effect = {
+			remove_advisor = dongxi
+			define_general = {
+				name = "董袭｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_dongxi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_huzun = {
+		major = yes
+		potential = {
+			
+			advisor = huzun
+			
+		}
+		allow = {
+			advisor = huzun
+		}
+		effect = {
+			remove_advisor = huzun
+			define_general = {
+				name = "胡遵｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_huzun
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

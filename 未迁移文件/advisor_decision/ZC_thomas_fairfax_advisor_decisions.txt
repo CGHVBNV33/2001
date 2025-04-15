@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_thomas_fairfax = {
+		major = yes
+		potential = {
+			
+			advisor = thomas_fairfax
+			
+		}
+		allow = {
+			advisor = thomas_fairfax
+		}
+		effect = {
+			remove_advisor = thomas_fairfax
+			define_general = {
+				name = "托马斯 费尔法克斯｢【将领】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = ZC_thomas_fairfax
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

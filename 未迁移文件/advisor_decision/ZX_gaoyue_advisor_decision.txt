@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaoyue = {
+		major = yes
+		potential = {
+			
+			advisor = gaoyue
+			
+		}
+		allow = {
+			advisor = gaoyue
+		}
+		effect = {
+			remove_advisor = gaoyue
+			define_general = {
+				name = "高岳｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_gaoyue
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

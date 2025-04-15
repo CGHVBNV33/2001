@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liufa = {
+		major = yes
+		potential = {
+			
+			advisor = liufa
+			
+		}
+		allow = {
+			advisor = liufa
+		}
+		effect = {
+			remove_advisor = liufa
+			define_general = {
+				name = "刘法｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liufa
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

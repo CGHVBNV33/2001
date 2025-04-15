@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuting = {
+		major = yes
+		potential = {
+			
+			advisor = liuting
+			
+		}
+		allow = {
+			advisor = liuting
+		}
+		effect = {
+			remove_advisor = liuting
+			define_general = {
+				name = "刘綎｢【武将】"
+				fire = 4
+				shock = 7
+				manuever = 5
+				siege = 2
+				trait = rab_leader_liuting
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

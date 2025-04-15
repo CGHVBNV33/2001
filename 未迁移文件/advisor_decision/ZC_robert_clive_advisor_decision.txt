@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_conquistador_robert_clive = {
+		major = yes
+		potential = {
+			
+			advisor = robert_clive
+			
+		}
+		allow = {
+			advisor = robert_clive
+		}
+		effect = {
+			remove_advisor = robert_clive
+			define_conquistador = {
+				name = "罗伯特 克莱武【征服者】"
+				fire = 6
+				shock = 6
+				manuever = 6
+				siege = 1
+				trait = ZC_robert_clive
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

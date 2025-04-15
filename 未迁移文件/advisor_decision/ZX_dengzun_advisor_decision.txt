@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dengzun = {
+		major = yes
+		potential = {
+			
+			advisor = dengzun
+			
+		}
+		allow = {
+			advisor = dengzun
+		}
+		effect = {
+			remove_advisor = dengzun
+			define_general = {
+				name = "邓遵｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_dengzun
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

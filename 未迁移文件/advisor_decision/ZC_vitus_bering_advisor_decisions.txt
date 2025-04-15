@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_explorer_vitus_bering = {
+		major = yes
+		potential = {
+			
+			advisor = vitus_bering
+			
+		}
+		allow = {
+			advisor = vitus_bering
+		}
+		effect = {
+			remove_advisor = vitus_bering
+			define_explorer = {
+				name = "维图斯 白令｢【探险家】"
+				fire = 4
+				shock = 2
+				manuever = 5
+				siege = 0
+				trait = rab_leader_vitus_bering
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

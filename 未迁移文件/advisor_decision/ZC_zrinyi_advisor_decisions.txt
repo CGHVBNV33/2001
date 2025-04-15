@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_zrinyi = {
+		major = yes
+		potential = {
+			
+			advisor = zrinyi
+			
+		}
+		allow = {
+			advisor = zrinyi
+		}
+		effect = {
+			remove_advisor = zrinyi
+			define_general = {
+				name = "米克洛什 兹里尼【作家】"
+				fire = 2
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = ZC_zrinyi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_duyu = {
+		major = yes
+		potential = {
+			
+			advisor = duyu
+			
+		}
+		allow = {
+			advisor = duyu
+		}
+		effect = {
+			remove_advisor = duyu
+			define_general = {
+				name = "杜预｢【杜武库】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 4
+				trait = rab_leader_duyu
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

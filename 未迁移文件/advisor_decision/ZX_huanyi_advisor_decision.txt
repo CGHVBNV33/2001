@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_huanyi = {
+		major = yes
+		potential = {
+			
+			advisor = huanyi
+			
+		}
+		allow = {
+			advisor = huanyi
+		}
+		effect = {
+			remove_advisor = huanyi
+			define_general = {
+				name = "桓伊｢【音乐家】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_huanyi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

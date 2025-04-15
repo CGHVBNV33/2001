@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_buzhi = {
+		major = yes
+		potential = {
+			
+			advisor = buzhi
+			
+		}
+		allow = {
+			advisor = buzhi
+		}
+		effect = {
+			remove_advisor = buzhi
+			define_general = {
+				name = "步骘｢【丞相】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_buzhi
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

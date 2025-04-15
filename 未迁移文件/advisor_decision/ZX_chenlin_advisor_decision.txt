@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chenlin = {
+		major = yes
+		potential = {
+			
+			advisor = chenlin
+			
+		}
+		allow = {
+			advisor = chenlin
+		}
+		effect = {
+			remove_advisor = chenlin
+			define_admiral = {
+				name = "陈璘 ｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 0
+				trait = rab_leader_chenlin
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

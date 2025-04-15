@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_guodeng = {
+		major = yes
+		potential = {
+			
+			advisor = guodeng
+			
+		}
+		allow = {
+			advisor = guodeng
+		}
+		effect = {
+			remove_advisor = guodeng
+			define_general = {
+				name = "郭登 ｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_guodeng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

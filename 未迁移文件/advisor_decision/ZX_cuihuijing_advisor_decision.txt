@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_cuihuijing = {
+		major = yes
+		potential = {
+			
+			advisor = cuihuijing
+			
+		}
+		allow = {
+			advisor = cuihuijing
+		}
+		effect = {
+			remove_advisor = cuihuijing
+			define_general = {
+				name = "崔慧景｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_cuihuijing
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

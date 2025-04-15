@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_william_slim = {
+		major = yes
+		potential = {
+			
+			advisor = william_slim
+			
+		}
+		allow = {
+			advisor = william_slim
+		}
+		effect = {
+			remove_advisor = william_slim
+			define_general = {
+				name = "威廉 斯利姆【元帅】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = ZC_william_slim
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

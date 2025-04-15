@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_richard_neville = {
+		major = yes
+		potential = {
+			
+			advisor = richard_neville
+			
+		}
+		allow = {
+			advisor = richard_neville
+		}
+		effect = {
+			remove_advisor = richard_neville
+			define_general = {
+				name = "理查德 内维尔｢【沃里克伯爵】"
+				fire = 2
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = rab_leader_richard_neville
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

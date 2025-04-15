@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_generals_stilico = {
+		major = yes
+		potential = {
+			
+			advisor = stilico
+			
+		}
+		allow = {
+			advisor = stilico
+		}
+		effect = {
+			remove_advisor = stilico
+			define_general = {
+				name = "弗拉维斯 斯提里科｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 2
+				trait = rab_leader_stilico
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

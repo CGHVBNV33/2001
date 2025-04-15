@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_stanislaw_zolkiewski = {
+		major = yes
+		potential = {
+			
+			advisor = stanislaw_zolkiewski
+			
+		}
+		allow = {
+			advisor = stanislaw_zolkiewski
+		}
+		effect = {
+			remove_advisor = stanislaw_zolkiewski
+			define_general = {
+				name = "斯坦尼斯瓦夫 若乌凯夫斯基【将领】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_stanislaw_zolkiewski
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_cuidaogu = {
+		major = yes
+		potential = {
+			
+			advisor = cuidaogu
+			
+		}
+		allow = {
+			advisor = cuidaogu
+		}
+		effect = {
+			remove_advisor = cuidaogu
+			define_general = {
+				name = "崔道固｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_cuidaogu
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

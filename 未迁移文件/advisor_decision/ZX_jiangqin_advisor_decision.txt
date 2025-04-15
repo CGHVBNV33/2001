@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_jiangqin = {
+		major = yes
+		potential = {
+			
+			advisor = jiangqin
+			
+		}
+		allow = {
+			advisor = jiangqin
+		}
+		effect = {
+			remove_advisor = jiangqin
+			define_general = {
+				name = "蒋钦｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_jiangqin
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
