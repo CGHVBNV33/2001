@@ -1,0 +1,58 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = dushinuli_advisor_come
+
+#æ­¦å°æç§æ¢ä»¶ä¸åºç¾
+#id = 1 : dushinuli : é½å¸çå©ï½¢ãæ­¦å°ã
+#
+country_event = {
+	id = dushinuli_advisor_come.1
+	title = "dushinuli_advisor_come.1.t"
+	desc = "dushinuli_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#é±èäºä»¶
+	hidden = yes
+	#æ´åéæ²åªè½è§¸ç¼ä¸æ¬¡
+	fire_only_once = yes
+
+
+	trigger = {
+	#æ­¦å°åºç°å¨é¡¾é®æ± åçæ¶é´ç¹åå°ç¹ æå½å®¶tag
+		is_year = 210
+		NOT = { is_year = 255 }
+		tag = BK1
+	}
+	#è§¸ç¼æéæ²å·®1-5daysåå¯
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = dushinuli_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+define_advisor_rab_dushinuli_advisor_come_35 = yes
+#			define_advisor = {
+#				type = dushinuli
+#				name = "é½å¸çå©ï½¢ãæ­¦å°ã"
+#				discount = yes	#é¡¾é®ææ
+#				skill = 3		#é¡¾é®ç­çº§
+#			}
+		}
+		#é å ä¸ï½¢ 
+		if = { 
+		limit = { ai = yes }
+define_general_rab_dushinuli_advisor_come_46 = yes
+#			define_general = {
+#				name = "é½å¸çå©ï½¢ãæ­¦å°ã"
+#				fire = 4
+#				shock = 4
+#				manuever = 3
+#				siege = 3
+#				trait = rab_leader_dushinuli #å°é¢çç¹è´¨
+#			}
+		}
+	}
+}
+

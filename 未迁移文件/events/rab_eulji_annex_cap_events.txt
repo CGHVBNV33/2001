@@ -1,0 +1,176 @@
+namespace = eulji_annex_cap_events
+
+
+country_event = {
+	id = eulji_annex_cap_events.1
+	title = "eulji_annex_cap_events.NAME1"
+	desc = "eulji_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = eulji
+				has_leader = "乙支文德｢【大对卢】"
+			}
+		}
+	}	
+	option = {
+		name = "eulji_annex_cap_events.OPTA1"
+		country_event = {
+			id = eulji_annex_cap_events.2
+		}
+	}
+}
+#######################################################################
+country_event = {
+	id = eulji_annex_cap_events.2
+	title = "eulji_annex_cap_events.NAME2"
+	desc = "eulji_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "eulji_annex_cap_events.OPTA2"
+		############################################
+		## This table defined by rab_event_modifiers
+		##------------------------------------------
+		## 宅心仁厚 ra_ch1    ## ဿ?内政 rb_ch1
+		##------------------------------------------
+		## 机敏ဿºN ra_ch2    ## ဿ?军事 rb_ch2
+		##------------------------------------------
+		## 性格暴㽐ra_ch3    ## ဿ?发展 rb_ch3
+		##------------------------------------------
+		## 懦弱胆小 ra_ch4    ## ဿ?名声 rb_ch4
+		##------------------------------------------
+		## 㼪þV享乐 ra_ch5    ## ဿ?宗教 rb_ch5
+		##------------------------------------------
+		## ሿÃV壮志 ra_ch6    ## ဿ?外交 rb_ch6
+		##------------------------------------------
+		## 优柔寡断 ra_ch7    ## ဿ?人文 rb_ch7
+		##------------------------------------------
+		## 用人唯才 ra_ch8    ## ဿ?商业 rb_ch8
+		##------------------------------------------
+		## 冲动ᄿ? ra_ch9    ##
+		##------------------------------------------
+		##AI ᄿ=f君王条件不符合，就不会㼉éb登用
+		##AI ᄿ=f君王条件符合，就有70%机率㼉éb之
+		############################################				
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7							
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = TNG
+					tag = SUI
+				}	
+			}	
+		}
+		#ꤐs家㼉N登用，且君王or other条件符合
+		#Sဿfk将建立于新的国家
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+				   		tag = TNG
+				   		tag = SUI
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+				define_advisor = {
+					type = eulji
+					name = "乙支文德｢【大对卢】"
+					discount = yes	
+					skill = 5
+				}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "乙支文德｢【大对卢】"
+					fire = 4
+					shock = 5
+					manuever = 3
+					siege = 3
+					trait = rab_leader_dadulu
+				}
+			}
+		}
+		else = {
+			country_event = {
+				id = eulji_annex_cap_events.3
+			}
+		}		
+	}
+	option = {
+		name = "eulji_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -1
+		add_treasury = 100
+	}	
+
+	option = {
+		name = "eulji_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_eulji"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+######################武将拒绝的画㽢###################################
+
+country_event = {
+	id = eulji_annex_cap_events.3
+	title = "eulji_annex_cap_events.NAME3"
+	desc = "eulji_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	#回到之前的 "显示抓到将ဿT的画㽢	?éb"
+	option = {
+		name = "eulji_annex_cap_events.OPTA3"
+		country_event = {
+				id = eulji_annex_cap_events.2
+		}
+	}
+}

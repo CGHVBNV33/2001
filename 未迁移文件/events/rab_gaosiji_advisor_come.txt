@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = gaosiji_advisor_come
+
+#武将某种条件下出现
+#id = 1 : gaosiji : 高思继｢【武将】
+
+country_event = {
+	id = gaosiji_advisor_come.1
+	title = "gaosiji_advisor_come.1.t"
+	desc = "gaosiji_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+
+	hidden = yes	
+	fire_only_once = yes
+	#出现时间
+	trigger = {
+		is_year = 880	
+		NOT = { is_year = 922 }
+		OR = {
+			AND = {
+				exists = HT1
+				tag = HT1
+			}
+			AND = {
+				NOT = { exists = HT1 }
+				owns = 696
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = gaosiji_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = gaosiji
+				name = "高思继｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "高思继｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_gaosiji
+			}
+		}
+	}
+}
+

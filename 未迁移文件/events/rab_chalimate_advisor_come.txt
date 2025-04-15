@@ -1,0 +1,49 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = chalimate_advisor_come
+
+#铁㼤åg理某种条件下出现
+#id = 1 : chalimate : 查理-㽬yr｢【铁㼤åg理】
+
+country_event = {
+	id = chalimate_advisor_come.1
+	title = "chalimate_advisor_come.1.t"
+	desc = "chalimate_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+		
+	option = {
+		name = chalimate_advisor_come.OPTA1
+	}
+	immediate = {
+		hidden_effect = {
+			if = { 
+				limit = { ai = no }
+				define_advisor = {
+					type = chalimate
+					name = "查理-马特｢【铁锤查理】"
+					discount = yes	
+					skill = 3
+				}
+			}
+			if = { 
+				limit = { ai = yes }
+				define_general = {
+					name = "查理-马特｢【铁锤查理】"
+					fire = 4
+					shock = 5
+					manuever = 3
+					siege = 2
+					trait = rab_leader_chalimate
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,62 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = cuiqianyou_advisor_come
+
+#名将某种条件下出现
+#id = 1 : cuiqianyou : 崔乾佑｢【猛将】
+
+country_event = {
+	id = cuiqianyou_advisor_come.1
+	title = "cuiqianyou_advisor_come.1.t"
+	desc = "cuiqianyou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		OR = {
+	                             AND = {
+		                          is_year = 733	
+		                          NOT = { is_year = 755 }
+		                          owns = 5121 #Pre-13.0
+	                             }
+	                             AND = {
+		                          is_year = 755	
+		                          NOT = { is_year = 760 }
+		                          owns = 1816
+	                             }
+	                }
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = cuiqianyou_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = cuiqianyou
+				name = "崔乾佑｢【猛将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "崔乾佑｢【猛将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_cuiqianyou
+			}
+		}
+	}
+}
+

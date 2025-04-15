@@ -1,0 +1,51 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = guoziyi_advisor_come
+#猛将某种条件下出现
+#id = 1 : guoziyi : 郭子仪｢【武将】
+country_event = {
+	id = guoziyi_advisor_come.1
+	title = "guoziyi_advisor_come.1.t"
+	desc = "guoziyi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 752
+		NOT = {
+			is_year = 781
+		}
+		OR = {
+			AND = {
+				exists = TNG
+				tag = TNG
+			}
+			AND = {
+				NOT = {
+					exists = TNG
+				}
+				owns = 5133				#Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = guoziyi_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_guoziyi = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_guoziyi = yes
+		}
+	}
+}

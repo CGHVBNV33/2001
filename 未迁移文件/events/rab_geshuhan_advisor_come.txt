@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = geshuhan_advisor_come
+
+#名将某种条件下出现
+#id = 1 : geshuhan : 哥舒翰｢【名将】
+
+country_event = {
+	id = geshuhan_advisor_come.1
+	title = "geshuhan_advisor_come.1.t"
+	desc = "geshuhan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 743	
+		NOT = { is_year = 758 }
+		OR = {
+			AND = {
+				exists = TNG
+				tag = TNG
+			}
+			AND = {
+				NOT = { exists = TNG }
+				owns = 3292
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = geshuhan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = geshuhan
+				name = "哥舒翰｢【名将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "哥舒翰｢【名将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_geshuhan_new
+			}
+		}
+	}
+}
+
