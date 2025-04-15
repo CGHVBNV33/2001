@@ -1,0 +1,75 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangjue_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangjue : 张珏｢【武将】
+#
+country_event = {
+	id = zhangjue_advisor_come.1
+	title = "zhangjue_advisor_come.1.t"
+	desc = "zhangjue_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1259
+		NOT = { is_year = 1279 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = GNN }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 684
+			}
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangjue_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhangjue
+				name = "张珏｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张珏｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangjue #将领的特质
+			}
+		}
+	}
+}
+

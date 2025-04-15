@@ -1,0 +1,62 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = dugao_advisor_come
+
+#武将某种條件下出現
+#id = 1 : dugao : 杜杲｢【武将】
+#
+country_event = {
+	id = dugao_advisor_come.1
+	title = "dugao_advisor_come.1.t"
+	desc = "dugao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1218
+		NOT = { is_year = 1243 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = GNN }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 684
+			}
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = dugao_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor_dugao = yes
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general_dugao = yes
+		}
+	}
+}
+
