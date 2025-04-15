@@ -1,0 +1,71 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = guokan_advisor_come
+
+#神将某种条件下出现
+#id = 1 : guokan : 郭侃｢【武将】
+
+country_event = {
+	id = guokan_advisor_come.1
+	title = "guokan_advisor_come.1.t"
+	desc = "guokan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1227	
+		NOT = { is_year = 1278 }
+		OR = {
+			AND = {
+				exists = MGE
+				tag = MGE
+			}
+			AND = {
+				exists = YUA
+				tag = YUA
+			}
+			AND = {
+				NOT = { exists = MGE }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				owns = 4885
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = guokan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = guokan
+				name = "郭侃｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "郭侃｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_guokan #将领的特质
+			}
+		}
+	}
+}
+

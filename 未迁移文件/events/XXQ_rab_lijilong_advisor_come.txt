@@ -1,0 +1,71 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lijilong_advisor_come
+
+#神将某种条件下出现
+#id = 1 : lijilong : 李继隆｢【武将】
+
+country_event = {
+	id = lijilong_advisor_come.1
+	title = "lijilong_advisor_come.1.t"
+	desc = "lijilong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 970	
+		NOT = { is_year = 1006 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = GNN }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 688
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = lijilong_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lijilong
+				name = "李继隆｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李继隆｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lijilong #将领的特质
+			}
+		}
+	}
+}
+

@@ -1,0 +1,188 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = xxx_advisor_come
+#武将某种条件下出现
+#id = 1 : chiang_kai_shek : 蒋介石｢【司令官】
+#id = 2 : he_yingqin : 何应钦｢【军官】
+#id = 3 : yue_fei : 岳飞｢【武将】
+country_event = {
+	id = xxx_advisor_come.1
+	title = "xxx_advisor_come.1.t"
+	desc = "xxx_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	#为了避免统治相冲突做了check ruler动作
+	trigger = {
+		OR = {
+			AND = {
+				tag = ROC
+				is_year = 1932
+				NOT = {
+					is_year = 1943
+				}
+				has_ruler_ROC_Sen = yes
+				NOT = {
+					has_country_flag = anti_general_chiang_kai_shek
+				}
+			}
+			AND = {
+				tag = GJ1
+				is_year = 1924
+				NOT = {
+					is_year = 1932
+				}
+				NOT = {
+					has_ROC_Jieshi_ruler = yes
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = xxx_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_chiang_kai_shek = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_chiang_kai_shek = yes
+		}
+	}
+}
+
+#################################################
+country_event = {
+	id = xxx_advisor_come.2
+	title = "xxx_advisor_come.NAME2"
+	desc = "xxx_advisor_come.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		OR = {
+			tag = GJ1
+			tag = ROC
+			tag = TWN
+		}
+		is_year = 1920
+		NOT = {
+			is_year = 1974
+		}
+		NOT = {
+			has_ruler = "何应钦"
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = xxx_advisor_come.OPTA2
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = he_yingqin
+				name = "何应钦｢【军官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "何应钦｢【军官】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 2
+				trait = rab_leader_he_yingqin
+			}
+		}
+	}
+}
+
+#################################################
+country_event = {
+	id = xxx_advisor_come.3
+	title = "xxx_advisor_come.NAME3"
+	desc = "xxx_advisor_come.DESC3"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1124
+		NOT = {
+			is_year = 1142
+		}
+		culture_group = east_asian
+		NOT = {
+			tag = GNN
+		}
+		NOT = {
+			tag = JAP
+		}
+		NOT = {
+			tag = KHT
+		}
+		NOT = {
+			tag = LIO
+		}
+		NOT = {
+			tag = KKT
+		}
+		NOT = {
+			tag = DN2
+		}
+		NOT = {
+			tag = XIA
+		}
+		NOT = {
+			tag = GA3
+		}
+		NOT = {
+			tag = MGE
+		}
+		NOT = {
+			tag = YUA
+		}
+		OR = {
+			owns = 683
+			tag = SNG
+		}
+		NOT = { has_country_flag = me_yue_fei_flag }
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = xxx_advisor_come.OPTA3
+		set_country_flag = me_yue_fei_flag
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_yuefei = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_leader_yuefei = yes
+		}
+	}
+}

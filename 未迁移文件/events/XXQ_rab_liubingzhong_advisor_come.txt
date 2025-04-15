@@ -1,0 +1,56 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liubingzhong_advisor_come
+
+#神将某种条件下出现
+#id = 1 : liubingzhong : 刘秉忠｢【文官】
+
+country_event = {
+	id = liubingzhong_advisor_come.1
+	title = "liubingzhong_advisor_come.1.t"
+	desc = "liubingzhong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1246
+		NOT = { is_year = 1275 }
+		OR = {
+			AND = {
+				exists = YUA
+				tag = YUA
+			}
+			AND = {
+				exists = MGE
+				tag = MGE
+			}
+			AND = {
+				NOT = { exists = YUA }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = GA3 }
+				owns = 3339
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liubingzhong_advisor_come.OPTA1
+		
+			define_advisor = {
+				type = liubingzhong
+				name = "刘秉忠｢【文官】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

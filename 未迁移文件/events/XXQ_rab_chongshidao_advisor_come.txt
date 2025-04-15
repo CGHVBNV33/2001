@@ -1,0 +1,71 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = chongshidao_advisor_come
+
+#神将某种条件下出现
+#id = 1 : chongshidao : 种师道｢【军师】
+
+country_event = {
+	id = chongshidao_advisor_come.1
+	title = "chongshidao_advisor_come.1.t"
+	desc = "chongshidao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1081
+		NOT = { is_year = 1127 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = GNN }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 688
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = chongshidao_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = chongshidao
+				name = "种师道｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "种师道｢【军师】"
+				fire = 4
+				shock = 2
+				manuever = 2
+				siege = 2
+				trait = rab_leader_chongshidao #将领的特质
+			}
+		}
+	}
+}
+

@@ -1,0 +1,57 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = fanzhongyan_advisor_come
+
+#神将某种条件下出现
+#id = 1 : fanzhongyan : 范仲淹｢【文官】
+
+country_event = {
+	id = fanzhongyan_advisor_come.1
+	title = "fanzhongyan_advisor_come.1.t"
+	desc = "fanzhongyan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1015
+		NOT = { is_year = 1059 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = GNN }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 688
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = fanzhongyan_advisor_come.OPTA1
+
+			define_advisor = {
+				type = fanzhongyan
+				name = "范仲淹｢【文官】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

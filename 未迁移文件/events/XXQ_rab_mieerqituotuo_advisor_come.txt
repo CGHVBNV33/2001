@@ -1,0 +1,72 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = mieerqituotuo_advisor_come
+
+#神将某种条件下出现
+#id = 1 : mieerqituotuo : 蔑儿乞·脱脱｢【军师】
+
+country_event = {
+	id = mieerqituotuo_advisor_come.1
+	title = "mieerqituotuo_advisor_come.1.t"
+	desc = "mieerqituotuo_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1334
+		NOT = { is_year = 1356 }
+		OR = {
+			AND = {
+				exists = MGE
+				tag = MGE
+			}
+			AND = {
+				exists = YUA
+				tag = YUA
+			}
+			AND = {
+				NOT = { exists = YUA }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				owns = 1816
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = mieerqituotuo_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = mieerqituotuo
+				name = "蔑儿乞·脱脱｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "蔑儿乞·脱脱｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = rab_leader_mieerqituotuo #将领的特质
+			}
+		}
+	}
+}
+

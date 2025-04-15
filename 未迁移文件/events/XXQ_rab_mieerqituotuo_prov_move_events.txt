@@ -1,0 +1,140 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 蔑儿乞·脱脱【军师】 毛遂自荐 
+
+namespace = mieerqituotuo_prov_move_events
+
+
+province_event = {
+	id =mieerqituotuo_prov_move_events.1
+	title = "mieerqituotuo_prov_move_events.NAME1"
+	desc = "mieerqituotuo_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的神将,记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_mieerqituotuo
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "mieerqituotuo_prov_move_events.OPTA1"
+###########################蔑儿乞·脱脱【军师】pov_mieerqituotuo#################################		
+		if = {
+			limit = { has_province_modifier = pov_mieerqituotuo }
+			if = {
+			#决定在野神将的寿命
+				limit = { 
+					NOT = { is_year = 1404  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = {
+							NOT = {
+								OR = {
+							 tag = JAP 
+							 tag = KHT 
+							 tag = LIO 
+							 tag = KKT 
+							 tag = DN2 
+							 tag = XIA 
+							 tag = GA3   
+							 tag = USA
+								}
+							} 
+								OR = {
+								has_ruler_modifier = ra_ch1	
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+							 	
+								}
+						}
+					}
+			
+					remove_province_modifier = pov_mieerqituotuo
+					owner = {
+						#军师的毛遂自荐 成功了 军师找到心目中的理想国度
+						country_event = {
+							id =mieerqituotuo_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪军师将会继续流浪到别的省份	
+				else = {
+					remove_province_modifier = pov_mieerqituotuo
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_mieerqituotuo"
+							duration = -1
+						}					
+					}								
+				}
+			}
+			if = {
+			#如果年份超过此限,在野神将离世
+				limit = { 
+					is_year = 1404 
+				}
+				remove_province_modifier = pov_mieerqituotuo		
+			}
+		}
+	}
+}
+############################################################################
+#	蔑儿乞·脱脱【军师】毛遂自荐
+############################################################################
+
+
+country_event = {
+	id =mieerqituotuo_prov_move_events.2
+	title = "mieerqituotuo_prov_move_events.NAME2"
+	desc = "mieerqituotuo_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "mieerqituotuo_prov_move_events.OPTA2"
+		if = {
+			limit = { ai = no }
+				define_advisor = {
+					type =mieerqituotuo
+					name = "蔑儿乞·脱脱｢【军师】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = {
+			limit = { ai = yes }
+				define_general = {
+				name = "蔑儿乞·脱脱｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = rab_leader_mieerqituotuo
+			    }
+		}
+	}
+}
