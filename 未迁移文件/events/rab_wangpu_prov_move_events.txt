@@ -1,0 +1,145 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 王朴｢【文官】 毛遂自荐 
+
+namespace = wangpu_prov_move_events
+
+
+province_event = {
+	id =wangpu_prov_move_events.1
+	title = "wangpu_prov_move_events.NAME1"
+	desc = "wangpu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的文官，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_wangpu
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "wangpu_prov_move_events.OPTA1"
+###########################王朴｢【文官】pov_wangpu#################################		
+		if = {
+			limit = { has_province_modifier = pov_wangpu }
+			if = {
+			#决定在野文官的寿命
+				limit = { 
+					NOT = { is_year = 969  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+								OR = {
+										has_ruler_modifier = ra_ch3
+										has_ruler_modifier = ra_ch2
+										has_ruler_modifier = ra_ch4
+										has_ruler_modifier = ra_ch1
+										has_ruler_modifier = rb_ch4
+										has_ruler_modifier = rb_ch5
+														
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_wangpu
+					owner = {
+						country_event = {
+							id =wangpu_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+									has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch5
+            
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_wangpu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wangpu"
+							duration = -1
+						}					
+					}
+				}
+				#不是期待的国家 直接移到别的省分
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_wangpu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_wangpu"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野文官离世
+				limit = { 
+					is_year = 969 
+				}	
+				remove_province_modifier = pov_wangpu		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	王朴｢【文官】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id =wangpu_prov_move_events.2
+	title = "wangpu_prov_move_events.NAME2"
+	desc = "wangpu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "wangpu_prov_move_events.OPTA2"
+				define_advisor = {
+					type =wangpu
+					name = "王朴｢【文官】"
+					discount = yes	
+					skill = 3
+				}
+	}
+}
+
+	
+	

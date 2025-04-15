@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wangpu_advisor_come
+
+#文官某种条件下出现
+#id = 1 : wangpu : 王朴｢【文官】
+
+country_event = {
+	id = wangpu_advisor_come.1
+	title = "wangpu_advisor_come.1.t"
+	desc = "wangpu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+	#出现时间
+	trigger = {
+		is_year = 926	
+		NOT = { is_year = 959 }
+		OR = {
+			AND = {
+				exists = HH1
+				tag = HH1
+			}
+			AND = {
+				NOT = { exists = HH1 }
+		owns = 3255
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wangpu_advisor_come.OPTA1
+		
+			define_advisor = {
+				type = wangpu
+				name = "王朴｢【文官】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

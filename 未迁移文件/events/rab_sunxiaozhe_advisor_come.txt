@@ -1,0 +1,53 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = sunxiaozhe_advisor_come
+
+#名将某种条件下出现
+#id = 1 : sunxiaozhe : 孙孝哲｢【武将】
+
+country_event = {
+	id = sunxiaozhe_advisor_come.1
+	title = "sunxiaozhe_advisor_come.1.t"
+	desc = "sunxiaozhe_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 753	
+		NOT = { is_year = 758 }
+		owns = 1816 
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = sunxiaozhe_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = sunxiaozhe
+				name = "孙孝哲｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "孙孝哲｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_sunxiaozhe_new
+			}
+		}
+	}
+}
+

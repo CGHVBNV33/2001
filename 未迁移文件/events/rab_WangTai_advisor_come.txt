@@ -1,0 +1,42 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = WangTai_advisor_come
+
+#武将某种條件下出現
+#id = 1 :WangTai : 王泰｢【军师】
+#
+country_event = {
+	id = WangTai_advisor_come.1
+	title = "WangTai_advisor_come.NAME1"
+	desc = "WangTai_advisor_come.DESC1"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = "WangTai_advisor_come.OPTA1"
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = WangTai
+				name = "王泰｢【军师】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "王泰｢【军师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_WangTai
+			}
+		}
+	}
+}
+

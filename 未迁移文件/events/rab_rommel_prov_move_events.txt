@@ -1,0 +1,175 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 隆美尔｢【元帅】毛遂自荐 
+
+namespace = rommel_prov_move_events
+
+
+province_event = {
+	id = rommel_prov_move_events.1
+	title = "rommel_prov_move_events.NAME1"
+	desc = "rommel_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+		has_province_modifier = pov_rommel
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "rommel_prov_move_events.OPTA1"
+###########################隆美尔｢【元帅】pov_rommel#################################		
+		if = {
+			limit = { has_province_modifier = pov_rommel }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 1950  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = XIO 
+									tag = NEW
+								}
+							} 
+								OR = {
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6	
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = rb_ch8				
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_rommel
+					owner = {
+						country_event = {
+							id = rommel_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = XIO 
+									tag = NEW
+								}
+							} 
+							NOT = { 
+								OR = {
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6	
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = rb_ch8
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_rommel
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_rommel"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = XIO 
+								tag = NEW
+							}
+						} 
+					}
+					remove_province_modifier = pov_rommel
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_rommel"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 1950 
+				}	
+				remove_province_modifier = pov_rommel		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	隆美尔｢【元帅】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id = rommel_prov_move_events.2
+	title = "rommel_prov_move_events.NAME2"
+	desc = "rommel_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "rommel_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = rommel
+					name = "隆美尔｢【元帅】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "隆美尔｢【元帅】"
+					fire = 5
+					shock = 7
+					manuever = 6
+					siege = 4
+					trait = fly_leader_rommel
+			}
+		}
+	}
+}

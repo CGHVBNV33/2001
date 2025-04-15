@@ -1,0 +1,59 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = rommel_advisor_come
+
+#武将某种條件下出現
+#id = 1 : rommel : 隆美尔｢【元帅】
+#1891年11月15日－1944年10月14日）
+country_event = {
+	id = rommel_advisor_come.1
+	title = "rommel_advisor_come.1.t"
+	desc = "rommel_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+#（614年－683年3月24日）
+	trigger = {
+		#这里是武将出现在哪里的条件
+		OR = {
+			tag = NZ1
+			AND = {
+				NOT = { exists = NZ1 }
+				owns = 77
+			}	
+		}		
+		is_year = 1911
+		NOT = { is_year = 1944 }
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = rommel_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = rommel
+				name = "隆美尔｢【元帅】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "隆美尔｢【元帅】"
+				fire = 5
+				shock = 7
+				manuever = 6
+				siege = 4
+				trait = fly_leader_rommel
+			}
+		}
+	}
+}
+
