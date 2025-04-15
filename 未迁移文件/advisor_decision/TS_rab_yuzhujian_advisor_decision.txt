@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuzhujian = {
+		major = yes
+		potential = {
+			
+			advisor = yuzhujian
+			
+		}
+		allow = {
+			advisor = yuzhujian
+		}
+		effect = {
+			remove_advisor = yuzhujian
+			define_general = {
+				name = "郁筑建｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = JI_leader_Yuzhujian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_weisheng = {
+		major = yes
+		potential = {
+			
+			advisor = weisheng
+			
+		}
+		allow = {
+			advisor = weisheng
+		}
+		effect = {
+			remove_advisor = weisheng
+			define_general = {
+				name = "魏胜｢【武将】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 4
+				trait = rab_leader_weisheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

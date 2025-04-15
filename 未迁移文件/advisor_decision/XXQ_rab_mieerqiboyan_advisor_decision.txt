@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mieerqiboyan = {
+		major = yes
+		potential = {
+			
+			advisor = mieerqiboyan
+			
+		}
+		allow = {
+			advisor = mieerqiboyan
+		}
+		effect = {
+			remove_advisor = mieerqiboyan
+			define_general = {
+				name = "蔑儿乞·伯颜｢【文官】"
+				fire = 1
+				shock = 1
+				manuever = 2
+				siege = 2
+				trait = rab_leader_mieerqiboyan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

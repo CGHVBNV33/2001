@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caowei = {
+		major = yes
+		potential = {
+			
+			advisor = caowei
+			
+		}
+		allow = {
+			advisor = caowei
+		}
+		effect = {
+			remove_advisor = caowei
+			define_general = {
+				name = "曹玮｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_caowei
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

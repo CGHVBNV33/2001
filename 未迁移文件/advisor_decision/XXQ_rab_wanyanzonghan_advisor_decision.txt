@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanzonghan = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanzonghan
+			
+		}
+		allow = {
+			advisor = wanyanzonghan
+		}
+		effect = {
+			remove_advisor = wanyanzonghan
+			define_general = {
+				name = "完颜宗翰｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wanyanzonghan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

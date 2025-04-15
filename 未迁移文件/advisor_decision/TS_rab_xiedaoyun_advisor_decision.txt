@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xiedaoyun= {
+		major = yes
+		potential = {
+			
+			advisor = xiedaoyun
+			
+		}
+		allow = {
+			advisor = xiedaoyun
+		}
+		effect = {
+			remove_advisor = xiedaoyun
+			define_general = {
+				name = "谢道韫 ｢【军师】"
+				fire = 1
+				shock = 1
+				manuever = 2
+				siege = 1
+				female = yes
+				trait = JI_leader_Xiedaouyun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

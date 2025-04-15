@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wulianghaashu = {
+		major = yes
+		potential = {
+			
+			advisor = wulianghaashu
+			
+		}
+		allow = {
+			advisor = wulianghaashu
+		}
+		effect = {
+			remove_advisor = wulianghaashu
+			define_general = {
+				name = "兀良哈·阿术｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 1
+				trait = rab_leader_wulianghaashu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

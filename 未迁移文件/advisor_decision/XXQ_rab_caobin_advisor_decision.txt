@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_caobin = {
+		major = yes
+		potential = {
+			
+			advisor = caobin
+			
+		}
+		allow = {
+			advisor = caobin
+		}
+		effect = {
+			remove_advisor = caobin
+			define_general = {
+				name = "曹彬｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_caobin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

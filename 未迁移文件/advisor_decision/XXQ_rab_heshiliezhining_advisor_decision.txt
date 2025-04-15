@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_heshiliezhining = {
+		major = yes
+		potential = {
+			
+			advisor = heshiliezhining
+			
+		}
+		allow = {
+			advisor = heshiliezhining
+		}
+		effect = {
+			remove_advisor = heshiliezhining
+			define_general = {
+				name = "纥石烈志宁｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_heshiliezhining
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

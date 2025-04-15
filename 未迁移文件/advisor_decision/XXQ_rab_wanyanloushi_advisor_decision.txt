@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanloushi = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanloushi
+			
+		}
+		allow = {
+			advisor = wanyanloushi
+		}
+		effect = {
+			remove_advisor = wanyanloushi
+			define_general = {
+				name = "完颜娄室｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wanyanloushi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

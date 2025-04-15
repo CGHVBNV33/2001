@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_explorer_amerigo_vespvcci = {
+		major = yes
+		potential = {
+			
+			advisor = amerigo_vespvcci
+			
+		}
+		allow = {
+			advisor = amerigo_vespvcci
+		}
+		effect = {
+			remove_advisor = amerigo_vespvcci
+			define_explorer = {
+				name = "阿美利哥 维斯普西｢【商人】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 0
+				trait = rab_leader_amerigo_vespvcci
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

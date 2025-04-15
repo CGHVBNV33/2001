@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_anne_de_montmorency = {
+		major = yes
+		potential = {
+			
+			advisor = anne_de_montmorency
+			
+		}
+		allow = {
+			advisor = anne_de_montmorency
+		}
+		effect = {
+			remove_advisor = anne_de_montmorency
+			define_general = {
+				name = "阿内 德 蒙莫朗西｢【莫朗西公爵】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 0
+				trait = ZC_anne_de_montmorency
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

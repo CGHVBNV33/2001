@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_tandaoji= {
+		major = yes
+		potential = {
+			
+			advisor = tandaoji
+			
+		}
+		allow = {
+			advisor = tandaoji
+		}
+		effect = {
+			remove_advisor = tandaoji
+			define_general = {
+				name = "檀道济 ｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

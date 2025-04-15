@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xiexuan= {
+		major = yes
+		potential = {
+			
+			advisor = xiexuan
+			
+		}
+		allow = {
+			advisor = xiexuan
+		}
+		effect = {
+			remove_advisor = xiexuan
+			define_general = {
+				name = "谢玄 ｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xiexuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

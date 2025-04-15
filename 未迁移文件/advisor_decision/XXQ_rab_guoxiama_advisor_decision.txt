@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_guoxiama = {
+		major = yes
+		potential = {
+			
+			advisor = guoxiama
+			
+		}
+		allow = {
+			advisor = guoxiama
+		}
+		effect = {
+			remove_advisor = guoxiama
+			define_general = {
+				name = "郭虾蟆｢【武将】"
+				fire = 6
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_guoxiama
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

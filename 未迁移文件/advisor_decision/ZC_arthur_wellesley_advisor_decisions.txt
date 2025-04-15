@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_arthur_wellesley = {
+		major = yes
+		potential = {
+			
+			advisor = arthur_wellesley
+			
+		}
+		allow = {
+			advisor = arthur_wellesley
+		}
+		effect = {
+			remove_advisor = arthur_wellesley
+			define_general = {
+				name = "阿瑟 韦尔斯利【铁公爵】"
+				fire = 5
+				shock = 5
+				manuever = 6
+				siege = 4
+				trait = ZC_arthur_wellesley
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

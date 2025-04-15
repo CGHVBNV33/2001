@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yimojuci = {
+		major = yes
+		potential = {
+			
+			advisor = yimojuci
+			
+		}
+		allow = {
+			advisor = yimojuci
+		}
+		effect = {
+			remove_advisor = yimojuci
+			define_general = {
+				name = "伊墨居次｢【军师】"
+				female = yes
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_yimojuci
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

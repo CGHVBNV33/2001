@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xichao= {
+		major = yes
+		potential = {
+			
+			advisor = xichao
+			
+		}
+		allow = {
+			advisor = xichao
+		}
+		effect = {
+			remove_advisor = xichao
+			define_general = {
+				name = "郗超 ｢【谋士】"
+				fire = 2
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = JI_leader_Xichao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

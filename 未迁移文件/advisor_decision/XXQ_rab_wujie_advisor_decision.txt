@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wujie = {
+		major = yes
+		potential = {
+			
+			advisor = wujie
+			
+		}
+		allow = {
+			advisor = wujie
+		}
+		effect = {
+			remove_advisor = wujie
+			define_general = {
+				name = "吴玠｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 4
+				trait = rab_leader_wujie
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

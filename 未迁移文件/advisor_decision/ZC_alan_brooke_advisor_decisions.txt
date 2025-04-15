@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_alan_brooke = {
+		major = yes
+		potential = {
+			
+			advisor = alan_brooke
+			
+		}
+		allow = {
+			advisor = alan_brooke
+		}
+		effect = {
+			remove_advisor = alan_brooke
+			define_general = {
+				name = "艾伦 布鲁克【元帅】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = ZC_alan_brooke
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

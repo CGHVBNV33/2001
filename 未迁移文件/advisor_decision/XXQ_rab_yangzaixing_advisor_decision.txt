@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangzaixing = {
+		major = yes
+		potential = {
+			
+			advisor = yangzaixing
+			
+		}
+		allow = {
+			advisor = yangzaixing
+		}
+		effect = {
+			remove_advisor = yangzaixing
+			define_general = {
+				name = "杨再兴｢【武将】"
+				fire = 6
+				shock = 7
+				manuever = 5
+				siege = 1
+				trait = rab_leader_yangzaixing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

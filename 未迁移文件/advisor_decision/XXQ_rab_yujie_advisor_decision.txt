@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yujie = {
+		major = yes
+		potential = {
+			
+			advisor = yujie
+			
+		}
+		allow = {
+			advisor = yujie
+		}
+		effect = {
+			remove_advisor = yujie
+			define_general = {
+				name = "余玠｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = rab_leader_yujie
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

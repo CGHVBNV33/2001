@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zongze = {
+		major = yes
+		potential = {
+			
+			advisor = zongze
+			
+		}
+		allow = {
+			advisor = zongze
+		}
+		effect = {
+			remove_advisor = zongze
+			define_general = {
+				name = "宗泽｢【军师】"
+				fire = 3
+				shock = 2
+				manuever = 2
+				siege = 2
+				trait = rab_leader_zongze
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

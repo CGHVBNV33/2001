@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yelvrenxian = {
+		major = yes
+		potential = {
+			
+			advisor = yelvrenxian
+			
+		}
+		allow = {
+			advisor = yelvrenxian
+		}
+		effect = {
+			remove_advisor = yelvrenxian
+			define_general = {
+				name = "耶律仁先｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = rab_leader_yelvrenxian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

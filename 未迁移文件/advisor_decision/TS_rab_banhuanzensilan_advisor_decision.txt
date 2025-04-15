@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_banhuanzensilan = {
+		major = yes
+		potential = {
+			
+			advisor = banhuanzensilan
+			
+		}
+		allow = {
+			advisor = banhuanzensilan
+		}
+		effect = {
+			remove_advisor = banhuanzensilan
+			define_general = {
+				name = "板垣征四郎｢【将军】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_banhuanzensilan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

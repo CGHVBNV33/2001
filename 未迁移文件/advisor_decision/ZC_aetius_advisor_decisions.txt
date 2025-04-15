@@ -1,0 +1,28 @@
+country_decisions = {
+	advisors_convert_generals_aetius = {
+		major = yes
+		potential = {
+			
+			advisor = aetius
+			
+		}
+		allow = {
+			advisor = aetius
+		}
+		effect = {
+			remove_advisor = aetius
+			define_general = {
+				name = "弗拉维斯 埃提乌斯｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 2
+				trait = rab_leader_aetius
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

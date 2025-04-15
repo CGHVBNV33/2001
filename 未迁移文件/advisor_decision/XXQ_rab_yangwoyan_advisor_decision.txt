@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangwoyan = {
+		major = yes
+		potential = {
+			
+			advisor = yangwoyan
+			
+		}
+		allow = {
+			advisor = yangwoyan
+		}
+		effect = {
+			remove_advisor = yangwoyan
+			define_general = {
+				name = "杨沃衍｢【军师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_yangwoyan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_qinliangyu = {
+		major = yes
+		potential = {
+			
+			advisor = qinliangyu
+			
+		}
+		allow = {
+			advisor = qinliangyu
+		}
+		effect = {
+			remove_advisor = qinliangyu
+			define_general = {
+				female = yes
+				name = "秦良玉｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_qinliangyu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

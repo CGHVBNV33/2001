@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuguojie = {
+		major = yes
+		potential = {
+			
+			advisor = liuguojie
+			
+		}
+		allow = {
+			advisor = liuguojie
+		}
+		effect = {
+			remove_advisor = liuguojie
+			define_general = {
+				name = "刘国杰｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_liuguojie
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

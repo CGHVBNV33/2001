@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_alexandre_bigdumas = {
+		major = yes
+		potential = {
+			
+			advisor = alexandre_bigdumas
+			
+		}
+		allow = {
+			advisor = alexandre_bigdumas
+		}
+		effect = {
+			remove_advisor = alexandre_bigdumas
+			define_general = {
+				name = "亚历山大 仲马｢【大仲马】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_alexandre_bigdumas
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

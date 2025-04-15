@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xuxuan = {
+		major = yes
+		potential = {
+			
+			advisor = xuxuan
+			
+		}
+		allow = {
+			advisor = xuxuan
+		}
+		effect = {
+			remove_advisor = xuxuan
+			define_general = {
+				name = "徐宣｢【武將】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_xuxuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_muguiying = {
+		major = yes
+		potential = {
+			
+			advisor = muguiying
+			
+		}
+		allow = {
+			advisor = muguiying
+		}
+		effect = {
+			remove_advisor = muguiying
+			define_general = {
+				female = yes
+				name = "梁红玉｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = JI_leader_Lianghongyu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

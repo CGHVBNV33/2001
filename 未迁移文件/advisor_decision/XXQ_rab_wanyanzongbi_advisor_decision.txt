@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanzongbi = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanzongbi
+			
+		}
+		allow = {
+			advisor = wanyanzongbi
+		}
+		effect = {
+			remove_advisor = wanyanzongbi
+			define_general = {
+				name = "完颜宗弼｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = rab_leader_wanyanzongbi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

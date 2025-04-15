@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_boyan = {
+		major = yes
+		potential = {
+			
+			advisor = boyan
+			
+		}
+		allow = {
+			advisor = boyan
+		}
+		effect = {
+			remove_advisor = boyan
+			define_general = {
+				name = "伯颜｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_boyan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

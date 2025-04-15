@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangjian = {
+		major = yes
+		potential = {
+			
+			advisor = wangjian
+			
+		}
+		allow = {
+			advisor = wangjian
+		}
+		effect = {
+			remove_advisor = wangjian
+			define_general = {
+				name = "王坚｢【武将】"
+				fire = 4
+				shock = 2
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangjian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

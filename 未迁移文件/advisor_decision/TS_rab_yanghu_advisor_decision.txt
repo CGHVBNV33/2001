@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yanghu = {
+		major = yes
+		potential = {
+			
+			advisor = yanghu
+			
+		}
+		allow = {
+			advisor = yanghu
+		}
+		effect = {
+			remove_advisor = yanghu
+			define_general = {
+				name = "羊祜｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yanghu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

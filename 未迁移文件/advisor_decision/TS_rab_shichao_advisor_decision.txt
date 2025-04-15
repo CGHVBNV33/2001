@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shichao = {
+		major = yes
+		potential = {
+			
+			advisor = shichao
+			
+		}
+		allow = {
+			advisor = shichao
+		}
+		effect = {
+			remove_advisor = shichao
+			define_general = {
+				name = "石超｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_shichao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

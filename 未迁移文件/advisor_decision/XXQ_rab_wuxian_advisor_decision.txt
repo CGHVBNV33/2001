@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wuxian = {
+		major = yes
+		potential = {
+			
+			advisor = wuxian
+			
+		}
+		allow = {
+			advisor = wuxian
+		}
+		effect = {
+			remove_advisor = wuxian
+			define_general = {
+				name = "武仙｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_wuxian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

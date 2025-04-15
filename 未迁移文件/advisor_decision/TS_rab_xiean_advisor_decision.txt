@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xiean = {
+		major = yes
+		potential = {
+			
+			advisor = xiean
+			
+		}
+		allow = {
+			advisor = xiean
+		}
+		effect = {
+			remove_advisor = xiean
+			define_general = {
+				name = "谢安｢【军师】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xiean
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

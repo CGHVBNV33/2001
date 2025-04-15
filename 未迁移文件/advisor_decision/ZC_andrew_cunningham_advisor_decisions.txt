@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_andrew_cunningham = {
+		major = yes
+		potential = {
+			
+			advisor = andrew_cunningham
+			
+		}
+		allow = {
+			advisor = andrew_cunningham
+		}
+		effect = {
+			remove_advisor = andrew_cunningham
+			define_general = {
+				name = "安德鲁 坎宁安【提督】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 0
+				trait = ZC_andrew_cunningham
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

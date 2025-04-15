@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuyunwen = {
+		major = yes
+		potential = {
+			
+			advisor = yuyunwen
+			
+		}
+		allow = {
+			advisor = yuyunwen
+		}
+		effect = {
+			remove_advisor = yuyunwen
+			define_general = {
+				name = "虞允文｢【军师】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yuyunwen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

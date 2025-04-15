@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangyanzhao = {
+		major = yes
+		potential = {
+			
+			advisor = yangyanzhao
+			
+		}
+		allow = {
+			advisor = yangyanzhao
+		}
+		effect = {
+			remove_advisor = yangyanzhao
+			define_general = {
+				name = "杨延昭｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_yangyanzhao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

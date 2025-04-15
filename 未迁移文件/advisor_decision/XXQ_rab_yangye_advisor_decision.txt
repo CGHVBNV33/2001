@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangye = {
+		major = yes
+		potential = {
+			
+			advisor = yangye
+			
+		}
+		allow = {
+			advisor = yangye
+		}
+		effect = {
+			remove_advisor = yangye
+			define_general = {
+				name = "杨业｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_yangye_new
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

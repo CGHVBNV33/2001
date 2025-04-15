@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yusi = {
+		major = yes
+		potential = {
+			
+			advisor = yusi
+			
+		}
+		allow = {
+			advisor = yusi
+		}
+		effect = {
+			remove_advisor = yusi
+			define_general = {
+				name = "虞汜｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 3
+				trait = JI_leader_Yusi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

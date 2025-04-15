@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_panmei = {
+		major = yes
+		potential = {
+			
+			advisor = panmei
+			
+		}
+		allow = {
+			advisor = panmei
+		}
+		effect = {
+			remove_advisor = panmei
+			define_general = {
+				name = "潘美｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_panmei
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

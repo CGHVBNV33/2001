@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lunqinling = {
+		major = yes
+		potential = {
+			
+			advisor = lunqinling
+			
+		}
+		allow = {
+			advisor = lunqinling
+		}
+		effect = {
+			remove_advisor = lunqinling
+			define_general = {
+				name = "噶尔.钦陵赞卓｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lunqinling
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

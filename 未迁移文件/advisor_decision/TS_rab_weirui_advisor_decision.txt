@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_weirui= {
+		major = yes
+		potential = {
+			
+			advisor = weirui
+			
+		}
+		allow = {
+			advisor = weirui
+		}
+		effect = {
+			remove_advisor = weirui
+			define_general = {
+				name = "韦睿｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_weirui
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

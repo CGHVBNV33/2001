@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangmeng= {
+		major = yes
+		potential = {
+			
+			advisor = wangmeng
+			
+		}
+		allow = {
+			advisor = wangmeng
+		}
+		effect = {
+			remove_advisor = wangmeng
+			define_general = {
+				name = "王猛 ｢【军师】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangmeng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chongshidao = {
+		major = yes
+		potential = {
+			
+			advisor = chongshidao
+			
+		}
+		allow = {
+			advisor = chongshidao
+		}
+		effect = {
+			remove_advisor = chongshidao
+			define_general = {
+				name = "种师道｢【军师】"
+				fire = 4
+				shock = 2
+				manuever = 2
+				siege = 2
+				trait = rab_leader_chongshidao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

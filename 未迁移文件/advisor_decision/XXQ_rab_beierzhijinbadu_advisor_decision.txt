@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_beierzhijinbadu = {
+		major = yes
+		potential = {
+			
+			advisor = beierzhijinbadu
+			
+		}
+		allow = {
+			advisor = beierzhijinbadu
+		}
+		effect = {
+			remove_advisor = beierzhijinbadu
+			define_general = {
+				name = "孛儿只斤·拔都｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = rab_leader_beierzhijinbadu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

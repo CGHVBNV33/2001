@@ -1,0 +1,28 @@
+country_decisions = {	
+	advisors_convert_general_albrecht_wallenstein = {
+		major = yes
+		potential = {
+			
+			advisor = albrecht_wallenstein
+			
+		}
+		allow = {
+			advisor = albrecht_wallenstein
+		}
+		effect = {
+			remove_advisor = albrecht_wallenstein
+			define_general = {
+				name = "阿尔布雷希特 华伦斯坦｢【将领】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_albrecht_wallenstein
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

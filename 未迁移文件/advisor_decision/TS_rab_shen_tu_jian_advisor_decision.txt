@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shen_tu_jian = {
+		major = yes
+		potential = {
+			
+			advisor = shen_tu_jian
+			
+		}
+		allow = {
+			advisor = shen_tu_jian
+		}
+		effect = {
+			remove_advisor = shen_tu_jian
+			define_general = {
+				name = "申屠建｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_shen_tu_jian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangshao = {
+		major = yes
+		potential = {
+			
+			advisor = wangshao
+			
+		}
+		allow = {
+			advisor = wangshao
+		}
+		effect = {
+			remove_advisor = wangshao
+			define_general = {
+				name = "王韶｢【军师】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wangshao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

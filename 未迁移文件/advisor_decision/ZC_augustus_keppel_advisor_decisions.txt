@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_augustus_keppel = {
+		major = yes
+		potential = {
+			
+			advisor = augustus_keppel
+			
+		}
+		allow = {
+			advisor = augustus_keppel
+		}
+		effect = {
+			remove_advisor = augustus_keppel
+			define_admiral = {
+				name = "奥古斯塔斯 凯佩尔【提督】"
+				fire = 2
+				shock = 3
+				manuever = 4
+				siege = 0
+				trait = ZC_augustus_keppel
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

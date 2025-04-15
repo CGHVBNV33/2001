@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_guokan = {
+		major = yes
+		potential = {
+			
+			advisor = guokan
+			
+		}
+		allow = {
+			advisor = guokan
+		}
+		effect = {
+			remove_advisor = guokan
+			define_general = {
+				name = "郭侃｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_guokan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

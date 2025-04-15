@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_diqing = {
+		major = yes
+		potential = {
+			
+			advisor = diqing
+			
+		}
+		allow = {
+			advisor = diqing
+		}
+		effect = {
+			remove_advisor = diqing
+			define_general = {
+				name = "狄青｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_diqing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhuyou = {
+		major = yes
+		potential = {
+			
+			advisor = zhuyou
+			
+		}
+		allow = {
+			advisor = zhuyou
+		}
+		effect = {
+			remove_advisor = zhuyou
+			define_general = {
+				name = "朱佑｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 2
+				trait = rab_leader_zhuyou
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

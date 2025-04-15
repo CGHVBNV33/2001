@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanzongwang = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanzongwang
+			
+		}
+		allow = {
+			advisor = wanyanzongwang
+		}
+		effect = {
+			remove_advisor = wanyanzongwang
+			define_general = {
+				name = "完颜宗望｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wanyanzongwang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

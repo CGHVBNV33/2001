@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_suiyu = {
+		major = yes
+		potential = {
+			
+			advisor = suiyu
+			
+		}
+		allow = {
+			advisor = suiyu
+		}
+		effect = {
+			remove_advisor = suiyu
+			define_general = {
+				name = "随育｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 2
+				siege = 2
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

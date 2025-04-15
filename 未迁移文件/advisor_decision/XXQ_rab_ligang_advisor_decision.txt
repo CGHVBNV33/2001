@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ligang = {
+		major = yes
+		potential = {
+			
+			advisor = ligang
+			
+		}
+		allow = {
+			advisor = ligang
+		}
+		effect = {
+			remove_advisor = ligang
+			define_general = {
+				name = "李纲｢【文官】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 2
+				trait = rab_leader_ligang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

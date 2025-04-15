@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xuding = {
+		major = yes
+		potential = {
+			
+			advisor = xuding
+			
+		}
+		allow = {
+			advisor = xuding
+		}
+		effect = {
+			remove_advisor = xuding
+			define_general = {
+				name = "胥鼎｢【军师】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 3
+				trait = rab_leader_xuding
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

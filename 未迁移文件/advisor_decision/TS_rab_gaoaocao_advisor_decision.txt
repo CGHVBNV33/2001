@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaoaocao= {
+		major = yes
+		potential = {
+			
+			advisor = gaoaocao
+			
+		}
+		allow = {
+			advisor = gaoaocao
+		}
+		effect = {
+			remove_advisor = gaoaocao
+			define_general = {
+				name = "高敖曹｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 1
+				trait = rab_leader_gaoaocao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

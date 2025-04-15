@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_abraham_duquesne = {
+		major = yes
+		potential = {
+			
+			advisor = abraham_duquesne
+			
+		}
+		allow = {
+			advisor = abraham_duquesne
+		}
+		effect = {
+			remove_advisor = abraham_duquesne
+			define_admiral = {
+				name = "亚伯拉罕 迪凯纳｢【提督】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_abraham_duquesne
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

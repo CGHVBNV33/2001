@@ -1,0 +1,44 @@
+country_decisions = {
+	################################################	
+	advisors_convert_generals_chiang_kai_shek = {
+		major = yes
+		potential = {
+			advisor = chiang_kai_shek
+		}
+		allow = {
+			advisor = chiang_kai_shek
+		}
+		effect = {
+			remove_advisor = chiang_kai_shek
+			define_general_chiang_kai_shek = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	################################################	
+	advisors_convert_generals_he_yingqin = {
+		major = yes
+		potential = {
+			advisor = he_yingqin
+		}
+		allow = {
+			advisor = he_yingqin
+		}
+		effect = {
+			remove_advisor = he_yingqin
+			define_general = {
+				name = "何应钦｢【军官】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 2
+				trait = rab_leader_he_yingqin
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	################################################	
+}

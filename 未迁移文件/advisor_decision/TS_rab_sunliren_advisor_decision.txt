@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_sunliren = {
+		major = yes
+		potential = {
+			
+			advisor = sunliren
+			
+		}
+		allow = {
+			advisor = sunliren
+		}
+		effect = {
+			remove_advisor = sunliren
+			define_general = {
+				name = "孙立人｢【将军】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_shunliren
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_bizaiyu = {
+		major = yes
+		potential = {
+			
+			advisor = bizaiyu
+			
+		}
+		allow = {
+			advisor = bizaiyu
+		}
+		effect = {
+			remove_advisor = bizaiyu
+			define_general = {
+				name = "毕再遇｢【武将】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_bizaiyu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

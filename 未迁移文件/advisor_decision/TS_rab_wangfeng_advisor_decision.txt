@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangfeng = {
+		major = yes
+		potential = {
+			
+			advisor = wangfeng
+			
+		}
+		allow = {
+			advisor = wangfeng
+		}
+		effect = {
+			remove_advisor = wangfeng
+			define_general = {
+				name = "王凤｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_wangfeng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

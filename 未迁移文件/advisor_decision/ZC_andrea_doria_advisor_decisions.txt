@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_admiral_andrea_doria = {
+		major = yes
+		potential = {
+			
+			advisor = andrea_doria
+			
+		}
+		allow = {
+			advisor = andrea_doria
+		}
+		effect = {
+			remove_advisor = andrea_doria
+			define_admiral = {
+				name = "安德鲁 多利亚【提督】"
+				fire = 4
+				shock = 4
+				manuever = 5
+				siege = 0
+				trait = ZC_andrea_doria
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

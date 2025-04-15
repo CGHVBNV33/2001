@@ -1,0 +1,27 @@
+country_decisions = {	
+	advisors_convert_general_auguste_marmont = {
+		major = yes
+		potential = {
+			
+			advisor = auguste_marmont
+			
+		}
+		allow = {
+			advisor = auguste_marmont
+		}
+		effect = {
+			remove_advisor = auguste_marmont
+			define_general = {
+				name = "奥古斯特 马尔蒙【将领】"
+				fire = 3
+				shock = 3
+				manuever = 5
+				siege = 2
+				trait = ZC_auguste_marmont
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

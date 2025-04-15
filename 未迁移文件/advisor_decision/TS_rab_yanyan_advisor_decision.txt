@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yanyan = {
+		major = yes
+		potential = {
+			
+			advisor = yanyan
+			
+		}
+		allow = {
+			advisor = yanyan
+		}
+		effect = {
+			remove_advisor = yanyan
+			define_general = {
+				name = "严颜｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yanyan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
