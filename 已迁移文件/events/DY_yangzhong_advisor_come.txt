@@ -1,0 +1,57 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yangzhong_advisor_come
+
+#武将某种条件下出现
+#id = 1 : yangzhong : 杨忠｢【武将】
+
+country_event = {
+	id = yangzhong_advisor_come.1
+	title = "yangzhong_advisor_come.1.t"
+	desc = "yangzhong_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+	
+		is_year = 527
+		NOT = { is_year = 568 }
+		OR = {
+			AND = {
+				exists = NWY
+				NOT = { exists = CZH }
+				tag = NWY
+			}
+			AND = {
+				exists = CZH
+				NOT = { exists = NWY }
+				tag = CZH
+			}	
+			AND = {
+				NOT = { exists = NWY }
+				NOT = { exists = CZH }
+				owns = 5131 #Pre-13.0
+			}			
+		}	
+	}	
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yangzhong_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor_yangzhong = yes
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general_yangzhong = yes
+		}
+	}
+}
+

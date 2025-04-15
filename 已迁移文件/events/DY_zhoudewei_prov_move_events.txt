@@ -1,0 +1,147 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 周德威｢【武将】 毛遂自荐 
+
+namespace = zhoudewei_prov_move_events
+
+
+province_event = {
+	id =zhoudewei_prov_move_events.1
+	title = "zhoudewei_prov_move_events.NAME1"
+	desc = "zhoudewei_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+	#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_zhoudewei
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "zhoudewei_prov_move_events.OPTA1"
+###########################周德威｢【武将】pov_zhoudewei#################################		
+		if = {
+			limit = { has_province_modifier = pov_zhoudewei }
+			if = {
+			#决定在武将的寿命
+				limit = { 
+					NOT = { is_year = 919  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = { tag = JAP } 
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+														
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_zhoudewei
+					owner = {
+						country_event = {
+							id =zhoudewei_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { tag = JAP } 
+							NOT = { 
+								OR = {
+								    has_ruler_modifier = ra_ch1
+								    has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+            
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_zhoudewei
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhoudewei"
+							duration = -1
+						}					
+					}
+				}
+				#不是期待的国家 直接移到别的省分
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_zhoudewei
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_zhoudewei"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 919
+				}	
+				remove_province_modifier = pov_zhoudewei		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	周德威｢【武将】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id =zhoudewei_prov_move_events.2
+	title = "zhoudewei_prov_move_events.NAME2"
+	desc = "zhoudewei_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "zhoudewei_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor_zhoudewei = yes
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general_zhoudewei = yes
+		}
+	}
+}
+
+	
+	
