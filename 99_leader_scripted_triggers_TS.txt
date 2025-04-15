@@ -1,0 +1,188 @@
+has_leader_or_advisor_zhouchu = {
+	OR = {
+		advisor = zhouchu
+		has_leader = "周处｢【武将】"
+	}
+}
+
+has_leader_or_advisor_zhudi = {
+	OR = {
+		advisor = zhudi
+		has_leader = "朱棣｢【燕王】"
+	}
+}
+
+has_leader_or_advisor_xiahouba = {
+	OR = {
+		advisor = xiahouba
+		has_leader = "夏侯霸｢【武将】"
+	}
+}
+
+has_leader_or_advisor_lisiyuan = {
+	OR = {
+		advisor = lisiyuan
+		has_leader = "李嗣源｢【武将】"
+	}
+}
+
+has_leader_or_advisor_simazour = {
+	OR = {
+		advisor = simazour
+		has_leader = "司马卓｢【将军】"
+	}
+}
+
+has_leader_or_advisor_wentianxiang = {
+	OR = {
+		advisor = wentianxiang
+		has_leader = "文天祥｢【军师】"
+	}
+}
+
+has_leader_or_advisor_roberthart = {
+	OR = {
+		advisor = roberthart
+		has_leader = "赫德｢【总税务司】"
+	}
+}
+
+has_leader_or_advisor_dengqiang = {
+	OR = {
+		advisor = dengqiang
+		has_leader = "邓羌｢【武将】"
+	}
+}
+
+has_leader_or_advisor_lijinglong = {
+	OR = {
+		advisor = lijinglong
+		has_leader = "李景隆｢【虎父犬子】"
+	}
+}
+
+has_leader_or_advisor_xuhuizu = {
+	OR = {
+		advisor = xuhuizu
+		has_leader = "徐辉祖｢【魏国公】"
+	}
+}
+
+has_leader_or_advisor_wanyanwolu = {
+	OR = {
+		advisor = wanyanwolu
+		has_leader = "完颜斡鲁｢【武将】"
+	}
+}
+
+has_leader_or_advisor_wenqiao = {
+	OR = {
+		advisor = wenqiao
+		has_leader = "温峤｢【武将】"
+	}
+}
+
+has_leader_or_advisor_xiaowolila = {
+	OR = {
+		advisor = xiaowolila
+		has_leader = "萧斡里剌｢【武将】"
+	}
+}
+
+has_leader_or_advisor_xijian = {
+	OR = {
+		advisor = xijian
+		has_leader = "郗鉴｢【司空】"
+	}
+}
+
+has_leader_or_advisor_yangan = {
+	OR = {
+		advisor = yangan
+		has_leader = "杨安｢【武将】"
+	}
+}
+
+has_leader_or_advisor_yangkan = {
+	OR = {
+		advisor = yangkan
+		has_leader = "羊侃｢【武将】"
+	}
+}
+
+has_leader_or_advisor_yangyaren = {
+	OR = {
+		advisor = yangyaren
+		has_leader = "羊鸦仁｢【武将】"
+	}
+}
+
+has_leader_or_advisor_yangzhong = {
+	OR = {
+		advisor = yangzhong
+		has_leader = "杨忠｢【武将】"
+	}
+}
+
+has_leader_or_advisor_yaochang = {
+	OR = {
+		advisor = yaochang
+		has_leader = "姚苌｢【武将】"
+	}
+}
+
+has_leader_or_advisor_yaoyizhong = {
+	OR = {
+		advisor = yaoyizhong
+		has_leader = "姚弋仲｢【武将】"
+	}
+}
+
+has_leader_or_advisor_DY_yujin = {
+	OR = {
+		advisor = DY_yujin
+		has_leader = "于谨｢【柱国】"
+	}
+}
+
+has_leader_or_advisor_yuliang = {
+	OR = {
+		advisor = yuliang
+		has_leader = "庾亮｢【外戚】"
+	}
+}
+
+has_leader_or_advisor_zhanghao = {
+	OR = {
+		advisor = zhanghao
+		has_leader = "张蚝｢【武将】"
+	}
+}
+
+has_leader_or_advisor_zhangzhaoda = {
+	OR = {
+		advisor = zhangzhaoda
+		has_leader = "章昭达｢【武将】"
+	}
+}
+
+has_leader_or_advisor_zhaofu = {
+	OR = {
+		advisor = zhaofu
+		has_leader = "赵辅｢【武将】"
+	}
+}
+
+has_leader_or_advisor_zhaogui = {
+	OR = {
+		advisor = zhaogui
+		has_leader = "赵贵｢【柱国】"
+	}
+}
+
+has_leader_or_advisor_zhoudewei = {
+	OR = {
+		advisor = zhoudewei
+		has_leader = "周德威｢【武将】"
+	}
+}
