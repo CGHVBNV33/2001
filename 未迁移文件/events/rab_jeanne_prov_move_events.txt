@@ -1,0 +1,173 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+#id = 1 : 主系統-幕後執行的
+#id = 2 : 贞德｢【圣女】毛遂自薦
+namespace = jeanne_prov_move_events
+province_event = {
+	id = jeanne_prov_move_events.1
+	title = "jeanne_prov_move_events.NAME1"
+	desc = "jeanne_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	hidden = yes
+	trigger = {
+		#偵測省份內是否有該pov_xxxx
+		#只要有新增的武将，記得加入該pov_xxxx 於 OR 其中
+		has_province_modifier = pov_jeanne
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	option = {
+		name = "jeanne_prov_move_events.OPTA1"
+		###########################贞德｢【圣女】pov_jeanne #################################		
+		if = {
+			limit = {
+				has_province_modifier = pov_jeanne
+			}
+			if = {
+				#決定在野武將的壽命
+				limit = {
+					NOT = {
+						is_year = 1500
+					}
+				}
+				#假如該國家的君王特質符合
+				#就毛遂自薦	
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								OR = {
+									tag = ENG
+									tag = BRI
+									tag = BUR
+								}
+							}
+							OR = {
+								has_ruler_modifier = ra_ch1
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch3
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch6
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = ra_ch9
+								has_ruler_modifier = rb_ch1
+								has_ruler_modifier = rb_ch2
+								has_ruler_modifier = rb_ch3
+								has_ruler_modifier = rb_ch4
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+								has_ruler_modifier = rb_ch8
+							}
+						}
+					}
+					remove_province_modifier = pov_jeanne
+					owner = {
+						country_event = {
+							id = jeanne_prov_move_events.2
+						}
+					}
+				}
+				#假如該國家的君王特質不符合就到鄰近的省分						
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								OR = {
+									tag = ENG
+									tag = BRI
+									tag = BUR
+								}
+							}
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = ra_ch9
+									has_ruler_modifier = rb_ch1
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch3
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+									has_ruler_modifier = rb_ch8
+								}
+							}
+						}
+					}
+					remove_province_modifier = pov_jeanne
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_jeanne"
+							duration = -1
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = {
+							OR = {
+								tag = ENG
+								tag = BRI
+								tag = BUR
+							}
+						}
+					}
+					remove_province_modifier = pov_jeanne
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_jeanne"
+							duration = -1
+						}
+					}
+				}
+			}
+			if = {
+				#如果年份超過此限，在野武將離世
+				limit = {
+					is_year = 1500
+				}
+				remove_province_modifier = pov_jeanne
+			}
+		}
+	}
+}
+
+############################################################################
+#	贞德｢【圣女】毛遂自薦
+#
+############################################################################
+country_event = {
+	id = jeanne_prov_move_events.2
+	title = "jeanne_prov_move_events.NAME2"
+	desc = "jeanne_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jeanne_prov_move_events.OPTA2"
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_jeanne = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_jeanne = yes
+		}
+	}
+}

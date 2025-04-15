@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = ligu_advisor_come
+
+#文官某种条件下出现
+#id = 1 : ligu : 李㼷ူe官】
+
+country_event = {
+	id = ligu_advisor_come.1
+	title = "ligu_advisor_come.1.t"
+	desc = "ligu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+
+	hidden = yes	
+	fire_only_once = yes
+	#出现时间
+	trigger = {
+		is_year = 923	
+		NOT = { is_year = 960 }
+		OR = {
+			AND = {
+				exists = HT1
+				tag = HT1
+			}
+			AND = {
+				NOT = { exists = HT1 }
+			owns = 2144
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = ligu_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = ligu
+				name = "李谷｢【文官】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

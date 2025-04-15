@@ -1,0 +1,49 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liuyux_advisor_come
+
+#武将某种条件下出现
+#id = 1 : liuyux :刘裕｢【武将】
+
+country_event = {
+	id = liuyux_advisor_come.1
+	title = "liuyu_advisor_come.1.t"
+	desc = "liuyu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 399
+		NOT = { is_year = 412 }
+		OR = {
+			AND = {
+				exists = JN1
+				tag = JN1
+				OR = {
+					AND = {
+						NOT = { is_year = 402 }
+						has_country_flag = LSO_zhong_yong_liu_yu_flag
+					}
+					started_in = 404.3.1
+				}
+			}
+			AND = {
+				NOT = { exists = JN1 }
+				owns = 2145
+			}
+		}
+		QN1 = { NOT = { mission_completed = MExx_QN1_missions_27 } }
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = liuyu_advisor_come.OPTA1
+		define_leader_liuyu = yes
+	}
+}
+

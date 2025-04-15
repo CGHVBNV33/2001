@@ -1,0 +1,62 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = morikachi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : morikachi : 长宗我部盛亲｢【武将】
+#
+country_event = {
+	id = morikachi_advisor_come.1
+	title = "morikachi_advisor_come.1.t"
+	desc = "morikachi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1614
+		NOT = { is_year = 1622 }
+		OR = {
+		   AND = {
+		      exists = ODA 
+		      tag = ODA
+		   }		
+		   AND = {
+		      NOT = {exists = ODA}		
+		      owns = 1835
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = morikachi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = morikachi
+				name = "长宗我部盛亲｢【武将】"
+				discount = yes	
+				skill = 2
+				culture = japanese
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "长宗我部盛亲｢【武将】"
+				fire = 2
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = JI_leader_morikachi
+			}
+		}
+	}
+}
+

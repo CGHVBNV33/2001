@@ -1,0 +1,173 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 海因茨.古德林｢【军官】毛遂自荐 
+
+namespace = Heinz_prov_move_events
+
+
+province_event = {
+	id = Heinz_prov_move_events.1
+	title = "Heinz_prov_move_events.NAME1"
+	desc = "Heinz_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+		has_province_modifier = pov_Heinz
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "Heinz_prov_move_events.OPTA1"
+###########################海因茨.古德林｢【军官】pov_Heinz#################################		
+		if = {
+			limit = { has_province_modifier = pov_Heinz }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 1955  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = ENG
+								}
+							} 
+								OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6	
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = rb_ch8
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_Heinz
+					owner = {
+						country_event = {
+							id = Heinz_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = ENG
+								}
+							} 
+							NOT = { 
+								OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6	
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = rb_ch8
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_Heinz
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_Heinz"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JAP 
+								tag = ENG
+							}
+						} 
+					}
+					remove_province_modifier = pov_Heinz
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_Heinz"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 1955 
+				}	
+				remove_province_modifier = pov_Heinz		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	海因茨.古德林｢【军官】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id = Heinz_prov_move_events.2
+	title = "Heinz_prov_move_events.NAME2"
+	desc = "Heinz_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Heinz_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = Heinz
+					name = "海因茨.古德林｢【军官】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "海因茨.古德林｢【军官】"
+					fire = 5
+					shock = 5
+					manuever = 5
+					siege = 4
+					trait = fly_leader_Guderian
+			}
+		}
+	}
+}

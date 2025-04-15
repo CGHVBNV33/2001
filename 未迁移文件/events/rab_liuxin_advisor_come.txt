@@ -1,0 +1,49 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = liuxin_advisor_come
+
+#文官某种条件下出现
+#id = 1 : liuxin : 刘歆｢【文官】
+
+country_event = {
+	id = liuxin_advisor_come.1
+	title = "liuxin_advisor_come.1.t"
+	desc = "liuxin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+			
+	immediate = {
+		hidden_effect = {
+			if = { 
+				limit = { ai = no }
+				define_advisor = {
+					type = liuxin
+					name = "刘歆｢【文官】"
+					discount = yes	
+					skill = 3
+				}
+			}
+			if = { 
+				limit = { ai = yes }
+				define_general = {
+					name = "刘歆｢【文官】"
+					fire = 1
+					shock = 1
+					manuever = 1
+					siege = 1
+					trait = rab_leader_liuchin
+				}
+			}
+		}
+	}
+	option = {
+		name = liuxin_advisor_come.OPTA1
+	}
+}
+

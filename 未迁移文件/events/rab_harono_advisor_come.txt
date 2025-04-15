@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = harono_advisor_come
+
+#武将某种條件下出現
+#id = 1 : harono : 大野治长｢【武将】
+#
+country_event = {
+	id = harono_advisor_come.1
+	title = "harono_advisor_come.1.t"
+	desc = "harono_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1614
+		NOT = { is_year = 1622 }
+		OR = {
+		   AND = {
+		      exists = ODA 
+		      tag = ODA
+		   }		
+		   AND = {
+		      NOT = {exists = ODA}		
+		      owns = 1825
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = harono_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = harono
+				name = "大野治长｢【文官】"
+				discount = yes	
+				skill = 3
+				culture = japanese
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "大野治长｢【文官】"
+				fire = 1
+				shock = 0
+				manuever = 1
+				siege = 0
+			}
+		}
+	}
+}
+

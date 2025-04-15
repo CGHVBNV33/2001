@@ -1,0 +1,56 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = lidian_advisor_come
+
+#武将某种条件下出现
+#id = 1 : lidian : 李典｢【武将】
+
+country_event = {
+	id = lidian_advisor_come.1
+	title = "lidian_advisor_come.NAME1"
+	desc = "lidian_advisor_come.DESC1"
+	picture = NEW_ADVISOR_eventPicture
+
+	#出现时间
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lidian_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = lidian
+				name = "李典｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "李典｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lidian
+			}
+		}
+	}
+	option = {
+		name = lidian_advisor_come.OPTB1	
+		hidden_effect = { 
+			random_neighbor_province  = {
+				add_province_modifier = {
+					name = "pov_lidian"
+					duration = -1
+				}
+			}
+		}		
+	}	
+}
+

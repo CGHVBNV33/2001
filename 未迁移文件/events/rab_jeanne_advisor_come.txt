@@ -1,0 +1,40 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = jeanne_advisor_come
+#武将某种條件下出現
+#id = 1 : jeanne : 贞德｢【圣女】
+#
+country_event = {
+	id = jeanne_advisor_come.1
+	title = "jeanne_advisor_come.1.t"
+	desc = "jeanne_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 1426
+		NOT = {
+			is_year = 1432
+		}
+		tag = FRA
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = jeanne_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_jeanne = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_jeanne = yes
+		}
+	}
+}

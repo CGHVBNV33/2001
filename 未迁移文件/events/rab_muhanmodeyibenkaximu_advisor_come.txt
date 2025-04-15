@@ -1,0 +1,63 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = muhanmodeyibenkaximu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : muhanmodeyibenkaximu : 穆罕默德.伊本.卡西木｢【总督】
+#695年12月31日－715年7月18日
+country_event = {
+	id = muhanmodeyibenkaximu_advisor_come.1
+	title = "muhanmodeyibenkaximu_advisor_come.1.t"
+	desc = "muhanmodeyibenkaximu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		#这里是武将出现在哪里的条件
+		is_year = 710
+		NOT = { is_year = 725 }
+		OR = {
+			AND = {
+				tag = UMA
+				exists = UMA
+			}
+			AND = {
+				NOT = { exists = UMA }
+				religion_group = muslim
+				owns = 210
+			}
+		}	
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = muhanmodeyibenkaximu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = muhanmodeyibenkaximu
+				name = "穆罕默德.伊本.卡西木｢【总督】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "穆罕默德.伊本.卡西木｢【总督】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_muhanmodeyibenkaximu
+			}
+		}
+	}
+}
+

@@ -1,0 +1,53 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = Heinz_advisor_come
+
+#武将某种條件下出現
+#id = 1 : Heinz : 海因茨.古德林｢【军官】
+#1891年11月15日－1944年10月14日）
+country_event = {
+	id = Heinz_advisor_come.1
+	title = "Heinz_advisor_come.1.t"
+	desc = "Heinz_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+#（614年－683年3月24日）
+	trigger = {
+		#这里是武将出现在哪里的条件
+		tag = NZ1
+		is_year = 1907
+		NOT = { is_year = 1954 }
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = Heinz_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = Heinz
+				name = "海因茨.古德林｢【军官】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "海因茨.古德林｢【军官】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 4
+				trait = fly_leader_Guderian
+			}
+		}
+	}
+}
+

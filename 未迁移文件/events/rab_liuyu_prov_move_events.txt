@@ -1,0 +1,189 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 刘裕｢【武将】 毛遂自荐 
+namespace = liuyu_prov_move_events
+province_event = {
+	id = liuyu_prov_move_events.1
+	title = "liuyu_prov_move_events.NAME1"
+	desc = "liuyu_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	hidden = yes
+	trigger = {
+		#侦测省份内是否有该pov_xxxx
+		#只要有新增的武将，记得加入该pov_xxxx 于 OR 其中
+		has_province_modifier = pov_liuyu
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	option = {
+		name = "liuyu_prov_move_events.OPTA1"
+		###########################刘裕｢【武将】pov_liuyu#################################		
+		if = {
+			limit = {
+				has_province_modifier = pov_liuyu
+			}
+			if = {
+				#决定在野武将的寿命
+				limit = {
+					NOT = {
+						is_year = 422
+					}
+				}
+				#假如该国家的君王特质符合
+				#就毛遂自荐	
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = HZZ
+									tag = QNG
+									tag = CUC
+									tag = ZAO
+									tag = DA1
+									tag = CCY
+									tag = XYN
+									tag = HY1
+									tag = CN1
+									tag = HO1
+									tag = HO2
+									tag = LNG
+									tag = BE1
+									tag = NA1
+									tag = HU1
+									tag = NWE
+									tag = XIB
+									tag = ROU
+								}
+							}
+							OR = {
+								has_ruler_modifier = ra_ch1
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch6
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch4
+								has_ruler_modifier = rb_ch6
+							}
+						}
+					}
+					remove_province_modifier = pov_liuyu
+					owner = {
+						country_event = {
+							id = liuyu_prov_move_events.2
+						}
+					}
+				}
+				#假如该国家的君王特质不符合就到邻近的省分						
+				if = {
+					limit = {
+						owner = {
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = HZZ
+									tag = QNG
+									tag = CUC
+									tag = ZAO
+									tag = DA1
+									tag = CCY
+									tag = XYN
+									tag = HY1
+									tag = CN1
+									tag = HO1
+									tag = HO2
+									tag = LNG
+									tag = BE1
+									tag = NA1
+									tag = HU1
+									tag = NWE
+									tag = XIB
+									tag = ROU
+								}
+							}
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch4
+									has_ruler_modifier = rb_ch6
+								}
+							}
+						}
+					}
+					remove_province_modifier = pov_liuyu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_liuyu"
+							duration = -1
+						}
+					}
+				}
+				#不是期待的国家 直接移到别的省分
+				if = {
+					limit = {
+						owner = {
+							OR = {
+								tag = JAP
+								tag = HZZ
+								tag = QNG
+								tag = CUC
+								tag = ZAO
+								tag = DA1
+								tag = CCY
+								tag = XYN
+								tag = HY1
+								tag = CN1
+								tag = HO1
+								tag = HO2
+								tag = LNG
+								tag = BE1
+								tag = NA1
+								tag = HU1
+								tag = NWE
+								tag = XIB
+								tag = ROU
+							}
+						}
+					}
+					remove_province_modifier = pov_liuyu
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_liuyu"
+							duration = -1
+						}
+					}
+				}
+			}
+			if = {
+				#如果年份超过此限，在野武将离世
+				limit = {
+					is_year = 425
+				}
+				remove_province_modifier = pov_liuyu
+			}
+		}
+	}
+}
+
+############################################################################
+#	刘裕｢【武将】毛遂自荐
+#
+############################################################################
+country_event = {
+	id = liuyu_prov_move_events.2
+	title = "liuyu_prov_move_events.NAME2"
+	desc = "liuyu_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "liuyu_prov_move_events.OPTA2"
+		define_leader_liuyu = yes
+	}
+}

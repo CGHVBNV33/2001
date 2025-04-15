@@ -1,0 +1,64 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = mafanng_advisor_come
+
+#武将某种條件下出現
+#id = 1 : mafanng : 马防｢【武将】
+#
+country_event = {
+	id = mafanng_advisor_come.1
+	title = "mafanng_advisor_come.1.t"
+	desc = "mafanng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 77	
+		NOT = { is_year = 101 }
+		OR = {
+			AND = {
+				exists = HND
+				tag = HND
+			}
+			AND = {
+				NOT = { exists = HND }
+				owns = 700
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = mafanng_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = mafanng
+				name = "马防｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "马防｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mafanng #将领的特质
+			}
+		}
+	}
+}
+

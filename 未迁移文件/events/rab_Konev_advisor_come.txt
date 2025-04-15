@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = Konev_advisor_come
+
+#武将某种条件下出现
+#id = 1 : Konev : 科涅夫｢【元帅】
+
+country_event = {
+	id = Konev_advisor_come.1
+	title = "Konev_advisor_come.1.t"
+	desc = "Konev_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1936	
+		NOT = { is_year = 1962 }
+		OR = {
+			AND = {
+				exists = SOV
+				tag = SOV
+			}
+			AND = {
+				NOT = { exists = SOV }
+				owns = 295
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = Konev_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = Konev
+				name = "科涅夫｢【元帅】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "科涅夫｢【元帅】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_Konev
+			}
+		}
+	}
+}
+

@@ -1,0 +1,35 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = jiuhu_advisor_come
+
+#圣德太子某种条件下出现
+#id = 1 : jiuhu : 厩户｢【圣德太子】
+
+country_event = {
+	id = jiuhu_advisor_come.1
+	title = "jiuhu_advisor_come.1.t"
+	desc = "jiuhu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+		
+	immediate = {
+		hidden_effect = {
+				define_advisor = {
+					type = jiuhu
+					name = "厩户｢【圣德太子】"
+					discount = yes	
+					skill = 3
+				}
+		}
+	}
+	option = {
+		name = jiuhu_advisor_come.OPTA1
+	}
+}
+

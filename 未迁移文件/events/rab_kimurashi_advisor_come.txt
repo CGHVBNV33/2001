@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = kimurashi_advisor_come
+
+#武将某种條件下出現
+#id = 1 : kimurashi : 木村重成｢【武将】
+#
+country_event = {
+	id = kimurashi_advisor_come.1
+	title = "kimurashi_advisor_come.1.t"
+	desc = "kimurashi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1614
+		NOT = { is_year = 1622 }
+		OR = {
+		   AND = {
+		      exists = ODA 
+		      tag = ODA
+		   }		
+		   AND = {
+		      NOT = {exists = ODA}		
+		      owns = 1028
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = kimurashi_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = kimurashi
+				name = "木村重成｢【武将】"
+				discount = yes	
+				skill = 3
+				culture = japanese
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "木村重成｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 1
+			}
+		}
+	}
+}
+

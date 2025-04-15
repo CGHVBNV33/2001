@@ -1,0 +1,171 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系统-幕后执行的
+#id = 2 : 刘国轩｢【武将】毛遂自荐 
+
+namespace = liuguoxuan_prov_move_events
+
+
+province_event = {
+	id = liuguoxuan_prov_move_events.1
+	title = "liuguoxuan_prov_move_events.NAME1"
+	desc = "liuguoxuan_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#侦测省份内是否有该pov_xxxx
+		has_province_modifier = pov_liuguoxuan
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "liuguoxuan_prov_move_events.OPTA1"
+###########################刘国轩｢【武将】pov_liuguoxuan#################################		
+		if = {
+			limit = { has_province_modifier = pov_liuguoxuan }
+			if = {
+			#决定在野武将的寿命
+				limit = { 
+					NOT = { is_year = 1693  }
+				}
+			#假如该国家的君王特质符合
+			#就毛遂自荐	
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = LIO 
+									tag = XIA
+								}
+							} 
+								OR = {
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7					
+								}
+							}
+						}
+			
+					remove_province_modifier = pov_liuguoxuan
+					owner = {
+						country_event = {
+							id = liuguoxuan_prov_move_events.2
+						}
+					}
+				}
+					#假如该国家的君王特质不符合就到邻近的省分						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = LIO 
+									tag = XIA
+								}
+							} 
+							NOT = { 
+								OR = {
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch3
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch6
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = rb_ch2
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7	
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_liuguoxuan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_liuguoxuan"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = LIO 
+								tag = XIA
+							}
+						} 
+					}
+					remove_province_modifier = pov_liuguoxuan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_liuguoxuan"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份超过此限，在野武将离世
+				limit = { 
+					is_year = 1693 
+				}	
+				remove_province_modifier = pov_liuguoxuan		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	刘国轩｢【武将】毛遂自荐
+#
+############################################################################
+
+
+country_event = {
+	id = liuguoxuan_prov_move_events.2
+	title = "liuguoxuan_prov_move_events.NAME2"
+	desc = "liuguoxuan_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "liuguoxuan_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = liuguoxuan
+					name = "刘国轩｢【武将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "刘国轩｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liuguoxuan
+			}
+		}
+	}
+}
