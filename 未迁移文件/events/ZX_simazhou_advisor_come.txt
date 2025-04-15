@@ -1,0 +1,72 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = simazhou_advisor_come
+
+#武将某种條件下出現
+#id = 1 : simazhou : 司马伷｢【琅邪王】
+#
+country_event = {
+	id = simazhou_advisor_come.1
+	title = "simazhou_advisor_come.1.t"
+	desc = "simazhou_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 241	
+		NOT = { is_year = 283 }
+		OR = {
+			AND = {
+				NOT = { exists = JN1 }
+				exists = WEI
+				tag = WEI
+			}
+			AND = {
+				NOT = { exists = WEI }
+				exists = JN1
+				tag = JN1
+			}
+			AND = {
+				NOT = { exists = WEI }
+				NOT = { exists = JN1 }
+				owns = 700
+			}			
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = simazhou_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = simazhou
+				name = "司马伷｢【琅邪王】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "司马伷｢【琅邪王】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_simazhou #将领的特质
+			}
+		}
+	}
+}
+

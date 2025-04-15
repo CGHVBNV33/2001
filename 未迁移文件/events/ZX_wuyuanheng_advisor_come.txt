@@ -1,0 +1,39 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wuyuanheng_advisor_come
+
+#武将某种条件下出现
+#id = 1 : wuyuanheng : 武元衡｢【文官】
+
+country_event = {
+	id = wuyuanheng_advisor_come.1
+	title = "wuyuanheng_advisor_come.1.t"
+	desc = "wuyuanheng_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 783	
+		NOT = { is_year = 815 }
+        owns = 700
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wuyuanheng_advisor_come.OPTA1
+		
+		
+			define_advisor = {
+				type = wuyuanheng
+				name = "武元衡｢【文官】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

@@ -1,0 +1,57 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = qinhan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : qinhan : 秦翰｢【武将】
+#
+country_event = {
+	id = qinhan_advisor_come.1
+	title = "qinhan_advisor_come.1.t"
+	desc = "qinhan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 979
+		NOT = { is_year = 1015 }
+                owns = 3339
+			}			
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = qinhan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = qinhan
+				name = "秦翰｢【武将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "秦翰｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_qinhan #将领的特质
+			}
+		}
+	}
+}
+
