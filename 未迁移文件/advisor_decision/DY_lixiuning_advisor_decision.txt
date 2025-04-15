@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lixiuning = {
+		major = yes
+		potential = {
+			
+			advisor = lixiuning
+			
+		}
+		allow = {
+			advisor = lixiuning
+		}
+		effect = {
+			remove_advisor = lixiuning
+			define_general = {
+				name = "李秀宁｢【平阳公主】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				female = yes
+				trait = rab_leader_lixiuning
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

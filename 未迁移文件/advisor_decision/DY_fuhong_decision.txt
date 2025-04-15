@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fuhong = {
+		major = yes
+		potential = {
+			
+			advisor = fuhong
+			
+		}
+		allow = {
+			advisor = fuhong
+		}
+		effect = {
+			remove_advisor = fuhong
+			define_general = {
+				name = "苻洪｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_fuhong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

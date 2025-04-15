@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dingfeng = {
+		major = yes
+		potential = {
+			
+			advisor = dingfeng
+			
+		}
+		allow = {
+			advisor = dingfeng
+		}
+		effect = {
+			remove_advisor = dingfeng
+			define_general = {
+				name = "丁奉【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_dingfeng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

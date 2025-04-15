@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_luguang = {
+		major = yes
+		potential = {
+			
+			advisor = luguang
+			
+		}
+		allow = {
+			advisor = luguang
+		}
+		effect = {
+			remove_advisor = luguang
+			define_general = {
+				name = "吕光｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_luguang
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

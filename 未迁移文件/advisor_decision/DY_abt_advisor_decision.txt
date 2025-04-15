@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_abt = {
+		major = yes
+		potential = {
+			
+			advisor = abt
+			
+		}
+		allow = {
+			advisor = abt
+		}
+		effect = {
+			remove_advisor = abt
+			define_general = {
+				name = "爱新觉罗 阿巴泰｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 1
+				#trait = dy_abt_personality
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

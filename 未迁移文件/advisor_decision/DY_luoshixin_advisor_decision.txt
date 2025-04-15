@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_luoshixin = {
+		major = yes
+		potential = {
+			
+			advisor = luoshixin
+			
+		}
+		allow = {
+			advisor = luoshixin
+		}
+		effect = {
+			remove_advisor = luoshixin
+			define_general = {
+				name = "罗士信｢【武将】"
+				fire = 3
+				shock = 7
+				manuever = 2
+				siege = 2
+				trait = rab_leader_luoshixin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

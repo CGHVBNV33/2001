@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongkai = {
+		major = yes
+		potential = {
+			
+			advisor = murongkai
+			
+		}
+		allow = {
+			advisor = murongkai
+		}
+		effect = {
+			remove_advisor = murongkai
+			define_general = {
+				name = "慕容楷【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_murongkai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_aobai = {
+		major = yes
+		potential = {
+			
+			advisor = aobai
+			
+		}
+		allow = {
+			advisor = aobai
+		}
+		effect = {
+			remove_advisor = aobai
+			define_general = {
+				name = "鳌拜【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_aobai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

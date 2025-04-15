@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_duluowa = {
+		major = yes
+		potential = {
+			
+			advisor = duluowa
+			
+		}
+		allow = {
+			advisor = duluowa
+		}
+		effect = {
+			remove_advisor = duluowa
+			define_general = {
+				name = "杜罗娃｢【女将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 2
+				female = yes
+				trait = rab_leader_duluowa
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

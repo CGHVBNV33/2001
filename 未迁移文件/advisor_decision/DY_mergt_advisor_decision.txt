@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mergt = {
+		major = yes
+		potential = {
+			
+			advisor = mergt
+			
+		}
+		allow = {
+			advisor = mergt
+		}
+		effect = {
+			remove_advisor = mergt
+			define_general = {
+				name = "爱新觉罗 莽尔古泰｢【武将】"
+				fire = 2
+				shock = 5
+				manuever = 3
+				siege = 2
+				#trait = dy_mergt_personality
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

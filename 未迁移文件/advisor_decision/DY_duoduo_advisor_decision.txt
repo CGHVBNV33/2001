@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_duoduo = {
+		major = yes
+		potential = {
+			
+			advisor = duoduo
+			
+		}
+		allow = {
+			advisor = duoduo
+		}
+		effect = {
+			remove_advisor = duoduo
+			define_general = {
+				name = "爱新觉罗 多铎【武将】"
+				fire = 3
+				shock = 5
+				manuever = 5
+				siege = 4
+				trait = rab_leader_duoduo
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

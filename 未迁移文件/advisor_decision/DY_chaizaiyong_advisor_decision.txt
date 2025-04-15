@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chaizaiyong = {
+		major = yes
+		potential = {
+			
+			advisor = chaizaiyong
+			
+		}
+		allow = {
+			advisor = chaizaiyong
+		}
+		effect = {
+			remove_advisor = chaizaiyong
+			define_general = {
+				name = "柴再用【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_chaizaiyong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

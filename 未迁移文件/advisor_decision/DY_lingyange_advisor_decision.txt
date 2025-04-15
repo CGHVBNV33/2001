@@ -1,0 +1,221 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhanggongjin = {
+		major = yes
+		potential = {
+			
+			advisor = zhanggongjin
+			
+		}
+		allow = {
+			advisor = zhanggongjin
+		}
+		effect = {
+			remove_advisor = zhanggongjin
+			define_general = {
+				name = "张公谨｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhanggongjin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_duanzhixuan = {
+		major = yes
+		potential = {
+			
+			advisor = duanzhixuan
+			
+		}
+		allow = {
+			advisor = duanzhixuan
+		}
+		effect = {
+			remove_advisor = duanzhixuan
+			define_general = {
+				name = "段志玄｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_duanzhixuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuhongji = {
+		major = yes
+		potential = {
+			
+			advisor = liuhongji
+			
+		}
+		allow = {
+			advisor = liuhongji
+		}
+		effect = {
+			remove_advisor = liuhongji
+			define_general = {
+				name = "刘弘基｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liuhongji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_qututong = {
+		major = yes
+		potential = {
+			
+			advisor = qututong
+			
+		}
+		allow = {
+			advisor = qututong
+		}
+		effect = {
+			remove_advisor = qututong
+			define_general = {
+				name = "屈突通｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_qututong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaoshilian = {
+		major = yes
+		potential = {
+			
+			advisor = gaoshilian
+			
+		}
+		allow = {
+			advisor = gaoshilian
+		}
+		effect = {
+			remove_advisor = gaoshilian
+			define_general = {
+				name = "高士廉｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = rab_leader_gaoshilian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_yinkaishan = {
+		major = yes
+		potential = {
+			
+			advisor = yinkaishan
+			
+		}
+		allow = {
+			advisor = yinkaishan
+		}
+		effect = {
+			remove_advisor = yinkaishan
+			define_general = {
+				name = "殷开山｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 2
+				siege = 2
+				trait = rab_leader_yinkaishan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangliang = {
+		major = yes
+		potential = {
+			
+			advisor = zhangliang
+			
+		}
+		allow = {
+			advisor = zhangliang
+		}
+		effect = {
+			remove_advisor = zhangliang
+			define_general = {
+				name = "张亮｢【武将】"
+				fire = 2
+				shock = 2
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangliang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

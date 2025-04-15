@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fengsheng = {
+		major = yes
+		potential = {
+			
+			advisor = fengsheng
+			
+		}
+		allow = {
+			advisor = fengsheng
+		}
+		effect = {
+			remove_advisor = fengsheng
+			define_general = {
+				name = "冯胜｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_fengsheng
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

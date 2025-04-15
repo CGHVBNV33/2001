@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hasang = {
+		major = yes
+		potential = {
+			
+			advisor = hasang
+			
+		}
+		allow = {
+			advisor = hasang
+		}
+		effect = {
+			remove_advisor = hasang
+			define_general = {
+				name = "哈桑·伊本·努尔曼｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_hasang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

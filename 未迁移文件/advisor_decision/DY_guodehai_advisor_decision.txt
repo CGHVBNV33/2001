@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_guodehai = {
+		major = yes
+		potential = {
+			
+			advisor = guodehai
+			
+		}
+		allow = {
+			advisor = guodehai
+		}
+		effect = {
+			remove_advisor = guodehai
+			define_general = {
+				name = "郭德海【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_guodehai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

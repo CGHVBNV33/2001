@@ -1,0 +1,89 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangshihou = {
+		major = yes
+		potential = {
+			
+			advisor = yangshihou
+			
+		}
+		allow = {
+			advisor = yangshihou
+		}
+		effect = {
+			remove_advisor = yangshihou
+			define_general = {
+				name = "杨师厚｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yangshihou
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_gecongzhou = {
+		major = yes
+		potential = {
+			
+			advisor = gecongzhou
+			
+		}
+		allow = {
+			advisor = gecongzhou
+		}
+		effect = {
+			remove_advisor = gecongzhou
+			define_general = {
+				name = "葛从周｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 4
+				trait = rab_leader_gecongzhou
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuxun = {
+		major = yes
+		potential = {
+			
+			advisor = liuxun
+			
+		}
+		allow = {
+			advisor = liuxun
+		}
+		effect = {
+			remove_advisor = liuxun
+			define_general = {
+				name = "刘鄩｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_liuxun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

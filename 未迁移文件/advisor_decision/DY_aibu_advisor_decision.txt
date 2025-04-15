@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_aibu = {
+		major = yes
+		potential = {
+			
+			advisor = aibu
+			
+		}
+		allow = {
+			advisor = aibu
+		}
+		effect = {
+			remove_advisor = aibu
+			define_general = {
+				name = "艾布·穆斯林｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_aibu
+				}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lingtong = {
+		major = yes
+		potential = {
+			
+			advisor = lingtong
+			
+		}
+		allow = {
+			advisor = lingtong
+		}
+		effect = {
+			remove_advisor = lingtong
+			define_general = {
+				name = "凌统【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_lingtong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

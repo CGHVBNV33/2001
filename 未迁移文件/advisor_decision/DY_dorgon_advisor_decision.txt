@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dorgon = {
+		major = yes
+		potential = {
+			
+			advisor = dorgon
+			
+		}
+		allow = {
+			advisor = dorgon
+		}
+		effect = {
+			remove_advisor = dorgon
+			define_general = {
+				name = "爱新觉罗 多尔衮【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = rab_leader_dorgon
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

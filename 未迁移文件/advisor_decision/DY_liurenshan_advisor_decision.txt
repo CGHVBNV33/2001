@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liurenshan = {
+		major = yes
+		potential = {
+			
+			advisor = liurenshan
+			
+		}
+		allow = {
+			advisor = liurenshan
+		}
+		effect = {
+			remove_advisor = liurenshan
+			define_general = {
+				name = "刘仁赡【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_liurenshan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

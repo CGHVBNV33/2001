@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_guobaoyu = {
+		major = yes
+		potential = {
+			
+			advisor = guobaoyu
+			
+		}
+		allow = {
+			advisor = guobaoyu
+		}
+		effect = {
+			remove_advisor = guobaoyu
+			define_general = {
+				name = "郭宝玉【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_guobaoyu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

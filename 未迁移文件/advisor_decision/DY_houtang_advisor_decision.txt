@@ -1,0 +1,59 @@
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaoxingzhou = {
+		major = yes
+		potential = {
+			
+			advisor = gaoxingzhou
+			
+		}
+		allow = {
+			advisor = gaoxingzhou
+		}
+		effect = {
+			remove_advisor = gaoxingzhou
+			define_general = {
+				name = "高行周｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_gaoxingzhou
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_gaohuaide = {
+		major = yes
+		potential = {
+			
+			advisor = gaohuaide
+			
+		}
+		allow = {
+			advisor = gaohuaide
+		}
+		effect = {
+			remove_advisor = gaohuaide
+			define_general = {
+				name = "高怀德｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_gaohuaide
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

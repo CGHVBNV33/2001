@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_mengxun = {
+		major = yes
+		potential = {
+			
+			advisor = mengxun
+			
+		}
+		allow = {
+			advisor = mengxun
+		}
+		effect = {
+			remove_advisor = mengxun
+			define_general = {
+				name = "沮渠蒙逊｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_mengxun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dengyu = {
+		major = yes
+		potential = {
+			
+			advisor = dengyu
+			
+		}
+		allow = {
+			advisor = dengyu
+		}
+		effect = {
+			remove_advisor = dengyu
+			define_general = {
+				name = "邓愈｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_dengyu
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ludeweixi = {
+		major = yes
+		potential = {
+			
+			advisor = ludeweixi
+			
+		}
+		allow = {
+			advisor = ludeweixi
+		}
+		effect = {
+			remove_advisor = ludeweixi
+			define_general = {
+				name = "路德维希｢【土耳其人路易】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_ludeweixi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

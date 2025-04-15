@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_duguxin = {
+		major = yes
+		potential = {
+			
+			advisor = duguxin
+			
+		}
+		allow = {
+			advisor = duguxin
+		}
+		effect = {
+			remove_advisor = duguxin
+			define_general = {
+				name = "独孤信｢【柱国】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_duguxin
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

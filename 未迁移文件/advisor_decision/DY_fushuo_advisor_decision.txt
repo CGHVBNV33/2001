@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fushuo = {
+		major = yes
+		potential = {
+			
+			advisor = fushuo
+			
+		}
+		allow = {
+			advisor = fushuo
+		}
+		effect = {
+			remove_advisor = fushuo
+			define_general = {
+				name = "苻硕｢【武将】"
+				fire = 2
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_fushuo
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

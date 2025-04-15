@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fanwencheng = {
+		major = yes
+		potential = {
+			
+			advisor = fanwencheng
+			
+		}
+		allow = {
+			advisor = fanwencheng
+		}
+		effect = {
+			remove_advisor = fanwencheng
+			define_general = {
+				name = "范文程｢【军师】"
+				fire = 1
+				shock = 1
+				manuever = 2
+				siege = 2
+				trait = rab_leader_fanwencheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

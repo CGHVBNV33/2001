@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_houandu = {
+		major = yes
+		potential = {
+			
+			advisor = houandu
+			
+		}
+		allow = {
+			advisor = houandu
+		}
+		effect = {
+			remove_advisor = houandu
+			define_general = {
+				name = "侯安都｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_houandu
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fuyoude = {
+		major = yes
+		potential = {
+			
+			advisor = fuyoude
+			
+		}
+		allow = {
+			advisor = fuyoude
+		}
+		effect = {
+			remove_advisor = fuyoude
+			define_general = {
+				name = "傅友德｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 3
+				trait = rab_leader_fuyoude
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

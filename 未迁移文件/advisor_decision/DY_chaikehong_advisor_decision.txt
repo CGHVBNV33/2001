@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chaikehong = {
+		major = yes
+		potential = {
+			
+			advisor = chaikehong
+			
+		}
+		allow = {
+			advisor = chaikehong
+		}
+		effect = {
+			remove_advisor = chaikehong
+			define_general = {
+				name = "柴克宏【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_chaikehong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

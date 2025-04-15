@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dusengming = {
+		major = yes
+		potential = {
+			
+			advisor = dusengming
+			
+		}
+		allow = {
+			advisor = dusengming
+		}
+		effect = {
+			remove_advisor = dusengming
+			define_general = {
+				name = "杜僧明｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_dusengming
+				}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

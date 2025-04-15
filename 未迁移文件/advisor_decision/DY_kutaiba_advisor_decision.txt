@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_kutaiba = {
+		major = yes
+		potential = {
+			
+			advisor = kutaiba
+			
+		}
+		allow = {
+			advisor = kutaiba
+		}
+		effect = {
+			remove_advisor = kutaiba
+			define_general = {
+				name = "库泰拔·伊本·穆斯林｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_kutaiba
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

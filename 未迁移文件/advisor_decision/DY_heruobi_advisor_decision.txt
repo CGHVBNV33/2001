@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_heruobi = {
+		major = yes
+		potential = {
+			
+			advisor = heruobi
+			
+		}
+		allow = {
+			advisor = heruobi
+		}
+		effect = {
+			remove_advisor = heruobi
+			define_general = {
+				name = "贺若弼｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_heruobi
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

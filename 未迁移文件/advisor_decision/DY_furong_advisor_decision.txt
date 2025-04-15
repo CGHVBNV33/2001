@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_furong = {
+		major = yes
+		potential = {
+			
+			advisor = furong
+			
+		}
+		allow = {
+			advisor = furong
+		}
+		effect = {
+			remove_advisor = furong
+			define_general = {
+				name = "苻融｢【军师】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_furong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

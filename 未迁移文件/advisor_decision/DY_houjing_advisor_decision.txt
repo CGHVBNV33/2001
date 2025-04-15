@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_houjing = {
+		major = yes
+		potential = {
+			
+			advisor = houjing
+			
+		}
+		allow = {
+			advisor = houjing
+		}
+		effect = {
+			remove_advisor = houjing
+			define_general = {
+				name = "侯景｢【宇宙大将军】"
+				fire = 2
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_houjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

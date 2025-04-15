@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chuying = {
+		major = yes
+		potential = {
+			
+			advisor = chuying
+			
+		}
+		allow = {
+			advisor = chuying
+		}
+		effect = {
+			remove_advisor = chuying
+			define_general = {
+				name = "爱新觉罗 褚英｢【武将】"
+				fire = 2
+				shock = 6
+				manuever = 2
+				siege = 1
+				#trait = dy_chuying_personality
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

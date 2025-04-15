@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_magui = {
+		major = yes
+		potential = {
+			
+			advisor = magui
+			
+		}
+		allow = {
+			advisor = magui
+		}
+		effect = {
+			remove_advisor = magui
+			define_general = {
+				name = "麻贵｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_magui
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_luxiangsheng = {
+		major = yes
+		potential = {
+			
+			advisor = luxiangsheng
+			
+		}
+		allow = {
+			advisor = luxiangsheng
+		}
+		effect = {
+			remove_advisor = luxiangsheng
+			define_general = {
+				name = "卢象升【督师】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_luxiangsheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_amuer = {
+		major = yes
+		potential = {
+			
+			advisor = amuer
+			
+		}
+		allow = {
+			advisor = amuer
+		}
+		effect = {
+			remove_advisor = amuer
+			define_general = {
+				name = "阿穆尔·伊本·阿绥｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_amuer
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

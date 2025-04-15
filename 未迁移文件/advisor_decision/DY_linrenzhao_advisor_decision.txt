@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_linrenzhao = {
+		major = yes
+		potential = {
+			
+			advisor = linrenzhao
+			
+		}
+		allow = {
+			advisor = linrenzhao
+		}
+		effect = {
+			remove_advisor = linrenzhao
+			define_general = {
+				name = "林仁肇【武将】"
+				fire = 6
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_linrenzhao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

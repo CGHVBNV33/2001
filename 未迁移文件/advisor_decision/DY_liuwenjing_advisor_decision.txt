@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuwenjing = {
+		major = yes
+		potential = {
+			
+			advisor = liuwenjing
+			
+		}
+		allow = {
+			advisor = liuwenjing
+		}
+		effect = {
+			remove_advisor = liuwenjing
+			define_general = {
+				name = "刘文静｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_liuwenjing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

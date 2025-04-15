@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lusu = {
+		major = yes
+		potential = {
+			
+			advisor = lusu
+			
+		}
+		allow = {
+			advisor = lusu
+		}
+		effect = {
+			remove_advisor = lusu
+			define_general = {
+				name = "鲁肃【军师】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_lusu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

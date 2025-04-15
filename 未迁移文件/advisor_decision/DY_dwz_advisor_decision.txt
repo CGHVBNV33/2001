@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_duanwenzhen = {
+		major = yes
+		potential = {
+			
+			advisor = duanwenzhen
+			
+		}
+		allow = {
+			advisor = duanwenzhen
+		}
+		effect = {
+			remove_advisor = duanwenzhen
+			define_general = {
+				name = "段文振｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 2
+				trait = rab_leader_duanwenzhen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

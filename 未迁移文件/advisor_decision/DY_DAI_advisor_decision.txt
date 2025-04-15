@@ -1,0 +1,150 @@
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_chenguojun = {
+		major = yes
+		potential = {
+			
+			advisor = chenguojun
+			
+		}
+		allow = {
+			advisor = chenguojun
+		}
+		effect = {
+			remove_advisor = chenguojun
+			define_general = {
+				name = "陈国峻｢【武将】"
+				fire = 6
+				shock = 6
+				manuever = 3
+				siege = 4
+				trait = rab_leader_chenguojun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_likuigong = {
+		major = yes
+		potential = {
+			
+			advisor = likuigong
+			
+		}
+		allow = {
+			advisor = likuigong
+		}
+		effect = {
+			remove_advisor = likuigong
+			define_general = {
+				name = "黎魁供｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_likuigong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_ruanyoujin = {
+		major = yes
+		potential = {
+			
+			advisor = ruanyoujin
+			
+		}
+		allow = {
+			advisor = ruanyoujin
+		}
+		effect = {
+			remove_advisor = ruanyoujin
+			define_general = {
+				name = "阮有进｢【武将】"
+				fire = 5
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ruanyoujin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_ruanyouyi = {
+		major = yes
+		potential = {
+			
+			advisor = ruanyouyi
+			
+		}
+		allow = {
+			advisor = ruanyouyi
+		}
+		effect = {
+			remove_advisor = ruanyouyi
+			define_general = {
+				name = "阮有镒｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ruanyouyi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+################################################	
+	advisors_convert_generals_ruanwenzhang = {
+		major = yes
+		potential = {
+			
+			advisor = ruanwenzhang
+			
+		}
+		allow = {
+			advisor = ruanwenzhang
+		}
+		effect = {
+			remove_advisor = ruanwenzhang
+			define_general = {
+				name = "阮文张｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ruanwenzhang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

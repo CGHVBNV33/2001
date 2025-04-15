@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_layefusiji = {
+		major = yes
+		potential = {
+			
+			advisor = layefusiji
+			
+		}
+		allow = {
+			advisor = layefusiji
+		}
+		effect = {
+			remove_advisor = layefusiji
+			define_general = {
+				name = "拉耶夫斯基｢【上将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_layefusiji
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

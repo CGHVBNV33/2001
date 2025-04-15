@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongbaiyao = {
+		major = yes
+		potential = {
+			
+			advisor = murongbaiyao
+			
+		}
+		allow = {
+			advisor = murongbaiyao
+		}
+		effect = {
+			remove_advisor = murongbaiyao
+			define_general = {
+				name = "慕容白曜｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_murongbaiyao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

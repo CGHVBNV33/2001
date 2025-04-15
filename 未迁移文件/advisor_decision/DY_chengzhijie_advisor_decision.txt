@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chengzhijie = {
+		major = yes
+		potential = {
+			
+			advisor = chengzhijie
+			
+		}
+		allow = {
+			advisor = chengzhijie
+		}
+		effect = {
+			remove_advisor = chengzhijie
+			define_general = {
+				name = "程知节｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 6
+				siege = 1
+				trait = rab_leader_chengzhijie
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

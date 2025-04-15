@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lijichong = {
+		major = yes
+		potential = {
+			
+			advisor = lijichong
+			
+		}
+		allow = {
+			advisor = lijichong
+		}
+		effect = {
+			remove_advisor = lijichong
+			define_general = {
+				name = "李继冲｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_lijichong
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

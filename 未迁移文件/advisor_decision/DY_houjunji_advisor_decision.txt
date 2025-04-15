@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_houjunji = {
+		major = yes
+		potential = {
+			
+			advisor = houjunji
+			
+		}
+		allow = {
+			advisor = houjunji
+		}
+		effect = {
+			remove_advisor = houjunji
+			define_general = {
+				name = "侯君集｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_houjunji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

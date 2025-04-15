@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hufan = {
+		major = yes
+		potential = {
+			
+			advisor = hufan
+			
+		}
+		allow = {
+			advisor = hufan
+		}
+		effect = {
+			remove_advisor = hufan
+			define_general = {
+				name = "胡藩｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 5
+				siege = 2
+				trait = rab_leader_hufan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

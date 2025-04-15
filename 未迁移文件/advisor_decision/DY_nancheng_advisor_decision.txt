@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_nancheng = {
+		major = yes
+		potential = {
+			
+			advisor = nancheng
+			
+		}
+		allow = {
+			advisor = nancheng
+		}
+		effect = {
+			remove_advisor = nancheng
+			define_general = {
+				name = "沮渠男成｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_nancheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

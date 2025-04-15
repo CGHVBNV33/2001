@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_muaweiye = {
+		major = yes
+		potential = {
+			
+			advisor = muaweiye
+			
+		}
+		allow = {
+			advisor = muaweiye
+		}
+		effect = {
+			remove_advisor = muaweiye
+			define_general = {
+				name = "穆阿维叶·伊本·阿布·苏富扬｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_muaweiye
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

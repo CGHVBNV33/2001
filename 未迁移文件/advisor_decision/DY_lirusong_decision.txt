@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lirusong = {
+		major = yes
+		potential = {
+			
+			advisor = lirusong
+			
+		}
+		allow = {
+			advisor = lirusong
+		}
+		effect = {
+			remove_advisor = lirusong
+			define_general = {
+				name = "李如松｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_lirusoun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

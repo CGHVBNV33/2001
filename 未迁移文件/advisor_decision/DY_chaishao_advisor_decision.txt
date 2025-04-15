@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chaishao = {
+		major = yes
+		potential = {
+			
+			advisor = chaishao
+			
+		}
+		allow = {
+			advisor = chaishao
+		}
+		effect = {
+			remove_advisor = chaishao
+			define_general = {
+				name = "柴绍｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_chaishao
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

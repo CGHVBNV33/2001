@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lichengliang = {
+		major = yes
+		potential = {
+			
+			advisor = lichengliang
+			
+		}
+		allow = {
+			advisor = lichengliang
+		}
+		effect = {
+			remove_advisor = lichengliang
+			define_general = {
+				name = "李成梁【武将】"
+				fire = 3
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_lichengliang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_doutai = {
+		major = yes
+		potential = {
+			
+			advisor = doutai
+			
+		}
+		allow = {
+			advisor = doutai
+		}
+		effect = {
+			remove_advisor = doutai
+			define_general = {
+				name = "窦泰｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_doutai
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

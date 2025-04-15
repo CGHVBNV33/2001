@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_houmochenchong = {
+		major = yes
+		potential = {
+			
+			advisor = houmochenchong
+			
+		}
+		allow = {
+			advisor = houmochenchong
+		}
+		effect = {
+			remove_advisor = houmochenchong
+			define_general = {
+				name = "侯莫陈崇｢【柱国】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege =1
+				trait = rab_leader_houmochenchong
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongshaozong = {
+		major = yes
+		potential = {
+			
+			advisor = murongshaozong
+			
+		}
+		allow = {
+			advisor = murongshaozong
+		}
+		effect = {
+			remove_advisor = murongshaozong
+			define_general = {
+				name = "慕容绍宗｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 1
+				trait = rab_leader_murongshaozong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

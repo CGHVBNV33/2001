@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_murongnong = {
+		major = yes
+		potential = {
+			
+			advisor = murongnong
+			
+		}
+		allow = {
+			advisor = murongnong
+		}
+		effect = {
+			remove_advisor = murongnong
+			define_general = {
+				name = "慕容农【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_murongnong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

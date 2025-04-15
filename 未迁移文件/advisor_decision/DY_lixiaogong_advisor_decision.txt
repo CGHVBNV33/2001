@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lixiaogong = {
+		major = yes
+		potential = {
+			
+			advisor = lixiaogong
+			
+		}
+		allow = {
+			advisor = lixiaogong
+		}
+		effect = {
+			remove_advisor = lixiaogong
+			define_general = {
+				name = "李孝恭｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_lixiaogong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

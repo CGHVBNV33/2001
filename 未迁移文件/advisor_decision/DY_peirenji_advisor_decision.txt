@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_peirenji = {
+		major = yes
+		potential = {
+			
+			advisor = peirenji
+			
+		}
+		allow = {
+			advisor = peirenji
+		}
+		effect = {
+			remove_advisor = peirenji
+			define_general = {
+				name = "裴仁基｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_peirenji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

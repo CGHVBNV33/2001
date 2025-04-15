@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hanqinhu = {
+		major = yes
+		potential = {
+			
+			advisor = hanqinhu
+			
+		}
+		allow = {
+			advisor = hanqinhu
+		}
+		effect = {
+			remove_advisor = hanqinhu
+			define_general = {
+				name = "韩擒虎｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_hanqinhu
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liubolin = {
+		major = yes
+		potential = {
+			
+			advisor = liubolin
+			
+		}
+		allow = {
+			advisor = liubolin
+		}
+		effect = {
+			remove_advisor = liubolin
+			define_general = {
+				name = "刘伯林【武将】"
+				fire = 4
+				shock = 3
+				manuever = 4
+				siege = 3
+				trait = rab_leader_liubolin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

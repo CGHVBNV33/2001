@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_hongchengchou = {
+		major = yes
+		potential = {
+			
+			advisor = hongchengchou
+			
+		}
+		allow = {
+			advisor = hongchengchou
+		}
+		effect = {
+			remove_advisor = hongchengchou
+			define_general = {
+				name = "洪承畴｢【督师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_hongchengchou
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

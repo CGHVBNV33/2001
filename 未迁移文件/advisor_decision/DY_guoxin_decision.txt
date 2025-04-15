@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_guoxin = {
+		major = yes
+		potential = {
+			
+			advisor = guoxin
+			
+		}
+		allow = {
+			advisor = guoxin
+		}
+		effect = {
+			remove_advisor = guoxin
+			define_general = {
+				name = "郭昕｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_guoxin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

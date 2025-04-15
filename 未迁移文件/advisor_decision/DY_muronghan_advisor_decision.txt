@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_muronghan = {
+		major = yes
+		potential = {
+			
+			advisor = muronghan
+			
+		}
+		allow = {
+			advisor = muronghan
+		}
+		effect = {
+			remove_advisor = muronghan
+			define_general = {
+				name = "慕容翰｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_muronghan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lidaoxuan = {
+		major = yes
+		potential = {
+			
+			advisor = lidaoxuan
+			
+		}
+		allow = {
+			advisor = lidaoxuan
+		}
+		effect = {
+			remove_advisor = lidaoxuan
+			define_general = {
+				name = "李道玄｢【武将】"
+				fire = 2
+				shock = 6
+				manuever = 2
+				siege = 1
+				trait = rab_leader_lidaoxuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lijingda = {
+		major = yes
+		potential = {
+			
+			advisor = lijingda
+			
+		}
+		allow = {
+			advisor = lijingda
+		}
+		effect = {
+			remove_advisor = lijingda
+			define_general = {
+				name = "李景达【武将】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 2
+				trait = rab_leader_lijingda
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

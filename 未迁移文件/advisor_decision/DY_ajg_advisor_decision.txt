@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ajg = {
+		major = yes
+		potential = {
+			
+			advisor = ajg
+			
+		}
+		allow = {
+			advisor = ajg
+		}
+		effect = {
+			remove_advisor = ajg
+			define_general = {
+				name = "爱新觉罗 阿济格｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 2
+				#trait = dy_ajg_personality
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_fuxiong = {
+		major = yes
+		potential = {
+			
+			advisor = fuxiong
+			
+		}
+		allow = {
+			advisor = fuxiong
+		}
+		effect = {
+			remove_advisor = fuxiong
+			define_general = {
+				name = "苻雄｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_fuxiong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

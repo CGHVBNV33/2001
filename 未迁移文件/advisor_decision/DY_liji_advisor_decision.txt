@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liji = {
+		major = yes
+		potential = {
+			
+			advisor = liji
+			
+		}
+		allow = {
+			advisor = liji
+		}
+		effect = {
+			remove_advisor = liji
+			define_general = {
+				name = "李勣｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_liji
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

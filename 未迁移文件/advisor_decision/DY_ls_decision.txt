@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ls = {
+		major = yes
+		potential = {
+			
+			advisor = ls
+			
+		}
+		allow = {
+			advisor = ls
+		}
+		effect = {
+			remove_advisor = ls
+			define_general = {
+				name = "李愬｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_ls
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

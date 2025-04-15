@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_huzongxian = {
+		major = yes
+		potential = {
+			
+			advisor = huzongxian
+			
+		}
+		allow = {
+			advisor = huzongxian
+		}
+		effect = {
+			remove_advisor = huzongxian
+			define_general = {
+				name = "胡宗宪【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_huzongxian
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

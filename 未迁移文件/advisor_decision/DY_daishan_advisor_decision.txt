@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_daishan = {
+		major = yes
+		potential = {
+			
+			advisor = daishan
+			
+		}
+		allow = {
+			advisor = daishan
+		}
+		effect = {
+			remove_advisor = daishan
+			define_general = {
+				name = "爱新觉罗 代善｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 2
+				siege = 1
+				#trait = dy_daishan_personality
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

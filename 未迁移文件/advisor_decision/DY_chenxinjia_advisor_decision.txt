@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chenxinjia = {
+		major = yes
+		potential = {
+			
+			advisor = chenxinjia
+			
+		}
+		allow = {
+			advisor = chenxinjia
+		}
+		effect = {
+			remove_advisor = chenxinjia
+			define_general = {
+				name = "陈新甲｢"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = rab_leader_chenxinjia
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_heba = {
+		major = yes
+		potential = {
+			
+			advisor = heba
+			
+		}
+		allow = {
+			advisor = heba
+		}
+		effect = {
+			remove_advisor = heba
+			define_general = {
+				name = "和跋｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 2
+				siege = 3
+				trait = rab_leader_heba
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
