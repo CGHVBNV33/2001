@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = johann_osterreich_advisor_come
+
+country_event = {
+	id = johann_osterreich_advisor_come.1
+	title = "johann_osterreich_advisor_come.1.t"
+	desc = "johann_osterreich_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1782
+		NOT = { is_year = 1859 }
+		OR = {
+			tag = HAB
+			AND = {
+				NOT = { exists = HAB }
+				owns = 116
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = johann_osterreich_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = johann_osterreich
+					name = "约翰【约翰大公】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "约翰【约翰大公】"
+				fire = 2
+				shock = 2
+				manuever = 2
+				siege = 0
+				trait = ZC_johann_osterreich
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = john_churchill_advisor_come
+
+country_event = {
+	id = john_churchill_advisor_come.1
+	title = "john_churchill_advisor_come.1.t"
+	desc = "john_churchill_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1650
+		NOT = { is_year = 1722 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 4373
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = john_churchill_advisor_come.OPTA1
+		
+		define_advisor = {
+				type = john_churchill
+				name = "约翰 丘吉尔｢【马尔博罗公爵】"
+				discount = yes	
+				skill = 3
+		}
+	}
+}

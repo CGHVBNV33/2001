@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = johann_osterreich_prov_move_events
+
+province_event = {
+	id = johann_osterreich_prov_move_events.1
+	title = "johann_osterreich_prov_move_events.NAME1"
+	desc = "johann_osterreich_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_johann_osterreich
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "johann_osterreich_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_johann_osterreich }
+			if = {
+				limit = { 
+					NOT = { is_year = 1859 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_johann_osterreich
+					owner = {
+						country_event = {
+							id = johann_osterreich_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_johann_osterreich
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_johann_osterreich"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1859
+				}	
+				remove_province_modifier = pov_johann_osterreich	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = johann_osterreich_prov_move_events.2
+	title = "johann_osterreich_prov_move_events.NAME2"
+	desc = "johann_osterreich_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "johann_osterreich_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = johann_osterreich
+					name = "约翰【约翰大公】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "约翰【约翰大公】"
+				fire = 2
+				shock = 2
+				manuever = 2
+				siege = 0
+				trait = ZC_johann_osterreich
+			}
+		}
+	}
+}

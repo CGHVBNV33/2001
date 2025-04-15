@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = joachim_murat_prov_move_events
+
+province_event = {
+	id = joachim_murat_prov_move_events.1
+	title = "joachim_murat_prov_move_events.NAME1"
+	desc = "joachim_murat_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_joachim_murat
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "joachim_murat_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_joachim_murat }
+			if = {
+				limit = { 
+					NOT = { is_year = 1815 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_joachim_murat
+					owner = {
+						country_event = {
+							id = joachim_murat_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_joachim_murat
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_joachim_murat"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1815
+				}	
+				remove_province_modifier = pov_joachim_murat	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = joachim_murat_prov_move_events.2
+	title = "joachim_murat_prov_move_events.NAME2"
+	desc = "joachim_murat_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "joachim_murat_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = joachim_murat
+					name = "若阿尚 缪拉【元帅】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "若阿尚 缪拉【元帅】"
+				fire = 4
+				shock = 4
+				manuever = 6
+				siege = 2
+				trait = ZC_joachim_murat
+			}
+		}
+	}
+}

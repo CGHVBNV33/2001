@@ -1,0 +1,44 @@
+namespace = johann_bach_advisor_come
+
+country_event = {
+	id = johann_bach_advisor_come.1
+	title = "johann_bach_advisor_come.1.t"
+	desc = "johann_bach_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1685
+		NOT = { is_year = 1750 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { tag = GER }
+				tag = PRU
+			}
+			AND = {
+				NOT = { tag = GER }
+				NOT = { tag = PRU }
+				owns = 63
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+			
+	option = {
+		name = johann_bach_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = johann_bach
+			name = "约翰 巴赫【作曲家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

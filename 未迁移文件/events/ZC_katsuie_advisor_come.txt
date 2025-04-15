@@ -1,0 +1,41 @@
+namespace = katsuie_advisor_come
+
+country_event = {
+	id = katsuie_advisor_come.1
+	title = "katsuie_advisor_come.1.t"
+	desc = "katsuie_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = katsuie_advisor_come.OPTA1
+		if = {
+			limit  = {
+				ai = no
+			}
+			define_advisor = {
+				type = katsuie
+				name = "柴田胜家｢【武将】"
+				discount = yes	
+				skill = 3
+			}	
+		}			
+		if = {
+			limit  = {
+				ai = yes
+			}		
+			define_general = {
+				name = "柴田胜家｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_katsuie
+			}			
+		}
+	}
+}

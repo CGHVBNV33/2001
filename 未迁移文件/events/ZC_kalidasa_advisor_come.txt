@@ -1,0 +1,36 @@
+namespace = kalidasa_advisor_come
+
+country_event = {
+	id = kalidasa_advisor_come.1
+	title = "kalidasa_advisor_come.1.t"
+	desc = "kalidasa_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 330
+		NOT = { is_year = 430 }
+		OR = {
+			tag = GUP
+			AND = {
+				NOT = { exists = GUP }
+				owns = 558
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = kalidasa_advisor_come.OPTA1
+		define_advisor = {
+			type = kalidasa
+			name = "迦梨陀娑｢【诗人】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

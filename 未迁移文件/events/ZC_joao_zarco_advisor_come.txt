@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = joao_zarco_advisor_come
+
+country_event = {
+	id = joao_zarco_advisor_come.1
+	title = "joao_zarco_advisor_come.1.t"
+	desc = "joao_zarco_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1390
+		NOT = { is_year = 1471 }
+		OR = {
+			tag = POR
+			AND = {
+				NOT = { exists = POR }
+				owns = 227
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = joao_zarco_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = joao_zarco
+					name = "若昂 扎尔科【探险家】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "若昂 扎尔科【探险家】"
+				fire = 1
+				shock = 1
+				manuever = 2
+				siege = 0
+				trait = ZC_joao_zarco
+			}
+		}
+	}
+}

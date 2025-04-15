@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = jozef_poniatowski_advisor_come
+
+country_event = {
+	id = jozef_poniatowski_advisor_come.1
+	title = "jozef_poniatowski_advisor_come.1.t"
+	desc = "jozef_poniatowski_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1763
+		NOT = { is_year = 1813 }
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				tag = PLC
+			}
+			AND = {
+				NOT = { exists = FRA }
+				NOT = { exists = PLC }
+				owns = 134
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = jozef_poniatowski_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = jozef_poniatowski
+					name = "约瑟夫 波尼亚托夫斯基【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "约瑟夫 波尼亚托夫斯基【将领】"
+				fire = 3
+				shock = 4
+				manuever = 4
+				siege = 0
+				trait = ZC_jozef_poniatowski
+			}
+		}
+	}
+}

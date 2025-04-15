@@ -1,0 +1,25 @@
+namespace = johannes_gutenberg_advisor_come
+
+country_event = {
+	id = johannes_gutenberg_advisor_come.1
+	title = "johannes_gutenberg_advisor_come.1.t"
+	desc = "johannes_gutenberg_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	is_triggered_only = yes
+			
+	option = {
+		name = johannes_gutenberg_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = johannes_gutenberg
+			name = "约翰 古腾堡【印刷发明家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

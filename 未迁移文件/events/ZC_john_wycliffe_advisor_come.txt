@@ -1,0 +1,42 @@
+namespace = john_wycliffe_advisor_come
+
+country_event = {
+	id = john_wycliffe_advisor_come.1
+	title = "john_wycliffe_advisor_come.1.t"
+	desc = "john_wycliffe_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1328
+		NOT = { is_year = 1384 }
+		OR = {
+			tag = ENG
+			AND = {
+				NOT = { exists = ENG }
+				tag = GBR
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 245
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = john_wycliffe_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = john_wycliffe
+			name = "约翰 威克里夫｢【神父】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

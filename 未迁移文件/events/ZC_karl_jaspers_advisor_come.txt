@@ -1,0 +1,44 @@
+namespace = karl_jaspers_advisor_come
+
+country_event = {
+	id = karl_jaspers_advisor_come.1
+	title = "karl_jaspers_advisor_come.1.t"
+	desc = "karl_jaspers_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1883
+		NOT = { is_year = 1969 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { tag = GER }
+				tag = PRU
+			}
+			AND = {
+				NOT = { tag = GER }
+				NOT = { tag = PRU }
+				owns = 55
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+			
+	option = {
+		name = karl_jaspers_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = karl_jaspers
+			name = "卡尔 雅斯贝尔斯【哲学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

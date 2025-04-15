@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = juan_leon_advisor_come
+
+country_event = {
+	id = juan_leon_advisor_come.1
+	title = "juan_leon_advisor_come.1.t"
+	desc = "juan_leon_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1474
+		NOT = { is_year = 1521 }
+		OR = {
+			tag = SPA
+			AND = {
+				NOT = { exists = SPA }
+				tag = CAS
+			}
+			AND = {
+				NOT = { exists = SPA }
+				NOT = { exists = CAS }
+				owns = 215
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = juan_leon_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = juan_leon
+					name = "胡安 庞塞 莱昂｢【征服者】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_conquistador = {
+				name = "胡安 庞塞 莱昂｢【征服者】"
+				fire = 2
+				shock = 2
+				manuever = 3
+				siege = 0
+				trait = rab_leader_juan_leon
+			}
+		}
+	}
+}
