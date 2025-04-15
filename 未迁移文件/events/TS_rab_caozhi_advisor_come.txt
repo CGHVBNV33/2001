@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = caozhi_advisor_come
+
+#武将某种条件下出现
+#id = 1 : caozhi : 曹植 ｢【大文豪】
+
+country_event = {
+	id = caozhi_advisor_come.1
+	title = "caozhi_advisor_come.1.t"
+	desc = "caozhi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 208	
+		NOT = { is_year = 250 }
+		OR = {
+			AND = {
+				exists = TS2
+				tag = TS2
+			}
+			AND = {
+				NOT = { exists = TS2 }
+				owns = 2144
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = caozhi_advisor_come.OPTA1
+		
+			define_advisor = {
+				type = caozhi
+				name = "曹植｢【大文豪】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

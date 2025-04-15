@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yuejin_advisor_come
+
+#武将某种条件下出现
+#id = 1 : yuejin : 乐进｢【武将】
+
+country_event = {
+	id = yuejin_advisor_come.1
+	title = "yuejin_advisor_come.1.t"
+	desc = "yuejin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 191	
+		NOT = { is_year = 218 }
+		OR = {
+			AND = {
+				exists = TS2
+				tag = BAQ
+			}
+			AND = {
+				NOT = { exists = BAQ }
+				owns = 5060 #Pre-13.0
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yuejin_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yuejin
+				name = "乐进｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "乐进｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yuejin
+			}
+		}
+	}
+}

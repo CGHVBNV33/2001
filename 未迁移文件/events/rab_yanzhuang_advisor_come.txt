@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yanzhuang_advisor_come
+
+#名将某种条件下出现
+#id = 1 : yanzhuang : 严庄｢【军师】
+
+country_event = {
+	id = yanzhuang_advisor_come.1
+	title = "yanzhuang_advisor_come.1.t"
+	desc = "yanzhuang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		OR = {
+	                             AND = {
+		                          is_year = 733	
+		                          NOT = { is_year = 755 }
+		                          owns = 3266
+	                             }
+	                             AND = {
+		                          is_year = 755	
+		                          NOT = { is_year = 773 }
+		                          owns = 1816
+	                             }
+	                }
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yanzhuang_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yanzhuang
+				name = "严庄｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "严庄｢【军师】"
+				fire = 2
+				shock = 3
+				manuever = 2
+				siege = 2
+			}
+		}
+	}
+}
+

@@ -1,0 +1,44 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = cengguofan_advisor_come
+#武将某种条件下出现
+#id = 1 : cengguofan : 曾国藩｢【武将】
+country_event = {
+	id = cengguofan_advisor_come.1
+	title = "cengguofan_advisor_come.1.t"
+	desc = "cengguofan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	#为了避免统治相冲突做了check ruler动作
+	trigger = {
+		tag = QNG
+		#NOT = { exists = XJ0 }
+		is_year = 1850
+		NOT = {
+			is_year = 1870
+		}
+		owns = 671
+		mission_completed = QNG_missions_Hanministers
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = cengguofan_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_cengguofan = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_cengguofan = yes
+		}
+	}
+}

@@ -1,0 +1,49 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = cuihao_advisor_come
+
+#武将某种条件下出现
+#id = 1 : cuihao : 崔浩｢【军师】
+
+country_event = {
+	id = cuihao_advisor_come.1
+	title = "cuihao_advisor_come.1.t"
+	desc = "cuihao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 410	
+		NOT = { is_year = 450 }
+		OR = {
+			AND = {
+				exists = NWE
+				tag = NWE
+			}
+			AND = {
+				NOT = { exists = NWE }
+				owns = 2019
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = cuihao_advisor_come.OPTA1
+		
+			define_advisor = {
+				type = cuihao
+				name = "崔浩｢【军师】"
+				discount = yes	
+				skill = 3
+				culture = hebei
+				religion = confucianism
+			}
+	}
+}
+

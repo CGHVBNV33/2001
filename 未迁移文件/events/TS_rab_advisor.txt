@@ -1,0 +1,3046 @@
+########################
+#Advisor  entry  Events#
+#########################
+#2019.1.1 fit to 1.28
+#2019-1-14 調整班超的出現時間點/將faction add fluence 作用變成自家的機制
+#2019-11-27 no faction any more
+namespace = Advisor_come
+##ma_loan
+country_event = {
+	id = Advisor_come.1
+	title = "Advisor_come.1.t"
+	desc = "Advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		owns = 689
+		is_year = 99
+		NOT = {
+			is_year = 166
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = ma_loan
+			name = "马融｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = ma_loan
+			name = "马融｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.2
+	title = "Advisor_come.2.t"
+	desc = "Advisor_come.2.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 671
+		is_year = 83
+		NOT = {
+			is_year = 121
+		}
+	}
+	mean_time_to_happen = {
+		days = 35
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = cai_lun
+			name = "蔡伦｢【宦官】"
+			discount = yes
+			skill = 3
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = cai_lun
+			name = "蔡伦｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.3
+	title = "Advisor_come.3.t"
+	desc = "Advisor_come.3.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 664
+		is_year = 29
+		NOT = {
+			is_year = 69
+		}
+		NOT = {
+			exists = DR1
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = deng_rang
+			name = "邓让｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = deng_rang
+			name = "邓让｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.4
+	title = "Advisor_come.4.t"
+	desc = "Advisor_come.4.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 673
+		is_year = 33
+		NOT = {
+			is_year = 77
+		}
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = jiang_shi
+			name = "姜诗｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = jiang_shi
+			name = "姜诗｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.5
+	title = "Advisor_come.5.t"
+	desc = "Advisor_come.5.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 673
+		is_year = 44
+		NOT = {
+			is_year = 87
+		}
+	}
+	mean_time_to_happen = {
+		days = 50
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = jiang_ge
+			name = "江革｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = jiang_ge
+			name = "江革｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.6
+	title = "Advisor_come.6.t"
+	desc = "Advisor_come.6.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 687
+		is_year = 44
+		NOT = {
+			is_year = 87
+		}
+	}
+	mean_time_to_happen = {
+		days = 75
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = liu_xin
+			name = "刘信｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = liu_xin
+			name = "刘信｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.7
+	title = "Advisor_come.7.t"
+	desc = "Advisor_come.7.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 688
+		is_year = 158
+		NOT = {
+			is_year = 176
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = chou_lan
+			name = "仇览｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = chou_lan
+			name = "仇览｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.8
+	title = "Advisor_come.8.t"
+	desc = "Advisor_come.8.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 681
+		is_year = 111
+		NOT = {
+			is_year = 172
+		}
+	}
+	mean_time_to_happen = {
+		days = 90
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = hu_guang
+			name = "胡广｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = hu_guang
+			name = "胡广｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.9
+	title = "Advisor_come.9.t"
+	desc = "Advisor_come.9.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 687
+		is_year = 155
+		NOT = {
+			is_year = 189
+		}
+	}
+	mean_time_to_happen = {
+		days = 80
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = zhang_rang
+			name = "张让｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = zhang_rang
+			name = "张让｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.10
+	title = "Advisor_come.10.t"
+	desc = "Advisor_come.10.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 1836
+		is_year = 68
+		NOT = {
+			is_year = 114
+		}
+	}
+	mean_time_to_happen = {
+		days = 6
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = zhen_chong
+			name = "郑众｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = zhen_chong
+			name = "郑众｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.11
+	title = "Advisor_come.11.t"
+	desc = "Advisor_come.11.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2180
+		is_year = 124
+		NOT = {
+			is_year = 174
+		}
+	}
+	mean_time_to_happen = {
+		days = 95
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = huang_fu_gui
+			name = "皇甫规｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = huang_fu_gui
+			name = "皇甫规｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.12
+	title = "Advisor_come.12.t"
+	desc = "Advisor_come.12.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2144
+		is_year = 120
+		NOT = {
+			is_year = 159
+		}
+	}
+	mean_time_to_happen = {
+		days = 65
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = cao_teng
+			name = "曹腾｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = cao_teng
+			name = "曹腾｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.14
+	title = "Advisor_come.14.t"
+	desc = "Advisor_come.14.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = HND
+		is_year = 52
+		NOT = {
+			is_year = 92
+		}
+	}
+	mean_time_to_happen = {
+		days = 67
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = dou_xian
+				name = "窦宪｢【外戚】"
+				skill = 3
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "窦宪｢【外戚】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_dou_xian
+			}
+		}
+	}
+}
+
+##talking about the doz not be took care
+#country_event = {
+#	id = Advisor_come.15
+#	title = "Advisor_come.15.t"
+#	desc = "Advisor_come.15.d"
+#	picture = NEW_ADVISOR_dou_zhi_eventPicture
+#		
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = HND
+#		is_year = 160
+#		NOT = { is_year = 162 }
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 2
+#	}
+#
+#	option = {
+#		name = Advisor_come.15a
+#		#define_consort = {
+#		#	name = "窦妙｢【外戚】"
+#		#		adm = 4
+#		#		dip = 4
+#		#		mil = 3
+#		#	female = yes
+#		#}
+#	}
+#}	
+country_event = {
+	id = Advisor_come.16
+	title = "Advisor_come.16.t"
+	desc = "Advisor_come.16.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 1836
+		is_year = 102
+		NOT = {
+			is_year = 160
+		}
+	}
+	mean_time_to_happen = {
+		days = 79
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = dan_chao
+			name = "单超｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = dan_chao
+			name = "单超｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.17
+	title = "Advisor_come.17.t"
+	desc = "Advisor_come.17.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 688
+		is_year = 153
+		NOT = {
+			is_year = 189
+		}
+	}
+	mean_time_to_happen = {
+		days = 92
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = cai_yong
+			name = "蔡邕｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.18
+	title = "Advisor_come.18.t"
+	desc = "Advisor_come.18.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 700
+		is_year = 50
+		NOT = {
+			is_year = 91
+		}
+	}
+	mean_time_to_happen = {
+		days = 105
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = geng_bing
+				name = "耿秉｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "耿秉｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_geng_bing
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.19
+	title = "Advisor_come.19.t"
+	desc = "Advisor_come.19.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 1836
+		is_year = 65
+		NOT = {
+			is_year = 105
+		}
+	}
+	mean_time_to_happen = {
+		days = 92
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = he_chang
+			name = "何敞｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = he_chang
+			name = "何敞｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.20
+	title = "Advisor_come.20.t"
+	desc = "Advisor_come.20.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2171
+		is_year = 29
+		NOT = {
+			is_year = 55
+		}
+	}
+	mean_time_to_happen = {
+		days = 33
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = jia_fu
+			name = "贾复｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = jia_fu
+			name = "贾复｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.21
+	title = "Advisor_come.21.t"
+	desc = "Advisor_come.21.d"
+	picture = BAN_CHAO_ADVISOR_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = Advisor_come.OPTA21
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = ban_chao
+				name = "班超｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "班超｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 5
+				siege = 2
+				trait = rab_leader_ciuduhu
+			}
+		}
+		if = {
+			limit = {
+				XI3 = {
+					has_ruler = "班超"
+				}
+			}
+			XI3 = {
+				kill_ruler = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.22
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 700
+		is_year = 75
+		NOT = {
+			is_year = 117
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = ban_zho
+			name = "班昭｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = ban_zho
+			name = "班昭｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.23
+	title = "Advisor_come.23.t"
+	desc = "Advisor_come.23.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2176
+		is_year = 87
+		NOT = {
+			is_year = 137
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = yu_xu
+				name = "虞诩｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "虞诩｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_yu_xu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.24
+	title = "Advisor_come.24.t"
+	desc = "Advisor_come.24.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2171
+		is_year = 98
+		NOT = {
+			is_year = 139
+		}
+	}
+	mean_time_to_happen = {
+		days = 28
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = zhang_heng
+			name = "张衡｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = zhang_heng
+			name = "张衡｢【文官】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.25
+	title = "Advisor_come.25.t"
+	desc = "Advisor_come.25.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 680
+		is_year = 159
+		NOT = {
+			is_year = 188
+		}
+		NOT = {
+			exists = LOE
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = liu_yan
+			name = "刘焉｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = liu_yan
+			name = "刘焉｢【武将】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.26
+	title = "Advisor_come.26.t"
+	desc = "Advisor_come.26.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2171
+		is_year = 82
+		NOT = {
+			is_year = 121
+		}
+	}
+	mean_time_to_happen = {
+		days = 67
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = deng_zhi
+			name = "邓骘｢【外戚】"
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = deng_zhi
+			name = "邓骘｢【外戚】"
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.27
+	title = "Advisor_come.27.t"
+	desc = "Advisor_come.27.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2171
+		is_year = 52
+		NOT = {
+			is_year = 92
+		}
+	}
+	mean_time_to_happen = {
+		days = 73
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = deng_xun
+			name = "邓训｢【外戚】"
+			discount = yes
+			skill = 3
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = deng_xun
+			name = "邓训｢【外戚】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.28
+	title = "Advisor_come.28.t"
+	desc = "Advisor_come.28.d"
+	picture = NEW_ADVISOR_deng_sui_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2171
+		is_year = 95
+		NOT = {
+			is_year = 121
+		}
+		NOT = {
+			started_in = 102.1.1
+		}		#heiljsf 20250113 102年之后会变为皇后
+	}
+	mean_time_to_happen = {
+		days = 102
+	}
+	option = {
+		name = Advisor_come.c
+		define_advisor = {
+			type = deng_sui
+			name = "邓绥｢【外戚】"
+			female = yes
+			skill = 3
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.d
+		define_advisor = {
+			type = deng_sui
+			name = "邓绥｢【外戚】"
+			female = yes
+			skill = 3
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.29
+	title = "Advisor_come.29.t"
+	desc = "Advisor_come.29.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = HND
+		is_year = 146
+		NOT = {
+			is_year = 170
+		}
+	}
+	mean_time_to_happen = {
+		days = 22
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = wang_fu
+			name = "王甫｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+		set_country_flag = wang_fu_come
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = wang_fu
+			name = "王甫｢【宦官】"
+			skill = 3
+			discount = yes
+		}
+		set_country_flag = wang_fu_come
+	}
+}
+
+country_event = {
+	id = Advisor_come.31
+	title = "Advisor_come.31.t"
+	desc = "Advisor_come.31.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2181
+		is_year = 154
+		NOT = {
+			is_year = 195
+		}
+	}
+	mean_time_to_happen = {
+		days = 88
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "皇甫嵩｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 5
+				siege = 3
+				trait = rab_leader_huang_fu_song
+			}
+		}
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = huang_fu_song
+				name = "皇甫嵩｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.32
+	title = "Advisor_come.32.t"
+	desc = "Advisor_come.32.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = HND
+		is_year = 154
+		NOT = {
+			is_year = 191
+		}
+	}
+	mean_time_to_happen = {
+		days = 113
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "朱俊｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+			}
+		}
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhu_jun
+				name = "朱俊｢【武将】"
+				skill = 3
+				discount = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.33
+	title = "Advisor_come.33.t"
+	desc = "Advisor_come.33.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 720
+		is_year = 170
+		NOT = {
+			is_year = 190
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = u_fu_ro
+				name = "于夫罗｢【武将】"
+				skill = 2
+				location = 720
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "于夫罗｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_u_fu_ro
+			}
+		}
+	}
+	option = {
+		name = Advisor_come.b
+	}
+}
+
+country_event = {
+	id = Advisor_come.34
+	title = "Advisor_come.34.t"
+	desc = "Advisor_come.34.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2193
+		is_year = 20
+		NOT = {
+			is_year = 47
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = pu_nu
+				name = "蒲奴｢【武将】"
+				skill = 2
+				location = 2193
+				discount = yes
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "蒲奴｢【武将】"
+				fire = 2
+				shock = 2
+				manuever = 2
+				siege = 2
+				trait = rab_leader_pu_nu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.35
+	title = "Advisor_come.35.t"
+	desc = "Advisor_come.35.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 2193
+		is_year = 85
+		NOT = {
+			is_year = 93
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = fon_ho
+			name = "逢侯｢【武将】"
+			skill = 1
+			location = 2193
+			discount = yes
+		}
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = fon_ho
+			name = "逢侯｢【武将】"
+			skill = 1
+			location = 2193
+			discount = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.37
+	title = "Advisor_come.37.t"
+	desc = "Advisor_come.37.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = HND
+		is_year = 146
+		NOT = {
+			is_year = 170
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = chen_fan
+			name = "陈蕃｢【文官】"
+			skill = 3
+			discount = yes
+		}
+		set_country_flag = chen_fan_come
+	}
+	option = {
+		name = Advisor_come.b
+		define_advisor = {
+			type = chen_fan
+			name = "陈蕃｢【文官】"
+			skill = 3
+			discount = yes
+		}
+		set_country_flag = chen_fan_come
+	}
+}
+
+country_event = {
+	id = Advisor_come.38
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = XIB
+		is_year = 38
+		NOT = {
+			is_year = 46
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = pen_ho
+			name = "偏何｢【武将】"
+			discount = yes
+			skill = 1
+		}
+	}
+}
+
+#张宝-player
+country_event = {
+	id = Advisor_come.39
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 200
+		}
+		tag = WHG
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = zhang_bao
+			name = "张宝｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#张宝-AI
+country_event = {
+	id = Advisor_come.40
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 200
+		}
+		tag = WHG
+		ai = yes
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_general = {
+			name = "张宝｢【武将】"
+			fire = 4
+			shock = 4
+			manuever = 3
+			siege = 2
+			trait = rab_leader_zhang_bao
+		}
+	}
+}
+
+#张梁｢【武将】-player
+country_event = {
+	id = Advisor_come.41
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 200
+		}
+		tag = WHG
+		NOT = {
+			ai = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = zhang_lian
+			name = "张梁｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#张梁｢【武将】-AI
+country_event = {
+	id = Advisor_come.42
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 200
+		}
+		tag = WHG
+		ai = yes
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_general = {
+			name = "张梁｢【武将】"
+			fire = 3
+			shock = 3
+			manuever = 3
+			siege = 1
+			trait = rab_leader_zhang_lian
+		}
+	}
+}
+
+#张曼成｢【武将】
+country_event = {
+	id = Advisor_come.44
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 200
+		}
+		tag = WHG
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhang_man_cheng
+				name = "张曼成｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "张曼成｢【武将】"
+				fire = 2
+				shock = 4
+				manuever = 1
+				siege = 1
+				trait = rab_leader_zhang_man_cheng
+			}
+		}
+	}
+}
+
+#管亥｢【武将】
+country_event = {
+	id = Advisor_come.45
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 200
+		}
+		tag = WHG
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = guan_hai
+			name = "管亥｢【武将】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#夏侯渊｢【武将】
+country_event = {
+	id = Advisor_come.46
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 216
+		}
+		OR = {
+			tag = WEI
+			tag = TS2
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = xia_hou_yuan
+				name = "夏侯渊｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "夏侯渊｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_xia_hou_yuan
+			}
+		}
+	}
+}
+
+#夏侯惇｢【武将】
+country_event = {
+	id = Advisor_come.47
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 216
+		}
+		OR = {
+			tag = WEI
+			tag = TS2
+		}
+	}
+	mean_time_to_happen = {
+		days = 25
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = xia_hou_dun
+				name = "夏侯惇｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "夏侯惇｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xia_hou_dun
+			}
+		}
+	}
+}
+
+#关羽｢【武将】
+country_event = {
+	id = Advisor_come.48
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 197
+		NOT = {
+			is_year = 220
+		}
+		OR = {
+			tag = LUP
+			tag = SHU
+		}
+		NOT = {
+			has_country_flag = flg_event_touyuan3zje
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_guan_yu = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_guan_yu = yes
+		}
+	}
+}
+
+#张飞｢【武将】
+country_event = {
+	id = Advisor_come.49
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 197
+		NOT = {
+			is_year = 220
+		}
+		OR = {
+			tag = LUP
+			tag = SHU
+		}
+		NOT = {
+			has_country_flag = flg_event_touyuan3zje
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhang_fei = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhang_fei = yes
+		}
+	}
+}
+
+#高顺｢【武将】
+country_event = {
+	id = Advisor_come.50
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 181
+		NOT = {
+			is_year = 196
+		}
+		tag = LB1
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_gao_shun = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_gao_shun = yes
+		}
+	}
+}
+
+#马超｢【武将】
+country_event = {
+	id = Advisor_come.51
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 215
+		NOT = {
+			is_year = 222
+		}
+		NOT = {
+			exists = MTN
+		}
+		OR = {
+			tag = LUP
+			tag = SHU
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = ma_chao
+				name = "马超｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "马超｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 1
+				trait = rab_leader_machao
+			}
+		}
+	}
+}
+
+#孙乾｢【文官】
+country_event = {
+	id = Advisor_come.52
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 190
+		NOT = {
+			is_year = 210
+		}
+		OR = {
+			tag = LUP
+			tag = SHU
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = sun_qian
+			name = "孙乾｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#周瑜｢【武将】
+country_event = {
+	id = Advisor_come.53
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = SNJ
+			tag = SNC
+			tag = WUU
+		}
+		is_year = 197
+		NOT = {
+			is_year = 210
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhou_yu
+				name = "周瑜｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "周瑜｢【军师】"
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 4
+				trait = rab_leader_mazoulan
+			}
+		}
+	}
+}
+
+#程普｢【武将】
+country_event = {
+	id = Advisor_come.54
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 190
+		NOT = {
+			is_year = 220
+		}
+		OR = {
+			tag = SNJ
+			tag = SNC
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = cheng_pu
+				name = "程普｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "程普｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 4
+				trait = rab_leader_cheng_pu
+			}
+		}
+	}
+}
+
+#颜良｢【武将】
+country_event = {
+	id = Advisor_come.55
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 199
+		}
+		tag = UAN
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = yan_liang
+				name = "颜良｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "颜良｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 2
+				trait = rab_leader_yan_liang
+			}
+		}
+	}
+}
+
+#文丑｢【武将】
+country_event = {
+	id = Advisor_come.56
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = UAN
+		is_year = 180
+		NOT = {
+			is_year = 210
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = wen_chou
+				name = "文丑｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "文丑｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 1
+				siege = 1
+				trait = JI_leader_Wenchou
+			}
+		}
+	}
+}
+
+#荀或｢【军师】
+country_event = {
+	id = Advisor_come.57
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 183
+		NOT = {
+			is_year = 205
+		}
+		tag = TS2
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = xun_yu
+			name = "荀或｢【军师】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#吕布｢【武将】
+country_event = {
+	id = Advisor_come.58
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		exists = TGG
+		tag = TGG
+		is_year = 183
+		NOT = {
+			is_year = 199
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = lu_bu
+				name = "吕布｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "吕布｢【武将】"
+				fire = 6
+				shock = 7
+				manuever = 5
+				siege = 2
+				trait = fly_leader_lvbu
+			}
+		}
+	}
+}
+
+#贾诩｢【军师】
+country_event = {
+	id = Advisor_come.59
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 191
+		NOT = {
+			is_year = 210
+		}
+		owns = 700
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = jia_xu
+			name = "贾诩｢【军师】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#李儒｢【军师】
+country_event = {
+	id = Advisor_come.60
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 184
+		NOT = {
+			is_year = 192
+		}
+		tag = TGG
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = li_lu
+				name = "李儒｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "李儒｢【军师】"
+				fire = 1
+				shock = 0
+				manuever = 1
+				siege = 1
+			}
+		}
+	}
+}
+
+#程昱｢【军师】
+country_event = {
+	id = Advisor_come.61
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 184
+		NOT = {
+			is_year = 210
+		}
+		OR = {
+			AND = {
+				exists = TS2
+				NOT = {
+					exists = HND
+				}
+				tag = TS2
+			}
+			AND = {
+				exists = HND
+				NOT = {
+					exists = TS2
+				}
+				tag = HND
+			}
+			AND = {
+				NOT = {
+					exists = HND
+				}
+				NOT = {
+					exists = TS2
+				}
+				owns = 690
+			}
+			AND = {
+				exists = HND
+				exists = TS2
+				tag = TS2
+			}
+			tag = WEI
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = cheng_yu
+				name = "程昱｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "程昱｢【军师】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 1
+				trait = JI_leader_Chengyu
+			}
+		}
+	}
+}
+
+#张勋｢【武将】
+country_event = {
+	id = Advisor_come.62
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 184
+		NOT = {
+			is_year = 210
+		}
+		OR = {
+			AND = {
+				exists = UAZ
+				NOT = {
+					exists = HND
+				}
+				tag = UAZ
+			}
+			AND = {
+				exists = HND
+				NOT = {
+					exists = UAZ
+				}
+				tag = HND
+			}
+			AND = {
+				NOT = {
+					exists = HND
+				}
+				NOT = {
+					exists = UAZ
+				}
+				owns = 686
+			}
+			AND = {
+				exists = HND
+				exists = UAZ
+				tag = UAZ
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = zhang_xun
+				name = "张勋｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "张勋｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_zhang_xun
+			}
+		}
+	}
+}
+
+#貂蝉｢【军师】
+country_event = {
+	id = Advisor_come.63
+	title = "Advisor_come.38.t"
+	desc = "Advisor_come.38.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		exists = TGG
+		tag = TGG
+		is_year = 183
+		NOT = {
+			is_year = 199
+		}
+		NOT = {
+			has_global_flag = diao_chan_ai_exist
+		}
+	}
+	immediate = {
+		set_global_flag = diao_chan_ai_exist
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = diao_chan
+				name = "貂蝉｢【军师】"
+				female = yes
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				female = yes
+				name = "貂蝉｢【军师】"
+				fire = 3
+				shock = 3
+				manuever = 5
+				siege = 2
+				trait = rab_leader_diao_chan
+			}
+		}
+	}
+}
+
+#王允｢【文官】
+country_event = {
+	id = Advisor_come.64
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 176
+		NOT = {
+			is_year = 190
+		}
+		OR = {
+			AND = {
+				exists = HND
+				NOT = {
+					exists = TGG
+				}
+				tag = HND
+			}
+			AND = {
+				exists = TGG
+				NOT = {
+					exists = HND
+				}
+				tag = TGG
+			}
+			AND = {
+				NOT = {
+					exists = TGG
+				}
+				NOT = {
+					exists = HND
+				}
+				owns = 700
+			}
+			AND = {
+				exists = TGG
+				exists = HND
+				tag = HND
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 22
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = wang_uan
+			name = "王允｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#杨奉｢【武将】
+#country_event = {
+#	id = Advisor_come.65
+#	title = "Advisor_come.22.t"
+#	desc = "Advisor_come.22.d"
+#	picture = NEW_ADVISOR_eventPicture
+#		hidden = yes
+#		fire_only_once = yes
+#	
+#	trigger = {
+#	
+#		is_year = 191
+#		NOT = { is_year = 200 }
+#		OR = {
+#			AND = {
+#				exists = HND
+#				NOT = { exists = BBS }
+#				tag = HND
+#			}
+#			AND = {
+#				exists = BBS
+#				NOT = { exists = HND }
+#				tag = BBS
+#			}	
+#			AND = {
+#				NOT = { exists = BBS }
+#				NOT = { exists = HND }
+#				owns = 3170
+#			}
+#			AND = {
+#				exists = BBS
+#				exists = HND
+#				tag = BBS
+#			}
+#		}
+#		
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 22
+#	}
+#	option = {
+#		name = Advisor_come.a
+#		if = { 
+#		limit = { ai = no }
+#			define_advisor = {
+#				type = yang_feng
+#				name = "杨奉｢【武将】"
+#				discount = yes	
+#				skill = 3
+#			}
+#		}
+#		if = { 
+#		limit = { ai = yes }
+#			define_general = {
+#				female = yes
+#				name = "杨奉｢【武将】"
+#				fire = 3
+#				shock = 3
+#				manuever = 3
+#				siege = 1
+#				trait = rab_leader_yang_feng
+#			}
+#		}			
+#	}	
+#}
+#诸葛亮｢【军师】
+country_event = {
+	id = Advisor_come.66
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 206
+		NOT = {
+			is_year = 230
+		}
+		OR = {
+			tag = LUP
+			tag = SHU
+		}
+	}
+	mean_time_to_happen = {
+		days = 22
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhuge_liang = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhuge_liang = yes
+		}
+	}
+}
+
+#黄忠｢【武将】
+country_event = {
+	id = Advisor_come.67
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 190
+		NOT = {
+			is_year = 220
+		}
+		OR = {
+			AND = {
+				exists = LBB
+				NOT = {
+					exists = LUP
+				}
+				tag = LBB
+			}
+			AND = {
+				exists = LUP
+				NOT = {
+					exists = LBB
+				}
+				tag = LUP
+			}
+			AND = {
+				exists = LUP
+				exists = LBB
+				tag = LBB
+			}
+			tag = SHU
+		}
+	}
+	mean_time_to_happen = {
+		days = 22
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = hoang_chung
+				name = "黄忠｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "黄忠｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 5
+				siege = 2
+				trait = rab_leader_in_vintage_form
+			}
+		}
+	}
+}
+
+#张昭｢【文官】
+country_event = {
+	id = Advisor_come.68
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 226
+		}
+		OR = {
+			tag = SNC
+			tag = SNJ
+			tag = WUU
+		}
+	}
+	mean_time_to_happen = {
+		days = 22
+	}
+	option = {
+		name = Advisor_come.a
+		define_advisor = {
+			type = zhang_zhao
+			name = "张昭｢【文官】"
+			discount = yes
+			skill = 3
+		}
+	}
+}
+
+#zhao_yun
+#赵云｢【武将】
+country_event = {
+	id = Advisor_come.69
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 180
+		NOT = {
+			is_year = 226
+		}
+		OR = {
+			tag = LUP
+			tag = SHU
+		}
+	}
+	mean_time_to_happen = {
+		days = 22
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhao_yun = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhao_yun = yes
+		}
+	}
+}
+
+#zhang_liao
+#张辽｢【武将】
+country_event = {
+	id = Advisor_come.70
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 194
+		NOT = {
+			is_year = 222
+		}
+		OR = {
+			AND = {
+				exists = TS2
+				NOT = {
+					exists = WEI
+				}
+				NOT = {
+					exists = LB1
+				}
+				NOT = {
+					exists = TGG
+				}
+				tag = TS2
+			}
+			AND = {
+				exists = LB1
+				NOT = {
+					exists = WEI
+				}
+				NOT = {
+					exists = TS2
+				}
+				tag = LB1
+			}
+			AND = {
+				exists = LB1
+				exists = TS2
+				tag = LB1
+			}
+			AND = {
+				NOT = {
+					exists = LB1
+				}
+				NOT = {
+					exists = TS2
+				}
+				NOT = {
+					exists = TGG
+				}
+				exists = WEI
+				tag = WEI
+			}
+			AND = {
+				NOT = {
+					exists = LB1
+				}
+				NOT = {
+					exists = TS2
+				}
+				NOT = {
+					exists = WEI
+				}
+				NOT = {
+					exists = TGG
+				}
+				owns = 2140
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhang_liao = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhang_liao = yes
+		}
+	}
+}
+
+#许褚
+#xu_chu
+country_event = {
+	id = Advisor_come.71
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 190
+		NOT = {
+			is_year = 225
+		}
+		OR = {
+			AND = {
+				exists = TS2
+				tag = TS2
+			}
+			AND = {
+				exists = WEI
+				tag = WEI
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = xu_chu
+				name = "许褚｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "许褚｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 2
+				trait = rab_leader_xu_chu
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.72
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 198
+		NOT = {
+			is_year = 245
+		}
+		OR = {
+			AND = {
+				exists = TS2
+				tag = TS2
+			}
+			AND = {
+				exists = WEI
+				tag = WEI
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_sima_yi = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_sima_yi = yes
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.73
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 219
+		NOT = {
+			is_year = 245
+		}
+		OR = {
+			AND = {
+				exists = WUU
+				tag = WUU
+			}
+			AND = {
+				exists = SNC
+				tag = SNC
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = lu_xun
+				name = "陆逊｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "陆逊｢【军师】"
+				fire = 6
+				shock = 4
+				manuever = 6
+				siege = 4
+				trait = rab_leader_lu_xun
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_come.74
+	title = "Advisor_come.22.t"
+	desc = "Advisor_come.22.d"
+	picture = NEW_ADVISOR_eventPicture
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			AND = {
+				is_year = 190
+				NOT = {
+					is_year = 196
+				}
+				exists = LUO
+				tag = LUO
+			}
+			AND = {
+				is_year = 196
+				NOT = {
+					is_year = 215
+				}
+				OR = {
+					AND = {
+						exists = SNC
+						tag = SNC
+					}
+					AND = {
+						exists = SNJ
+						tag = SNJ
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = Advisor_come.a
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor = {
+				type = taishi_ci
+				name = "太史慈｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general = {
+				name = "太史慈｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_tashici
+			}
+		}
+	}
+}

@@ -1,0 +1,6538 @@
+########################
+#Advisor  entry  Events#
+#########################
+#2018.12.31 fit to 1.28
+namespace = Advisor_cap
+##ma_loan
+country_event = {
+	id = Advisor_cap.1
+	title = "Advisor_cap.1.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA1"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = ma_loan
+				name = "马融｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10001
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB1"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC1"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_ma_loan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.2
+	title = "Advisor_cap.2.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA2"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = cai_lun
+				name = "蔡伦｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10002
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB2"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC2"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_cai_lun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.3
+	title = "Advisor_cap.3.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA3"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = deng_rang
+				name = "邓让｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10003
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB3"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC3"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_deng_rang"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.4
+	title = "Advisor_cap.4.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA4"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = jiang_shi
+				name = "姜诗｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10004
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB4"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC4"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_jiang_shi"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.5
+	title = "Advisor_cap.5.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA5"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = jiang_ge
+				name = "江革｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10005
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB5"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC5"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_jiang_ge"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.6
+	title = "Advisor_cap.6.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA6"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = liu_xin
+				name = "刘信｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10006
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB6"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC6"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_liu_xin"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.7
+	title = "Advisor_cap.7.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA7"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = chou_lan
+				name = "仇览｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10007
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB7"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC7"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_chou_lan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.8
+	title = "Advisor_cap.8.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA8"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			define_advisor = {
+				type = hu_guang
+				name = "胡广｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10008
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB8"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC8"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_hu_guang"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.9
+	title = "Advisor_cap.9.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA9"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = ra_ch7
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = ra_ch7
+				}
+			}
+			define_advisor = {
+				type = zhang_rang
+				name = "张让｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = ra_ch7
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10009
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB9"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC9"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_rang"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.10
+	title = "Advisor_cap.10.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA10"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = ra_ch7
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = ra_ch7
+				}
+			}
+			define_advisor = {
+				type = zhen_chong
+				name = "郑众｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = ra_ch7
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10010
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB10"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC10"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhen_chong"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.11
+	title = "Advisor_cap.11.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA11"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = huang_fu_gui
+					name = "皇甫规｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "皇甫规｢【武将】"
+					fire = 2
+					shock = 3
+					manuever = 2
+					siege = 1
+					trait = JI_leader_Huangfugui
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10011
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB11"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC11"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_huang_fu_gui"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.12
+	title = "Advisor_cap.12.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA12"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = rb_ch7
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = rb_ch7
+				}
+			}
+			define_advisor = {
+				type = cao_teng
+				name = "曹腾｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = rb_ch7
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10012
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB12"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC12"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_cao_teng"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+####country_event = {
+####	id = Advisor_cap.13
+####	title = "Advisor_cap.13.t"
+####	desc = "Advisor_cap.13.d"
+####	picture = CAPTURE_GENERAL_eventPicture
+####	
+####	is_triggered_only = yes
+####	
+####	trigger = {
+####		tag = HND
+####		is_year = 146
+####		NOT = { is_year = 170 }
+####	}
+####	
+####	mean_time_to_happen = {
+####		days = 77
+####	}
+####	option = {
+####		name = Advisor_cap.OPTA1
+####			if = { limit = { has_faction = relationship_party }
+####			add_faction_influence = { faction = relationship_party  influence = 2 }
+####			}		
+####		define_advisor = {
+####				type = dou_wu
+####				name = "窦武｢【外戚】"
+####				skill = 3
+####				discount = yes
+####				
+####		}
+####	set_country_flag = dou_wu_come
+####	}
+####	option = {
+####		name = Advisor_cap.b
+####		
+####			define_advisor = {
+####				type = dou_wu
+####				name = "窦武｢【外戚】"
+####				skill = 3
+####				discount = yes
+####		}
+####	set_country_flag = dou_wu_come	
+####	}
+####	
+####}
+country_event = {
+	id = Advisor_cap.14
+	title = "Advisor_cap.14.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA14"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = dou_xian
+					name = "窦宪｢【外戚】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "窦宪｢【外戚】"
+					fire = 5
+					shock = 5
+					manuever = 3
+					siege = 2
+					trait = rab_leader_dou_xian
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10014
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB14"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC14"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_dou_xian"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+##talking about the doz not be took care
+country_event = {
+	id = Advisor_cap.16
+	title = "Advisor_cap.16.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA16"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch8
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch8
+				}
+			}
+			define_advisor = {
+				type = dan_chao
+				name = "单超｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch8
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10016
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB16"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC16"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_dan_chao"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.17
+	title = "Advisor_cap.17.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA17"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch4
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7
+				}
+			}
+			define_advisor = {
+				type = cai_yong
+				name = "蔡邕｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10017
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB17"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC17"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_cai_yong"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.18
+	title = "Advisor_cap.18.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA18"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = geng_bing
+					name = "耿秉｢【武将】"
+					skill = 3
+					discount = yes
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "耿秉｢【武将】"
+					fire = 2
+					shock = 3
+					manuever = 3
+					siege = 2
+					trait = rab_leader_geng_bing
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10018
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB18"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC18"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_geng_bing"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.19
+	title = "Advisor_cap.19.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA19"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch7
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+				}
+			}
+			define_advisor = {
+				type = he_chang
+				name = "何敞｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10019
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB19"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC19"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_he_chang"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.20
+	title = "Advisor_cap.20.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA20"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			define_advisor = {
+				type = jia_fu
+				name = "贾复｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10020
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB20"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC20"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_jia_fu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.21
+	title = "Advisor_cap.21.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA21"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch4
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			define_advisor = {
+				type = ban_chao
+				name = "班超｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10021
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB21"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC21"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_ban_chao"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+##jim
+country_event = {
+	id = Advisor_cap.22
+	title = "Advisor_cap.22.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA22"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = rb_ch8
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch4
+					has_ruler_modifier = rb_ch7
+					has_ruler_modifier = rb_ch8
+				}
+			}
+			define_advisor = {
+				type = ban_zho
+				name = "班昭｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch7
+						has_ruler_modifier = rb_ch8
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10022
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB22"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC22"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_ban_zho"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.23
+	title = "Advisor_cap.23.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA23"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = yu_xu
+					name = "虞诩｢【武将】"
+					skill = 3
+					discount = yes
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "虞诩｢【武将】"
+					fire = 2
+					shock = 3
+					manuever = 3
+					siege = 2
+					trait = rab_leader_yu_xu
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10023
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB23"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC23"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_yu_xu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.24
+	title = "Advisor_cap.24.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA24"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch7
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch7
+				}
+			}
+			define_advisor = {
+				type = zhang_heng
+				name = "张衡｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch7
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10024
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB24"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC24"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_heng"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.25
+	title = "Advisor_cap.25.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA25"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch4
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch4
+				}
+			}
+			define_advisor = {
+				type = liu_yan
+				name = "刘焉｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch4
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10025
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB25"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC25"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_liu_yan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.26
+	title = "Advisor_cap.26.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA26"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch6
+				}
+			}
+			define_advisor = {
+				type = deng_zhi
+				name = "邓骘｢【外戚】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10026
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB26"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC26"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_deng_zhi"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.27
+	title = "Advisor_cap.27.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA27"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch6
+				}
+			}
+			define_advisor = {
+				type = deng_xun
+				name = "邓训｢【外戚】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10027
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB27"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC27"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_deng_xun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.28
+	title = "Advisor_cap.28.t"
+	desc = "Advisor_cap.1.d"
+	picture = NEW_ADVISOR_deng_sui_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA28"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch6
+				}
+			}
+			define_advisor = {
+				type = deng_sui
+				name = "邓绥｢【外戚】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10028
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB28"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC28"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_deng_sui"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.29
+	title = "Advisor_cap.29.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA29"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+				}
+			}
+			define_advisor = {
+				type = wang_fu
+				name = "王甫｢【宦官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10029
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB29"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC29"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_wang_fu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.31
+	title = "Advisor_cap.31.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA31"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch4
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch4
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "皇甫嵩｢【武将】"
+					fire = 5
+					shock = 5
+					manuever = 5
+					siege = 3
+					trait = rab_leader_huang_fu_song
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = huang_fu_song
+					name = "皇甫嵩｢【武将】"
+					skill = 3
+					discount = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch4
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10031
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB31"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC31"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_huang_fu_song"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.32
+	title = "Advisor_cap.32.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA32"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "朱俊｢【武将】"
+					fire = 2
+					shock = 3
+					manuever = 3
+					siege = 1
+					trait = rab_leader_zhu_jun
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = zhu_jun
+					name = "朱俊｢【武将】"
+					skill = 3
+					discount = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10032
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB32"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC32"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhu_jun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.33
+	title = "Advisor_cap.33.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA33"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = u_fu_ro
+					name = "于夫罗｢【武将】"
+					skill = 2
+					location = 720
+					discount = yes
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "于夫罗｢【武将】"
+					fire = 2
+					shock = 3
+					manuever = 3
+					siege = 1
+					trait = rab_leader_u_fu_ro
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10033
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB33"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC33"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_u_fu_ro"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.34
+	title = "Advisor_cap.34.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA34"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = pu_nu
+					name = "蒲奴｢【武将】"
+					skill = 2
+					location = 2193
+					discount = yes
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "蒲奴｢【武将】"
+					fire = 2
+					shock = 2
+					manuever = 2
+					siege = 2
+					trait = rab_leader_pu_nu
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10034
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB34"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC34"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_pu_nu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.35
+	title = "Advisor_cap.35.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA35"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			define_advisor = {
+				type = fon_ho
+				name = "逢侯｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10035
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB35"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC35"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_fon_ho"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.37
+	title = "Advisor_cap.37.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA37"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch1
+				}
+			}
+			define_advisor = {
+				type = chen_fan
+				name = "陈蕃｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10037
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB37"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC37"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_chen_fan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Advisor_cap.38
+	title = "Advisor_cap.38.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA38"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			define_advisor = {
+				type = pen_ho
+				name = "偏何｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10038
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB38"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC38"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_pen_ho"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#张宝-player
+country_event = {
+	id = Advisor_cap.39
+	title = "Advisor_cap.39.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA39"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch5
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch5
+				}
+			}
+			define_advisor = {
+				type = zhang_bao
+				name = "张宝｢【武将】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch5
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10039
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB39"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC39"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_bao"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#张梁｢【武将】-player
+country_event = {
+	id = Advisor_cap.41
+	title = "Advisor_cap.41.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA41"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch5
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch5
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = zhang_lian
+					name = "张梁｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "张梁｢【武将】"
+					fire = 2
+					shock = 4
+					manuever = 1
+					siege = 1
+					trait = rab_leader_zhang_lian
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch5
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10041
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB41"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC41"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_lian"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#张曼成｢【武将】
+country_event = {
+	id = Advisor_cap.44
+	title = "Advisor_cap.44.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA44"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = rb_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = zhang_man_cheng
+					name = "张曼成｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "张曼成｢【武将】"
+					fire = 2
+					shock = 4
+					manuever = 1
+					siege = 1
+					trait = rab_leader_zhang_man_cheng
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = rb_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10044
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB44"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC44"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_man_cheng"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#管亥｢【武将】
+country_event = {
+	id = Advisor_cap.45
+	title = "Advisor_cap.45.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA45"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch5
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch5
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = guan_hai
+					name = "管亥｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "管亥｢【武将】"
+					fire = 2
+					shock = 3
+					manuever = 1
+					siege = 1
+					trait = JI_leader_Guanhai
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch5
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10045
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB45"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC45"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_guan_hai"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#夏侯渊｢【武将】
+country_event = {
+	id = Advisor_cap.46
+	title = "Advisor_cap.46.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA46"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+						tag = WEI
+						tag = TS2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+					tag = WEI
+					tag = TS2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = xia_hou_yuan
+					name = "夏侯渊｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "夏侯渊｢【武将】"
+					fire = 4
+					shock = 5
+					manuever = 3
+					siege = 1
+					trait = rab_leader_xia_hou_yuan
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+						tag = WEI
+						tag = TS2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10046
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB46"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC46"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_xia_hou_yuan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#夏侯惇｢【武将】
+country_event = {
+	id = Advisor_cap.47
+	title = "Advisor_cap.47.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA47"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+						tag = WEI
+						tag = TS2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+					tag = WEI
+					tag = TS2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = xia_hou_dun
+					name = "夏侯惇｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "夏侯惇｢【武将】"
+					fire = 4
+					shock = 3
+					manuever = 3
+					siege = 2
+					trait = rab_leader_xia_hou_dun
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+						tag = WEI
+						tag = TS2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10047
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB47"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC47"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_xia_hou_dun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#关羽｢【武将】
+country_event = {
+	id = Advisor_cap.48
+	title = "Advisor_cap.48.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA48"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						tag = LUP
+						tag = HND
+						tag = SHU
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					tag = LUP
+					tag = HND
+					tag = SHU
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_guan_yu = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_guan_yu = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						tag = LUP
+						tag = HND
+						tag = SHU
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10048
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB48"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC48"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_guan_yu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#张飞｢【武将】
+country_event = {
+	id = Advisor_cap.49
+	title = "Advisor_cap.49.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA49"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						tag = LUP
+						tag = HND
+						tag = SHU
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					tag = LUP
+					tag = HND
+					tag = SHU
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_zhang_fei = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_zhang_fei = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						tag = LUP
+						tag = HND
+						tag = SHU
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10049
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB49"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC49"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_fei"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#高顺｢【武将】
+country_event = {
+	id = Advisor_cap.50
+	title = "Advisor_cap.50.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA50"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_gao_shun = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_gao_shun = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10050
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB50"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC50"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_gao_shun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#马超｢【武将】
+country_event = {
+	id = Advisor_cap.51
+	title = "Advisor_cap.51.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA51"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = ma_chao
+					name = "马超｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "马超｢【武将】"
+					fire = 4
+					shock = 6
+					manuever = 5
+					siege = 1
+					trait = rab_leader_machao
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10051
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB51"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC51"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_ma_chao"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#孙乾｢【文官】
+country_event = {
+	id = Advisor_cap.52
+	title = "Advisor_cap.52.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA52"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch6
+				}
+			}
+			define_advisor = {
+				type = sun_qian
+				name = "孙乾｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10052
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB52"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC52"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_sun_qian"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#周瑜｢【武将】
+country_event = {
+	id = Advisor_cap.53
+	title = "Advisor_cap.53.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA53"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch4
+					tag = WUU
+					tag = SNJ
+					tag = SNC
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = zhou_yu
+					name = "周瑜｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "周瑜｢【军师】"
+					fire = 6
+					shock = 5
+					manuever = 4
+					siege = 4
+					trait = rab_leader_mazoulan
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10053
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB53"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC53"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhou_yu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#程普｢【武将】
+country_event = {
+	id = Advisor_cap.54
+	title = "Advisor_cap.54.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA54"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch7
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch7
+					tag = WUU
+					tag = SNJ
+					tag = SNC
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = cheng_pu
+					name = "程普｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "程普｢【武将】"
+					fire = 4
+					shock = 4
+					manuever = 4
+					siege = 4
+					trait = rab_leader_cheng_pu
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch7
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10054
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB54"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC54"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_cheng_pu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#颜良｢【武将】
+country_event = {
+	id = Advisor_cap.55
+	title = "Advisor_cap.55.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA55"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = yan_liang
+					name = "颜良｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "颜良｢【武将】"
+					fire = 4
+					shock = 5
+					manuever = 1
+					siege = 2
+					trait = rab_leader_yan_liang
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10055
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB55"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC55"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_yan_liang"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#文丑｢【武将】
+country_event = {
+	id = Advisor_cap.56
+	title = "Advisor_cap.56.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA56"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						tag = UAN
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+					tag = UAN
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = wen_chou
+					name = "文丑｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "文丑｢【武将】"
+					fire = 4
+					shock = 3
+					manuever = 3
+					siege = 2
+					trait = JI_leader_Wenchou
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						tag = UAN
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10056
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB56"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC56"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_wen_chou"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#荀或｢【军师】
+country_event = {
+	id = Advisor_cap.57
+	title = "Advisor_cap.57.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA57"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						tag = TS2
+						tag = HND
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch4
+					tag = TS2
+					tag = HND
+				}
+			}
+			define_advisor = {
+				type = xun_yu
+				name = "荀或｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						tag = TS2
+						tag = HND
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10057
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB57"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC57"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_xun_yu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#吕布｢【武将】
+country_event = {
+	id = Advisor_cap.58
+	title = "Advisor_cap.58.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA58"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = lu_bu
+					name = "吕布｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "吕布｢【武将】"
+					fire = 6
+					shock = 7
+					manuever = 5
+					siege = 2
+					trait = fly_leader_lvbu
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10058
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB58"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC58"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_lu_bu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#贾诩｢【军师】
+country_event = {
+	id = Advisor_cap.59
+	title = "Advisor_cap.59.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA59"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch1
+				}
+			}
+			define_advisor = {
+				type = jia_xu
+				name = "贾诩｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch1
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10059
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB59"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC59"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_jia_xu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#李儒｢【军师】
+country_event = {
+	id = Advisor_cap.60
+	title = "Advisor_cap.60.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA60"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+						tag = TGG
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch3
+					tag = TGG
+				}
+			}
+			define_advisor = {
+				type = li_lu
+				name = "李儒｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch3
+						tag = TGG
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10060
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB60"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC60"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_li_lu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#程昱｢【军师】
+country_event = {
+	id = Advisor_cap.61
+	title = "Advisor_cap.61.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA61"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+						tag = TS2
+						tag = WEI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch3
+					tag = TS2
+					tag = WEI
+				}
+			}
+			define_advisor = {
+				type = cheng_yu
+				name = "程昱｢【军师】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch3
+						tag = TS2
+						tag = WEI
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10061
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB61"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC61"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_cheng_yu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#张勋｢【武将】
+country_event = {
+	id = Advisor_cap.62
+	title = "Advisor_cap.62.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA62"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						tag = UAZ
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+					tag = UAZ
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = zhang_xun
+					name = "张勋｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "张勋｢【武将】"
+					fire = 3
+					shock = 3
+					manuever = 2
+					siege = 1
+					trait = rab_leader_zhang_xun
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						tag = UAZ
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10062
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB62"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC62"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_xun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#貂蝉｢【军师】
+country_event = {
+	id = Advisor_cap.63
+	title = "Advisor_cap.63.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_F_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA63"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch5
+						tag = LB1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch4
+					has_ruler_modifier = rb_ch5
+					tag = LB1
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					female = yes
+					type = diao_chan
+					name = "貂蝉｢【军师】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					female = yes
+					name = "貂蝉｢【军师】"
+					fire = 3
+					shock = 3
+					manuever = 5
+					siege = 2
+					trait = rab_leader_diao_chan
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch5
+						tag = LB1
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10063
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB63"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC63"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_diao_chan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#王允｢【文官】
+country_event = {
+	id = Advisor_cap.64
+	title = "Advisor_cap.64.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA64"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch7
+						tag = HND
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch4
+					has_ruler_modifier = rb_ch7
+					tag = HND
+				}
+			}
+			define_advisor = {
+				type = wang_uan
+				name = "王允｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch7
+						tag = HND
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10064
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB64"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC64"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_wang_uan"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#杨奉｢【武将】
+country_event = {
+	id = Advisor_cap.65
+	title = "Advisor_cap.65.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA65"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch8
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch8
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = yang_feng
+					name = "杨奉｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "杨奉｢【武将】"
+					fire = 3
+					shock = 3
+					manuever = 3
+					siege = 1
+					trait = rab_leader_yang_feng
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch8
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10065
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB65"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC65"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_yang_feng"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#诸葛亮｢【军师】
+country_event = {
+	id = Advisor_cap.66
+	title = "Advisor_cap.66.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA66"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch7
+						tag = HND
+						tag = SHU
+						tag = LUP
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch4
+					has_ruler_modifier = rb_ch7
+					tag = HND
+					tag = SHU
+					tag = LUP
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_zhuge_liang = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_zhuge_liang = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						has_ruler_modifier = rb_ch7
+						tag = HND
+						tag = SHU
+						tag = LUP
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10066
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB66"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC66"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhuge_liang"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#黄忠｢【武将】
+country_event = {
+	id = Advisor_cap.67
+	title = "Advisor_cap.67.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA67"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						tag = LBB
+						tag = LUP
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch2
+					tag = LBB
+					tag = LUP
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = hoang_chung
+					name = "黄忠｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "黄忠｢【武将】"
+					fire = 5
+					shock = 4
+					manuever = 5
+					siege = 2
+					trait = rab_leader_in_vintage_form
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch2
+						tag = LBB
+						tag = LUP
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10067
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB67"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC67"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_hoang_chung"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#张昭｢【文官】
+country_event = {
+	id = Advisor_cap.68
+	title = "Advisor_cap.68.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA68"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch1
+					tag = WUU
+					tag = SNJ
+					tag = SNC
+				}
+			}
+			define_advisor = {
+				type = zhang_zhao
+				name = "张昭｢【文官】"
+				discount = yes
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10068
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB68"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC68"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_zhao"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#zhao_yun
+#赵云｢【武将】
+country_event = {
+	id = Advisor_cap.69
+	title = "Advisor_cap.69.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA69"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						tag = LUP
+						tag = SHU
+						tag = HND
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch4
+					tag = LUP
+					tag = SHU
+					tag = HND
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_zhao_yun = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_zhao_yun = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						tag = LUP
+						tag = SHU
+						tag = HND
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10069
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB69"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC69"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhao_yun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#zhang_liao
+#张辽｢【武将】
+country_event = {
+	id = Advisor_cap.70
+	title = "Advisor_cap.70.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA70"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						tag = TS2
+						tag = LB1
+						tag = WEI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = ra_ch9
+					has_ruler_modifier = rb_ch1
+					has_ruler_modifier = rb_ch4
+					tag = TS2
+					tag = LB1
+					tag = WEI
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_zhang_liao = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_zhang_liao = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = ra_ch9
+						has_ruler_modifier = rb_ch1
+						has_ruler_modifier = rb_ch4
+						tag = TS2
+						tag = LB1
+						tag = WEI
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10070
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB70"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC70"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_zhang_liao"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#xu_chu
+#许褚｢【武将】
+country_event = {
+	id = Advisor_cap.71
+	title = "Advisor_cap.71.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA71"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch7
+						tag = TS2
+						tag = WEI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch7
+					tag = TS2
+					tag = WEI
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = xu_chu
+					name = "许褚｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "许褚｢【武将】"
+					fire = 4
+					shock = 5
+					manuever = 2
+					siege = 2
+					trait = rab_leader_xu_chu
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch7
+						tag = TS2
+						tag = WEI
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10071
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB71"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC71"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_xu_chu"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#sima_yi
+#司马懿｢【军师】
+country_event = {
+	id = Advisor_cap.72
+	title = "Advisor_cap.72.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA72"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						tag = TS2
+						tag = WEI
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch3
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch6
+					tag = TS2
+					tag = WEI
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor_sima_yi = yes
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general_sima_yi = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch3
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch6
+						tag = TS2
+						tag = WEI
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10072
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB72"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC72"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_sima_yi"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#lu_xun
+#陆逊｢【军师】
+country_event = {
+	id = Advisor_cap.73
+	title = "Advisor_cap.73.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA73"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch2
+					has_ruler_modifier = rb_ch3
+					has_ruler_modifier = rb_ch4
+					tag = WUU
+					tag = SNJ
+					tag = SNC
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = lu_xun
+					name = "陆逊｢【军师】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "陆逊｢【军师】"
+					fire = 6
+					shock = 4
+					manuever = 6
+					siege = 4
+					trait = rab_leader_lu_xun
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch2
+						has_ruler_modifier = rb_ch3
+						has_ruler_modifier = rb_ch4
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10073
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB73"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC73"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_lu_xun"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#taishi_ci
+#太史慈｢【武将】
+country_event = {
+	id = Advisor_cap.74
+	title = "Advisor_cap.74.t"
+	desc = "Advisor_cap.1.d"
+	picture = CAPTURE_GENERAL_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "Advisor_cap.OPTA74"
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch4
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ruler_modifier = ra_ch1
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch6
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch4
+					tag = WUU
+					tag = SNJ
+					tag = SNC
+				}
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				define_advisor = {
+					type = taishi_ci
+					name = "太史慈｢【武将】"
+					discount = yes
+					skill = 3
+				}
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				define_general = {
+					name = "太史慈｢【武将】"
+					fire = 4
+					shock = 5
+					manuever = 4
+					siege = 3
+					trait = rab_leader_tashici
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_ruler_modifier = ra_ch1
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch6
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch4
+						tag = WUU
+						tag = SNJ
+						tag = SNC
+					}
+				}
+			}
+			country_event = {
+				id = Advisor_cap.10074
+			}
+		}
+	}
+	option = {
+		name = "Advisor_cap.OPTB74"
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -2
+		add_treasury = 100
+	}
+	option = {
+		name = "Advisor_cap.OPTC74"
+		ai_chance = {
+			factor = 20
+		}
+		add_prestige = 2
+		hidden_effect = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_taishi_ci"
+					duration = -1
+				}
+			}
+		}
+	}
+}

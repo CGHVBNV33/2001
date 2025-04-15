@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = Yueder_advisor_come
+
+#武将某种条件下出现
+#id = 1 : Yueder : 约德尔｢【将军】
+
+country_event = {
+	id = Yueder_advisor_come.1
+	title = "Yueder_advisor_come.1.t"
+	desc = "Yueder_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1936	
+		NOT = { is_year = 1945 }
+		OR = {
+			AND = {
+				exists = NZ1
+				tag = NZ1
+			}
+			AND = {
+				NOT = { exists = NZ1 }
+				owns = 50
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = Yueder_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = Yueder
+				name = "约德尔｢【将军】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "约德尔｢【将军】"
+				fire = 3
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_Yueder
+			}
+		}
+	}
+}
+
