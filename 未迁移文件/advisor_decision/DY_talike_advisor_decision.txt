@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_talike = {
+		major = yes
+		potential = {
+			
+			advisor = talike
+			
+		}
+		allow = {
+			advisor = talike
+		}
+		effect = {
+			remove_advisor = talike
+			define_general = {
+				name = "塔里克·伊本·齐亚德｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_taliker
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

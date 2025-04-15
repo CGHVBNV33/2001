@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_weiyunqi = {
+		major = yes
+		potential = {
+			
+			advisor = weiyunqi
+			
+		}
+		allow = {
+			advisor = weiyunqi
+		}
+		effect = {
+			remove_advisor = weiyunqi
+			define_general = {
+				name = "韦云起｢【武将】"
+				fire = 2
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_weiyunqi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

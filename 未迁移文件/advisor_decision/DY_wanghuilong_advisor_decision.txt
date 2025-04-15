@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanghuilong = {
+		major = yes
+		potential = {
+			
+			advisor = wanghuilong
+			
+		}
+		allow = {
+			advisor = wanghuilong
+		}
+		effect = {
+			remove_advisor = wanghuilong
+			define_general = {
+				name = "王慧龙｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 2
+				siege = 2
+				trait = rab_leader_wanghuilong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

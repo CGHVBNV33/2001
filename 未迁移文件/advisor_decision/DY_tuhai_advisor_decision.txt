@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_tuhai = {
+		major = yes
+		potential = {
+			
+			advisor = tuhai
+			
+		}
+		allow = {
+			advisor = tuhai
+		}
+		effect = {
+			remove_advisor = tuhai
+			define_general = {
+				name = "图海【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 1
+				trait = rab_leader_tuhai
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

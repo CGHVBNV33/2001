@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_liuzan = {
+		major = yes
+		potential = {
+			
+			advisor = liuzan
+			
+		}
+		allow = {
+			advisor = liuzan
+		}
+		effect = {
+			remove_advisor = liuzan
+			define_general = {
+				name = "留赞｢【武将】"
+				fire = 2
+				shock = 6
+				manuever = 3
+				siege = 1
+				trait = rab_leader_liuzan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

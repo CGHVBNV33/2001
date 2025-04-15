@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_sunchuanting = {
+		major = yes
+		potential = {
+			
+			advisor = sunchuanting
+			
+		}
+		allow = {
+			advisor = sunchuanting
+		}
+		effect = {
+			remove_advisor = sunchuanting
+			define_general = {
+				name = "孙传庭【督师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_sunchuanting
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

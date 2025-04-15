@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhanghuangyan = {
+		major = yes
+		potential = {
+			
+			advisor = zhanghuangyan
+			
+		}
+		allow = {
+			advisor = zhanghuangyan
+		}
+		effect = {
+			remove_advisor = zhanghuangyan
+			define_general = {
+				name = "张煌言【武将】"
+				fire = 4
+				shock = 2
+				manuever = 3
+				siege = 4
+				trait = rab_leader_zhanghuangyan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

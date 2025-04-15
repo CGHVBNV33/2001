@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_pengle = {
+		major = yes
+		potential = {
+			
+			advisor = pengle
+			
+		}
+		allow = {
+			advisor = pengle
+		}
+		effect = {
+			remove_advisor = pengle
+			define_general = {
+				name = "彭乐｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_pengle
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

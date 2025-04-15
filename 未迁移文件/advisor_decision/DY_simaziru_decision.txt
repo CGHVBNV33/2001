@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_simaziru = {
+		major = yes
+		potential = {
+			
+			advisor = simaziru
+			
+		}
+		allow = {
+			advisor = simaziru
+		}
+		effect = {
+			remove_advisor = simaziru
+			define_general = {
+				name = "司马子如｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_simaziru
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

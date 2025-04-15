@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_longju = {
+		major = yes
+		potential = {
+			
+			advisor = longju
+			
+		}
+		allow = {
+			advisor = longju
+		}
+		effect = {
+			remove_advisor = longju
+			define_general = {
+				name = "龙且｢【武将】"
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_longju
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

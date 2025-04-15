@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shihu = {
+		major = yes
+		potential = {
+			
+			advisor = shihu
+			
+		}
+		allow = {
+			advisor = shihu
+		}
+		effect = {
+			remove_advisor = shihu
+			define_general = {
+				name = "石虎｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shihu
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

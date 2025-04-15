@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xingluan = {
+		major = yes
+		potential = {
+			
+			advisor = xingluan
+			
+		}
+		allow = {
+			advisor = xingluan
+		}
+		effect = {
+			remove_advisor = xingluan
+			define_general = {
+				name = "邢峦｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 4
+				siege = 3
+				trait = rab_leader_xingluan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

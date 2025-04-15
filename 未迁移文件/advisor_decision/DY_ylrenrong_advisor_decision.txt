@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ylrenrong = {
+		major = yes
+		potential = {
+			
+			advisor = ylrenrong
+			
+		}
+		allow = {
+			advisor = ylrenrong
+		}
+		effect = {
+			remove_advisor = ylrenrong
+			define_general = {
+				name = "野利仁荣｢"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ylrenrong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

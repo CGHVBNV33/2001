@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yangdayan = {
+		major = yes
+		potential = {
+			
+			advisor = yangdayan
+			
+		}
+		allow = {
+			advisor = yangdayan
+		}
+		effect = {
+			remove_advisor = yangdayan
+			define_general = {
+				name = "杨大眼｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = rab_leader_yangdayan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

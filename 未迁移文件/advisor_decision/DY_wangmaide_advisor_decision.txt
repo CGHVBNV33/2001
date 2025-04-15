@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangmaide = {
+		major = yes
+		potential = {
+			
+			advisor = wangmaide
+			
+		}
+		allow = {
+			advisor = wangmaide
+		}
+		effect = {
+			remove_advisor = wangmaide
+			define_general = {
+				name = "王买德｢【军师】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangmaide
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

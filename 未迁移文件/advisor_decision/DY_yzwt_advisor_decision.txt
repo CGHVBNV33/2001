@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuzhongwen = {
+		major = yes
+		potential = {
+			
+			advisor = yuzhongwen
+			
+		}
+		allow = {
+			advisor = yuzhongwen
+		}
+		effect = {
+			remove_advisor = yuzhongwen
+			define_general = {
+				name = "于仲文｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_yuzhongwen
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

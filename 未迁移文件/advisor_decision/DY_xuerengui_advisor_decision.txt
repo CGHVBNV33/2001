@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xuerengui = {
+		major = yes
+		potential = {
+			
+			advisor = xuerengui
+			
+		}
+		allow = {
+			advisor = xuerengui
+		}
+		effect = {
+			remove_advisor = xuerengui
+			define_general = {
+				name = "薛仁贵｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 4
+				siege = 5
+				trait = rab_leader_xuerengui
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

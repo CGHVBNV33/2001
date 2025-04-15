@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhonglimo = {
+		major = yes
+		potential = {
+			
+			advisor = zhonglimo
+			
+		}
+		allow = {
+			advisor = zhonglimo
+		}
+		effect = {
+			remove_advisor = zhonglimo
+			define_general = {
+				name = "钟离眜｢【武将】"
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_zhonglimo
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

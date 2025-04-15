@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shitianxiang = {
+		major = yes
+		potential = {
+			
+			advisor = shitianxiang
+			
+		}
+		allow = {
+			advisor = shitianxiang
+		}
+		effect = {
+			remove_advisor = shitianxiang
+			define_general = {
+				name = "史天祥【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_shitianxiang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

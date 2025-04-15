@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhanghonglue = {
+		major = yes
+		potential = {
+			
+			advisor = zhanghonglue
+			
+		}
+		allow = {
+			advisor = zhanghonglue
+		}
+		effect = {
+			remove_advisor = zhanghonglue
+			define_general = {
+				name = "张弘略【武将】"
+				fire = 4
+				shock = 3
+				manuever = 4
+				siege = 3
+				trait = rab_leader_zhanghonglue
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

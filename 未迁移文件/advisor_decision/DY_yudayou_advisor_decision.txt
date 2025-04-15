@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yudayou = {
+		major = yes
+		potential = {
+			
+			advisor = yudayou
+			
+		}
+		allow = {
+			advisor = yudayou
+		}
+		effect = {
+			remove_advisor = yudayou
+			define_general = {
+				name = "俞大猷【武将】"
+				fire = 3
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yudayou
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

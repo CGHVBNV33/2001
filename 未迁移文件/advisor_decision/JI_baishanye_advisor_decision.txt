@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_baishanye = {
+		major = yes
+		potential = {
+			
+			advisor = baishanye
+			
+		}
+		allow = {
+			advisor = baishanye
+		}
+		effect = {
+			remove_advisor = baishanye
+			define_general = {
+				name = "白善烨｢【将军】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_baishanye
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

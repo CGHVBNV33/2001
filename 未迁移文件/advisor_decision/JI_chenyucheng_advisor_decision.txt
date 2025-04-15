@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_chenyucheng = {
+		major = yes
+		potential = {
+			
+			advisor = chenyucheng
+			
+		}
+		allow = {
+			advisor = chenyucheng
+		}
+		effect = {
+			remove_advisor = chenyucheng
+			define_general = {
+				name = "陈玉成｢【武将】"
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_chenyucheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

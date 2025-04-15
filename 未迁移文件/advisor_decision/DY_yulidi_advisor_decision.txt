@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yulidi = {
+		major = yes
+		potential = {
+			
+			advisor = yulidi
+			
+		}
+		allow = {
+			advisor = yulidi
+		}
+		effect = {
+			remove_advisor = yulidi
+			define_general = {
+				name = "于栗磾｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yulidi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

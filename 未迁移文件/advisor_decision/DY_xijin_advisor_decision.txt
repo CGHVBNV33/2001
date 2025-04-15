@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xijin = {
+		major = yes
+		potential = {
+			
+			advisor = xijin
+			
+		}
+		allow = {
+			advisor = xijin
+		}
+		effect = {
+			remove_advisor = xijin
+			define_general = {
+				name = "奚斤｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 2
+				trait = rab_leader_xijin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

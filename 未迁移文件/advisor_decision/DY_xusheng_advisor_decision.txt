@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xusheng = {
+		major = yes
+		potential = {
+			
+			advisor = xusheng
+			
+		}
+		allow = {
+			advisor = xusheng
+		}
+		effect = {
+			remove_advisor = xusheng
+			define_general = {
+				name = "徐盛【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_xusheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

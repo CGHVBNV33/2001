@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_tuobazun = {
+		major = yes
+		potential = {
+			
+			advisor = tuobazun
+			
+		}
+		allow = {
+			advisor = tuobazun
+		}
+		effect = {
+			remove_advisor = tuobazun
+			define_general = {
+				name = "拓跋遵｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 3
+				trait = rab_leader_tuobazun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

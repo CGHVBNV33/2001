@@ -1,0 +1,209 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wulin = {
+		major = yes
+		potential = {
+			
+			advisor = wulin
+			
+		}
+		allow = {
+			advisor = wulin
+		}
+		effect = {
+			remove_advisor = wulin
+			define_general = {
+				name = "吴璘｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wulin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_shedeyi = {
+		major = yes
+		potential = {
+			
+			advisor = shedeyi
+			
+		}
+		allow = {
+			advisor = shedeyi
+		}
+		effect = {
+			remove_advisor = shedeyi
+			define_general = {
+				name = "折德扆｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_shedeyi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_hanqi = {
+		major = yes
+		potential = {
+			
+			advisor = hanqi
+			
+		}
+		allow = {
+			advisor = hanqi
+		}
+		effect = {
+			remove_advisor = hanqi
+			define_general = {
+				name = "韩琦｢【武将】"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 2
+				trait = rab_leader_hanqi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_sheyuxun = {
+		major = yes
+		potential = {
+			
+			advisor = sheyuxun
+			
+		}
+		allow = {
+			advisor = sheyuxun
+		}
+		effect = {
+			remove_advisor = sheyuxun
+			define_general = {
+				name = "折御勋｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_sheyuxun
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_sheyuqing = {
+		major = yes
+		potential = {
+			
+			advisor = sheyuqing
+			
+		}
+		allow = {
+			advisor = sheyuqing
+		}
+		effect = {
+			remove_advisor = sheyuqing
+			define_general = {
+				name = "折御卿｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_sheyuqing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_shekexing = {
+		major = yes
+		potential = {
+			
+			advisor = shekexing
+			
+		}
+		allow = {
+			advisor = shekexing
+		}
+		effect = {
+			remove_advisor = shekexing
+			define_general = {
+				name = "折克行｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_shekexing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+country_decisions = {
+################################################	
+	advisors_convert_generals_shekeshi = {
+		major = yes
+		potential = {
+			
+			advisor = shekeshi
+			
+		}
+		allow = {
+			advisor = shekeshi
+		}
+		effect = {
+			remove_advisor = shekeshi
+			define_general = {
+				name = "折可适｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_shekeshi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+

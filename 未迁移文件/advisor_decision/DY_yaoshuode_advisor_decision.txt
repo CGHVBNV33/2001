@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yaoshuode = {
+		major = yes
+		potential = {
+			
+			advisor = yaoshuode
+			
+		}
+		allow = {
+			advisor = yaoshuode
+		}
+		effect = {
+			remove_advisor = yaoshuode
+			define_general = {
+				name = "姚硕德｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 4
+				trait = rab_leader_yaoshuode
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

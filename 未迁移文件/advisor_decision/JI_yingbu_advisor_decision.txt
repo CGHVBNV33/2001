@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yingbu = {
+		major = yes
+		potential = {
+			
+			advisor = yingbu
+			
+		}
+		allow = {
+			advisor = yingbu
+		}
+		effect = {
+			remove_advisor = yingbu
+			define_general = {
+				name = "英布｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 4
+				siege = 3
+				trait = rab_leader_yingbu
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

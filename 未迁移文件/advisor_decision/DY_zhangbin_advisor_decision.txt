@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangbin = {
+		major = yes
+		potential = {
+			
+			advisor = zhangbin
+			
+		}
+		allow = {
+			advisor = zhangbin
+		}
+		effect = {
+			remove_advisor = zhangbin
+			define_general = {
+				name = "张宾｢【谋主】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangbin
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

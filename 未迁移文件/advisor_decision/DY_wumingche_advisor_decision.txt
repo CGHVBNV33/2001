@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wumingche = {
+		major = yes
+		potential = {
+			
+			advisor = wumingche
+			
+		}
+		allow = {
+			advisor = wumingche
+		}
+		effect = {
+			remove_advisor = wumingche
+			define_general = {
+				name = "吴明彻｢【武将】"
+				fire = 3
+				shock = 5
+				manuever = 2
+				siege = 3
+				trait = rab_leader_wumingche
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

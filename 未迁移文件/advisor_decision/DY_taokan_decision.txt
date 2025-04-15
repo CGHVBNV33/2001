@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_taokan = {
+		major = yes
+		potential = {
+			
+			advisor = taokan
+			
+		}
+		allow = {
+			advisor = taokan
+		}
+		effect = {
+			remove_advisor = taokan
+			define_general = {
+				name = "陶侃｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_taokan
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

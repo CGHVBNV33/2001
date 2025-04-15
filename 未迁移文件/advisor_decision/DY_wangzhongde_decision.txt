@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangzhongde = {
+		major = yes
+		potential = {
+			
+			advisor = wangzhongde
+			
+		}
+		allow = {
+			advisor = wangzhongde
+		}
+		effect = {
+			remove_advisor = wangzhongde
+			define_general = {
+				name = "王仲德｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wangzhongde
+		    }
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

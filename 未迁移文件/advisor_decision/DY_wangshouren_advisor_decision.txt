@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangshouren = {
+		major = yes
+		potential = {
+			
+			advisor = wangshouren
+			
+		}
+		allow = {
+			advisor = wangshouren
+		}
+		effect = {
+			remove_advisor = wangshouren
+			define_general = {
+				name = "王守仁｢【思想家】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangshouren
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

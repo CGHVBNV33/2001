@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_dingruchang = {
+		major = yes
+		potential = {
+			
+			advisor = dingruchang
+			
+		}
+		allow = {
+			advisor = dingruchang
+		}
+		effect = {
+			remove_advisor = dingruchang
+			define_admiral = {
+				name = "丁汝昌｢【水师提督】"
+				fire = 4
+				shock = 3
+				manuever = 2
+				siege = 1
+				trait = rab_leader_dingruchang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

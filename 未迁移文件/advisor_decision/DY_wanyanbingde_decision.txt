@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanyanbingde = {
+		major = yes
+		potential = {
+			
+			advisor = wanyanbingde
+			
+		}
+		allow = {
+			advisor = wanyanbingde
+		}
+		effect = {
+			remove_advisor = wanyanbingde
+			define_general = {
+				name = "完颜秉德｢【武将】"
+				fire = 2
+				shock = 3
+				manuever = 3
+				siege = 1
+				trait = rab_leader_wanyanbingde
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

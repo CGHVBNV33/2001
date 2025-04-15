@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhuchaoshi = {
+		major = yes
+		potential = {
+			
+			advisor = zhuchaoshi
+			
+		}
+		allow = {
+			advisor = zhuchaoshi
+		}
+		effect = {
+			remove_advisor = zhuchaoshi
+			define_general = {
+				name = "朱超石｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhuchaoshi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

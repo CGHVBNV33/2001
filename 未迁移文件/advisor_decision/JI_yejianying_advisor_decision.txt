@@ -1,0 +1,30 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yejianying = {
+		major = yes
+		potential = {
+			
+			advisor = yejianying
+			
+		}
+		allow = {
+			advisor = yejianying
+		}
+		effect = {
+			remove_advisor = yejianying
+			define_general = {
+				name = "叶剑英｢【元帅】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yejianying
+				female = no #如果你創建的是女的 請改成yes
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

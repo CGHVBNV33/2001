@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ylyuqi = {
+		major = yes
+		potential = {
+			
+			advisor = ylyuqi
+			
+		}
+		allow = {
+			advisor = ylyuqi
+		}
+		effect = {
+			remove_advisor = ylyuqi
+			define_general = {
+				name = "野利遇乞【武将】"
+				fire = 5
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_ylyuqi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

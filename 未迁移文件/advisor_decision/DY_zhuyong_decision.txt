@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhuyong = {
+		major = yes
+		potential = {
+			
+			advisor = zhuyong
+			
+		}
+		allow = {
+			advisor = zhuyong
+		}
+		effect = {
+			remove_advisor = zhuyong
+			define_general = {
+				name = "朱永｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhuyong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

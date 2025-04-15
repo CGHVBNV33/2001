@@ -1,0 +1,21 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xieai = {
+		major = yes
+		potential = {
+			
+			advisor = xieai
+			
+		}
+		allow = {
+			advisor = xieai
+		}
+		effect = {
+			remove_advisor = xieai
+			define_general_xieai = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

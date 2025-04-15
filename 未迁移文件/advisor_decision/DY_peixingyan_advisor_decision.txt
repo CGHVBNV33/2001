@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_peixingyan = {
+		major = yes
+		potential = {
+			
+			advisor = peixingyan
+			
+		}
+		allow = {
+			advisor = peixingyan
+		}
+		effect = {
+			remove_advisor = peixingyan
+			define_general = {
+				name = "裴行俨｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 3
+				siege = 2
+				trait = rab_leader_peixingyan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

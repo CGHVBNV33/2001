@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangbodang = {
+		major = yes
+		potential = {
+			
+			advisor = wangbodang
+			
+		}
+		allow = {
+			advisor = wangbodang
+		}
+		effect = {
+			remove_advisor = wangbodang
+			define_general = {
+				name = "王伯当｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_wangbodang
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

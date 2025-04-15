@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangsizheng = {
+		major = yes
+		potential = {
+			
+			advisor = wangsizheng
+			
+		}
+		allow = {
+			advisor = wangsizheng
+		}
+		effect = {
+			remove_advisor = wangsizheng
+			define_general = {
+				name = "王思政｢【武将】"
+				fire = 3
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_wangsizheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

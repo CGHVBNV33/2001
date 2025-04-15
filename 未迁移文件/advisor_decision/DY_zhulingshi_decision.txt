@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhulingshi = {
+		major = yes
+		potential = {
+			
+			advisor = zhulingshi
+			
+		}
+		allow = {
+			advisor = zhulingshi
+		}
+		effect = {
+			remove_advisor = zhulingshi
+			define_general = {
+				name = "朱龄石｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhulingshi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

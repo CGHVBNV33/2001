@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangsengbian = {
+		major = yes
+		potential = {
+			
+			advisor = wangsengbian
+			
+		}
+		allow = {
+			advisor = wangsengbian
+		}
+		effect = {
+			remove_advisor = wangsengbian
+			define_general = {
+				name = "王僧辩｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 2
+				trait = rab_leader_jungchiwang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

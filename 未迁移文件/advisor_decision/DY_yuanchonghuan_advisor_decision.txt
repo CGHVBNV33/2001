@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuanchonghuan = {
+		major = yes
+		potential = {
+			
+			advisor = yuanchonghuan
+			
+		}
+		allow = {
+			advisor = yuanchonghuan
+		}
+		effect = {
+			remove_advisor = yuanchonghuan
+			define_general = {
+				name = "袁崇焕【督师】"
+				fire = 6
+				shock = 1
+				manuever = 1
+				siege = 5
+				trait = rab_leader_yuanchonghuan
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

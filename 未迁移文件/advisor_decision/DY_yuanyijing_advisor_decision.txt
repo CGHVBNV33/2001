@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yuanyijing = {
+		major = yes
+		potential = {
+			
+			advisor = yuanyijing
+			
+		}
+		allow = {
+			advisor = yuanyijing
+		}
+		effect = {
+			remove_advisor = yuanyijing
+			define_general = {
+				name = "源义经｢【武将】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 3
+				trait = rab_leader_yuanyijing
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

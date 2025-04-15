@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shenlinzi = {
+		major = yes
+		potential = {
+			
+			advisor = shenlinzi
+			
+		}
+		allow = {
+			advisor = shenlinzi
+		}
+		effect = {
+			remove_advisor = shenlinzi
+			define_general = {
+				name = "沈林子｢【將軍】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_shenlinzi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

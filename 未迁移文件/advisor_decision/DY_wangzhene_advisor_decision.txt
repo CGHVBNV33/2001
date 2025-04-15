@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wangzhene = {
+		major = yes
+		potential = {
+			
+			advisor = wangzhene
+			
+		}
+		allow = {
+			advisor = wangzhene
+		}
+		effect = {
+			remove_advisor = wangzhene
+			define_general = {
+				name = "王镇恶｢【將軍】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 5
+				trait = rab_leader_wangzhene
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

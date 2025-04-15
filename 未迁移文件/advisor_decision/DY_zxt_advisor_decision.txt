@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhangxutuo = {
+		major = yes
+		potential = {
+			
+			advisor = zhangxutuo
+			
+		}
+		allow = {
+			advisor = zhangxutuo
+		}
+		effect = {
+			remove_advisor = zhangxutuo
+			define_general = {
+				name = "张须陀｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 1
+				siege = 2
+				trait = rab_leader_zhangxutuo
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

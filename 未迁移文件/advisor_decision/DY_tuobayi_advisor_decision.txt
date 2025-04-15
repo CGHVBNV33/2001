@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_tuobayi = {
+		major = yes
+		potential = {
+			
+			advisor = tuobayi
+			
+		}
+		allow = {
+			advisor = tuobayi
+		}
+		effect = {
+			remove_advisor = tuobayi
+			define_general = {
+				name = "拓跋仪｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_tuobayi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

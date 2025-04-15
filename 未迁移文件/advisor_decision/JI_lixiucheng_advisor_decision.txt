@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_lixiucheng = {
+		major = yes
+		potential = {
+			
+			advisor = lixiucheng
+			
+		}
+		allow = {
+			advisor = lixiucheng
+		}
+		effect = {
+			remove_advisor = lixiucheng
+			define_general = {
+				name = "李秀成｢【武将】"
+				fire = 6
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_lixiucheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

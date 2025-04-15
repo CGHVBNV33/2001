@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_qinqiong = {
+		major = yes
+		potential = {
+			
+			advisor = qinqiong
+			
+		}
+		allow = {
+			advisor = qinqiong
+		}
+		effect = {
+			remove_advisor = qinqiong
+			define_general = {
+				name = "秦琼｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 4
+				siege = 3
+				trait = rab_leader_qinqiong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wenyang = {
+		major = yes
+		potential = {
+			
+			advisor = wenyang
+			
+		}
+		allow = {
+			advisor = wenyang
+		}
+		effect = {
+			remove_advisor = wenyang
+			define_general = {
+				name = "文鸯｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = rab_leader_wenyang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

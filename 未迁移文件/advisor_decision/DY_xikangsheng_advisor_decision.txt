@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_xikangsheng = {
+		major = yes
+		potential = {
+			
+			advisor = xikangsheng
+			
+		}
+		allow = {
+			advisor = xikangsheng
+		}
+		effect = {
+			remove_advisor = xikangsheng
+			define_general = {
+				name = "奚康生｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 3
+				trait = rab_leader_xikangsheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

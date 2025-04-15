@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_yaoxiang = {
+		major = yes
+		potential = {
+			
+			advisor = yaoxiang
+			
+		}
+		allow = {
+			advisor = yaoxiang
+		}
+		effect = {
+			remove_advisor = yaoxiang
+			define_general = {
+				name = "姚详｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_yaoxiang
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

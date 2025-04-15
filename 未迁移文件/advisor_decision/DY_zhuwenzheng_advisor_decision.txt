@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_zhuwenzheng = {
+		major = yes
+		potential = {
+			
+			advisor = zhuwenzheng
+			
+		}
+		allow = {
+			advisor = zhuwenzheng
+		}
+		effect = {
+			remove_advisor = zhuwenzheng
+			define_general = {
+				name = "朱文正｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 3
+				siege = 3
+				trait = rab_leader_zhuwenzheng
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

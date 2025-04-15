@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shanxiongxin = {
+		major = yes
+		potential = {
+			
+			advisor = shanxiongxin
+			
+		}
+		allow = {
+			advisor = shanxiongxin
+		}
+		effect = {
+			remove_advisor = shanxiongxin
+			define_general = {
+				name = "单雄信｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_shanxiongxin
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

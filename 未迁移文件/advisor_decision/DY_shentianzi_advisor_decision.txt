@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_shentianzi = {
+		major = yes
+		potential = {
+			
+			advisor = shentianzi
+			
+		}
+		allow = {
+			advisor = shentianzi
+		}
+		effect = {
+			remove_advisor = shentianzi
+			define_general = {
+				name = "沈田子｢【將軍】"
+				fire = 4
+				shock = 5
+				manuever = 4
+				siege = 3
+				trait = rab_leader_shentianzi
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

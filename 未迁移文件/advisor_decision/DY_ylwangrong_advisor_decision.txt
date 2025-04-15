@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_ylwangrong = {
+		major = yes
+		potential = {
+			
+			advisor = ylwangrong
+			
+		}
+		allow = {
+			advisor = ylwangrong
+		}
+		effect = {
+			remove_advisor = ylwangrong
+			define_general = {
+				name = "野利旺荣【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_ylwangrong
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

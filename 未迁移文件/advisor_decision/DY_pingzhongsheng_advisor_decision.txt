@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_pingzhongsheng = {
+		major = yes
+		potential = {
+			
+			advisor = pingzhongsheng
+			
+		}
+		allow = {
+			advisor = pingzhongsheng
+		}
+		effect = {
+			remove_advisor = pingzhongsheng
+			define_general = {
+				name = "平忠盛【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = rab_leader_pingzhongsheng
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

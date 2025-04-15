@@ -1,0 +1,28 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_weitegensitan = {
+		major = yes
+		potential = {
+			
+			advisor = weitegensitan
+			
+		}
+		allow = {
+			advisor = weitegensitan
+		}
+		effect = {
+			remove_advisor = weitegensitan
+			define_general = {
+				name = "维特根斯坦｢【元帅】"
+				fire = 5
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_weitergansitan
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

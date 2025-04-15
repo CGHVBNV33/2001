@@ -1,0 +1,29 @@
+country_decisions = {
+################################################	
+	advisors_convert_generals_wanggui = {
+		major = yes
+		potential = {
+			
+			advisor = wanggui
+			
+		}
+		allow = {
+			advisor = wanggui
+		}
+		effect = {
+			remove_advisor = wanggui
+			define_general = {
+				name = "王轨｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 1
+				trait = rab_leader_wanggui
+			}
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
