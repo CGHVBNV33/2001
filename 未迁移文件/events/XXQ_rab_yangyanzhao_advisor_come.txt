@@ -1,0 +1,71 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yangyanzhao_advisor_come
+
+#神将某种条件下出现
+#id = 1 : yangyanzhao : 杨延昭｢【武将】
+
+country_event = {
+	id = yangyanzhao_advisor_come.1
+	title = "yangyanzhao_advisor_come.1.t"
+	desc = "yangyanzhao_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 983	
+		NOT = { is_year = 1015 }
+		OR = {
+			AND = {
+				exists = SNG
+				tag = SNG
+			}
+			AND = {
+				NOT = { exists = SNG }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = GNN }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 2505
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yangyanzhao_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yangyanzhao
+				name = "杨延昭｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "杨延昭｢【武将】"
+				fire = 5
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_yangyanzhao #将领的特质
+			}
+		}
+	}
+}
+

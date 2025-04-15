@@ -1,0 +1,72 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhanghongfan_advisor_come
+
+#神将某种条件下出现
+#id = 1 : zhanghongfan : 张弘范｢【武将】
+
+country_event = {
+	id = zhanghongfan_advisor_come.1
+	title = "zhanghongfan_advisor_come.1.t"
+	desc = "zhanghongfan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1268	
+		NOT = { is_year = 1280 }
+		NOT = { culture_group = east_asian }
+		OR = {
+			AND = {
+				exists = MGE
+				tag = MGE
+			}
+			AND = {
+				exists = YUA
+				tag = YUA
+			}
+			AND = {
+				NOT = { exists = MGE }
+				NOT = { tag = KHT }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				owns = 692
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhanghongfan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhanghongfan
+				name = "张弘范｢【武将】"
+				discount = yes	
+				skill = 3
+				culture = hebei
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张弘范｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_zhanghongfan #将领的特质
+			}
+		}
+	}
+}
+

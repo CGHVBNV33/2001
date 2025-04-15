@@ -1,0 +1,59 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanchenheshang_advisor_come
+
+#神将某种条件下出现
+#id = 1 : wanyanchenheshang : 完颜陈和尚｢【武将】
+
+country_event = {
+	id = wanyanchenheshang_advisor_come.1
+	title = "wanyanchenheshang_advisor_come.1.t"
+	desc = "wanyanchenheshang_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1217	
+		NOT = { is_year = 1233 }
+		OR = {
+			AND = {
+				exists = GNN
+				tag = GNN
+			}
+			AND = {
+				NOT = { exists = GNN }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = SNG }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 697
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanchenheshang_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor_wanyanchenheshang = yes
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general_wanyanchenheshang = yes
+		}
+	}
+}
+

@@ -1,0 +1,71 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wanyanloushi_advisor_come
+
+#神将某种条件下出现
+#id = 1 : wanyanloushi : 完颜娄室｢【武将】
+
+country_event = {
+	id = wanyanloushi_advisor_come.1
+	title = "wanyanloushi_advisor_come.1.t"
+	desc = "wanyanloushi_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1103	
+		NOT = { is_year = 1131 }
+		OR = {
+			AND = {
+				exists = GNN
+				tag = GNN
+			}
+			AND = {
+				NOT = { exists = GNN }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = SNG }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 727
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wanyanloushi_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wanyanloushi
+				name = "完颜娄室｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "完颜娄室｢【武将】"
+				fire = 5
+				shock = 6
+				manuever = 4
+				siege = 1
+				trait = rab_leader_wanyanloushi #将领的特质
+			}
+		}
+	}
+}
+

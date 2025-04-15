@@ -1,0 +1,70 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = xuding_advisor_come
+
+#神将某种条件下出现
+#id = 1 : xuding : 胥鼎｢【军师】
+
+country_event = {
+	id = xuding_advisor_come.1
+	title = "xuding_advisor_come.1.t"
+	desc = "xuding_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1180
+		NOT = { is_year = 1225 }
+		OR = {
+			AND = {
+				exists = GNN
+				tag = GNN
+			}
+			AND = {
+				NOT = { exists = GNN }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 3170
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = xuding_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = xuding
+				name = "胥鼎｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "胥鼎｢【军师】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 3
+				trait = rab_leader_xuding #将领的特质
+			}
+		}
+	}
+}
+

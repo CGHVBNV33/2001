@@ -1,0 +1,70 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yangwoyan_advisor_come
+
+#神将某种条件下出现
+#id = 1 : yangwoyan : 杨沃衍｢【军师】
+
+country_event = {
+	id = yangwoyan_advisor_come.1
+	title = "yangwoyan_advisor_come.1.t"
+	desc = "yangwoyan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1205
+		NOT = { is_year = 1232 }
+		OR = {
+			AND = {
+				exists = GNN
+				tag = GNN
+			}
+			AND = {
+				NOT = { exists = GNN }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = MGE }
+				NOT = { tag = YUA }
+				owns = 693
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yangwoyan_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yangwoyan
+				name = "杨沃衍｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "杨沃衍｢【军师】"
+				fire = 4
+				shock = 4
+				manuever = 4
+				siege = 2
+				trait = rab_leader_yangwoyan #将领的特质
+			}
+		}
+	}
+}
+

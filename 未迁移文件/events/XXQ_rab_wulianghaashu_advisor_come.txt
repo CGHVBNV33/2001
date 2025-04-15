@@ -1,0 +1,74 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = wulianghaashu_advisor_come
+
+#神将某种条件下出现
+#id = 1 : wulianghaashu : 兀良哈·阿术｢【武将】
+
+country_event = {
+	id = wulianghaashu_advisor_come.1
+	title = "wulianghaashu_advisor_come.1.t"
+	desc = "wulianghaashu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1254	
+		NOT = { is_year = 1288 }
+		OR = {
+			AND = {
+				exists = MGE
+				tag = MGE
+			}
+			AND = {
+				exists = YUA
+				tag = YUA
+			}
+			AND = {
+				NOT = { exists = MGE }
+				NOT = { tag = JAP }
+				NOT = { tag = KHT }
+				NOT = { tag = LIO }
+				NOT = { tag = KKT }
+				NOT = { tag = DN2 }
+				NOT = { tag = XIA }
+				NOT = { tag = GA3 }
+				NOT = { tag = SNG }
+				NOT = { tag = GNN }
+				owns = 3281
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = wulianghaashu_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = wulianghaashu
+				name = "兀良哈·阿术｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "兀良哈·阿术｢【武将】"
+				fire = 4
+				shock = 6
+				manuever = 5
+				siege = 1
+				trait = rab_leader_wulianghaashu #将领的特质
+			}
+		}
+	}
+}
+
