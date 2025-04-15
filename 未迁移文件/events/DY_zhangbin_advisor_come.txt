@@ -1,0 +1,61 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangbin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhangbin : 
+#
+country_event = {
+	id = zhangbin_advisor_come.1
+	title = "zhangbin_advisor_come.1.t"
+	desc = "zhangbin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 319
+		NOT = { is_year = 322 }
+		OR = {
+		   AND = {
+		      exists = SLJ
+		      tag = SLJ
+		   }		
+		   AND = {
+		      NOT = { exists = SLJ}		
+		      owns = 3339
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangbin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhangbin
+				name = "张宾｢【谋主】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "张宾"
+				fire = 4
+				shock = 5
+				manuever = 3
+				siege = 2
+				trait = rab_leader_zhangbin
+			}
+		}
+	}
+}
+

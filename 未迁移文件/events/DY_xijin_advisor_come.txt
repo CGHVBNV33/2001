@@ -1,0 +1,68 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = xijin_advisor_come
+
+#武将某种條件下出現
+#id = 1 : xijin : 
+#
+country_event = {
+	id = xijin_advisor_come.1
+	title = "xijin_advisor_come.1.t"
+	desc = "xijin_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 390
+		NOT = { is_year = 448 }
+		OR = {
+		   AND = {
+		      exists = NWE
+			  NOT = { exists = DA1}
+		      tag = NWE
+		   }
+		    AND = {
+		      exists = DA1
+			  NOT = { exists = NWE}
+		      tag = DA1
+		   }		
+		   AND = {
+		      NOT = { exists = NWE}	
+			  NOT = { exists = DA1}
+		      owns = 697
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = xijin_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = xijin
+				name = "奚斤｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "奚斤｢【武将】"
+				fire = 4
+				shock = 5
+				manuever = 2
+				siege = 2
+				trait = rab_leader_xijin
+			}
+		}
+	}
+}
+

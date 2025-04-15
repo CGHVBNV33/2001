@@ -1,0 +1,170 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = yangdayan_prov_move_events
+
+
+province_event = {
+	id = yangdayan_prov_move_events.1
+	title = "yangdayan_prov_move_events.NAME1"
+	desc = "yangdayan_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_yangdayan
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "yangdayan_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_yangdayan }
+			if = {
+			#
+				limit = { 
+					NOT = { is_year = 515  }
+				}
+			#
+			#
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = TKG 
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_yangdayan
+					owner = {
+						country_event = {
+							id = yangdayan_prov_move_events.2
+						}
+					}
+				}
+					#假如						
+				if = { 
+					limit = { 
+						owner = {
+							NOT = {
+								OR = {
+									tag = TKG  
+								}
+							} 
+							NOT = {
+								OR = {
+									has_ruler_modifier = ra_ch1		
+									has_ruler_modifier = ra_ch2
+									has_ruler_modifier = ra_ch4
+									has_ruler_modifier = ra_ch5
+									has_ruler_modifier = ra_ch7
+									has_ruler_modifier = ra_ch8
+									has_ruler_modifier = rb_ch5
+									has_ruler_modifier = rb_ch6
+									has_ruler_modifier = rb_ch7
+								}		
+							}
+						}		
+					}
+					remove_province_modifier = pov_yangdayan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yangdayan"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = TKG
+							}
+						} 
+					}
+					remove_province_modifier = pov_yangdayan
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_yangdayan"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份higher than below years, then it will clear the province modifier
+				limit = { 
+					is_year = 515
+				}	
+				remove_province_modifier = pov_yangdayan		
+			}
+		}
+	}
+}
+	
+############################################################################
+#	方㽊ူfk将】毛㽂?㼿#
+############################################################################
+
+
+country_event = {
+	id = yangdayan_prov_move_events.2
+	title = "yangdayan_prov_move_events.NAME2"
+	desc = "yangdayan_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "yangdayan_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = yangdayan
+					name = "杨大眼｢【武将】"
+					discount = yes	
+					skill = 5
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "杨大眼｢【武将】"
+				fire = 3
+				shock = 6
+				manuever = 5
+				siege = 2
+				trait = rab_leader_yangdayan
+			}
+		}
+	}
+}

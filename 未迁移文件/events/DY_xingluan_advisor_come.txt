@@ -1,0 +1,68 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = xingluan_advisor_come
+
+#武将某种條件下出現
+#id = 1 : xingluan : 
+#
+country_event = {
+	id = xingluan_advisor_come.1
+	title = "xingluan_advisor_come.1.t"
+	desc = "xingluan_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 484
+		NOT = { is_year = 514 }
+		OR = {
+		   AND = {
+		      exists = NWE
+			  NOT = { exists = DA1}
+		      tag = NWE
+		   }
+		    AND = {
+		      exists = DA1
+			  NOT = { exists = NWE}
+		      tag = DA1
+		   }		
+		   AND = {
+		      NOT = { exists = NWE}	
+			  NOT = { exists = DA1}
+		      owns = 3178
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = xingluan_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = xingluan
+				name = "邢峦｢【武将】"
+				discount = yes	
+				skill = 5
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "邢峦｢【武将】"
+				fire = 4
+				shock = 3
+				manuever = 4
+				siege = 3
+				trait = rab_leader_xingluan
+			}
+		}
+	}
+}
+

@@ -1,0 +1,50 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhaopu_advisor_come
+
+#武将某种條件下出現
+#id = 1 : zhaopu: 
+#
+country_event = {
+	id = zhaopu_advisor_come.1
+	title = "zhaopu_advisor_come.1.t"
+	desc = "zhaopu_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 954
+		NOT = { is_year = 992 }
+		OR = {
+		   AND = {
+		      exists = SNG
+		      tag = SNG
+		   }		
+		   AND = {
+		      NOT = { exists = SNG}		
+		      owns = 688
+		   }
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhaopu_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = zhaopu
+				name = "赵普【军师】"
+				discount = yes	
+				skill = 5
+			}
+		}
+	}
+}
+

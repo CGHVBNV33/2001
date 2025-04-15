@@ -1,0 +1,47 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = zhangchengye_advisor_come
+
+#武将某种条件下出现
+#id = 1 : zhangchengye : 张承业｢【军师】
+
+country_event = {
+	id = zhangchengye_advisor_come.1
+	title = "zhangchengye_advisor_come.1.t"
+	desc = "zhangchengye_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 866	
+		NOT = { is_year = 922 }
+		OR = {
+			AND = {
+				exists = QJ1
+				tag = QJ1
+			}
+			AND = {
+				NOT = { exists = QJ1 }
+			    owns = 693
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = zhangchengye_advisor_come.OPTA1
+		
+			define_advisor = {
+				type = zhangchengye
+				name = "张承业｢【军师】"
+				discount = yes	
+				skill = 3
+			}
+	}
+}
+

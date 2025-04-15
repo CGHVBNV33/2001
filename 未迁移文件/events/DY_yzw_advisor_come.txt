@@ -1,0 +1,62 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = yuzhongwen_advisor_come
+
+#武将某种條件下出現
+#id = 1 : yuzhongwen : 于仲文｢【武将】
+#
+country_event = {
+	id = yuzhongwen_advisor_come.1
+	title = "yuzhongwen_advisor_come.1.t"
+	desc = "yuzhongwen_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+#571年－649年7月2日
+	trigger = {
+		#这里是武将出现在哪里的条件
+		is_year = 570
+		NOT = { is_year = 613 }
+		OR = {
+			AND = {
+				exists = CZH
+				tag = CZH
+			}
+			AND = {
+				NOT = { exists = CZH }
+		owns = 700
+	    }
+	}
+}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = yuzhongwen_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = yuzhongwen
+				name = "于仲文｢【武将】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "于仲文｢【武将】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 1
+				trait = rab_leader_yuzhongwen
+			}
+		}
+	}
+}
+

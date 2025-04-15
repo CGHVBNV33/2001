@@ -1,0 +1,51 @@
+########################
+#Advisor  entry  Events#
+#########################
+namespace = zhenghe_advisor_come
+#武将某种条件下出现
+#id = 1 : zhenghe : 郑和｢【航海家】
+country_event = {
+	id = zhenghe_advisor_come.1
+	title = "zhenghe_advisor_come.1.t"
+	desc = "zhenghe_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	#出现时间
+	trigger = {
+		is_year = 1404
+		NOT = {
+			is_year = 1433
+		}
+		OR = {
+			AND = {
+				exists = MNG
+				tag = MNG
+			}
+			AND = {
+				NOT = {
+					exists = MNG
+				}
+				owns = 662
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = zhenghe_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no
+			}
+			define_advisor_zhenghe = yes
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			define_general_zhenghe = yes
+		}
+	}
+}
