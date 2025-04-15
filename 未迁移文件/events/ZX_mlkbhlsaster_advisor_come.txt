@@ -1,0 +1,66 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = mlkbhlsaster_advisor_come
+
+#武将某种條件下出現
+#id = 1 : mlkbhlsaster : 马立克·阿什塔尔｢【猛将】
+#
+country_event = {
+	id = mlkbhlsaster_advisor_come.1
+	title = "mlkbhlsaster_advisor_come.1.t"
+	desc = "mlkbhlsaster_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	#隱藏事件
+	hidden = yes
+	#整個遊戲只能觸發一次
+	fire_only_once = yes
+
+
+	trigger = {
+	#武将出现在顾问池内的时间点和地点 或国家tag
+		is_year = 640
+		NOT = { is_year = 658 }
+		OR = {
+		   AND = {
+		      exists = RSD 
+		      tag = RSD
+		   }		
+		   AND = {
+		      NOT = { exists = RSD}		
+		      owns = 384
+		   }
+		}
+	}
+	#觸發時間沒差1-5days均可
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = mlkbhlsaster_advisor_come.OPTA1
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = mlkbhlsaster
+				name = "马立克·阿什塔尔｢【猛将】"
+				discount = yes	#顾问打折
+				skill = 3		#顾问等级
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+		#須加上｢ 
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "马立克·阿什塔尔｢【猛将】"
+				fire = 5
+				shock = 7
+				manuever = 6
+				siege = 1
+				trait = rab_leader_mlkbhlsaster #将领的特质
+			}
+		}
+	}
+}
+

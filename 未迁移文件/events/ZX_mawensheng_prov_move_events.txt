@@ -1,0 +1,132 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+#id = 1 : 主系統-幕後hidden effect
+#id = 2 : 
+
+namespace = mawensheng_prov_move_events
+
+
+province_event = {
+	id = mawensheng_prov_move_events.1
+	title = "mawensheng_prov_move_events.NAME1"
+	desc = "mawensheng_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	#偵測省份內是否有該pov_xxxx
+		has_province_modifier = pov_mawensheng
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = "mawensheng_prov_move_events.OPTA1"
+##################################################		
+		if = {
+			limit = { has_province_modifier = pov_mawensheng }
+			if = {
+				limit = { 
+					NOT = { is_year = 1510 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP
+									tag = USA
+								}
+							} 
+							OR = {
+								has_ruler_modifier = ra_ch1		
+								has_ruler_modifier = ra_ch2
+								has_ruler_modifier = ra_ch4
+								has_ruler_modifier = ra_ch5
+								has_ruler_modifier = ra_ch7
+								has_ruler_modifier = ra_ch8
+								has_ruler_modifier = rb_ch5
+								has_ruler_modifier = rb_ch6
+								has_ruler_modifier = rb_ch7
+													
+							}
+						}
+					}
+			
+					remove_province_modifier = pov_mawensheng
+					owner = {
+						#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+						country_event = {
+							id = mawensheng_prov_move_events.2
+						}
+					}
+				}
+				#不符合以上的条件 则流浪武将将会继续流浪到别的省份
+				else = {
+					remove_province_modifier = pov_mawensheng
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_mawensheng"
+							duration = -1
+						}					
+					}								
+				}
+			}	
+			if = {
+			#如果年份高于这个，那这个在野的武将将会永久消失
+				limit = { 
+					is_year = 1510
+				}	
+				remove_province_modifier = pov_mawensheng		
+			}
+		}
+	}
+}
+	
+############################################################################
+#武将的毛遂自荐 成功了 武将找到心目中的理想国度
+############################################################################
+
+
+country_event = {
+	id = mawensheng_prov_move_events.2
+	title = "mawensheng_prov_move_events.NAME2"
+	desc = "mawensheng_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "mawensheng_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = mawensheng
+					name = "马文升  ｢【名臣】"
+					discount = yes	
+					skill = 3
+					female = no #如果你創建的是女的 請改成yes
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "马文升  ｢【名臣】"
+				fire = 4
+				shock = 4
+				manuever = 3
+				siege = 2
+				trait = rab_leader_mawensheng
+				female = no #如果你創建的是女的 請改成yes
+			}
+		}
+	}
+}

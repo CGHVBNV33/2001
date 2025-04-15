@@ -1,0 +1,1166 @@
+namespace = liaoyongan_annex_cap_events
+
+#这个 liaoyongan_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = liaoyongan_annex_cap_events.1
+	title = "liaoyongan_annex_cap_events.NAME1"
+	desc = "liaoyongan_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = liaoyongan
+				has_leader = "廖永安｢【巢湖之杰】"
+			}
+		}
+	}	
+	option = {
+		name = "liaoyongan_annex_cap_events.OPTA1"
+		country_event = {
+			id = liaoyongan_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = liaoyongan_annex_cap_events.2
+	title = "liaoyongan_annex_cap_events.NAME2"
+	desc = "liaoyongan_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "liaoyongan_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+				define_advisor = {
+						type = liaoyongan
+						name = "廖永安｢【巢湖之杰】"
+						discount = yes	
+						skill = 5
+						female = no #如果你創建的是女的 請改成yes
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_admiral = {
+					name = "廖永安｢【巢湖之杰】"
+					fire = 4
+					shock = 4
+					manuever = 3
+					siege = 0
+					trait = rab_leader_liaoyongan
+					female = no #如果你創建的是女的 請改成yes
+				}
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = liaoyongan_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "liaoyongan_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "liaoyongan_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_liaoyongan"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = liaoyongan_annex_cap_events.3
+	title = "liaoyongan_annex_cap_events.NAME3"
+	desc = "liaoyongan_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "liaoyongan_annex_cap_events.OPTA3"
+		country_event = {
+			id = liaoyongan_annex_cap_events.2
+		}
+	}
+}
+namespace = muying_annex_cap_events
+
+#这个 liaoyongan_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = muying_annex_cap_events.1
+	title = "muying_annex_cap_events.NAME1"
+	desc = "muying_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			has_muying_leader_or_advisor = yes
+		}
+	}	
+	option = {
+		name = "muying_annex_cap_events.OPTA1"
+		country_event = {
+			id = muying_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = muying_annex_cap_events.2
+	title = "muying_annex_cap_events.NAME2"
+	desc = "muying_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "muying_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor_muying = yes
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general_muying = yes
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = muying_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "muying_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "muying_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_muying"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = muying_annex_cap_events.3
+	title = "muying_annex_cap_events.NAME3"
+	desc = "muying_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "muying_annex_cap_events.OPTA3"
+		country_event = {
+			id = muying_annex_cap_events.2
+		}
+	}
+}
+namespace = anji_annex_cap_events
+
+#这个 anji_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = anji_annex_cap_events.1
+	title = "anji_annex_cap_events.NAME1"
+	desc = "anji_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = anji
+				has_leader = "安颉｢【武将】"
+			}
+		}
+	}	
+	option = {
+		name = "anji_annex_cap_events.OPTA1"
+		country_event = {
+			id = anji_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = anji_annex_cap_events.2
+	title = "anji_annex_cap_events.NAME2"
+	desc = "anji_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "anji_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = anji
+						name = "安颉｢【武将】"
+						discount = yes	
+						skill = 5
+						female = no #如果你創建的是女的 請改成yes
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "安颉｢【武将】"
+					fire = 4
+					shock = 5
+					manuever = 5
+					siege = 2
+					trait = rab_leader_anjie
+					female = no #如果你創建的是女的 請改成yes
+				}
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = anji_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "anji_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "anji_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_anjie"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = anji_annex_cap_events.3
+	title = "anji_annex_cap_events.NAME3"
+	desc = "anji_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "anji_annex_cap_events.OPTA3"
+		country_event = {
+			id = anji_annex_cap_events.2
+		}
+	}
+}
+namespace = qiujuan_annex_cap_events
+
+#这个 qiujuan_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = qiujuan_annex_cap_events.1
+	title = "qiujuan_annex_cap_events.NAME1"
+	desc = "qiujuan_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = qiujuan
+				has_leader = "安颉｢【武将】"
+			}
+		}
+	}	
+	option = {
+		name = "qiujuan_annex_cap_events.OPTA1"
+		country_event = {
+			id = qiujuan_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = qiujuan_annex_cap_events.2
+	title = "qiujuan_annex_cap_events.NAME2"
+	desc = "qiujuan_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "qiujuan_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = qiujuan
+						name = "丘眷｢【武将】"
+						discount = yes	
+						skill = 5
+						female = no #如果你創建的是女的 請改成yes
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "丘眷｢【武将】"
+					fire = 3
+					shock = 5
+					manuever = 3
+					siege = 2
+					trait = rab_leader_qiujuan
+					female = no #如果你創建的是女的 請改成yes
+				}
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = qiujuan_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "qiujuan_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "qiujuan_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_qiujuan"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = qiujuan_annex_cap_events.3
+	title = "qiujuan_annex_cap_events.NAME3"
+	desc = "qiujuan_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "qiujuan_annex_cap_events.OPTA3"
+		country_event = {
+			id = qiujuan_annex_cap_events.2
+		}
+	}
+}
+namespace = shusunjian_annex_cap_events
+
+#这个 shusunjian_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = shusunjian_annex_cap_events.1
+	title = "shusunjian_annex_cap_events.NAME1"
+	desc = "shusunjian_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = shusunjian
+				has_leader = "丘眷｢【武将】"
+			}
+		}
+	}	
+	option = {
+		name = "shusunjian_annex_cap_events.OPTA1"
+		country_event = {
+			id = shusunjian_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = shusunjian_annex_cap_events.2
+	title = "shusunjian_annex_cap_events.NAME2"
+	desc = "shusunjian_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "shusunjian_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = shusunjian
+						name = "叔孙建｢【丹阳王】"
+						discount = yes	
+						skill = 5
+						female = no #如果你創建的是女的 請改成yes
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "叔孙建｢【丹阳王】"
+					fire = 4
+					shock = 5
+					manuever = 3
+					siege = 1
+					trait = rab_leader_shusunjian
+					female = no #如果你創建的是女的 請改成yes
+				}
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = shusunjian_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "shusunjian_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "shusunjian_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_shusunjian"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = shusunjian_annex_cap_events.3
+	title = "shusunjian_annex_cap_events.NAME3"
+	desc = "shusunjian_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "shusunjian_annex_cap_events.OPTA3"
+		country_event = {
+			id = shusunjian_annex_cap_events.2
+		}
+	}
+}
+namespace = duanhong_annex_cap_events
+
+#这个 duanhong_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = duanhong_annex_cap_events.1
+	title = "duanhong_annex_cap_events.NAME1"
+	desc = "duanhong_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = duanhong
+				has_leader = "叔孙建｢【丹阳王】"
+			}
+		}
+	}	
+	option = {
+		name = "duanhong_annex_cap_events.OPTA1"
+		country_event = {
+			id = duanhong_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = duanhong_annex_cap_events.2
+	title = "duanhong_annex_cap_events.NAME2"
+	desc = "duanhong_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "duanhong_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = duanhong
+						name = "段宏｢【左将军】"
+						discount = yes	
+						skill = 5
+						female = no #如果你創建的是女的 請改成yes
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "段宏｢【左将军】"
+					fire = 4
+					shock = 5
+					manuever = 3
+					siege = 2
+					trait = rab_leader_duanhong
+					female = no #如果你創建的是女的 請改成yes
+				}
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = duanhong_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "duanhong_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "duanhong_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_duanhong"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = duanhong_annex_cap_events.3
+	title = "duanhong_annex_cap_events.NAME3"
+	desc = "duanhong_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "duanhong_annex_cap_events.OPTA3"
+		country_event = {
+			id = duanhong_annex_cap_events.2
+		}
+	}
+}
+namespace = simachuzhi_annex_cap_events
+
+#这个 simachuzhi_annex_cap_events.1 必须放在on_actions.txt 里面的 on_annexed 否则国家被灭也刷不到降将事件
+country_event = {
+	id = simachuzhi_annex_cap_events.1
+	title = "simachuzhi_annex_cap_events.NAME1"
+	desc = "simachuzhi_annex_cap_events.DESC1"
+	picture = SIEGE_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { 
+			OR = {
+			 	advisor = simachuzhi
+				has_leader = "段宏｢【左将军】"
+			}
+		}
+	}	
+	option = {
+		name = "simachuzhi_annex_cap_events.OPTA1"
+		country_event = {
+			id = simachuzhi_annex_cap_events.2
+			days = 1
+		}
+	}
+}
+
+#######################################################################
+country_event = {
+	id = simachuzhi_annex_cap_events.2
+	title = "simachuzhi_annex_cap_events.NAME2"
+	desc = "simachuzhi_annex_cap_events.DESC2"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+	# major = yes 就是昭告天下
+	major = yes
+	
+	option = {
+		name = "simachuzhi_annex_cap_events.OPTA2"
+		#ai_chance 代表的是该选项AI会用多少的概率选择，这个分母加总于所有options
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0 #不符合以下的条件，直接从70%掉到0%
+				NOT = {
+					OR = {
+					
+						has_ruler_modifier = ra_ch1		
+						has_ruler_modifier = ra_ch2
+						has_ruler_modifier = ra_ch4
+						has_ruler_modifier = ra_ch5
+						has_ruler_modifier = ra_ch7
+						has_ruler_modifier = ra_ch8
+						has_ruler_modifier = rb_ch5
+						has_ruler_modifier = rb_ch6
+						has_ruler_modifier = rb_ch7
+													
+					}
+				}
+			}
+			modifier = {
+				factor = 0 #符合以下的条件，直接从70%掉到0%
+				OR = {
+					tag = QNG
+					tag = MCH
+				}	
+			}	
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+			 		OR = {
+						tag = QNG
+						tag = MCH
+					}	
+				}
+				OR = {
+					has_ruler_modifier = ra_ch1		
+					has_ruler_modifier = ra_ch2
+					has_ruler_modifier = ra_ch4
+					has_ruler_modifier = ra_ch5
+					has_ruler_modifier = ra_ch7
+					has_ruler_modifier = ra_ch8
+					has_ruler_modifier = rb_ch5
+					has_ruler_modifier = rb_ch6
+					has_ruler_modifier = rb_ch7		
+			    }
+			}
+			
+			if = { 
+				limit = { ai = no }
+					define_advisor = {
+						type = simachuzhi
+						name = "司马楚之｢【琅琊王】"
+						discount = yes	
+						skill = 5
+						female = no #如果你創建的是女的 請改成yes
+					}
+			}
+			if = { 
+				limit = { ai = yes }
+					define_general = {
+					name = "司马楚之｢【琅琊王】"
+					fire = 4
+					shock = 5
+					manuever = 3
+					siege = 3
+					trait = rab_leader_simachuzhi
+					female = no #如果你創建的是女的 請改成yes
+				}
+			}
+		}
+		else = {
+		#玩家登用，但是君王or other条件不符合
+		#武将拒绝的画
+			country_event = {
+				id = simachuzhi_annex_cap_events.3
+			}		
+		}		
+	}
+
+	option = {
+		#AI或玩家砍了他
+		#	
+		name = "simachuzhi_annex_cap_events.OPTB2"
+		ai_chance = { factor = 10 }	
+		add_prestige = -2
+		add_treasury = 100
+		
+	}	
+
+	option = {
+		#AI或玩家放他走了
+		#武将将会开始流浪
+		name = "simachuzhi_annex_cap_events.OPTC2"
+		ai_chance = { factor = 20 }
+		add_prestige = 2
+		hidden_effect = { 
+			random_owned_province = {
+				add_province_modifier = {
+					name = "pov_simachuzhi"
+					duration = -1
+				}
+			}
+		}
+	}	
+}
+
+
+######################武将拒绝的event㽢###################################
+country_event = {
+	id = simachuzhi_annex_cap_events.3
+	title = "simachuzhi_annex_cap_events.NAME3"
+	desc = "simachuzhi_annex_cap_events.DESC3"
+	picture = CAPTURE_GENERAL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "simachuzhi_annex_cap_events.OPTA3"
+		country_event = {
+			id = simachuzhi_annex_cap_events.2
+		}
+	}
+}
