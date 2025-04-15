@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = halid_advisor_come
+
+country_event = {
+	id = halid_advisor_come.1
+	title = "halid_advisor_come.1.t"
+	desc = "halid_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 592
+		NOT = { is_year = 642 }
+		OR = {
+			tag = RSD
+			AND = {
+				NOT = { exists = RSD }
+				owns = 385
+				religion_group = muslim
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = halid_advisor_come.OPTA1
+		if = {
+			limit = {
+				ai = no 
+			}
+			define_advisor = {
+				type = halid
+				name = "哈立德 本 瓦利德｢【真主之剑】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes 
+			}
+			define_general = {
+				name = "哈立德 本 瓦利德｢【真主之剑】"
+				fire = 6
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_zenzuzhijen	
+		
+			}
+		}		
+	}
+}

@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = horatio_nelson_advisor_come
+
+country_event = {
+	id = horatio_nelson_advisor_come.1
+	title = "horatio_nelson_advisor_come.1.t"
+	desc = "horatio_nelson_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1758
+		NOT = { is_year = 1805 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				owns = 1860
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = horatio_nelson_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = horatio_nelson
+					name = "霍雷肖 纳尔逊【海军之魂】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+				name = "霍雷肖 纳尔逊【海军之魂】"
+				fire = 6
+				shock = 6
+				manuever = 6
+				siege = 0
+				trait = ZC_horatio_nelson
+			}
+		}
+	}
+}

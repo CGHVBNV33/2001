@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = heinz_guderian_prov_move_events
+
+province_event = {
+	id = heinz_guderian_prov_move_events.1
+	title = "heinz_guderian_prov_move_events.NAME1"
+	desc = "heinz_guderian_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_heinz_guderian
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "heinz_guderian_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_heinz_guderian }
+			if = {
+				limit = { 
+					NOT = { is_year = 1954 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_heinz_guderian
+					owner = {
+						country_event = {
+							id = heinz_guderian_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_heinz_guderian
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_heinz_guderian"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1954
+				}	
+				remove_province_modifier = pov_heinz_guderian	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = heinz_guderian_prov_move_events.2
+	title = "heinz_guderian_prov_move_events.NAME2"
+	desc = "heinz_guderian_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "heinz_guderian_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = heinz_guderian
+					name = "海因里希 古德里安【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "海因里希 古德里安【将领】"
+				fire = 4
+				shock = 3
+				manuever = 6
+				siege = 4
+				trait = ZC_heinz_guderian
+			}
+		}
+	}
+}

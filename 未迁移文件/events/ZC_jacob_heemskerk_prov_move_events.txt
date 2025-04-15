@@ -1,0 +1,111 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = jacob_heemskerk_prov_move_events
+
+province_event = {
+	id = jacob_heemskerk_prov_move_events.1
+	title = "jacob_heemskerk_prov_move_events.NAME1"
+	desc = "jacob_heemskerk_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_jacob_heemskerk
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "jacob_heemskerk_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_jacob_heemskerk }
+			if = {
+				limit = { 
+					NOT = { is_year = 1607 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+						}
+					}	
+					remove_province_modifier = pov_jacob_heemskerk
+					owner = {
+						country_event = {
+							id = jacob_heemskerk_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+						}		
+					}
+					remove_province_modifier = pov_jacob_heemskerk
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_jacob_heemskerk"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1607
+				}	
+				remove_province_modifier = pov_jacob_heemskerk	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jacob_heemskerk_prov_move_events.2
+	title = "jacob_heemskerk_prov_move_events.NAME2"
+	desc = "jacob_heemskerk_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "jacob_heemskerk_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = jacob_heemskerk
+					name = "雅各布 海姆斯凯克【海军上将】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "雅各布 海姆斯凯克【海军上将】"
+				fire = 4
+				shock = 4
+				manuever = 6
+				siege = 1
+				trait = ZC_jacob_heemskerk
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+namespace = jacques_offenbach_advisor_come
+
+country_event = {
+	id = jacques_offenbach_advisor_come.1
+	title = "jacques_offenbach_advisor_come.1.t"
+	desc = "jacques_offenbach_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	hidden = yes
+	fire_only_once = yes
+
+
+	trigger = {
+		is_year = 1819
+		NOT = { is_year = 1880 }
+		OR = {
+			tag = GER
+			AND = {
+				NOT = { exists = GER }
+				owns = 85
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = jacques_offenbach_advisor_come.OPTA1
+		define_advisor = {
+			type = jacques_offenbach
+			name = "雅克 奥芬巴赫｢【作曲家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}

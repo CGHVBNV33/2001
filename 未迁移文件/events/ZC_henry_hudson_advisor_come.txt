@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = henry_hudson_advisor_come
+
+country_event = {
+	id = henry_hudson_advisor_come.1
+	title = "henry_hudson_advisor_come.1.t"
+	desc = "henry_hudson_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1565
+		NOT = { is_year = 1611 }
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = ENG }
+				NOT = { exists = GBR }
+				owns = 236
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = henry_hudson_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = henry_hudson
+					name = "亨利 哈德逊｢【探险家】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_explorer = {
+				name = "亨利 哈德逊｢【探险家】"
+				fire = 3
+				shock = 2
+				manuever = 5
+				siege = 0
+				trait = rab_leader_henry_hudson
+			}
+		}
+	}
+}

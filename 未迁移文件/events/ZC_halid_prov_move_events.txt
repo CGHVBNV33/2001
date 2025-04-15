@@ -1,0 +1,133 @@
+namespace = halid_prov_move_events
+
+
+province_event = {
+	id = halid_prov_move_events.1
+	title = "halid_prov_move_events.NAME1"
+	desc = "halid_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_halid
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "halid_prov_move_events.OPTA1"
+	
+		if = {
+			limit = { has_province_modifier = pov_halid }
+			if = {
+			limit = { 
+				NOT = { is_year = 642  }
+			}	
+				if = { 
+					limit = {
+						owner = { 
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality		
+							}
+						}
+					}
+					remove_province_modifier = pov_halid
+					owner = {
+						country_event = {
+							id = halid_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							NOT = { 
+								OR = {
+								  ruler_has_personality = well_connected_personality
+								  ruler_has_personality = well_advised_personality
+								  ruler_has_personality = silver_tongue_personality
+								  ruler_has_personality = fierce_negotiator_personality
+								  ruler_has_personality = humane_personality
+								  ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_halid
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_halid"
+							duration = -1
+						}					
+					}
+				}
+				if = { 
+					limit = { 
+						owner = { tag = JAP } 
+					}
+					remove_province_modifier = pov_halid
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_halid"
+							duration = -1
+						}					
+					}								
+				}
+			}		
+			if = {
+			limit = { 
+				is_year = 642
+			}	
+				remove_province_modifier = pov_halid	
+			}
+		}
+	}	
+}	
+
+country_event = {
+	id = halid_prov_move_events.2
+	title = "halid_prov_move_events.NAME2"
+	desc = "halid_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "halid_prov_move_events.OPTA2"
+		if = {
+			limit = {
+				ai = no 
+			}
+			define_advisor = {
+				type = halid
+				name = "哈立德 本 瓦利德｢【真主之剑】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = {
+			limit = {
+				ai = yes 
+			}
+			define_general = {
+				name = "哈立德 本 瓦利德｢【真主之剑】"
+				fire = 6
+				shock = 6
+				manuever = 4
+				siege = 2
+				trait = rab_leader_zenzuzhijen			
+			}
+		}
+	}
+}

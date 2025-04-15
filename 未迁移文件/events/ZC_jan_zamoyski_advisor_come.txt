@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = jan_zamoyski_advisor_come
+
+country_event = {
+	id = jan_zamoyski_advisor_come.1
+	title = "jan_zamoyski_advisor_come.1.t"
+	desc = "jan_zamoyski_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1542
+		NOT = { is_year = 1605 }
+		OR = {
+			tag = PLC
+			AND = {
+				NOT = { exists = PLC }
+				owns = 257
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = jan_zamoyski_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = jan_zamoyski
+					name = "扬 扎莫厄斯基【奥德南特】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "扬 扎莫厄斯基【奥德南特】"
+				fire = 2
+				shock = 4
+				manuever = 3
+				siege = 3
+				trait = ZC_jan_zamoyski
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = heinz_guderian_advisor_come
+
+country_event = {
+	id = heinz_guderian_advisor_come.1
+	title = "heinz_guderian_advisor_come.1.t"
+	desc = "heinz_guderian_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1888
+		NOT = { is_year = 1954 }
+		OR = {
+			tag = NZ1
+			AND = {
+				NOT = { exists = NZ1 }
+				tag = NZ2
+			}
+			AND = {
+				NOT = { exists = NZ1 }
+				NOT = { exists = NZ2 }
+				owns = 50
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = heinz_guderian_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = heinz_guderian
+					name = "海因里希 古德里安【将领】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "海因里希 古德里安【将领】"
+				fire = 4
+				shock = 3
+				manuever = 6
+				siege = 4
+				trait = ZC_heinz_guderian
+			}
+		}
+	}
+}

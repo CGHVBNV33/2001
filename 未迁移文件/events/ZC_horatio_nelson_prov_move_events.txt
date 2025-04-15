@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = horatio_nelson_prov_move_events
+
+province_event = {
+	id = horatio_nelson_prov_move_events.1
+	title = "horatio_nelson_prov_move_events.NAME1"
+	desc = "horatio_nelson_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_horatio_nelson
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "horatio_nelson_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_horatio_nelson }
+			if = {
+				limit = { 
+					NOT = { is_year = 1805 }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_horatio_nelson
+					owner = {
+						country_event = {
+							id = horatio_nelson_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_horatio_nelson
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_horatio_nelson"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1805
+				}	
+				remove_province_modifier = pov_horatio_nelson	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = horatio_nelson_prov_move_events.2
+	title = "horatio_nelson_prov_move_events.NAME2"
+	desc = "horatio_nelson_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "horatio_nelson_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = horatio_nelson
+					name = "霍雷肖 纳尔逊【海军之魂】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_admiral = {
+					name = "霍雷肖 纳尔逊【海军之魂】"
+					fire = 6
+					shock = 6
+					manuever = 6
+					siege = 0
+				trait = ZC_horatio_nelson
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = hanyanhui_advisor_come
+
+country_event = {
+	id = hanyanhui_advisor_come.1
+	title = "hanyanhui_advisor_come.1.t"
+	desc = "hanyanhui_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = hanyanhui_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = hanyanhui_advisor_come.OPTA1
+		
+		if = { 
+		limit = { ai = no }
+			define_advisor = {
+				type = hanyanhui
+				name = "韩延徽｢【谋士】"
+				discount = yes	
+				skill = 3
+			}
+		}
+		if = { 
+		limit = { ai = yes }
+			define_general = {
+				name = "韩延徽｢【谋士】"
+				fire = 1
+				shock = 1
+				manuever = 1
+				siege = 3
+				trait = rab_leader_hanyanhwai
+			}
+		}
+	}
+}

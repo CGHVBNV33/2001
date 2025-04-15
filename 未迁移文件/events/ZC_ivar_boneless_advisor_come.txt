@@ -1,0 +1,55 @@
+########################
+#Advisor  entry  Events#
+#########################
+
+namespace = ivar_boneless_advisor_come
+
+country_event = {
+	id = ivar_boneless_advisor_come.1
+	title = "ivar_boneless_advisor_come.1.t"
+	desc = "ivar_boneless_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 830
+		NOT = { is_year = 873 }
+		OR = {
+			tag = DAN
+			AND = {
+				NOT = { exists = DAN }
+				owns = 12
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = ivar_boneless_advisor_come.OPTA1
+		
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = ivar_boneless
+					name = "伊瓦尔｢【无骨者】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "伊瓦尔｢【无骨者】"
+				fire = 5
+				shock = 5
+				manuever = 2
+				siege = 3
+				trait = rab_leader_ivar_boneless
+			}
+		}
+	}
+}

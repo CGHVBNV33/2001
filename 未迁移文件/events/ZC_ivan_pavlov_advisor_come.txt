@@ -1,0 +1,42 @@
+namespace = ivan_pavlov_advisor_come
+
+country_event = {
+	id = ivan_pavlov_advisor_come.1
+	title = "ivan_pavlov_advisor_come.1.t"
+	desc = "ivan_pavlov_advisor_come.1.d"
+	picture = NEW_ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		is_year = 1849
+		NOT = { is_year = 1936 }
+		OR = {
+			tag = RUS
+			AND = {
+				NOT = { exists = RUS }
+				tag = MOS
+			}
+			AND = {
+				NOT = { exists = RUS }
+				NOT = { exists = MOS }
+				owns = 301
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}		
+	option = {
+		name = ivan_pavlov_advisor_come.OPTA1
+		
+		define_advisor = {
+			type = ivan_pavlov
+			name = "伊万 巴甫洛夫｢【生理学家】"
+			discount = yes	
+			skill = 3
+		}
+	}
+}
+

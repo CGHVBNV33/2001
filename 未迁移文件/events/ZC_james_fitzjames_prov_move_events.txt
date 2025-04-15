@@ -1,0 +1,129 @@
+#################################
+#This sections define outoff general 
+#move to another provinces .
+#################################
+
+namespace = james_fitzjames_prov_move_events
+
+province_event = {
+	id = james_fitzjames_prov_move_events.1
+	title = "james_fitzjames_prov_move_events.NAME1"
+	desc = "james_fitzjames_prov_move_events.DESC1"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = pov_james_fitzjames
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "james_fitzjames_prov_move_events.OPTA1"		
+		if = {
+			limit = { has_province_modifier = pov_james_fitzjames }
+			if = {
+				limit = { 
+					NOT = { is_year = 1734  }
+				}
+				if = { 
+					limit = {
+						owner = { 
+							NOT = {
+								OR = {
+									tag = JAP 
+									tag = JA1
+								}
+							}
+							OR = {
+								ruler_has_personality = well_connected_personality
+								ruler_has_personality = well_advised_personality
+								ruler_has_personality = silver_tongue_personality
+								ruler_has_personality = fierce_negotiator_personality
+								ruler_has_personality = humane_personality
+								ruler_has_personality = benevolent_personality				
+							}
+						}
+					}	
+					remove_province_modifier = pov_james_fitzjames
+					owner = {
+						country_event = {
+							id = james_fitzjames_prov_move_events.2
+						}
+					}
+				}					
+				if = { 
+					limit = { 
+						owner = {
+							OR = {
+								tag = JA1
+								tag = JAP
+							}	
+							NOT = { 
+								OR = {
+								 	ruler_has_personality = well_connected_personality
+							 	  	ruler_has_personality = well_advised_personality
+								  	ruler_has_personality = silver_tongue_personality
+								  	ruler_has_personality = fierce_negotiator_personality
+								  	ruler_has_personality = humane_personality
+								  	ruler_has_personality = benevolent_personality
+								}
+							}
+						}		
+					}
+					remove_province_modifier = pov_james_fitzjames
+					random_neighbor_province = {
+						add_province_modifier = {
+							name = "pov_james_fitzjames"
+							duration = -1
+						}					
+					}
+				}
+			}	
+			if = {
+				limit = { 
+					is_year = 1722
+				}	
+				remove_province_modifier = pov_james_fitzjames	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = james_fitzjames_prov_move_events.2
+	title = "james_fitzjames_prov_move_events.NAME2"
+	desc = "james_fitzjames_prov_move_events.DESC2"
+	picture = NEW_ADVISOR_eventPicture
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "james_fitzjames_prov_move_events.OPTA2"
+		if = { 
+			limit = { ai = no }
+				define_advisor = {
+					type = james_fitzjames
+					name = "詹姆斯 菲茨詹姆斯｢【贝里克公爵】"
+					discount = yes	
+					skill = 3
+				}
+		}
+		if = { 
+			limit = { ai = yes }
+				define_general = {
+				name = "詹姆斯 菲茨詹姆斯｢【贝里克公爵】"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 1
+				trait = ZC_james_fitzjames
+			}
+		}
+	}
+}
